@@ -1,6 +1,6 @@
 # interview-notes
 
-interview questions and answeres
+interview questions and answers
 
 
 
