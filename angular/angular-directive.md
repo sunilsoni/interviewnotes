@@ -163,15 +163,6 @@ condition.
 In this code snippet, we are adding a blue background if the value of isBlue variable is true. If the value of `isBlue`
 variable is false, then the background of the above element will be red.
 
-
-
-Difference between Structural Directive and Attribute Directive
-----------------
-
-|  Structural Directive       |  Attribute Directive  |
-| ----------- | ----------- |
-| Structural directives are applied to `<template>` elements and used to add or remove content (stamp and template).      | The component has their view (HTML and styles) because of that, there can be one component on a host element, but multiple directives.       |
-
 How to Create Custom Directives?
 ----------------
 
@@ -250,8 +241,7 @@ We will write the changes in `change-text.directive.ts` file as-
 
 change-text.directive.ts
 ```typescript
-import { Directive, elementRef} from
-‘@angular/core’;
+import { Directive, elementRef} from ‘@angular/core’;
 @Directive({
 Selector: ‘[changeText]’’
 })
@@ -263,6 +253,29 @@ Element.nativeElement.innerText= “Text is changed by changeText Directive.”;
 }
 ```
 In the above file, there is a class known as `ChangeTextDirective`, and also a constructor.
+
+
+Difference between Structural Directive and Attribute Directive
+----------------
+
+
+
+|  Structural Directive       |  Attribute Directive  |
+| ----------- | ----------- |
+| Structural directives are applied to `<template>` elements and used to add or remove content (stamp and template).      | The component has their view (HTML and styles) because of that, there can be one component on a host element, but multiple directives.       |
+
+
+Difference between component and directive?
+----------------
+<img src="./images-directives/difference-between-directives-components.png" width="400" border="2" />
+
+
+Components have their own view (HTML and styles). 
+Directives are just "behavior" added to existing elements and components. Component extends Directive.
+
+Because of that there can only be one component on a host element, but multiple directives.
+
+Structural directives are directives applied to <template> elements and used to add/remove content (stamp the template). The * in directive applications like *ngIf causes a <template> tag to be created implicitly.
 
 
 For more information:
