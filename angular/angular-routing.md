@@ -1,9 +1,6 @@
 Working with Angular Routing and Navigation
 =====================
 
-Working with existing/cloned/copied Angular App
----------------------
-
 - Run command: `npm install` to install project/app dependencies `(node_modules)`
 - To Build and run Angular App, command: `ng serve / npm start` OR `ng serve -o` OR `ng serve --open`
 - To change port from 4200 to other port - type command:  `ng serve --port 5000`

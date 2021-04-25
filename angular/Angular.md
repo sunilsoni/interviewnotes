@@ -296,4 +296,6 @@ Angular Routing and Navigation
   - The attribute/directive for binding a clickable HTML element to a route which denotes link/view name to load/show
     in `(<router-outlet>)`
 
+For more
+information  [Angular Routing and Navigation](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-routing.md#1-angular-routing-and-navigation)
 
