@@ -35,7 +35,7 @@ Let's create below Angular Single Page Application (SPA) with Routing and Naviga
 ---------------------
 <p>
   <figure>
-    &nbsp;&nbsp;&nbsp; <img src="/images-routing/1.1-spa-single-page-app-home.png" alt="Image - Output - Angular Single Page Application (SPA) with Routing and Navigation - Home View" title="Image - Output - Angular Single Page Application (SPA) with Routing and Navigation - Home View" width="1000" border="2" />
+    &nbsp;&nbsp;&nbsp; <img src="./images-routing/1.1-spa-single-page-app-home.png" alt="Image - Output - Angular Single Page Application (SPA) with Routing and Navigation - Home View" title="Image - Output - Angular Single Page Application (SPA) with Routing and Navigation - Home View" width="1000" border="2" />
     <figcaption>&nbsp;&nbsp;&nbsp; Image - Output - Angular Single Page Application (SPA) with Routing Navigation - Home View</figcaption>
   </figure>
 </p>
