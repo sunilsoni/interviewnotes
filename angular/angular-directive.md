@@ -157,11 +157,7 @@ Attribute Directives for our desired functionality.
 condition.
 
 ```typescript
-<p [ngStyle] = "{'background': isBlue ? 'blue' : 'red'}" > I
-am
-an
-Attribute
-Directive < /p>
+<p [ngStyle] = "{'background': isBlue ? 'blue' : 'red'}" > I am an Attribute Directive < /p>
 ```
 
 In this code snippet, we are adding a blue background if the value of isBlue variable is true. If the value of `isBlue`
@@ -181,6 +177,93 @@ How to Create Custom Directives?
 
 We can create our custom directives to use in Angular components with the help of the command line. The command which is
 used to develop the Directive using the command line is as follows-
+
+```typescript
+ng g directive name of the Directive
+```
+
+For example,
+
+```typescript
+ng g directive change text
+```
+
+It is seen in the command line as given in the below code-
+```typescript
+C:\ang-app>ng g directive change text
+CREATE src/app/change-text.directive.spec.ts (241 bytes)
+CREATE src /app/change-text.directive.ts (149 bytes)
+UPDATE src/app/app.module.ts (565 bytes)
+```
+
+The above files, i.e., `change-text directive.spec.ts` and `change-text.directive.ts` created and the `app.module.ts` is updated.
+
+app.module.ts:;
+
+```typescript
+import { BrowserModule } from ‘@angular/platform-browser’;
+import { NgModule } from ‘@angular/core’;
+import { AppRoutingModule } from ‘./app-routing.module’;
+import { AppComponent } from ‘./app.component’;
+import { NewcmpComponent } from ‘. /new-cmp.component’;
+import { ChangeTextDirective } from ‘. /change-text.directive’;
+@NgModule({
+declarations: [
+AppComponent,
+NewCmpComponent,
+ChangeTextDirective
+],
+Imports: [
+BrowserModule,
+AppRoutingModule
+],
+providers: [ ],
+bootstrap: [AppComponent]
+}]
+export class AppModule { }  
+```
+The `ChangeTextDirective` class has been included in the declarations in the above file. The class is also imported from the file given below-
+
+Change-text.directive
+```typescript
+Import {Directive}  from ‘@angular/core’;
+@Directive ({
+Selector; ‘[changeText]’
+})
+Export class ChangeTextDirective {
+Constructor ( ) { }
+}
+```
+The above file has a directive and it also has a selector property. Whatever we define in the selector, the same has to match in the view, where we assign the custom directive.
+
+In the `app.component.html` view, add the directive as follows-
+```html
+<!—The content below is only a placeholder and replaced.-->
+<div style= "text-align:center">
+<h1>Welcome to {{title}}. </h1>
+</div>
+<div style = "text-align:center">
+<span changeText > Welcome to {{ title}}.</span>
+</div> 
+```
+We will write the changes in `change-text.directive.ts` file as-
+
+change-text.directive.ts
+```typescript
+import { Directive, elementRef} from
+‘@angular/core’;
+@Directive({
+Selector: ‘[changeText]’’
+})
+Export class ChangeTextDirective {
+Constructor(Element: ElementRef) {
+Console.log(Element);
+Element.nativeElement.innerText= “Text is changed by changeText Directive.”;
+}
+}
+```
+In the above file, there is a class known as `ChangeTextDirective`, and also a constructor.
+
 
 For more information:
 
