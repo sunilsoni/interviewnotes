@@ -99,6 +99,7 @@ template = "ngFor let movie of movies" > {
 }
 }
 </div>
+
 < ng - template
 ngFor
 let -
@@ -117,10 +118,11 @@ movie [ngFor] = "movies" > {
 Example For Ngswitch:
 
 ```typescript
-<div><ng-template [ngSwitch] = "'sad'" >
+<div>
+        <ng-template [ngSwitch] = "'sad'" >
 <horror-movie [movie] = "movie" > </horror-movie>
-        < /ng-template> </
-div >
+        < /ng-template> 
+        < /div>
 ```
 
 The Angular `NgSwitch` is actually a set of cooperating directives: `NgSwitch`, `NgSwitchCase`, and `NgSwitchDefault`.
