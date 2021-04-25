@@ -52,8 +52,9 @@ Structural Directives are done in the elements section. These directives are use
 of the DOM elements. Structural directives have a star (*) sign before the directive. Like as,* ngIf, *ngFor, and *
 ngSwitch directive.
 
-- `*ngIf Directive`: The `*ngIf` allows us to Add/Remove DOM Element.
-- `*ngSwitch Directive`: The `*ngSwitch` will enable us to Add/Remove DOM element.
+- `*ngIf Directive`: The `*ngIf` is used to create or remove a part of the DOM tree depending on a condition.
+- `*ngSwitch Directive`: The `*ngSwitch` is like the JavaScript switch. It can display one element from among several
+  possible elements, based on a switch condition. Angular puts only the selected element into the DOM.
 - `*ngFor Directive`: The `*ngFor` directive is used to repeat a part of HTML template once per each item from an
   iterable list (Collection).
 
@@ -62,16 +63,73 @@ ngSwitch directive.
 <HTMLTag [structuralDirective]='value'/>
 ```
 
-For example,
+Example For NgIf:
 
 ```html
 
 <div *ngIf="isNeeded">
   Only render if the *isNeeded* value has true value.
 </div>
+
+<div *ngIf=”movie”>{{movie.name}}</div>
+
+<div template=”ngIf movie”>{{movie.name}}</div>
+
+<ng-template [ngIf]=”movie”>
+  <div>{{movie.name}}</div>
+</ng-template>
+
 ```
 
 Here, `ngIf` is a built-in directive used to add or remove the HTML element in the current HTML document.
+
+Example For Ngfor:
+
+```typescript
+<div * ngFor = "let movie of movies" > {
+{
+  movie.name
+}
+}
+</div>
+< div
+template = "ngFor let movie of movies" > {
+{
+  movie.name
+}
+}
+</div>
+< ng - template
+ngFor
+let -
+movie [ngFor] = "movies" > {
+{
+  movie.name
+}
+}
+</ng-template>
+```
+
+- The let keyword declares a template input variable that you reference within the template. The input variables in this
+  example is movie. The parser translates let movie into variables named, let-movie.
+- As the NgFor directive loops through the list, it sets and resets properties of its own context
+
+Example For Ngswitch:
+
+```typescript
+<div><ng-template [ngSwitch] = "'sad'" >
+<horror-movie [movie] = "movie" > </horror-movie>
+        < /ng-template> </
+div >
+```
+
+The Angular `NgSwitch` is actually a set of cooperating directives: `NgSwitch`, `NgSwitchCase`, and `NgSwitchDefault`.
+`NgSwitchCase` and `NgSwitchDefault` are structural directives. You attach them to elements using the asterisk `(*)`
+prefix notation. A `NgSwitchCase` displays its host element when its value matches the switch value.
+The `NgSwitchDefault` displays its host element when no sibling `NgSwitchCase` matches the switch value.
+
+
+
 
 Attribute Directives:
 ----------------
@@ -97,6 +155,28 @@ For example,
 
 Here, `showToolTip` refers an example directive, which when used in a HTML element will show tips while user hovers the
 HTML element.
+
+We use attribute directives to apply conditional style to elements, show or hide elements or dynamically change the
+behavior of a component according to a changing property.
+
+Angular provides many built-in Attribute Directives like `NgStyle`, `NgClass`, etc. We can also create our own custom
+Attribute Directives for our desired functionality.
+
+`NgStyle` Directive is an Attribute directive used to change the styling of any DOM element on the basis of some
+condition.
+
+```typescript
+<p [ngStyle] = "{'background': isBlue ? 'blue' : 'red'}" > I
+am
+an
+Attribute
+Directive < /p>
+```
+
+In this code snippet, we are adding a blue background if the value of isBlue variable is true. If the value of `isBlue`
+variable is false, then the background of the above element will be red.
+
+
 
 Difference between Structural Directive and Attribute Directive
 ----------------
