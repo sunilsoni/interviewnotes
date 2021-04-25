@@ -14,6 +14,13 @@ developments with a minimum of effort.
 
 Components
 -----------------
+Components are a logical piece of code for Angular application. A Component consists of the following −
+
+- **Template** This is used to render the view for the application. This contains the HTML that needs to be rendered in
+  the application. This part also includes the binding and directives.
+- **Class** This is like a class defined in any language such as C. This contains properties and methods. This has the
+  code which is used to support the view. It is defined in TypeScript.
+- **Metadata** This has the extra data defined for the Angular class. It is defined with a decorator.
 
 Components are the building blocks that compose an application. A component includes a TypeScript class with a
 @Component() decorator, an HTML template, and styles. The [@Component()](https://angular.io/api/core/Component)
