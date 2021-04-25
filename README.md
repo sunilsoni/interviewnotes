@@ -7,6 +7,7 @@ Interview questions and answers
   - [Angular Routing and Navigation](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-routing.md#1-angular-routing-and-navigation)
   - [Angular Component](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-components.md)
   - [Angular Directive](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-directive.md)
+  - [Angular Pipes](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-pipes.md)
 
 
 
