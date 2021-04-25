@@ -91,6 +91,9 @@ Example For Ngfor:
   movie.name
 }
 }
+```
+
+```typescript
 </div>
 < div
 template = "ngFor let movie of movies" > {
@@ -99,8 +102,10 @@ template = "ngFor let movie of movies" > {
 }
 }
 </div>
+```
 
-< ng - template
+```typescript
+<ng -template
 ngFor
 let -
 movie [ngFor] = "movies" > {
