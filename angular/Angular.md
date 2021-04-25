@@ -272,6 +272,28 @@ export class HelloWorldDependencyInjectionComponent {
 }
 ```
 
-For more information  [Dependency injection ](https://angular.io/guide/dependency-injection)  
+For more information  [Dependency injection ](https://angular.io/guide/dependency-injection)
+
+Angular Routing and Navigation
+-----------------
+
+- The `Angular Router enables navigation from one view (component)` to the another/next as users perform tasks, views (
+  component)
+- Routing simply means navigating between different view (component)
+- **RouterModule**
+  - RouterModule helps to `create routes`, which allows us to move from one part of the application to another part or
+    from one view to another
+  - A separate NgModule/Angular Module that provides the necessary service providers and directives for navigating
+    through application views
+- **Router**
+  - The Angular Router is an `optional service that presents a particular component view` for a given URL, it is not
+    part of the Angular core
+  - The Angular Router enables navigation from one view to the another as users perform application tasks/actions
+- **router-outlet**
+  - The directive `(<router-outlet>)` that marks where the router displays a view (a container to hold different
+    views/components loaded as users perform application tasks/actions)
+- **routerLink**
+  - The attribute/directive for binding a clickable HTML element to a route which denotes link/view name to load/show
+    in `(<router-outlet>)`
 
 
