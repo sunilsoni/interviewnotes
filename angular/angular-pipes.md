@@ -25,8 +25,8 @@ Further Built-in Pipes are divided into two types i.e. Parameterized and chainin
 
 <img src="./images-pipes/Types-of-Pipes.png" width="472" border="2" />
 
-1.  Built-in Pipes
-----------
+ Built-in Pipes
+-----------------
 
 Angular provides built-in pipes for typical data transformations, including transformations for internationalization (i18n), which use locale information to format data. The following are commonly used built-in pipes for data formatting:
 
@@ -67,8 +67,12 @@ For example,
 </table>
 ```
 
-output: 
+Output:
+
 <img src="./images-pipes/student-table-output.png" width="472" border="2" />
+
+ Custom Pipes
+-----------------
 
 For more information:
 1. [Transforming Data Using Pipes](https://angular.io/guide/pipes)
