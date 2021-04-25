@@ -15,8 +15,8 @@ Syntax to use Pipes in Angular Application:
 ---------------
 <img src="./images-pipes/anular-pipes.png" width="472" border="2" />
 
-Types of Pipes in Angular:
----------------
+## Types of Pipes in Angular: 
+
 The Angular Framework divided the Pipes into two types i.e. 
 1. Built-in Pipes and 
 2. Custom Pipes. 
@@ -25,8 +25,7 @@ Further Built-in Pipes are divided into two types i.e. Parameterized and chainin
 
 <img src="./images-pipes/Types-of-Pipes.png" width="472" border="2" />
 
- 1.Built-in Pipes
------------------
+### 1. Built-in Pipes 
 
 Angular provides built-in pipes for typical data transformations, including transformations for internationalization (i18n), which use locale information to format data. The following are commonly used built-in pipes for data formatting:
 
@@ -71,8 +70,7 @@ Output:
 
 <img src="./images-pipes/student-table-output.png" width="472" border="2" />
 
- 2.Custom Pipes
------------------
+### 2.Custom Pipes 
 
 To create a custom pipe, create a new ts file and use the code according to the work you have to do. You have to import Pipe, PipeTransform from Angular/Core. Let's create a sqrt custom pipe.
 
@@ -138,6 +136,7 @@ Square root of 169 is: {{169 | sqrt}}
 For more information:
 1. [Transforming Data Using Pipes](https://angular.io/guide/pipes)
 2. [Angular Pipes](https://dotnettutorials.net/lesson/angular-pipes/)
+3. [Angular 7 Pipes](https://www.javatpoint.com/angular-7-pipes)
 
 
 
