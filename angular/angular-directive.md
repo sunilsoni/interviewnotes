@@ -86,34 +86,17 @@ Here, `ngIf` is a built-in directive used to add or remove the HTML element in t
 Example For Ngfor:
 
 ```typescript
-<div * ngFor = "let movie of movies" > {
-{
-  movie.name
-}
-}
+<div *ngFor="let movie of movies">{{movie.name}}</div>
+
 ```
 
 ```typescript
-</div>
-< div
-template = "ngFor let movie of movies" > {
-{
-  movie.name
-}
-}
-</div>
+<div template="ngFor let movie of movies">{{movie.name}}</div>
+
 ```
 
 ```typescript
-<ng -template
-ngFor
-let -
-movie [ngFor] = "movies" > {
-{
-  movie.name
-}
-}
-</ng-template>
+<ng-template ngFor let-movie [ngFor]="movies">{{movie.name}} </ng-template>
 ```
 
 - The let keyword declares a template input variable that you reference within the template. The input variables in this
@@ -123,11 +106,12 @@ movie [ngFor] = "movies" > {
 Example For Ngswitch:
 
 ```typescript
-<div>
-        <ng-template [ngSwitch] = "'sad'" >
-<horror-movie [movie] = "movie" > </horror-movie>
-        < /ng-template> 
-        < /div>
+<div> <ng-template [ngSwitch]="'sad'">
+
+<horror-movie [movie]="movie"></horror-movie>
+
+ </ng-template> </div>
+
 ```
 
 The Angular `NgSwitch` is actually a set of cooperating directives: `NgSwitch`, `NgSwitchCase`, and `NgSwitchDefault`.
