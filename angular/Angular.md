@@ -274,6 +274,26 @@ export class HelloWorldDependencyInjectionComponent {
 
 For more information  [Dependency injection ](https://angular.io/guide/dependency-injection)
 
+What is routing
+-----------------
+
+- A website is made up of a multitude of pages These pages are written with HTML(HyperText Markup Language) language.
+- Hypertext is the technology that will link a page to other pages via hyperlinks.
+- Routing is the mechanism for navigating from one page to another on a website.
+
+For example, if you type these two urls in your browser.
+
+```html
+https://en.wikipedia.org/wiki/Braveheart
+https://en.wikipedia.org/wiki/Dances_with_Wolves
+```
+
+Depending on the movie name indicated in the url, the Wikipedia web application will determine the processing to be
+performed. This treatment will display the web page corresponding to the requested movie (here  `Braveheart`
+or `Dances_with_Wolves` ).
+
+This is called Routing.
+
 Angular Routing and Navigation
 -----------------
 
@@ -296,6 +316,8 @@ Angular Routing and Navigation
   - The attribute/directive for binding a clickable HTML element to a route which denotes link/view name to load/show
     in `(<router-outlet>)`
 
-For more
-information  [Angular Routing and Navigation](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-routing.md#1-angular-routing-and-navigation)
+For more information:
+
+- [Angular Routing and Navigation](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-routing.md#1-angular-routing-and-navigation)
+- [Routing and navigation with Angular 11](https://www.ganatan.com/tutorials/routing-with-angular)
 
