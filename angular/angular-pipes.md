@@ -25,6 +25,9 @@ Further Built-in Pipes are divided into two types i.e. Parameterized and chainin
 
 <img src="./images-pipes/Types-of-Pipes.png" width="472" border="2" />
 
+1.  Built-in Pipes
+----------
+
 Angular provides built-in pipes for typical data transformations, including transformations for internationalization (i18n), which use locale information to format data. The following are commonly used built-in pipes for data formatting:
 
 
@@ -40,8 +43,32 @@ Angular provides built-in pipes for typical data transformations, including tran
 
 [PercentPipe](https://angular.io/api/common/PercentPipe): Transforms a number to a percentage string, formatted according to locale rules.
 
+For example,
+```html
+<table border="1">
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>CourseFee</th>            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let student of students'>
+            <td>{{student.ID | uppercase}}</td>
+            <td>{{student.Name | titlecase}}</td>
+            <td>{{student.DOB | date:'dd/MM/yyyy'}}</td>
+            <td>{{student.Gender | lowercase}}</td>
+            <td>{{student.CourseFee | currency:'USD':true}}</td>
+        </tr>
+    </tbody>
+</table>
+```
 
-
+output: 
+<img src="./images-pipes/student-table-output.png" width="472" border="2" />
 
 For more information:
 1. [Transforming Data Using Pipes](https://angular.io/guide/pipes)
