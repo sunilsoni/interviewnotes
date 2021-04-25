@@ -12,10 +12,11 @@ Generally, If we need to transform data, we write the code in the component, For
 So instead of writing separate boilerplate code, we can use the built-in pipe called `DatePipe` which will take input and transform it into the desired date format.
 
 Syntax to use Pipes in Angular Application:
-
+---------------
 <img src="./images-pipes/anular-pipes.png" width="472" border="2" />
 
 Types of Pipes in Angular:
+---------------
 The Angular Framework divided the Pipes into two types i.e. 
 1. Built-in Pipes and 
 2. Custom Pipes. 
