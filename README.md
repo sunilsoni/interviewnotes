@@ -8,6 +8,9 @@ Interview questions and answers
   - [Angular Component](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-components.md)
   - [Angular Directive](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-directive.md)
   - [Angular Pipes](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-pipes.md)
+  - [Angular Data Binding](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-data-binding.md)
+  - [Angular Lazy Loading](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-lazy-loading.md)
+
 
 
 
