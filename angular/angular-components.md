@@ -1,7 +1,6 @@
 What Is an Angular Component?
 ==================
 
-
 Angular Component = HTML Template + Component Class + Component Metadata
 
  <img src="./images-components/angular-component.png" width="300" border="2" />

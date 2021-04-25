@@ -1,5 +1,7 @@
 Working with Angular Routing and Navigation
 =====================
+Navigating from one page to another page in a web application is known as Routing. Routing in Angular is called Angular
+Routing.
 
 - Run command: `npm install` to install project/app dependencies `(node_modules)`
 - To Build and run Angular App, command: `ng serve / npm start` OR `ng serve -o` OR `ng serve --open`
