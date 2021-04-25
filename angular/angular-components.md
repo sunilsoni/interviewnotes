@@ -4,7 +4,7 @@ What Is an Angular Component?
 
 Angular Component = HTML Template + Component Class + Component Metadata
 
- <img src="./images-components/angular-component.png" alt="Image - Angular Component " title="Image - Angular Component " width="1000" border="2" />
+ <img src="./images-components/angular-component.png" alt="Image - Angular Component " title="Image - Angular Component " width="300" border="2" />
     <figcaption>&nbsp;&nbsp;&nbsp; Image - Angular Component </figcaption>
 
 Every Angular application has at least one component that is used to display the data on the view. Technically, a
