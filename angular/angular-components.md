@@ -45,3 +45,8 @@ From the official docs:
 Components are the most basic building block of an UI in an Angular application. An Angular application is a tree of Angular components. 
 Angular components are a subset of directives. Unlike directives, components always have a template and only one component can be instantiated per an element in a template.
 ```
+
+For more information:
+
+1. [Angular Components with Examples](https://dotnettutorials.net/lesson/angular-components/)
+2. [Angular Component](https://www.tutorialsteacher.com/angular/angular-component)

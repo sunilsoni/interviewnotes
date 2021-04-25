@@ -325,6 +325,6 @@ Angular Routing and Navigation
 
 For more information:
 
-- [Angular Routing and Navigation](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-routing.md#1-angular-routing-and-navigation)
-- [Routing and navigation with Angular 11](https://www.ganatan.com/tutorials/routing-with-angular)
+1. [Angular Routing and Navigation](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-routing.md#1-angular-routing-and-navigation)
+2. [Routing and navigation with Angular 11](https://www.ganatan.com/tutorials/routing-with-angular)
 
