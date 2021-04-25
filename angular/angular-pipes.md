@@ -12,6 +12,7 @@ Generally, If we need to transform data, we write the code in the component, For
 So instead of writing separate boilerplate code, we can use the built-in pipe called `DatePipe` which will take input and transform it into the desired date format.
 
 Syntax to use Pipes in Angular Application:
+
 <img src="./images-pipes/anular-pipes.png" width="472" border="2" />
 
 Types of Pipes in Angular:
@@ -27,10 +28,15 @@ Angular provides built-in pipes for typical data transformations, including tran
 
 
 [DatePipe](https://angular.io/api/common/DatePipe): Formats a date value according to locale rules.
+
 [UpperCasePipe](https://angular.io/api/common/UpperCasePipe): Transforms text to all upper case.
+
 [LowerCasePipe](https://angular.io/api/common/LowerCasePipe): Transforms text to all lower case.
+
 [CurrencyPipe](https://angular.io/api/common/CurrencyPipe): Transforms a number to a currency string, formatted according to locale rules.
+
 [DecimalPipe](https://angular.io/api/common/DecimalPipe): Transforms a number into a string with a decimal point, formatted according to locale rules.
+
 [PercentPipe](https://angular.io/api/common/PercentPipe): Transforms a number to a percentage string, formatted according to locale rules.
 
 
