@@ -8,12 +8,12 @@ In plain words
 Wikipedia says
 > In software engineering, creational design patterns are design patterns that deal with object creation mechanisms, trying to create objects in a manner suitable to the situation. The basic form of object creation could result in design problems or added complexity to the design. Creational design patterns solve this problem by somehow controlling this object creation.
 
-* [Simple Factory](#-simple-factory)
-* [Factory Method](#-factory-method)
-* [Abstract Factory](#-abstract-factory)
-* [Builder](#-builder)
-* [Prototype](#-prototype)
-* [Singleton](#-singleton)
+* [Simple Factory](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/creational-design-pattern.md#-simple-factory)
+* [Factory Method](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/creational-design-pattern.md#-factory-method)
+* [Abstract Factory](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/creational-design-pattern.md#-abstract-factory)
+* [Builder](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/creational-design-pattern.md#-builder)
+* [Prototype](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/creational-design-pattern.md#-prototype)
+* [Singleton](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/creational-design-pattern.md#-singleton)
 
 
 🏠 Simple Factory

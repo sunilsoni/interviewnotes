@@ -7,13 +7,13 @@ In plain words
 Wikipedia says
 > In software engineering, structural design patterns are design patterns that ease the design by identifying a simple way to realize relationships between entities.
 
-* [Adapter](#-adapter)
-* [Bridge](#-bridge)
-* [Composite](#-composite)
-* [Decorator](#-decorator)
-* [Facade](#-facade)
-* [Flyweight](#-flyweight)
-* [Proxy](#-proxy)
+* [Adapter](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/structural-design-pattern.md#-adapter)
+* [Bridge](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/structural-design-pattern.md#-bridge)
+* [Composite](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/structural-design-pattern.md#-composite)
+* [Decorator](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/structural-design-pattern.md#-decorator)
+* [Facade](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/structural-design-pattern.md#-facade)
+* [Flyweight](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/structural-design-pattern.md#-flyweight)
+* [Proxy](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/structural-design-pattern.md#-proxy)
 
 🔌 Adapter
 -------
