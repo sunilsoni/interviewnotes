@@ -43,6 +43,15 @@ Interview questions and answers
 
 - **Microservices**
   - [Microservices](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md)
+    * [Advantages of Microservices Architecture](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#advantages-of-microservices-architecture)
+    * [Disadvantages of Microservices](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#disadvantages-of-microservices)
+    * [Challenges of Microservices Architecture](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#challenges-of-microservices-architecture)
+    * [Gateway](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#gateway)
+    * [Microservices Monitor](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#microservices-monitor)
+    * [Microservices vs Monolithic Architecture](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#microservices-vs-monolithic-architecture)
+    * [How does Microservice Architecture work?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#how-does-microservice-architecture-work)
+    * [Communicating Between Microservices](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#communicating-between-microservices)
+
 
 - **Kafka**
   - [Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md)
