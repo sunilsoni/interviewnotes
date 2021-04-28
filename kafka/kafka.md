@@ -12,6 +12,10 @@ The main components of Kafka are:
 - **Brokers**: These act as a channel between the producers and consumers. They are a set of servers where the published messages are stored.
 - **Consumer**: The consumer is the one who is going to the consumer the published data. It can subscribe to different topics and then pull data from the brokers.
 
+
+<img src="./images/kafka-message-flow.jpeg" width="500" border="2" />
+
+
 Advantages of Kafka
 -------------------
 There are some advantages of Kafka, which makes it significant to use:
@@ -148,12 +152,45 @@ In the Producer, when does QueueFullException occur?
 QueueFullException typically occurs when the Producer attempts to send messages at a pace that the Broker cannot handle. Since the Producer doesn’t block, users will need to add enough brokers to collaboratively handle the increased load.
 
 
+Confluent Kafka vs. Apache Kafka
+---------------
+
+- **Performance**
+    - Confluent Kafka performs really well, and even under the higher workloads, its performance is unwavering.
+    - On the other hand, though Apache Kafka performs well, it still lags behind Confluent Kafka’s performance.
+    
+- **Pros and Cons**
+
+    - **Confluent Kafka Pros**
+        - It has almost all the attributes of Kafka and some extra attributes as well.
+        - It streamlines the admin operations procedures with much ease.
+        - It takes the burden of worrying about data relaying, off the data managers.
+    - **Confluent Kaka Cons**
+        - Confluent Kafka is created by using Apache Kafka, and hence the scope of tweaking it further is limited.
+        - Confluent Kafka’s fault-tolerant capabilities may be questioned in some cases.
+
+    - **Apache Kafka Pros**
+        - Apache Kafka is an open-source platform.
+        - It allows you to have the flexibility and features to tweak the code as per your requirements.
+        - It is known for its fault tolerance and durability.
+        - It is easily accessible and gives you real-time feedback.
+    - **Apache Kafka Cons**
+        - It is only a pub-sub platform and doesn’t have the entire data processing and data operations tools.
+        - In some cases, if the workload goes too high, it tends to work an awry manner.
+        - You cannot use the point-to-point and request/reply messages in Apache Kafka.
+    
+- **Pricing**
+    - The pricing model of Confluent Kafka is based on cloud usage, and typically it costs you around $0.11 per GB. The usage calculated based on the data stored on the Confluent Cloud.
+    - Apache Kafka is an open-source platform that you can use for free, but you need to store the data on your cloud/on-premise platforms.
+
+Confluent Kafka has far more capabilities than Apache Kafka, but you need to pay to use Confluent Kafka.
+But, Apache Kafka is free of cost, and you can make the tweaks as per your requirements on the platforms too.
 
 
 
 For more information:
 1. [Top 30 Apache Kafka Interview Questions](https://www.whizlabs.com/blog/apache-kafka-interview-questions/)
-
+2. [Apache Kafka Tutorial](https://www.javatpoint.com/apache-kafka)
 
 
 

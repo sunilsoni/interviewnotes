@@ -62,6 +62,7 @@ Interview questions and answers
     * [Replicas in Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#replicas-in-kafka)
     * [Starting a Kafka server](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#starting-a-kafka-server)
     * [In the Producer, when does QueueFullException occur?](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#in-the-producer-when-does-queuefullexception-occur)
+    * [Confluent Kafka vs. Apache Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#Confluent-Kafka-vs-Apache Kafka)
 
 
 
