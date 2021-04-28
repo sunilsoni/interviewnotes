@@ -46,4 +46,23 @@ Interview questions and answers
 
 - **Microservices**
   - [Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md)
+    * [Advantages of Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#advantages-of-kafka)
+    * [Offset in Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#offset-in-kafka)
+    * [Consumer group in Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#consumer-group-in-kafka)
+    * [ZooKeeper in Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#zookeeper-in-kafka)
+    * [Can I use Kafka without Zookeeper?](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#can-i-use-kafka-without-zookeeper)
+    * [What is Zookeeper in Kafka? Can we use Kafka without Zookeeper?](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#what-is-zookeeper-in-kafka-can-we-use-kafka-without-zookeeper)
+    * [Partition in Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#partition-in-kafka)
+    * [APIs of Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#apis-of-kafka)
+    * [Load balancing of the server in Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#load-balancing-of-the-server-in-kafka)
+    * [Retention period in Kafka cluster](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#retention-period-in-kafka-cluster)
+    * [RabbitMQ vs Apache Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#rabbitmq-vs-apache-kafka)
+    * [Explain Apache Kafka Use Cases?](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#explain-apache-kafka-use-cases)
+    * [Kafka Cluster, and its key benefits](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#kafka-cluster-and-its-key-benefits)
+    * [Replicas in Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#replicas-in-kafka)
+    * [Starting a Kafka server](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#starting-a-kafka-server)
+    * [In the Producer, when does QueueFullException occur?](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#in-the-producer-when-does-queuefullexception-occur)
+
+
+
 
