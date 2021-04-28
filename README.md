@@ -44,7 +44,7 @@ Interview questions and answers
 - **Microservices**
   - [Microservices](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md)
 
-- **Microservices**
+- **Kafka**
   - [Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md)
     * [Advantages of Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#advantages-of-kafka)
     * [Offset in Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#offset-in-kafka)
