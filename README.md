@@ -75,15 +75,15 @@ Interview questions and answers
 
 - **MongoDB**
   - [MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#mongodb)
-  - [Key Components](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#key-components)
-  - [Document](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#document)
-  - [Collection](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#collection)
-  - [Namespace](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#namespace)
-  - [Databases in MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#databases-in-mongodb)
-  - [Mongo Shell](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#mongo-shell)
-  - [Advantages of MongoDB:](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#advantages-of-mongodb)
-  - [Features of MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#features-of-mongodb)
-  - [Indexes in MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#indexes-in-mongodb)
-  - [MongoDB](https)
+    *  [Key Components](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#key-components)
+    *  [Document](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#document)
+    *  [Collection](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#collection)
+    *  [Namespace](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#namespace)
+    *  [Databases in MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#databases-in-mongodb)
+    *  [Mongo Shell](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#mongo-shell)
+    *  [Advantages of MongoDB:](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#advantages-of-mongodb)
+    *  [Features of MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#features-of-mongodb)
+    *  [Indexes in MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#indexes-in-mongodb)
+    *  [MongoDB](https)
 
 
