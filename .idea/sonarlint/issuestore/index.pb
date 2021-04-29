@@ -21,3 +21,13 @@ W
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
 P
  micro-services/micro-services.md,5/2/52d5eb18b59403292cfcd196607b99c1c444e34a
+B
+angular/Angular.md,5/6/56c8b8a8b9f0839f6d4f6f9e4312933c49280c59
+>
+kafka/kafka.md,0/5/058bc387417f869e17d55f27a24c0dfad5d3a7e0
+[
++design-pattern/behavioral-design-pattern.md,6/d/6d9f25faa3fe43592ef76fc157ade88d83494cb9
+M
+angular/angular-components.md,8/2/825f283c26be92a30e9376a8549da874b6994e3f
+O
+angular/angular-data-binding.md,5/8/58cd42c0a6c2cfaae21235ced9a40b6ef9dcaa35
