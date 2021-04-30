@@ -14,7 +14,7 @@ developments with a minimum of effort.
 
 Components
 -----------------
-Components are a logical piece of code for Angular application. A Component consists of the following −
+Components are a logical piece of code for Angular application. A Component consists −
 
 - **Template** This is used to render the view for the application. This contains the HTML that needs to be rendered in
   the application. This part also includes the binding and directives.
