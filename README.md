@@ -2,6 +2,17 @@
 
 Interview questions and answers
 
+- **Java**
+  - [Multi threading](https://github.com/sunilsoni/interview-notes/blob/main/multi-threading/multi-threading.md)
+    - [Life Cycle of a Thread](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#life-cycle-of-a-thread)
+    - [Creating a Thread](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#creating-a-thread)
+    - [Life](https)
+    - [Life](https)
+    - [Life](https)
+    - [Life](https)
+    - [Life](https)
+    - [Life](https)
+
 - **Angular interview questions and answers**
   - [Angular](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md)
     - [Angular Routing and Navigation](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-routing.md#1-angular-routing-and-navigation)
