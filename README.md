@@ -3,15 +3,14 @@
 Interview questions and answers
 
 - **Java**
-  - [Multi threading](https://github.com/sunilsoni/interview-notes/blob/main/multi-threading/multi-threading.md)
+  - [Multi threading](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#multi-threading)
     - [Life Cycle of a Thread](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#life-cycle-of-a-thread)
     - [Creating a Thread](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#creating-a-thread)
+    - [Life Cycle of a Thread](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#life-cycle-of-a-thread)
+    - [Creating a Thread](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#creating-a-thread)
+    - [Q. What does join() method?](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#q-what-does-join-method)
     - [Life](https)
-    - [Life](https)
-    - [Life](https)
-    - [Life](https)
-    - [Life](https)
-    - [Life](https)
+
 
 - **Angular interview questions and answers**
   - [Angular](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md)
