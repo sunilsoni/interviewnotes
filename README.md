@@ -3,7 +3,14 @@
 Interview questions and answers
 
 - **Object-oriented programming(OOPS)**
-  - [OOPS](https://github.com/sunilsoni/interview-notes/blob/main/oop/oop.md)
+  - [OOPS](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#object-oriented-programmingoops)
+    - [Abstraction](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#abstraction)
+    - [Encapsulation](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#encapsulation)
+    - [Polymorphism](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#polymorphism)
+    - [Abstract Class](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#abstract-class)
+    - [Life](https)
+    - [Life](https)
+    - [Life](https)
 - **Java**
   - [Multi threading](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#multi-threading)
     - [Life Cycle of a Thread](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#life-cycle-of-a-thread)
