@@ -58,7 +58,6 @@ Some points to remember:
 
 Example: 
 ```java
-package com.tech;
 
 abstract class MyAbstractClass {
 	//abstract method
@@ -90,6 +89,82 @@ Output:
  In display method
 ```
 
+
+Does Abstract class have constructor?
+------------
+
+Yes, abstract classes have constructor. Either you can provide it or the default one will be provided by Java. Now, you must be wondering if you cannot create an object of abstract class then what is the need of a constructor.
+One thing you must know is that the constructors are used when you are creating an object of a class, to initialize the data members of that class and your abstract class can have data members.
+
+Now, when your class extends abstract class then the same abstract class will become super class for your extending class and remember when you have constructor of your class then first line of your constructor is always a call to super class constructor and this is the time when your abstract class constructor will get called.
+
+Example 1:
+```java
+abstract class MyAbstractClass {
+
+	public MyAbstractClass() {
+		System.out.println("inside MyAbstractClass constructor");
+	}
+
+}
+
+public class AbstractDemo extends MyAbstractClass {
+
+	public AbstractDemo() {
+		System.out.println("inside AbstractDemo constructor");
+	}
+	
+	public static void main(String[] args) {
+		AbstractDemo obj = new AbstractDemo();
+	}
+
+}
+```
+Output:
+```log
+inside MyAbstractClass constructor
+inside AbstractDemo constructor
+```
+
+Example 2:
+```java
+
+abstract class MyAbstractClass {
+
+	public int a;
+	public int b;
+	
+	public MyAbstractClass(int a, int b) {
+		this.a = a;
+		this.b = b;
+	}
+	
+	public void print() {
+		System.out.println("a = " + a);
+		System.out.println("b = " + b);
+	}
+
+}
+
+public class AbstractDemo extends MyAbstractClass {
+
+	public AbstractDemo(int x, int y) {
+		super(x, y);
+		
+	}
+	public static void main(String[] args) {
+		AbstractDemo obj = new AbstractDemo(5, 10);
+		obj.print();
+	}
+
+}
+```
+Output:
+
+```log
+a = 5
+b = 10
+```
 
 
 
