@@ -12,7 +12,9 @@ Interview questions and answers
     - [Abstract class Vs Interface](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#abstract-class-vs-interface)
     - [What to choose – interface or abstract class](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#what-to-choose--interface-or-abstract-class)
     - [Why Java 8 has introduced default methods?](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#why-java-8-has-introduced-default-methods)
-    - [Test](https)
+    - [Why Java 8 has introduced static methods?](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#why-java-8-has-introduced-static-methods)
+    - [Why Java does not allow multiple inheritance?](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#why-java-does-not-allow-multiple-inheritance)
+
 - **Java**
   - [Multi threading](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#multi-threading)
     - [Life Cycle of a Thread](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#life-cycle-of-a-thread)
