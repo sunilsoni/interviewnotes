@@ -241,12 +241,44 @@ public class Child implements Interface1, Interface2 {
 	}
 }
 ```
-
+Output: 
 ```log
 Inside Child class hello method
 Hello from Interface1
 ```
 
+Why Java 8 has introduced static methods?
+------------
+
+Consider an example where you want to define a utility class, what you usually do is you define a class which contains static methods and then you call these methods using class name. Now, Java 8 onwards you can do the same thing using an Interface by giving only static methods inside your interface. This way of using Interface for defining utility classes is better as it helps in performance also, because using a class is more expensive operation than using an interface.
+
+Why Java does not allow multiple inheritance?
+------------
+Multiple inheritance occurs when a class has more than one parent classes.
+Why Java does not allow this : let us consider there are 2 parent classes having a method named hello() with same signature and one child class is extending these 2 classes, if you call this hello() method which is same in both parents, which parent class method will get executed – it results into an ambiguous situation, this is also called Diamond Problem .
+You will get a compile time error if you try to extend more than one class.
 
 
+```java
+class Parent1 {
+	default void hello() {
+		System.out.println("Hello from Parent1 class");
+	}
+}
 
+class Parent2 {
+	default void hello() {
+		System.out.println("Hello from Parent2 class");
+	}
+}
+
+public class Child extends Parent1, Parent2 {
+	
+}
+
+```
+
+Output:
+```log
+Syntax error on token ",". expected.
+```
