@@ -226,7 +226,7 @@ nside Child class hello method
 Hello from Interface1
 ```
 
- <img src="./images/default-methods-error.png" width="500" border="2" />
+ <img src="./images/default-methods-error.png" width="800" border="2" />
 
 So, to avoid this error, it is mandatory to provide implementation for common default methods of interfaces
 
