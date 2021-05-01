@@ -220,12 +220,8 @@ interface Interface2 {
 public class Child implements Interface1, Interface2 {
 	
 }
-```
-```log
-nside Child class hello method
-Hello from Interface1
-```
 
+```
  <img src="./images/default-methods-error.png" width="800" border="2" />
 
 So, to avoid this error, it is mandatory to provide implementation for common default methods of interfaces
