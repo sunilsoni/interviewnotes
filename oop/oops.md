@@ -166,22 +166,90 @@ a = 5
 b = 10
 ```
 
+Interface
+------------
+- An interface in Java is a blueprint of a class. It has static constants and abstract methods.
+- Interface specify what a class must do but not how to do
+- An interface is like defining a contract that is fulfilled by implementing classes
+- An interface is used to achieve full abstraction.
+- All methods in an interface are public and abstract by default and all variables declared in an interface are constants i.e. public, static and final
+- A class which implements an interface will have to provide implementation of all the methods that are defined in the interface
+- A class can implement more than one interface, this is how Java allows multiple inheritance.
+- Since Java 8, we can have default and static methods in an interface
 
+Abstract class Vs Interface
+------------
+The differences are:
+- Abstract class can have both abstract and concrete methods but interface can only have abstract methods (Java 8 onwards, it can have default and static methods as well)
+- Abstract class methods can have access modifiers other than public but interface methods are implicitly public and abstract
+- Abstract class can have final, non-final, static and non-static variables but interface variables are only static and final
+- A subclass can extend only one abstract class but it can implement multiple interfaces
+- An Abstract class can extend one other class and can implement multiple interfaces but an interface can only extend other interfaces
 
+from Java 8 onwards, you can have static and default methods in an Interface so now what is the difference between abstract class and interface and the answer is – We can still extend only one class but can implement multiple interfaces.
 
+What to choose – interface or abstract class
+------------
+Consider these points while choosing between the two:
+- When you want to provide default implementation to some of the common methods that can be used directly by the sub-classes then you can use abstract class because it can have concrete methods also, this is not the case with Interface because the child classes that are implementing this interface will have to provide implementation for all the methods that are declared in the interface
+- If your contract keeps on changing then Interface will create problems because then you will have to provide implementation of those new methods in all the implementing classes, whereas with abstract class you can provide one default implementation to the new methods and only change those implementing classes that are actually going to use these new methods
 
+Most of the times, interfaces are a good choice. It is also one of the best practices, when you code in terms of interfaces.
 
+Why Java 8 has introduced default methods?
+------------
 
+To extend the capability of an already existing interface, default methods are introduced in Java 8. Let’s understand this by one example:
 
+Consider there are 100 classes that are implementing one interface. Now you want to define one new method inside your interface. In this case you will have to change all the implementation classes to fulfill the interface contract. So, Java introduced default methods, here you can provide default implementation of that new method inside your interface and as it is not mandatory to provide implementation of default methods by the implementing classes, all the 100 classes can use the default implementation or if they want they can provide their own implementation by overriding the default method.
 
+Now consider one interesting scenario: You have two interfaces, Interface1 and Interface2 both having default method hello() and one class is implementing these 2 interfaces without giving implementation to this default method. You see the problem here? Yes, it is the famous Diamond Problem (Refer to Question 9 , if you’re not already familiar with this problem).
+```java
+interface Interface1 {
+	default void hello() {
+		System.out.println("Hello from Interface1");
+	}
+}
 
+interface Interface2 {
+	default void hello() {
+		System.out.println("Hello from Interface2");
+	}
+}
 
+public class Child implements Interface1, Interface2 {
+	
+}
+```
+```log
+nside Child class hello method
+Hello from Interface1
+```
 
+ <img src="./images/default-methods-error.png" width="500" border="2" />
 
+So, to avoid this error, it is mandatory to provide implementation for common default methods of interfaces
 
+```java
 
+public class Child implements Interface1, Interface2 {
+	@Override
+	public void hello() {
+		System.out.println("inside Child class hello method");
+		Interface1.super.hello();
+	}
+	
+	public static void main(String[] args) {
+		Child obj = new Child();
+		obj.hello();
+	}
+}
+```
 
-
+```log
+Inside Child class hello method
+Hello from Interface1
+```
 
 
 
