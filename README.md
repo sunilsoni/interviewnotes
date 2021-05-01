@@ -2,6 +2,8 @@
 
 Interview questions and answers
 
+- **Object-oriented programming(OOPS)**
+  - [OOPS](https://github.com/sunilsoni/interview-notes/blob/main/oop/oop.md)
 - **Java**
   - [Multi threading](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#multi-threading)
     - [Life Cycle of a Thread](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#life-cycle-of-a-thread)
@@ -95,5 +97,7 @@ Interview questions and answers
     *  [Features of MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#features-of-mongodb)
     *  [Indexes in MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#indexes-in-mongodb)
     *  [MongoDB](https)
-
+  
+- **Maven**
+  - [Maven](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#Maven)
 
