@@ -14,14 +14,22 @@ Interview questions and answers
     - [Why Java 8 has introduced default methods?](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#why-java-8-has-introduced-default-methods)
     - [Why Java 8 has introduced static methods?](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#why-java-8-has-introduced-static-methods)
     - [Why Java does not allow multiple inheritance?](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#why-java-does-not-allow-multiple-inheritance)
-
+  
 - **Java**
   - [Multi threading](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#multi-threading)
     - [Life Cycle of a Thread](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#life-cycle-of-a-thread)
     - [Creating a Thread](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#creating-a-thread)
     - [Life Cycle of a Thread](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#life-cycle-of-a-thread)
     - [Creating a Thread](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#creating-a-thread)
-    - [Q. What does join() method?](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#q-what-does-join-method)
+    - [What does join() method?](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#q-what-does-join-method)
+    - [Deadlock](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#deadlock) 
+    - [How to avoid deadlock?](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#how-to-avoid-deadlock)
+    - [What will happen if I directly call the run() method and not the start() method to execute a thread?](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#what-will-happen-if-i-directly-call-the-run-method-and-not-the-start-method-to-execute-a-thread)
+    - [Once a thread has been started can it be started again?](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#once-a-thread-has-been-started-can-it-be-started-again)
+    - [Why wait, notify and notifyAll methods are defined in the Object class instead of Thread class?](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#why-wait-notify-and-notifyall-methods-are-defined-in-the-object-class-instead-of-thread-class)
+    - [Why wait(), notify(), notifyAll() methods must be called from synchronized block?](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#why-wait-notify-notifyall-methods-must-be-called-from-synchronized-block)
+    - [wait() vs sleep() methods](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#wait-vs-sleep-methods)
+    - [Executor Framework](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#executor-framework)
     - [Life](https)
 
 
@@ -62,8 +70,7 @@ Interview questions and answers
       * [Strategy](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/behavioral-design-pattern.md##-strategy)
       * [State](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/behavioral-design-pattern.md##-state)
       * [Template Method](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/behavioral-design-pattern.md##-template-method)
-
-
+  
 - **Microservices**
   - [Microservices](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md)
     * [Advantages of Microservices Architecture](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#advantages-of-microservices-architecture)
@@ -74,8 +81,7 @@ Interview questions and answers
     * [Microservices vs Monolithic Architecture](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#microservices-vs-monolithic-architecture)
     * [How does Microservice Architecture work?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#how-does-microservice-architecture-work)
     * [Communicating Between Microservices](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#communicating-between-microservices)
-
-
+  
 - **Kafka**
   - [Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md)
     * [Advantages of Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#advantages-of-kafka)
