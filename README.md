@@ -31,8 +31,7 @@ Interview questions and answers
     - [wait() vs sleep() methods](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#wait-vs-sleep-methods)
     - [Executor Framework](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#executor-framework)
     - [Life](https)
-
-
+  
 - **Angular interview questions and answers**
   - [Angular](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md)
     - [Angular Routing and Navigation](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-routing.md#1-angular-routing-and-navigation)
