@@ -16,6 +16,12 @@ Interview questions and answers
     - [Why Java does not allow multiple inheritance?](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#why-java-does-not-allow-multiple-inheritance)
   
 - **Java**
+  - [collection framework](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#collection-framework)
+    - [HashMap](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#hashmap)
+    - [Interal working of put() and get() methods of HashMap](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#interal-working-of-put-and-get-methods-of-hashmap-)
+    - [HashMap collisions](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#hashmap-collisions)
+    - [Life](https)
+    
   - [Multi threading](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#multi-threading)
     - [Life Cycle of a Thread](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#life-cycle-of-a-thread)
     - [Creating a Thread](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#creating-a-thread)
