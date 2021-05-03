@@ -1,4 +1,4 @@
-collection framework
+Collection Framework
 ====================
 
 Collection framework represents an architecture to store and manipulate a group of objects. All the classes and interfaces of this framework are present in java.util package.
