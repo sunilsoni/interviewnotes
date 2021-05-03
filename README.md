@@ -123,8 +123,16 @@ Interview questions and answers
 - **Maven**
   - [Maven](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#Maven)
 
-- **DevOps**
+- **DevOps Tools**
   - [Docker](https)
-  - [Git](https)
+  - [Git](https://github.com/sunilsoni/interview-notes/blob/main/devops/git/git.md#git)
+    * [Advantages of git](https://github.com/sunilsoni/interview-notes/blob/main/devops/git/git.md#advantages-of-git)
+    * [git push](https://github.com/sunilsoni/interview-notes/blob/main/devops/git/git.md#git-push)
+    * [git pull vs git fetch](https://github.com/sunilsoni/interview-notes/blob/main/devops/git/git.md#git-pull-vs-git-fetch)
+    * [conflict](https://github.com/sunilsoni/interview-notes/blob/main/devops/git/git.md#conflict)
+    * [resolve a conflict](https://github.com/sunilsoni/interview-notes/blob/main/devops/git/git.md#resolve-a-conflict)
+    * [git clone](https://github.com/sunilsoni/interview-notes/blob/main/devops/git/git.md#git-clone)
+    * [git pull origin](https://github.com/sunilsoni/interview-notes/blob/main/devops/git/git.md#git-pull-origin)
+    * [git commit a](https://github.com/sunilsoni/interview-notes/blob/main/devops/git/git.md#git-commit-a)
   - [Jenkins](https)
   - [Kubernetes](https)

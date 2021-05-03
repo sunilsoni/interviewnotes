@@ -4,7 +4,7 @@ Git
 > Git is an open source distributed version control system and source code management (SCM) system with an insistence to control small and large projects with speed and efficiency.
 
 
-advantages of git
+Advantages of git
 ------
 - Data repetition and data replication is possible
 - It is a much applicable service
