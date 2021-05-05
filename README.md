@@ -38,6 +38,13 @@ Interview questions and answers
     * [Executor Framework](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#executor-framework)
     * [Test](https)
   
+- **Spring**
+  - [Spring Boot Security using OAuth2 with JWT](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#collection-framework)
+    * [HashMap](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#hashmap) 
+    * [OAuth2 Terminology](http)
+    * [Json Web Token(JWT)](http)
+    * [Spring Boot Rest Authentication with JWT Token Flow](http)
+
 - **Angular interview questions and answers**
   - [Angular](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md)
     * [Angular Routing and Navigation](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-routing.md#1-angular-routing-and-navigation)
