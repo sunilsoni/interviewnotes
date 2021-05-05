@@ -39,11 +39,11 @@ Interview questions and answers
     * [Test](https)
   
 - **Spring**
-  - [Spring Boot Security using OAuth2 with JWT](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#collection-framework)
-    * [HashMap](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#hashmap) 
-    * [OAuth2 Terminology](http)
-    * [Json Web Token(JWT)](http)
-    * [Spring Boot Rest Authentication with JWT Token Flow](http)
+  - [Spring](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#spring)
+    * [Spring Boot Security using OAuth2 with JWT](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#spring-boot-security-using-oauth2-with-jwt) 
+    * [OAuth2 Terminology](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#oauth2-terminology)
+    * [Json Web Token(JWT)](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#json-web-tokenjwt)
+    * [Spring Boot Rest Authentication with JWT Token Flow](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#spring-boot-rest-authentication-with-jwt-token-flow)
 
 - **Angular interview questions and answers**
   - [Angular](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md)
