@@ -508,5 +508,71 @@ Here, both e1 and e2 are equals as we are comparing the contents of them in our 
 You can be asked to write the `equals()` and `hashCode()` methods implementation by hand also, so you should pay attention to how these are implemented.
 
 
+How to make a HashMap synchronized?
+
+Collections.synchronizedMap(map);
+
+Concurrent HashMap
+------------------
+
+`ConcurrentHashMap` class provides concurrent access to the map, this class is very similar to `HashTable`, except that `ConcurrentHashMap` provides better concurrency than `HashTable` or even `synchronizedMap`.
+
+Some points to remember:
+- `ConcurrentHashMap` is internally divided into segments, by default size is 16 that means, at max 16 threads can work at a time
+- Unlike `HashTable`, the entire map is not locked while reading/writing from the map
+- In `ConcurrentHashMap`, concurrent threads can read the value without locking
+- For adding or updating the map, the lock is obtained on segment level, that means each thread can work on each segment during high concurrency
+- Concurrency level defines a number, which is an estimated number of threads concurrently accessing the map
+- `ConcurrentHashMap` does not allow null keys or null values
+- put() method acquires lock on the segment
+- get() method returns the most recently updated value
+- iterators returned by `ConcurrentHashMap` are fail-safe and never throw `ConcurrentModificationException`
+
+HashSet class
+--------------
+HashSet is a class in Java that implements the Set Interface and it allows us to have the unique elements only. HashSet class does not maintain the insertion order of elements, if you want to maintain the insertion order, then you can use LinkedHashSet.
+
+- **Internal implementation of HashSet:**
+
+HashSet internally uses HashMap and as we know the keys are unique in hashmap, the value passed in the add() method of HashSet is stored as the key of hashmap, that is how Set maintains the unique elements.
+
+```java
+/**
+* Constructs a new, empty set; the backing <tt> HashMap </tt> instance has
+* default initial capacity (16) and load factor (0.75).
+*/
+public HashSet() {
+        map = new HashMap<>();
+}
+private transient HashMap<E,Object> map ;
+
+```
+Let’s see add() method’s Javadoc:
+```java
+public boolean add(E e ) {
+        return map .put(e , PRESENT )==null ;
+}
+// Dummy value to associate with an Object in the backing Map
+private static final Object PRESENT = new Object();
+```
+
+So, when we call hashSet.add(element) method then
+- map.put() is called where key is the element and value is the dummy value (the map.put() method internal working has already been discussed above)
+- if value is added in the map then put method will return null which will be compared with null, hence returning true from hashSet.add() method indicating the element is added
+- however if the element is already present in the map, then the value associated with the element will be returned which in turn will be compared with null, returning false from hashSet.add() method
+
+set.contains() method:
+
+```java
+public boolean contains(Object o ) {
+    return map .containsKey(o );
+}
+```
+The passed object is given to map.containsKey() method, as the HashSet’s values are stored as the keys of internal map.
+
+NOTE: If you are adding a custom class object inside the HashSet, do follow equals and hashCode contract.
+
+
+
 
 
