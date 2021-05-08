@@ -20,7 +20,7 @@ Interview questions and answers
     * [HashMap](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#hashmap)
     * [Interal working of put() and get() methods of HashMap](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#interal-working-of-put-and-get-methods-of-hashmap-)
     * [HashMap collisions](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#hashmap-collisions)
-    * [equals and hashCode method in HashMap when the key is a custom class](https)
+    * [equals and hashCode method in HashMap when the key is a custom class](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#equals-and-hashcode-method-in-hashmap-when-the-key-is-a-custom-class)
     * [Test](https)
     * [Test](https)
     * [Test](https)
