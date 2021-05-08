@@ -235,6 +235,278 @@ equals and hashCode method in HashMap when the key is a custom class
 
 `equals` and `hashCode` methods are called when we store and retrieve values from hashmap.
 
-if in your custom class, you are not implementing equals() and hashCode(), then the Object class equals() and hashCode() will be called, and the contract between these 2 methods. 
+if in your custom class, you are not implementing `equals()` and `hashCode()`, then the Object class `equals()` and `hashCode()` will be called, and the contract between these 2 methods. 
 It says when 2 objects are equal according to equals() method, then their hashCode must be same, reverse may not be true.
+
+- **Scenario 1**: when custom class does not implement both equals and hashCode methods
+```java
+public class Employee {
+  private String name;
+  private int age;
+  public Employee(String name, int age) {
+    this.name = name;
+    this.age = age;
+  }
+}
+```
+Here, `Employee` class has not given `equals()` and `hashCode()` method implementation, so Object’s class `equals()` and `hashCode()` methods will be used when we use this `Employee` class as hashmap’s key, and remember, equals() method of Object class compares the reference.
+
+TestHashMap.java:
+```java
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class TestHashMap {
+  public static void main(String[] args) {
+
+    Map<Employee, Integer> map = new HashMap<>();
+
+    Employee e1 = new Employee("Mike", 15);
+    Employee e2 = new Employee("Mike", 15);
+    Employee e3 = new Employee("John", 20);
+    Employee e4 = e3;
+
+    System.out.println("e1 hashcode: " + e1.hashCode());
+    System.out.println("e2 hashcode: " + e2.hashCode());
+    System.out.println("e3 hashcode: " + e3.hashCode());
+    System.out.println("e4 hashcode: " + e4.hashCode());
+
+    System.out.println("e1 equals e2: " + e1.equals(e2));
+    System.out.println("e3 equals e4: " + e3.equals(e4));
+
+    map.put(e1, 100);
+    map.put(e2, 200);
+    map.put(e3, 300);
+    map.put(e4, 400);
+
+    System.out.println(map.get(e1));
+    System.out.println(map.get(e2));
+    System.out.println(map.get(e3));
+    System.out.println(map.get(e4));
+    System.out.println("hashmap size: " + map.size());
+  }
+}
+```
+
+Output:
+```log
+e1 hashcode: 1324119927
+e2 hashcode: 999966131
+e3 hashcode: 1989780873
+e4 hashcode: 1989780873
+e1 equals e2: false
+e3 equals e4: true
+100
+200
+400
+400
+hashmap size: 3
+```
+Here, `Employee` objects e1 and e2 are same but they are both inserted in the `HashMap` because both are created using new keyword and holding a different reference, and as the Object’s `equals()` method checks reference, they both are unique.
+And as for objects e3 and e4, they both are pointing to same reference (e4 = e3), so they are equal according to Object’s `equals()` method hence the value of e3 which was 300 gets replaced with the value 400 of the same key e4, and finally size of HashMap is 3.
+
+
+- **Scenario 2**:  when only equals() method is implemented by Employee class
+
+```java
+
+public class Employee {
+
+  private String name;
+  private int age;
+
+  public Employee(String name, int age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj)
+      return true;
+    if (obj == null)
+      return false;
+    if (getClass() != obj.getClass())
+      return false;
+    Employee other = (Employee) obj;
+    if (age != other.age)
+      return false;
+    if (name == null) {
+      if (other.name != null)
+        return false;
+    } else if (!name.equals(other.name))
+      return false;
+    return true;
+  }
+
+}
+```
+
+```java
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class TestHashMap {
+  public static void main(String[] args) {
+
+    Map<Employee, Integer> map = new HashMap<>();
+
+    Employee e1 = new Employee("Mike", 15);
+    Employee e2 = new Employee("Mike", 15);
+    Employee e3 = new Employee("John", 20);
+    Employee e4 = e3;
+
+    System.out.println("e1 hashcode: " + e1.hashCode());
+    System.out.println("e2 hashcode: " + e2.hashCode());
+    System.out.println("e3 hashcode: " + e3.hashCode());
+    System.out.println("e4 hashcode: " + e4.hashCode());
+
+    System.out.println("e1 equals e2: " + e1.equals(e2));
+    System.out.println("e3 equals e4: " + e3.equals(e4));
+
+    map.put(e1, 100);
+    map.put(e2, 200);
+    map.put(e3, 300);
+    map.put(e4, 400);
+
+    System.out.println(map.get(e1));
+    System.out.println(map.get(e2));
+    System.out.println(map.get(e3));
+    System.out.println(map.get(e4));
+    System.out.println("hashmap size: " + map.size());
+  }
+}
+```
+
+
+
+Let’s see the output:
+```log
+e1 hashcode: 1324119927
+e2 hashcode: 999966131
+e3 hashcode: 1989780873
+e4 hashcode: 1989780873
+e1 equals e2: true
+e3 equals e4: true
+100
+200
+400
+400
+hashmap size: 3
+```
+
+Well, nothing’s changed here. Because even though e1 and e2 are equal according to our newly implemented equals() method, they still have different hashCode as the Object’s class hashCode() is used. So the equals and hashCode contract is not followed and both e1, e2 got inserted in HashMap.
+
+- **Scenario 3**:  when only hashCode() method is implemented:
+
+
+
+```java
+
+public class Employee {
+  private String name;
+  private int age;
+
+  public Employee(String name, int age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + age;
+    result = prime * result + ((name == null) ? 0 : name.hashCode());
+    return result;
+  }
+
+}
+```
+
+
+Let’s run our TestHashMap class again and see the output: 
+```log
+e1 hashcode: 2399656
+e2 hashcode: 2399656
+e3 hashcode: 2316120
+e4 hashcode: 2316120
+e1 equals e2: false
+e3 equals e4: true
+100
+200
+400
+400
+hashmap size: 3
+
+```
+
+Well, now we have same hashCode for e1 and e2, but Object’s equals method still checks the references and as references are different, both are not equal and are inserted in the hashmap.
+
+- **Scenario 4**: When both equals and hashCode are implemented properly:
+
+```java
+
+public class Employee {
+    private String name;
+    private int age;
+
+    public Employee(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + age;
+        result = prime * result + ((name == null) ? 0 : name.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Employee other = (Employee) obj;
+        if (age != other.age)
+            return false;
+        if (name == null) {
+            if (other.name != null)
+                return false;
+        } else if (!name.equals(other.name))
+            return false;
+        return true;
+    }
+}
+```
+
+Output:
+
+```log
+e1 hashcode: 2399656
+e2 hashcode: 2399656
+e3 hashcode: 2316120
+e4 hashcode: 2316120
+e1 equals e2: true
+e3 equals e4: true
+200
+200
+400
+400
+hashmap size: 2
+```
+Here, both e1 and e2 are equals as we are comparing the contents of them in our equals() method, so their hashCodes must be same, which they are. So value of e1 which was 100 got replaced by 200, and size of hashmap is 2.
+
+You can be asked to write the equals() and hashCode() methods implementation by hand also, so you should pay attention to how these are implemented.
+
+
+
 
