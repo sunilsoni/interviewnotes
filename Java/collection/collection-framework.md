@@ -397,7 +397,7 @@ e3 equals e4: true
 hashmap size: 3
 ```
 
-Well, nothing’s changed here. Because even though e1 and e2 are equal according to our newly implemented equals() method, they still have different hashCode as the Object’s class hashCode() is used. So the equals and hashCode contract is not followed and both e1, e2 got inserted in HashMap.
+Well, nothing’s changed here. Because even though e1 and e2 are equal according to our newly implemented `equals()` method, they still have different hashCode as the Object’s class `hashCode()` is used. So the equals and hashCode contract is not followed and both e1, e2 got inserted in `HashMap`.
 
 - **Scenario 3**:  when only hashCode() method is implemented:
 
@@ -427,7 +427,7 @@ public class Employee {
 ```
 
 
-Let’s run our TestHashMap class again and see the output: 
+Let’s run our `TestHashMap` class again and see the output: 
 ```log
 e1 hashcode: 2399656
 e2 hashcode: 2399656
@@ -503,9 +503,9 @@ e3 equals e4: true
 400
 hashmap size: 2
 ```
-Here, both e1 and e2 are equals as we are comparing the contents of them in our equals() method, so their hashCodes must be same, which they are. So value of e1 which was 100 got replaced by 200, and size of hashmap is 2.
+Here, both e1 and e2 are equals as we are comparing the contents of them in our `equals()` method, so their hashCodes must be same, which they are. So value of e1 which was 100 got replaced by 200, and size of hashmap is 2.
 
-You can be asked to write the equals() and hashCode() methods implementation by hand also, so you should pay attention to how these are implemented.
+You can be asked to write the `equals()` and `hashCode()` methods implementation by hand also, so you should pay attention to how these are implemented.
 
 
 
