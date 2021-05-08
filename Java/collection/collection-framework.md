@@ -230,3 +230,11 @@ hashmap capacity: 32
 hashmap size: 13
 ```
 
+equals and hashCode method in HashMap when the key is a custom class
+-----------------
+
+`equals` and `hashCode` methods are called when we store and retrieve values from hashmap.
+
+if in your custom class, you are not implementing equals() and hashCode(), then the Object class equals() and hashCode() will be called, and the contract between these 2 methods. 
+It says when 2 objects are equal according to equals() method, then their hashCode must be same, reverse may not be true.
+
