@@ -573,6 +573,297 @@ The passed object is given to map.containsKey() method, as the HashSet’s value
 NOTE: If you are adding a custom class object inside the HashSet, do follow equals and hashCode contract.
 
 
+TreeMap
+-------
+TreeMap class is one of the implementation of Map interface.
+
+Some points to remember:
+- TreeMap entries are sorted based on the natural ordering of its keys. This means if we are using a custom class as the key, we have to make sure that the custom class is implementing Comparable interface
+- TreeMap class also provides a constructor which takes a Comparator object, this should be used when we want to do a custom sorting
+- TreeMap provides guaranteed log(n) time complexity for the methods such as containsKey(), get(), put() and remove()
+- TreeMap iterator is fail-fast in nature, so any concurrent modification will result in ConcurrentModificationException
+- TreeMap does not allow null keys but it allows multiple null values
+- TreeMap is not synchronized, so it is not thread-safe. We can make it thread-safe by using utility method, Collections.synchronizedSortedMap(treeMap)
+- TreeMap internally uses Red-Black tree based NavigableMap implementation.
+
+Red-Black tree algorithm has the following properties:
+
+- Color of every node in the tree is either red or black.
+- Root node must be Black in color.
+- Red node cannot have a red color neighbor node.
+- All paths from root node to the null should consist the same number of black nodes
+
+- **Program 1**: Using Wrapper class as key
+
+```java
+
+import java.util.TreeMap;
+
+public class TestTreeMap {
+  public static void main(String[] args) {
+    TreeMap<Integer, String> map = new TreeMap<>();
+    map.put(4, "Mike");
+    map.put(1, "John");
+    map.put(3, "Jack");
+    map.put(2, "Lisa");
+
+    map.forEach((k,v) -> System.out.println(k + ":" + v));
+  }
+}
+
+```
+Output:
+
+```log
+1:John
+2:Lisa
+3:Jack
+4:Mike
+```
+Here, Integer class already implements Comparable interface, so the keys are sorted based on the Integer’s natural sorting order (ascending order).
+
+Let’s see, when key is a custom class:
+
+- **Program 2**:
+
+```java
+
+import java.util.TreeMap;
+
+class Employee {
+	String name;
+	int age;
+	Employee(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+}
+
+public class TestTreeMap {
+	public static void main(String[] args) {
+		
+		TreeMap<Employee, Integer> map = new TreeMap<>();
+		
+		map.put(new Employee("Mike", 20), 100);
+		map.put(new Employee("John", 10), 500);
+		map.put(new Employee("Ryan", 15), 200);
+		map.put(new Employee("Lisa", 20), 400);
+		
+		map.forEach((k,v) -> System.out.println(k + ":" + v));		
+	}
+}
+
+```
+
+```log
+Exception in thread "main" java.lang.ClassCastException: class GrokkingInterview.Grokking.Question109.Program2.Employee cannot be cast to class java.lang.Comparable (GrokkingInterview.Grokking.Question109.Program2.Employee is in unnamed module of loader 'app'; java.lang.Comparable is in module java.base of loader 'bootstrap')
+	at java.base/java.util.TreeMap.compare(TreeMap.java:1563)
+	at java.base/java.util.TreeMap.addEntryToEmptyMap(TreeMap.java:768)
+	at java.base/java.util.TreeMap.put(TreeMap.java:777)
+	at java.base/java.util.TreeMap.put(TreeMap.java:534)
+	at GrokkingInterview.Grokking.Question109.Program2.TestTreeMap.main(TestTreeMap.java:19)
+```
+
+We get `ClassCastException` at runtime. Now, let’s implement `Comparable` interface in `Employee` class and provide implementation of its `compareTo()` method:
+
+
+- **Program 3**:
+```java
+
+import java.util.TreeMap;
+
+class Employee implements Comparable<Employee> {
+  String name;
+  int age;
+  Employee(String name, int age) {
+    this.name = name;
+    this.age = age;
+  }
+  @Override
+  public int compareTo(Employee emp) {
+    return this.name.compareTo(emp.name);
+  }
+  @Override
+  public String toString() {
+    return "Employee [name=" + name + ", age=" + age + "]";
+  }
+}
+
+public class TestTreeMap {
+  public static void main(String[] args) {
+
+    TreeMap<Employee, Integer> map = new TreeMap<>();
+
+    map.put(new Employee("Mike", 20), 100);
+    map.put(new Employee("John", 10), 500);
+    map.put(new Employee("Ryan", 15), 200);
+    map.put(new Employee("Lisa", 20), 400);
+
+    map.forEach((k,v) -> System.out.println(k + ":" + v));
+  }
+}
+```
+Here, we are sorting based on `Employee` name,
+
+Output:
+
+```log
+Employee [name=John, age=10]:500
+Employee [name=Lisa, age=20]:400
+Employee [name=Mike, age=20]:100
+Employee [name=Ryan, age=15]:200
+```
+Let’s look at a program where we pass a `Comparator` in the `TreeMap` constructor, and sort the `Employee` object’s based on age in descending order:
+
+- **Program 4**:
+
+```java
+
+import java.util.Comparator;
+import java.util.TreeMap;
+import java.util.TreeSet;
+
+class Employee {
+	String name;
+	int age;
+	Employee(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+	@Override
+	public String toString() {
+		return "Employee [name=" + name + ", age=" + age + "]";
+	}
+}
+
+public class TestTreeMap {
+	public static void main(String[] args) {
+		TreeMap<Employee, Integer> map = new TreeMap<>(
+				new Comparator<Employee>() {
+					@Override
+					public int compare(Employee e1, Employee e2) {					
+						if(e1.age < e2.age){
+							return 1;
+						} else if(e1.age > e2.age) {
+							return -1;
+						}
+						return 0;
+					}		
+				}
+			);
+		
+		map.put(new Employee("Mike", 20), 100);
+		map.put(new Employee("John", 10), 500);
+		map.put(new Employee("Ryan", 15), 200);
+		map.put(new Employee("Lisa", 40), 400);
+		
+		map.forEach((k,v) -> System.out.println(k + ":" + v));		
+	}
+}
+
+
+```
+
+Output:
+
+```log
+Employee [name=Lisa, age=40]:400
+Employee [name=Mike, age=20]:100
+Employee [name=Ryan, age=15]:200
+Employee [name=John, age=10]:500
+
+```
+
+Here, in Employee class, I have not implemented equals() and hashCode()
+
+TreeMap’s Javadoc:
+
+```java
+public class TreeMap<K,V>
+        extends AbstractMap<K,V>
+        implements NavigableMap<K,V>, Cloneable, java.io.Serializable
+{
+  /**
+   * The comparator used to maintain order in this tree map, or
+   * null if it uses the natural ordering of its keys.
+   *
+   * @serial
+   */
+  private final Comparator<? super K> comparator ;
+  private transient Entry<K,V> root ;
+  //No-arg TreeMap constructor:
+  public TreeMap() {
+    comparator = null ;
+  }
+}
+
+```
+
+TreeMap constructor which takes comparator object:
+
+```java
+public TreeMap(Comparator<? super K> comparator ) {
+            this .comparator = comparator ;
+        }
+        
+       // TreeMap.put() method excerpt:
+public V put(K key , V value ) {
+        Entry<K,V> t = root ;
+        if (t == null ) {
+          compare(key , key ); // type (and possibly null) check
+          root = new Entry<>(key , value , null );
+          size = 1;
+          modCount ++;
+          return null ;
+        }
+        
+        int cmp ;
+        Entry<K,V> parent ;
+// split comparator and comparable paths
+        Comparator<? super K> cpr = comparator ;
+        if (cpr != null ) {
+          do {
+            parent = t ;
+            cmp = cpr .compare(key , t .key );
+            if (cmp < 0)
+                t = t .left ;
+            else if (cmp > 0)
+              t = t .right ;
+            else
+                return t .setValue(value );
+          } while (t != null );
+        }
+```
+
+
+TreeSet
+---------
+
+TreeSet class is one of the implementation of Set interface
+
+Some points to remember:
+- TreeSet class contains unique elements just like HashSet
+- TreeSet class does not allow null elements
+- TreeSet class is not synchronized
+- TreeSet class internally uses TreeMap, i.e. the value added in TreeSet is internally stored in the key of TreeMap
+- TreeSet elements are ordered using their natural ordering or by a Comparator which can be provided at the set creation time
+- TreeSet provides guaranteed log(n) time cost for the basic operations (add, remove and contains)
+- TreeSet iterator is fail-fast in nature
+
+TreeSet Javadoc:
+
+```java
+public class TreeSet<E> extends AbstractSet<E>
+        implements NavigableSet<E>, Cloneable, java.io.Serializable
+        public TreeSet() {
+          this (new TreeMap<E,Object>());
+        }
+        public TreeSet(Comparator<? super E> comparator ) {
+          this (new TreeMap<>(comparator ));
+        }
+
+```
+
 
 
 
