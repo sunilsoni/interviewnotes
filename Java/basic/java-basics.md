@@ -14,5 +14,33 @@ String is immutable for below reasons:
 - **Class Loaders** : Strings are used in Java ClassLoaders and since String is made immutable, it provides security that correct class is being loaded.
 
 
+StringBuffer and StringBuilder
+-----------------------
+
+- Both StringBuffer and StringBuilder classes are used for String manipulation. These are mutable objects. But StringBuffer provides thread-safety as all its methods are synchronized, this makes performance of StringBuffer slower as compared to StringBuilder.
+
+- StringBuffer class is present from Java 1.0, but due to its slower performance, StringBuilder class was introduced in Java 1.5
+
+- If you are in a single-threaded environment or don’t care about thread safety, you should use StringBuilder. Otherwise, use StringBuffer for thread-safe operations.
+
+- You should use String class if you require immutability, use StringBuffer if you require mutability + Thread safety and use StringBuilder if you require mutability and no thread safety.
+
+equals and hashcode contract
+-------------
+
+The equals and hashcode contract says:
+> If two objects are equals according to equals() method, then their hashcode must be same but reverse is not true i.e. if two objects have same hashcode then they may/may not be equals.
+
+
+Comparable and Comparator interfaces
+---------------------
+
+
+
+
+
+
+
+
 
 
