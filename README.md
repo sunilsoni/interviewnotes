@@ -21,7 +21,7 @@ Interview questions and answers
     * [StringBuffer and StringBuilder](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#stringbuffer-and-stringbuilder)
     * [equals and hashcode contract](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#equals-and-hashcode-contract)
     * [Comparable and Comparator interfaces](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#comparable-and-comparator-interfaces)
-    * [static keyword](https)
+    * [static keyword](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#static-keyword)
     * [Test](https)
     * [Test](https)
   - [Collection Framework](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#collection-framework)
