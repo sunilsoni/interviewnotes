@@ -212,3 +212,140 @@ Output:
 ]
 
 ```
+
+Comparable and Comparator
+-------------------------
+- `Comparable` interface can be used to provide single way of sorting whereas `Comparator` interface is used to provide multiple ways of sorting
+- `Comparable` interface is present in ‘java.lang’ package whereas `Comparator` interface is present in `java.util` package
+- For using `Comparable`, the class needs to implement `Comparable` interface whereas for using `Comparator`, there is no need to make changes in the class
+- `Comparable` provides `compareTo()` method to sort elements, whereas `Comparator` provides `compare()` method to sort elements
+- We can sort the list elements of `Comparable` type by using `Collections.sort(listObj)` method, whereas to sort the list elements of `Comparator` type, we have to provide a `Comparator` object like, `Collections.sort(listObj, Comparator)`
+
+At times, when you are using any third-party classes or the classes where you are not the author of the class, then in that case `Comparator` is the only choice to sort those objects
+
+static keyword
+--------------
+In Java, a static member is a member of a class that isn’t associated with an instance of a class. Instead, the member belongs to the class itself.
+
+In Java, Static is applicable for the following:
+1.  Variable
+2.  Method
+3.  Block
+4.  Nested class
+
+- **Static Variable** : if any variable is declared as static, then it is known as ‘static variable’. Only single copy of the variable gets created and all instances of the class share same static variable. The static variable gets memory only once in the class area at the time of class loading.
+When to use static variable : static variables should be used to declare common property of all objects as only single copy is created and shared among all class objects, for example, the company name of employees etc.
+
+- **Static Method** : When a method is declared with static keyword then it is known as static method. These methods belong to the class rather than the object of the class. As a result, a static method can be directly accessed using class name without the need of creating an object.
+One of the basic rules of working with static methods is that you can’t access a non-static method or field from a static method because the static method doesn’t have an instance of the class to use to reference instance methods or fields. Another restriction is, ‘this’ and ‘super’ cannot be used in static context.
+For example: main() method is static, Java Runtime uses this method to start an application without creating an object.
+
+- **Static Block** : Static block gets executed exactly once when the class is first loaded, use static block to initialize the static variables.
+
+- **Static nested classes** :
+Static nested classes are a type of inner class in java where the inner class is static. Static nested classes can access only the static members of the outer class. The advantage of using static nested classes is that it makes the code more readable and maintainable.
+In the case of normal inner class, you cannot create inner class object without first creating the outer class object, but in the case of static inner class, there can be a static inner class object without the outer class object.
+
+How to create object of static inner class:
+```java
+    OuterClass.StaticNestedClass nestedClassObject = new OuterClass.StaticNestedClass();
+```
+
+Compile Time Error comes when we try to access non-static member inside static nested class:
+
+```java
+
+class OuterClass {
+    int a = 10;
+    static int b = 20;
+    private static int c = 30;
+
+    static class InnerClass {
+        void print() {
+            System.out.println("Outer class variable a : " + a);
+            System.out.println("Outer class variable b : " + b);
+            System.out.println("Outer class variable c : " + c);
+        }
+    }
+}
+    
+
+```
+Compile Time Error
+```log
+Non-static field 'a' cannot be referenced from a static context
+
+```
+
+```java
+
+
+class OuterClass {
+    int a = 10;
+    static int b = 20;
+    private static int c = 30;
+
+    static class InnerClass {
+        void print() {
+            //System.out.println("Outer class variable a : " + a);
+            System.out.println("Outer class variable b : " + b);
+            System.out.println("Outer class variable c : " + c);
+        }
+    }
+}
+
+public class StaticNestedTestClass {
+    public static void main(String[] args) {
+        OuterClass.InnerClass innerClassObject = new OuterClass.InnerClass();
+        innerClassObject.print();
+    }
+}
+
+```
+
+Output:
+```log
+Outer class variable b : 20
+Outer class variable c : 30
+```
+
+If you have static members in your Static Inner class then there is no need to create the inner class object:
+```java
+
+class OuterClass {
+	static int x = 20;
+	
+	static class InnerClass {
+		static int y = 30;
+		
+		static void display() {
+			System.out.println("Outer x : " + x);
+		}
+	}
+}
+
+public class StaticNestedTestClass {
+	public static void main(String[] args) {
+		OuterClass.InnerClass.display();
+		System.out.println(OuterClass.InnerClass.y);
+	}	
+}
+
+```
+
+Output: 
+```log
+Outer x : 20
+30
+```
+
+
+
+
+
+
+
+
+
+
+
