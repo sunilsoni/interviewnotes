@@ -864,6 +864,214 @@ public class TreeSet<E> extends AbstractSet<E>
 
 ```
 
+fail-safe and fail-fast iterators
+--------
+
+Iterators in Java are used to iterate over the Collection objects.
+
+- **Fail-fast iterators** : 
+immediately throw `ConcurrentModificationException`, if the collection is modified while iterating over it. `Iterator` of `ArrayList` and `HashMap` are fail-fast iterators.
+All the collections internally maintain some sort of array to store the elements, Fail-fast iterators fetch the elements from this array. Whenever, we modify the collection, an internal field called modCount is updated. This modCount is used by Fail-safe iterators to know whether the collection is structurally modified or not. Every time when the Iterator’s next() method is called, it checks the modCount. If it finds that modCount has been 
+
+updated after the Iterator has been created, it throws `ConcurrentModificationException`.
+
+Program 1:
+```java
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class FailFastIteratorTest {
+	public static void main(String[] args) {
+		
+		ArrayList<Integer> list = new ArrayList<>();
+		list.add(1);
+		list.add(2);
+		list.add(3);
+		
+		Iterator<Integer> itr = list.iterator();
+		while(itr.hasNext()) {
+			System.out.println(itr.next());
+			list.add(4);
+		}
+	}
+}
+```
+
+
+Output:
+```log
+1
+Exception in thread "main" java.util.ConcurrentModificationException
+at java.base/java.util.ArrayList$Itr.checkForComodification(ArrayList.java:1013)
+at java.base/java.util.ArrayList$Itr.next(ArrayList.java:967)
+at GrokkingInterview.Grokking.Question111.Failfastiterator.Program1.FailFastIteratorTest.main(FailFastIteratorTest.java:16)
+```
+
+But they don’t throw the exception, if the collection is modified by Iterator’s `remove()` method.
+
+Program 2:
+
+```java
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class FailFastIteratorTest {
+	public static void main(String[] args) {
+		
+		ArrayList<Integer> list = new ArrayList<>();
+		list.add(1);
+		list.add(2);
+		list.add(3);
+		System.out.println("List: " + list);
+		Iterator<Integer> itr = list.iterator();
+		while(itr.hasNext()) {
+			System.out.println(itr.next());
+			itr.remove();
+		}
+		System.out.println("List: " + list);
+	}
+}
+```
+
+Output:
+```log
+List: [1, 2, 3]
+1
+2
+3
+List: []
+
+```
+
+Javadoc:
+
+**arrayList.iterator() method**:
+
+```java
+public Iterator<E> iterator(){
+        return new Itr();
+}
+    
+```
+
+Itr is a private nested class in ArrayList:
+
+
+```java
+private class Itr implements Iterator<E> {
+  int cursor ;       // index of next element to return
+  int lastRet = -1; // index of last element returned; -1 if no such
+  int expectedModCount = modCount ;
+  Itr() {}
+  public boolean hasNext() {
+    return cursor != size ; 
+  }
+```
+
+**Itr.next() method:**
+
+```java
+
+@SuppressWarnings ("unchecked" )
+public E next() {
+        checkForComodification();
+        int i = cursor ;
+        if (i >= size )
+            throw new NoSuchElementException();
+        Object[] elementData = ArrayList.this .elementData ;
+        if (i >= elementData .length )
+            throw new ConcurrentModificationException();
+        cursor = i + 1;
+        return (E) elementData [lastRet = i ];
+        }
+        
+```
+
+See the first statement is a call to checkForComodification():
+
+```java
+final void checkForComodification() {
+    if (modCount != expectedModCount )
+        throw new ConcurrentModificationException();
+}
+```
+
+
+
+On the other hand, 
+
+- **Fail-safe iterators**
+
+does not throw `ConcurrentModificationException` , because they operate on the clone of the collection, not the actual collection. This also means that any modification done on the actual collection goes unnoticed by these iterators. The last statement is not always true though, sometimes it can happen that the iterator may reflect modifications to the collection after the iterator is created. But there is no guarantee of it. CopyOnWriteArrayList, ConcurrentHashMap are the examples of fail-safe iterators.
+
+Program 1: ConcurrentHashMap example
+
+```java
+
+import java.util.Iterator;
+import java.util.TreeMap;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+public class FailSafeIteratorTest {
+	public static void main(String[] args) {
+		CopyOnWriteArrayList<Integer> list = new CopyOnWriteArrayList<>();
+		list.add(1);
+		list.add(2);
+		list.add(3);
+		
+		Iterator<Integer> itr = list.iterator();
+		while(itr.hasNext()) {
+			System.out.println(itr.next());
+			list.add(4);
+		}
+		System.out.println("List: " + list);
+	}
+}
+
+```
+
+Output:
+
+```log
+1 : Mike
+2 : John
+3 : Lisa
+4 : Ryan
+Map: {1=Mike, 2=John, 3=Lisa, 4=Ryan}
+```
+
+Here, iterator is reflecting the element which was added during the iteration operation.
+
+Program 2: CopyOnWriteArrayList example
+```java
+import java.util.Iterator;
+import java.util.TreeMap;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+public class FailSafeIteratorTest {
+	public static void main(String[] args) {
+		CopyOnWriteArrayList<Integer> list = new CopyOnWriteArrayList<>();
+		list.add(1);
+		list.add(2);
+		list.add(3);
+		
+		Iterator<Integer> itr = list.iterator();
+		while(itr.hasNext()) {
+			System.out.println(itr.next());
+			list.add(4);
+		}
+		System.out.println("List: " + list);
+	}
+}
+```
+Output: 
+```log
+1
+2
+3
+List: [1, 2, 3, 4, 4, 4]
+```
+
 
 
 
