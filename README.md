@@ -18,6 +18,10 @@ Interview questions and answers
 - **Java**
   - [Basic](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md)
     * [Why String is Immutable?](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#why-string-is-immutable)
+    * [StringBuffer and StringBuilder](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#stringbuffer-and-stringbuilder)
+    * [equals and hashcode contract](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#equals-and-hashcode-contract)
+    * [Comparable and Comparator interfaces](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#comparable-and-comparator-interfaces)
+    * [Test](https)
   - [Collection Framework](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#collection-framework)
     * [HashMap](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#hashmap)
     * [Interal working of put() and get() methods of HashMap](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#interal-working-of-put-and-get-methods-of-hashmap-)
@@ -28,7 +32,6 @@ Interview questions and answers
     * [TreeMap](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#treemap)
     * [TreeSet](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#treeset)
     * [fail-safe and fail-fast iterators](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#fail-safe-and-fail-fast-iterators)
-    * [StringBuffer and StringBuilder](https)
     * [Test](https)
     
   - [Multi threading](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#multi-threading)
