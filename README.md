@@ -22,6 +22,8 @@ Interview questions and answers
     * [equals and hashcode contract](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#equals-and-hashcode-contract)
     * [Comparable and Comparator interfaces](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#comparable-and-comparator-interfaces)
     * [Test](https)
+    * [Test](https)
+    * [Test](https)
   - [Collection Framework](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#collection-framework)
     * [HashMap](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#hashmap)
     * [Interal working of put() and get() methods of HashMap](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#interal-working-of-put-and-get-methods-of-hashmap-)
