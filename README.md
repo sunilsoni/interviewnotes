@@ -16,6 +16,8 @@ Interview questions and answers
     * [Why Java does not allow multiple inheritance?](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#why-java-does-not-allow-multiple-inheritance)
   
 - **Java**
+  - [Basic](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#collection-framework)
+    * [Why String is Immutable?](https)
   - [Collection Framework](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#collection-framework)
     * [HashMap](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#hashmap)
     * [Interal working of put() and get() methods of HashMap](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#interal-working-of-put-and-get-methods-of-hashmap-)
