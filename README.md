@@ -25,7 +25,7 @@ Interview questions and answers
     * [HashSet class](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#hashset-class)
     * [TreeMap](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#treemap)
     * [TreeSet](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#treeset)
-    * [fail-safe and fail-fast iterators](https)
+    * [fail-safe and fail-fast iterators](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#fail-safe-and-fail-fast-iterators)
     * [Test](https)
     * [Test](https)
     
