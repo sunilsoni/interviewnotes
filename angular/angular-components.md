@@ -50,10 +50,10 @@ Communication Between Components
 
 There are 4 ways to share data between components:
 
-- **1. Parent to Child**: Sharing Data via Input
-- **2. Child to Parent**: Sharing Data via ViewChild with AfterViewInit
-- **3. Child to Parent**: Sharing Data via Output() and EventEmitter
-- **4. Unrelated Components**: Sharing Data with a Service
+1. Parent to Child: Sharing Data via Input
+2. Child to Parent: Sharing Data via ViewChild with AfterViewInit
+3. Child to Parent: Sharing Data via Output() and EventEmitter
+4. Unrelated Components: Sharing Data with a Service
 
 
 - **Parent to Child: Sharing Data via Input**
