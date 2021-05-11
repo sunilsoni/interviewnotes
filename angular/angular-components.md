@@ -40,10 +40,9 @@ required to process the component.
 
 From the official docs:
 
-```
-Components are the most basic building block of an UI in an Angular application. An Angular application is a tree of Angular components. 
+> Components are the most basic building block of an UI in an Angular application. An Angular application is a tree of Angular components. 
 Angular components are a subset of directives. Unlike directives, components always have a template and only one component can be instantiated per an element in a template.
-```
+ 
 
 Communication Between Components
 -------------------------------
