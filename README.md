@@ -67,6 +67,7 @@ Interview questions and answers
     * [Angular Pipes](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-pipes.md)
     * [Angular Data Binding](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-data-binding.md)
     * [Angular Lazy Loading](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-lazy-loading.md)
+    * [Communication Between Components](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-lazy-loading.md)
   
 - **Design Patterns interview questions and answers**
   - [Design Patterns](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md)
