@@ -996,8 +996,6 @@ final void checkForComodification() {
 }
 ```
 
-
-
 On the other hand, 
 
 - **Fail-safe iterators**
@@ -1064,6 +1062,7 @@ public class FailSafeIteratorTest {
 	}
 }
 ```
+
 Output: 
 ```log
 1

@@ -50,15 +50,15 @@ Communication Between Components
 
 There are 4 ways to share data between components:
 
-1. Parent to Child: Sharing Data via Input
-2. Child to Parent: Sharing Data via ViewChild with AfterViewInit
-3. Child to Parent: Sharing Data via Output() and EventEmitter
-4. Unrelated Components: Sharing Data with a Service
+1. Parent to Child: Sharing Data via `Input`
+2. Child to Parent: Sharing Data via `ViewChild` with `AfterViewInit`
+3. Child to Parent: Sharing Data via `Output()` and `EventEmitter`
+4. Unrelated Components: Sharing Data with a `Service`
 
 
 - **Parent to Child: Sharing Data via Input**
 
-It works by using the @Input() decorator to allow data to be passed via the template.
+It works by using the `@Input()` decorator to allow data to be passed via the template.
 
 parent.component.ts
 
@@ -101,7 +101,7 @@ export class ChildComponent {
 
 - **Child to Parent: Sharing Data via ViewChild**
 
-ViewChild allows a one component to be injected into another, giving the parent access to its attributes and functions. One caveat, however, is that child won’t be available until after the view has been initialized. This means we need to implement the AfterViewInit lifecycle hook to receive the data from the child.
+`ViewChild` allows a one component to be injected into another, giving the parent access to its attributes and functions. One caveat, however, is that child won’t be available until after the view has been initialized. This means we need to implement the `AfterViewInit` lifecycle hook to receive the data from the child.
 
 parent.component.ts
 ```typescript
@@ -218,13 +218,13 @@ export class ChildComponent {
 
 When passing data between components that lack a direct connection, such as siblings, grandchildren, etc, you should you a shared service. When you have data that should aways been in sync, I find the RxJS BehaviorSubject very useful in this situation.
 
-You can also use a regular RxJS Subject for sharing data via the service, but here’s why I prefer a BehaviorSubject.
+You can also use a regular RxJS Subject for sharing data via the service, but here’s why I prefer a `BehaviorSubject`.
 
 - It will always return the current value on subscription - there is no need to call onnext
 - It has a getValue() function to extract the last value as raw data.
 - It ensures that the component always receives the most recent data.
 
-In the service, we create a private BehaviorSubject that will hold the current value of the message. We define a currentMessage variable handle this data stream as an observable that will be used by the components. Lastly, we create function that calls next on the BehaviorSubject to change its value.
+In the service, we create a private `BehaviorSubject` that will hold the current value of the message. We define a currentMessage variable handle this data stream as an observable that will be used by the components. Lastly, we create function that calls next on the `BehaviorSubject` to change its value.
 
 The parent, child, and sibling components all receive the same treatment. We inject the DataService in the constructor, then subscribe to the currentMessage observable and set its value equal to the message variable.
 
