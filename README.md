@@ -63,11 +63,14 @@ Interview questions and answers
   - [Angular](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md)
     * [Angular Routing and Navigation](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-routing.md#1-angular-routing-and-navigation)
     * [Angular Component](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-components.md)
+      * [What Is an Angular Component?](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-components.md#what-is-an-angular-component)
+      * [Communication Between Components](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-components.md#communication-between-components)
+      * [Test](https)
+
     * [Angular Directive](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-directive.md)
     * [Angular Pipes](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-pipes.md)
     * [Angular Data Binding](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-data-binding.md)
     * [Angular Lazy Loading](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-lazy-loading.md)
-    * [Communication Between Components](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-lazy-loading.md)
   
 - **Design Patterns interview questions and answers**
   - [Design Patterns](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md)
