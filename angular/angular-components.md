@@ -48,12 +48,12 @@ Angular components are a subset of directives. Unlike directives, components alw
 Communication Between Components
 -------------------------------
 
-There are five ways to share data between components:
+There are 4 ways to share data between components:
 
-- **Parent to Child**: Sharing Data via Input
-- **Child to Parent**: Sharing Data via ViewChild with AfterViewInit
-- **Child to Parent**: Sharing Data via Output() and EventEmitter
-- **Unrelated Components**: Sharing Data with a Service
+- **1. Parent to Child**: Sharing Data via Input
+- **2. Child to Parent**: Sharing Data via ViewChild with AfterViewInit
+- **3. Child to Parent**: Sharing Data via Output() and EventEmitter
+- **4. Unrelated Components**: Sharing Data with a Service
 
 
 - **Parent to Child: Sharing Data via Input**
