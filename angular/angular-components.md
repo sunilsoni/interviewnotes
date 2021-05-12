@@ -323,3 +323,6 @@ For more information:
 
 1. [Angular Components with Examples](https://dotnettutorials.net/lesson/angular-components/)
 2. [Angular Component](https://www.tutorialsteacher.com/angular/angular-component)
+3. [Component interaction](https://angular.io/guide/component-interaction#component-interaction)
+4. [How Angular components communicate?](https://www.thirdrocktechkno.com/blog/how-angular-components-communicate/)
+5. [Sharing Data between Angular Components - Four Methods](https://fireship.io/lessons/sharing-data-between-angular-components-four-methods/)
