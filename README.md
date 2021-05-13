@@ -58,7 +58,15 @@ Interview questions and answers
     * [OAuth2 Terminology](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#oauth2-terminology)
     * [Json Web Token(JWT)](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#json-web-tokenjwt)
     * [Spring Boot Rest Authentication with JWT Token Flow](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#spring-boot-rest-authentication-with-jwt-token-flow)
-    * [Spring Transaction Management](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#json-web-tokenjwt)
+    * [Spring Transaction Management](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#spring-transaction-management)
+      * [Global Transactions](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#global-transactions)
+      * [Local Transactions](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#local-transactions)
+      * [Programmatic Approach:](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#programmatic-approach)
+      * [Declarative Approach (@Transactional)](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#declarative-approach-transactional)
+      * [propagation](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#propagation)
+      * [isolation](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#isolation)
+      * [readOnly](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#isolation)
+      * [timeout](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#isolation)
 
 - **Angular interview questions and answers**
   - [Angular](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md)
