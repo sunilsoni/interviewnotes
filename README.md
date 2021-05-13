@@ -58,6 +58,7 @@ Interview questions and answers
     * [OAuth2 Terminology](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#oauth2-terminology)
     * [Json Web Token(JWT)](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#json-web-tokenjwt)
     * [Spring Boot Rest Authentication with JWT Token Flow](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#spring-boot-rest-authentication-with-jwt-token-flow)
+    * [Spring Transaction Management](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#json-web-tokenjwt)
 
 - **Angular interview questions and answers**
   - [Angular](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md)
