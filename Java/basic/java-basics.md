@@ -343,15 +343,152 @@ Outer x : 20
 Shallow Copy and Deep Copy
 -------------------
 
+- **Shallow Copy** : When we use the default implementation of clone() method, a shallow copy of object is returned, meaning if the object that we are trying to clone contains both primitive variables and non-primitive or reference type variable, then only the object’s reference is copied not the entire object itself.
+
+Consider this with the example:
+Employee object is having Company object as a reference, now when we perform cloning on Employee object, then for primitive type variables, cloning will be done i.e. new instances will be created and copied to the cloned object but for non-primitive i.e. Company object, only the object’s reference will be copied to the cloned object. It simply means Company object will be same in both original and cloned object, changing the value in one will change the value in other and vice-versa.
+Now, if you want to clone the Company object also, so that your original and cloned Employee object will be independent of each other, then you have to perform Deep Copy.
+
+- **Deep Copy** :
+In Deep copy, the non-primitive types are also cloned to make the original and cloned object fully independent of each other.
+
+Program 1:
+
+```java
+
+class Company implements Cloneable {
+	private String name;
+	public Company(String name) {
+		this.name = name;
+	}
+	public String getName() {	return name;	}
+	public void setName(String name) {	this.name = name;	}
+
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		return super.clone();
+	}
+}
+
+public class Employee implements Cloneable {
+	private String name;
+	private int age;
+	private Company company;
+	
+	public Employee(String name, int age, Company company) {
+		this.name = name;
+		this.age = age;
+		this.company = company;
+	}
+	
+	public String getName() {	return name;	}
+	public int getAge() {	return age;		}
+	public void setName(String name) {	this.name = name; 	}
+	public void setAge(int age) {	this.age = age;		}
+	public Company getCompany() {	return company;		}
+	public void setCompany(Company company) {	this.company = company;		}
+
+	@Override
+	protected Object clone() throws CloneNotSupportedException {
+		Employee employee = (Employee) super.clone();
+		employee.company = (Company) company.clone();
+		return employee;
+	}
+	public static void main(String[] args) throws CloneNotSupportedException {
+		Company c1 = new Company("Company_ABC");
+		Employee e1 = new Employee("Mike", 10, c1);
+		System.out.println("Employee 1, company name : " + e1.getCompany().getName());
+		
+		Employee e2 = (Employee) e1.clone();
+		System.out.println("Employee 2, company name : " + e2.getCompany().getName());
+		e2.getCompany().setName("XYZ");
+		System.out.println("----------------------------");
+		System.out.println("Employee 1, company name : " + e1.getCompany().getName());
+		System.out.println("Employee 2, company name : " + e2.getCompany().getName());
+	}
+}
+
+```
+
+Output:
+```log
+Employee 1, company name : Company_ABC
+Employee 2, company name : Company_ABC
+----------------------------
+Employee 1, company name : Company_ABC
+Employee 2, company name : XYZ
+```
+
+In above example, we have overridden the clone method in our employee class and we called the clone method on mutable company object.
 
 
+We can also use Copy constructor to perform deep copy:
 
 
+Program 2:
+```java
 
+class Company {
+	private String name;
+	public Company(String name) {
+		this.name = name;
+	}
+	public String getName() {	return name;	}
+	public void setName(String name) {	this.name = name;	}
 
+}
 
+public class Employee {
+	private String name;
+	private int age;
+	private Company company;
+	
+	public Employee(String name, int age, Company company) {
+		this.name = name;
+		this.age = age;
+		this.company = company;
+	}
+	
+	//Copy constructor
+	public Employee(Employee emp) {
+		this.name = emp.getName();
+		this.age = emp.getAge();
+		Company company = new Company(emp.getCompany().getName());
+		this.company = company;
+	}
+	
+	public String getName() {	return name;	}
+	public int getAge() {	return age;		}
+	public void setName(String name) {	this.name = name; 	}
+	public void setAge(int age) {	this.age = age;		}
+	public Company getCompany() {	return company;		}
+	public void setCompany(Company company) {	this.company = company;		}
 
+	public static void main(String[] args) {
+		Company c1 = new Company("Company_ABC");
+		Employee e1 = new Employee("Mike", 10, c1);
+		System.out.println("Employee 1, company name : " + e1.getCompany().getName());
+		
+		//Invoking copy constructor
+		Employee e2 = new Employee(e1);
+		System.out.println("Employee 2, company name : " + e2.getCompany().getName());
+		e2.getCompany().setName("XYZ");
+		System.out.println("----------------------------");
+		System.out.println("Employee 1, company name : " + e1.getCompany().getName());
+		System.out.println("Employee 2, company name : " + e2.getCompany().getName());
+	}
+}
+```
 
+Output:
+```log
+Employee 1, company name : Company_ABC
+Employee 2, company name : Company_ABC
+----------------------------
+Employee 1, company name : Company_ABC
+Employee 2, company name : XYZ
+```
 
-
-
+There are 2 other methods by which you can perform deep copy:
+- By using Serialization, where you serialize the original object and returns the deserialized object as a clone
+- By using external library of Apache Commons Lang. Apache Common Lang comes with SerializationUtils.clone() method for performing deep copy on an object. It expects all classes in the hierarchy to implement Serializable interfaces else SerializableException is thrown by the system
