@@ -28,7 +28,7 @@ Interview questions and answers
     * [How to make a class Immutable?](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#how-to-make-a-class-immutable)
     * [Class loaders in Java](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#class-loaders-in-java)
     * [Garbage Collection and types of Garbage Collectors](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#garbage-collection-and-types-of-garbage-collectors)
-    * [Generics in Java](https)
+    * [Generics in Java](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#generics-in-java)
     * [Test](https)
     * [Test](https)
     * [Test](https)
