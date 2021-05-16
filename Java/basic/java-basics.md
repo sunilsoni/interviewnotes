@@ -870,11 +870,11 @@ How to make a class Immutable?
 -----------------------------
 As we know, String is an Immutable class in Java, i.e. once initialized its value never change. We can also make our own custom Immutable class, where the class object’s state will not change once it is initialized.
 
-- **Benefits of Immutable class:**
+1. <u>**Benefits of Immutable class:**</u>
 - Thread-safe: With immutable classes, we don’t have to worry about the thread-safety in case of multi-threaded environment as these classes are inherently thread-safe
 - Cacheable: An immutable class is good for Caching because while we don’t have to worry about the value changes
 
-- **How to create an Immutable class in java:**
+2. <u>**How to create an Immutable class:**</u>
 - Declare the class as final so that it cannot be extended
 - Make all fields as private so that direct access to them is not allowed
 - Make all fields as final so that its value can be assigned only once
