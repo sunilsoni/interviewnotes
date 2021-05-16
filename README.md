@@ -24,6 +24,7 @@ Interview questions and answers
     * [static keyword](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#static-keyword)
     * [Shallow Copy and Deep Copy](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#shallow-copy-and-deep-copy)
     * [Serialization and De-serialization](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#serialization-and-de-serialization)
+    * [Serialization scenarios with Inheritance](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#serialization-scenarios-with-inheritance)
     * [Test](https)
   - [Collection Framework](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#collection-framework)
     * [HashMap](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#hashmap)
@@ -35,7 +36,7 @@ Interview questions and answers
     * [TreeMap](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#treemap)
     * [TreeSet](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#treeset)
     * [fail-safe and fail-fast iterators](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#fail-safe-and-fail-fast-iterators)
-    * [Serialization scenarios with Inheritance](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#serialization-scenarios-with-inheritance)
+    * [Test](https)
     * [Test](https)
     
   - [Multi threading](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#multi-threading)
