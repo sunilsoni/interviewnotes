@@ -585,5 +585,5 @@ Employee object is de-serialized : Employee [name=Mike, age=15, salary=0]
 Here, while de-serializing the employee object, salary is 0, that is because we have made salary variable to be ‘transient’. ‘static’ and ‘transient’ variables do not take part in Serialization process. During de-serialization, transient variables will be initialized with their default values i.e. if objects, it will be null and if “int”, it will be 0 and static variables will be having the current value.
 And if you look at the file present in current directory bytestream.txt, you can see how the object is serialized into this file,
 
-bytestream.txt file content:
+See file [bytestream.txt](https://github.com/sunilsoni/interview-notes/blob/main/Java/images/byteStream.txt)
 
