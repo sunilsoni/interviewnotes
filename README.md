@@ -35,7 +35,7 @@ Interview questions and answers
     * [TreeMap](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#treemap)
     * [TreeSet](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#treeset)
     * [fail-safe and fail-fast iterators](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#fail-safe-and-fail-fast-iterators)
-    * [Serialization scenarios with Inheritance](https)
+    * [Serialization scenarios with Inheritance](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#serialization-scenarios-with-inheritance)
     * [Test](https)
     
   - [Multi threading](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#multi-threading)
