@@ -866,3 +866,179 @@ y : 40
 
 ```
 
+How to make a class Immutable?
+-----------------------------
+As we know, String is an Immutable class in Java, i.e. once initialized its value never change. We can also make our own custom Immutable class, where the class object’s state will not change once it is initialized.
+
+- **Benefits of Immutable class:**
+- Thread-safe: With immutable classes, we don’t have to worry about the thread-safety in case of multi-threaded environment as these classes are inherently thread-safe
+- Cacheable: An immutable class is good for Caching because while we don’t have to worry about the value changes
+
+- **How to create an Immutable class in java:**
+- Declare the class as final so that it cannot be extended
+- Make all fields as private so that direct access to them is not allowed
+- Make all fields as final so that its value can be assigned only once
+- Don’t provide ‘setter’ methods for variables
+- When the class contains a mutable object reference,
+    1. While initializing the field in constructor, perform a deep copy
+    2. While returning the object from its getter method, make sure to return a copy rather than the actual object reference
+
+Example:
+We will make Employee class as immutable, but Employee class contains a reference of Address class
+
+
+
+
+Address.java:
+```java
+
+public class Address {
+	
+	private String city;
+	private String state;
+	
+	public Address(String city, String state) {
+		this.city = city;
+		this.state = state;
+	}
+	
+	public String getCity() { return city; }
+	public String getState() { return state; }
+	
+	public void setCity(String city) { this.city = city; }
+	public void setState(String state) { this.state = state; }
+
+	@Override
+	public String toString() {
+		return "Address [city=" + city + ", state=" + state + "]";
+	}
+	
+}
+
+```
+
+Employee.java:
+```java
+
+public final class Employee {
+
+    private final String name;
+    private final int age;
+    private final Address address;
+
+    public Employee(String name, int age, Address address) {
+        this.name = name;
+        this.age = age;
+        Address cloneAddress = new Address(address.getCity(), address.getState());
+        this.address = cloneAddress;
+    }
+
+    public String getName() { return name; }
+
+    public int getAge() { return age; }
+
+    public Address getAddress() {
+        return new Address(address.getCity(), address.getState());
+    }
+
+    @Override
+    public String toString() {
+        return "Employee [name=" + name + ", age=" + age + ", address=" + address + "]";
+    }
+
+}
+```
+
+
+TestImmutable.java:
+```java
+public class TestImmutable {
+	public static void main(String[] args) {
+		Address address = new Address("Chennai", "Tamil Nadu");
+		Employee employee = new Employee("Mike", 15, address);
+		
+		System.out.println("Original Employee object : \n" + employee);
+		
+		address.setCity("Mumbai");
+		address.setState("Maharashtra");
+		
+		System.out.println("Employee object after local variable address change :\n" + employee);
+		
+		Address empAddress = employee.getAddress();
+		empAddress.setCity("Jaipur");
+		empAddress.setState("Rajasthan");
+		
+		System.out.println("Employee object after employee address change:\n" + employee);
+	}
+}
+
+```
+
+Here, after creating Employee object, the first change is done in local address object and then we used the employee’s getter method to access the address object and tried to change the value in it.
+
+Output:
+```log
+Original Employee object : 
+Employee [name=Mike, age=15, address=Address [city=Chennai, state=Tamil Nadu]]
+Employee object after local variable address change :
+Employee [name=Mike, age=15, address=Address [city=Chennai, state=Tamil Nadu]]
+Employee object after employee address change:
+Employee [name=Mike, age=15, address=Address [city=Chennai, state=Tamil Nadu]]
+
+```
+
+As, you can see that the value remained the same.
+If we don’t follow the rule about mutable object reference present in the class, let’s see what will happen in that case.
+Let’s change the Employee class constructor and getter method:
+
+Employee.java:
+
+```java
+
+public final class Employee {
+	
+	private final String name;
+	private final int age;
+	private final Address address;
+	
+	public Employee(String name, int age, Address address) {
+		this.name = name;
+		this.age = age;
+		this.address = address;
+	}
+
+	public String getName() { return name; }
+
+	public int getAge() { return age; }
+
+	public Address getAddress() {
+		return address;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [name=" + name + ", age=" + age + ", address=" + address + "]";
+	}
+	
+}
+
+```
+Now, if we run our TestImmutable.java class, below is the output:
+
+Output:
+```log
+
+Original Employee object :
+Employee [name=Mike, age=15, address=Address [city=Chennai, state=Tamil Nadu]]
+Employee object after local variable address change :
+Employee [name=Mike, age=15, address=Address [city=Mumbai, state=Maharashtra]]
+Employee object after employee address change:
+Employee [name=Mike, age=15, address=Address [city=Jaipur, state=Rajasthan]]
+```
+
+Why we perform deep copy in constructor:
+- When you assign the actual address object in the constructor, then remember it is storing the reference of address object, so if you change the value in this address object, it will reflect in the employee object
+
+Why we don’t return original reference from the getter:
+- When you return the original address object from the getter method then you can use the returned object reference to change the values in employee object
+

@@ -25,6 +25,7 @@ Interview questions and answers
     * [Shallow Copy and Deep Copy](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#shallow-copy-and-deep-copy)
     * [Serialization and De-serialization](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#serialization-and-de-serialization)
     * [Serialization scenarios with Inheritance](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#serialization-scenarios-with-inheritance)
+    * [How to make a class Immutable?](https)
     * [Test](https)
   - [Collection Framework](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#collection-framework)
     * [HashMap](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#hashmap)
