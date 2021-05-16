@@ -1042,3 +1042,82 @@ Why we perform deep copy in constructor:
 Why we don’t return original reference from the getter:
 - When you return the original address object from the getter method then you can use the returned object reference to change the values in employee object
 
+Class loaders in Java
+---------------------
+ClassLoader is a java class which is used to load .class files in memory. When we compile a java class, JVM creates a bytecode which is platform independent. The bytecode is present in .class file. When we try to use a class, then classloader loads it into memory.
+
+There are 3 types of built-in class loaders in java:
+
+1. **<u>Bootstrap class loader</u>** : it loads JDK class files from `jre/lib/rt.jar` and other core classes. It is the parent of all class loaders, it is also called Primordial classloader. 
+2. **<u>Extensions class loader</u>**  : it loads classes from `JDK extensions` directory, it delegates class loading request to its parent, Bootstrap and if the loading of class is unsuccessful, it loads classes from `jre/lib/ext` directory or any other directory pointed by `java.ext.dirs` system property.
+3. **<u>System class loader</u>**  : It loads application specific classes from the `CLASSPATH`. We can set classpath while invoking the program using -cp or classpath command line options. It is a child of Extension ClassLoader.
+
+Java class loader is based on three principles:
+
+1. Delegation principle: It forwards the request for class loading to its parent class loader. It only loads the class if the parent does not find or load the class.
+2. Visibility principle: According to Visibility principle, the child ClassLoader can see all the classes loaded by parent ClassLoader. But the parent class loader cannot see classes loaded by the child class loader.
+3. Uniqueness principle: According to this principle, a class loaded by Parent should not be loaded by Child ClassLoader again. It is achieved by delegation principle.
+
+Suppose, you have created a class `Employee.java` and compiled this class and `Emloyee.class` file is created. Now, you want to use this class, the first request to load this class will come to System/Application ClassLoader, which will delegate the request to its parent, Extension ClassLoader which further delegates to Primordial or Bootstrap class loader
+Now, Bootstrap ClassLoader will look for this class in rt.jar, since this class is not there, the request will come to Extension ClassLoader which looks in `jre/lib/ext` directory and tries to locate this class there, if this class is found there then Extension ClassLoader will load this class and Application ClassLoader will not load this class, this has been done to maintain the Uniqueness principle. But if the class is not loaded by Extension ClassLoader, then this `Employee.class` will be loaded by Application ClassLoader from the CLASSPATH.
+
+```java
+
+public class Employee {
+
+	public static void main(String[] args) {
+		System.out.println(Employee.class.getClassLoader());
+		System.out.println(System.class.getClassLoader());
+	}
+
+}
+
+```
+Output:
+```log
+jdk.internal.loader.ClassLoaders$AppClassLoader@73d16e93
+null
+
+```
+
+If you are thinking why null is printed when we tried to know which classloader is loading the java.lang.System class then take a look at the Javadoc :
+```log
+
+    /**
+     * Returns the class loader for the class.  Some implementations may use
+     * null to represent the bootstrap class loader. This method will return
+     * null in such implementations if this class was loaded by the bootstrap
+     * class loader.
+     *
+     * <p>If this {@code Class} object
+     * represents a primitive type or void, null is returned.
+     *
+     * @return  the class loader that loaded the class or interface
+     *          represented by this {@code Class} object.
+     * @throws  SecurityException
+     *          if a security manager is present, and the caller's class loader
+     *          is not {@code null} and is not the same as or an ancestor of the
+     *          class loader for the class whose class loader is requested,
+     *          and the caller does not have the
+     *          {@link RuntimePermission}{@code ("getClassLoader")}
+     * @see java.lang.ClassLoader
+     * @see SecurityManager#checkPermission
+     * @see java.lang.RuntimePermission
+     */
+    @CallerSensitive
+    @ForceInline // to ensure Reflection.getCallerClass optimization
+    public ClassLoader getClassLoader() {
+        ClassLoader cl = getClassLoader0();
+        if (cl == null)
+            return null;
+        SecurityManager sm = System.getSecurityManager();
+        if (sm != null) {
+            ClassLoader.checkClassLoaderPermission(cl, Reflection.getCallerClass());
+        }
+        return cl;
+    }
+
+```
+
+We can also create our own custom class loader by extending the ClassLoader class.
+
