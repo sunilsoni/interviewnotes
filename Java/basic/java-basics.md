@@ -586,7 +586,4 @@ Here, while de-serializing the employee object, salary is 0, that is because we 
 And if you look at the file present in current directory bytestream.txt, you can see how the object is serialized into this file,
 
 bytestream.txt file content:
-```java
-¨Ì sr Question56.EmployeeΩ—<);Ì∏ I ageL namet Ljava/lang/String;xp   t Mike
-```
 
