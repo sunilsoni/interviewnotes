@@ -756,15 +756,15 @@ Output:
 x : 20
 y : 40
 The object has been serialized
-java.io.InvalidClassException: GrokkingInterview.Grokking.Question58.Case2.Child; no valid constructor
+java.io.InvalidClassException: Case2.Child; no valid constructor
 	at java.base/java.io.ObjectStreamClass$ExceptionInfo.newInvalidClassException(ObjectStreamClass.java:170)
 	at java.base/java.io.ObjectStreamClass.checkDeserialize(ObjectStreamClass.java:917)
 	at java.base/java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2203)
 	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1712)
 	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:519)
 	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:477)
-	at GrokkingInterview.Grokking.Question58.Case2.TestSerialization.deserializeObject(TestSerialization.java:54)
-	at GrokkingInterview.Grokking.Question58.Case2.TestSerialization.main(TestSerialization.java:33)
+	at Case2.TestSerialization.deserializeObject(TestSerialization.java:54)
+	at Case2.TestSerialization.main(TestSerialization.java:33)
 
 
 ```
