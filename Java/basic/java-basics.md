@@ -585,3 +585,285 @@ And if you look at the file present in current directory bytestream.txt, you can
 
 See file [bytestream.txt](https://github.com/sunilsoni/interview-notes/blob/main/Java/images/byteStream.txt)
 
+Serialization scenarios with Inheritance
+----------------------------------------
+
+- **Case 1**: If super class is Serializable then by default, its sub-classes are also Serializable
+
+
+```java
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+class Parent implements Serializable {
+	int x;
+	public Parent(int x) {
+		this.x = x;
+	}
+}
+
+class Child extends Parent {
+	int y;
+	public Child(int x, int y) {
+		super(x);
+		this.y = y;
+	}
+}
+
+public class TestSerialization {
+	public static void main(String[] args) {
+		Child child = new Child(10,50);
+		System.out.println("x : " + child.x);
+		System.out.println("y : " + child.y);
+		String file = "temp/child.ser";
+		
+		serializeObject(file, child);
+		deserializeObject(file);			
+	}
+	
+	private static void serializeObject(String file, Child child) {
+		try {
+			FileOutputStream fos = new FileOutputStream(file);
+			ObjectOutputStream oos = new ObjectOutputStream(fos);			
+			oos.writeObject(child);
+			
+			fos.close();
+			oos.close();		
+			System.out.println("The object has been serialized");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}	
+	}
+	
+	private static void deserializeObject(String file) {
+		try {
+			FileInputStream fis = new FileInputStream(file);
+			ObjectInputStream ois = new ObjectInputStream(fis);
+			Child child1 = (Child) ois.readObject();
+			
+			fis.close();
+			ois.close();
+			System.out.println("The object has been deserialized");
+			System.out.println("x : " + child1.x);
+			System.out.println("y : " + child1.y);
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace(); 
+		}
+	}
+}
+```
+
+See file [child.ser](https://github.com/sunilsoni/interview-notes/blob/main/Java/images/child.ser)
+
+Output:
+```log
+x : 10
+y : 50
+The object has been serialized
+The object has been deserialized
+x : 10
+y : 50
+
+
+```
+
+
+- **Case 2**: When super class does not implement the Serializable Interface, then also we can serialize the subclass provided that it implements Serializable interface.
+
+In this case, when we de-serialize the subclass object, then no-arg constructor of its parent class gets called. So, the serializable sub-class must have access to the default no-arg constructor of its parent class (general rule is that the Serializable sub-class must have access to the no-arg constructor of first non-Serializable super class).
+
+
+```java
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+class Parent {
+    int x;
+    public Parent(int x) {
+        this.x = x;
+    }
+}
+
+class Child extends Parent implements Serializable {
+    int y;
+    public Child(int x, int y) {
+        super(x);
+        this.y = y;
+    }
+}
+
+public class TestSerialization {
+    public static void main(String[] args) {
+        Child child = new Child(20,40);
+        System.out.println("x : " + child.x);
+        System.out.println("y : " + child.y);
+        String file = "child1.ser";
+
+        serializeObject(file, child);
+        deserializeObject(file);
+    }
+
+    private static void serializeObject(String file, Child child) {
+        try {
+            FileOutputStream fos = new FileOutputStream(file);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(child);
+
+            fos.close();
+            oos.close();
+            System.out.println("The object has been serialized");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void deserializeObject(String file) {
+        try {
+            FileInputStream fis = new FileInputStream(file);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            Child child1 = (Child) ois.readObject();
+
+            fis.close();
+            ois.close();
+            System.out.println("The object has been deserialized");
+            System.out.println("x : " + child1.x);
+            System.out.println("y : " + child1.y);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+(Note: serializeObject() and deserializeObject() remains same as the Case 1 program)
+
+Output:
+```log
+x : 20
+y : 40
+The object has been serialized
+java.io.InvalidClassException: GrokkingInterview.Grokking.Question58.Case2.Child; no valid constructor
+	at java.base/java.io.ObjectStreamClass$ExceptionInfo.newInvalidClassException(ObjectStreamClass.java:170)
+	at java.base/java.io.ObjectStreamClass.checkDeserialize(ObjectStreamClass.java:917)
+	at java.base/java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2203)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1712)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:519)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:477)
+	at GrokkingInterview.Grokking.Question58.Case2.TestSerialization.deserializeObject(TestSerialization.java:54)
+	at GrokkingInterview.Grokking.Question58.Case2.TestSerialization.main(TestSerialization.java:33)
+
+
+```
+
+When no-arg constructor is present in Super class:
+
+
+```java
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+class Parent {
+	int x;
+	public Parent(int x) {
+		this.x = x;
+		System.out.println("Parent class one-arg constructor");
+	}
+	public Parent() {
+		x = 100;
+		System.out.println("Parent class no-arg constructor");
+	}
+}
+
+class Child extends Parent implements Serializable {
+	int y;
+	public Child(int x, int y) {
+		super(x);
+		this.y = y;
+		System.out.println("Child class two-arg constructor");
+	}
+	public Child() {
+		System.out.println("Child class no-arg constructor");
+	}
+}
+
+public class TestSerialization {
+	public static void main(String[] args) {
+		Child child = new Child(20,40);
+		System.out.println("x : " + child.x);
+		System.out.println("y : " + child.y);
+		String file = "child2.ser";
+		
+		serializeObject(file, child);
+		deserializeObject(file);			
+	}
+	
+	private static void serializeObject(String file, Child child) {
+		try {
+			FileOutputStream fos = new FileOutputStream(file);
+			ObjectOutputStream oos = new ObjectOutputStream(fos);			
+			oos.writeObject(child);
+			
+			fos.close();
+			oos.close();		
+			System.out.println("The object has been serialized");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}	
+	}
+	
+	private static void deserializeObject(String file) {
+		try {
+			FileInputStream fis = new FileInputStream(file);
+			ObjectInputStream ois = new ObjectInputStream(fis);
+			Child child1 = (Child) ois.readObject();
+			
+			fis.close();
+			ois.close();
+			System.out.println("The object has been deserialized");
+			System.out.println("x : " + child1.x);
+			System.out.println("y : " + child1.y);
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace(); 
+		}
+	}
+}
+
+```
+
+(Note: serializeObject() and deserializeObject() remains same as the Case 1 program) 
+
+Output:
+```log
+Parent class one-arg constructor
+Child class two-arg constructor
+x : 20
+y : 40
+The object has been serialized
+Parent class no-arg constructor
+The object has been deserialized
+x : 100
+y : 40
+
+```
+
