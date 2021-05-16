@@ -492,3 +492,101 @@ Employee 2, company name : XYZ
 There are 2 other methods by which you can perform deep copy:
 - By using Serialization, where you serialize the original object and returns the deserialized object as a clone
 - By using external library of Apache Commons Lang. Apache Common Lang comes with SerializationUtils.clone() method for performing deep copy on an object. It expects all classes in the hierarchy to implement Serializable interfaces else SerializableException is thrown by the system
+
+
+
+Serialization and De-serialization
+-----------------------------------
+
+
+Serialization is a mechanism to convert the state of an object into a byte stream while De-serialization is the reverse process where the byte stream is used to recreate the actual object in memory. The byte stream created is platform independent that means objects serialized on one platform can be deserialized on another platform.
+To make a Java Object serializable, the class must implement Serializable interface. Serializable is a Marker interface. Object
+
+OutputStream and ObjectInputStream classes are used for Serialization and Deserialization in java.
+We will serialize the below Employee class:
+
+```java
+
+import java.io.Serializable;
+
+public class Employee implements Serializable{
+	private String name;
+	private int age;
+	private transient int salary;
+	
+	public Employee(String name, int age, int salary) {
+		this.name = name;
+		this.age = age;
+		this.salary = salary;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [name=" + name + ", age=" + age + ", salary=" + salary + "]";
+	}
+	
+}
+
+
+```
+
+
+SerializationDemo.java:
+```java
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
+public class SerializationDemo {
+	public static void main(String[] args) {
+		Employee emp = new Employee("Mike", 15, 20000);
+		String file = "byteStream.txt";
+		try {
+			FileOutputStream fos = new FileOutputStream(file);
+			ObjectOutputStream oos = new ObjectOutputStream(fos);			
+			oos.writeObject(emp);
+
+			fos.close();
+			oos.close();			
+			System.out.println("Employee object is serialized : " + emp);
+		} catch (IOException e1) {
+			System.out.println("IOException is caught");
+		}	
+		try {
+			FileInputStream fis = new FileInputStream(file);
+			ObjectInputStream ois = new ObjectInputStream(fis);
+			Employee emp1 = (Employee) ois.readObject();
+			
+			fis.close();
+			ois.close();
+			System.out.println("Employee object is de-serialized : " + emp1);
+		} catch (IOException e) {
+			System.out.println("IOException is caught");
+		} catch (ClassNotFoundException e) {
+			System.out.println("ClassNotFoundException is caught"); 
+		}
+	}
+}
+
+
+```
+
+
+Output:
+```log
+Employee object is serialized : Employee [name=Mike, age=15, salary=20000]
+Employee object is de-serialized : Employee [name=Mike, age=15, salary=0]
+
+```
+
+Here, while de-serializing the employee object, salary is 0, that is because we have made salary variable to be ‘transient’. ‘static’ and ‘transient’ variables do not take part in Serialization process. During de-serialization, transient variables will be initialized with their default values i.e. if objects, it will be null and if “int”, it will be 0 and static variables will be having the current value.
+And if you look at the file present in current directory bytestream.txt, you can see how the object is serialized into this file,
+
+bytestream.txt file content:
+```log
+¨Ì sr Question56.EmployeeΩ—<);Ì∏ I ageL namet Ljava/lang/String;xp   t Mike
+```
+
