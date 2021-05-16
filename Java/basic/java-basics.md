@@ -766,7 +766,6 @@ java.io.InvalidClassException: Case2.Child; no valid constructor
 	at Case2.TestSerialization.deserializeObject(TestSerialization.java:54)
 	at Case2.TestSerialization.main(TestSerialization.java:33)
 
-
 ```
 
 When no-arg constructor is present in Super class:
