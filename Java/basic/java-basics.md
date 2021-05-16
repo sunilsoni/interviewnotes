@@ -1190,6 +1190,7 @@ Compacting describes the act of moving objects in a way that there are no holes 
 > java -Xmx12m -Xms3m -Xmn1m -XX:PermSize=20m -XX:MaxPermSize=20m -XX:+UseParallelOldGC -jar C:\temp\test.jar
 
 **Concurrent Mark Sweep (CMS) Collector:**
+
 The CMS collector, also called as the concurrent low pause collector, collects the tenured generation. It attempts to minimize the pauses due to garbage collection, by doing most of the garbage collection work concurrently with the application threads.
 
 It can be turned on by passing -XX:+UseConcMarkSweepGC in the command line option.
