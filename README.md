@@ -27,7 +27,7 @@ Interview questions and answers
     * [Serialization scenarios with Inheritance](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#serialization-scenarios-with-inheritance)
     * [How to make a class Immutable?](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#how-to-make-a-class-immutable)
     * [Class loaders in Java](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#class-loaders-in-java)
-    * [Test](https)
+    * [Garbage Collection and types of Garbage Collectors](https)
     * [Test](https)
     * [Test](https)
     * [Test](https)

@@ -1121,3 +1121,15 @@ If you are thinking why null is printed when we tried to know which classloader 
 
 We can also create our own custom class loader by extending the ClassLoader class.
 
+Garbage Collection and types of Garbage Collectors
+--------------------------------------------------
+
+
+
+
+
+
+
+
+
+
