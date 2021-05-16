@@ -541,7 +541,7 @@ import java.io.ObjectOutputStream;
 public class SerializationDemo {
 	public static void main(String[] args) {
 		Employee emp = new Employee("Mike", 15, 20000);
-		String file = "byteStream.txt";
+		String file = "byteStream.txt1";
 		try {
 			FileOutputStream fos = new FileOutputStream(file);
 			ObjectOutputStream oos = new ObjectOutputStream(fos);			
