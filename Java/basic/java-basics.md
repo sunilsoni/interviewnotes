@@ -1124,9 +1124,81 @@ We can also create our own custom class loader by extending the ClassLoader clas
 Garbage Collection and types of Garbage Collectors
 --------------------------------------------------
 
+Garbage collection in java is the process of looking at heap memory, identifying which objects are in use and which are not and deleting the unused objects. An unused object or unreferenced object, is no longer referenced by any part of your program.
+Garbage collector is a daemon thread that keeps running in the background, freeing up heap memory by destroying the unreachable objects.
+There was an analysis done on several applications which showed that most objects are short lived, so this behavior was used to improve the performance of JVM. In this method, the heap space is divided into smaller parts or generations. These are, Young Generation , Old or Tenured Generation and Permanent Generation .
+The Young Generation is where all new objects are allocated and aged. The young generation is further divided into 3 parts: Eden Space, Survivor space S0 and Survivor space S1. When the young generation fills up, this causes a minor garbage collection . Some surviving objects are aged and eventually move to the old generation. All minor garbage collections are "Stop the World" events. This means that all application threads are stopped until the operation completes. Minor garbage collections are always Stop the World events.
+
+The Old Generation is used to store long surviving objects. Typically, a threshold is set for young generation object and when that age is met, the object gets moved to the old generation. Eventually the old generation needs to be collected. This event is called a major garbage collection . Major garbage collection are also Stop the World events. Often a major collection is much slower because it involves all live objects. So, for Responsive applications, major garbage collections should be minimized. Also note that the length of the Stop the World event for a major garbage collection is affected by the kind of garbage collector that is used for the old generation space.
+The Permanent generation contains metadata required by the JVM to describe the classes and methods used in the application. The permanent generation is populated by the JVM at runtime based on classes in use by the application. In addition, Java SE library classes and methods may be stored here.
+Classes may get collected (unloaded) if the JVM finds they are no longer needed and space may be needed for other classes. 
+
+
+The Permanent generation contains metadata required by the JVM to describe the classes and methods used in the application. The permanent generation is populated by the JVM at runtime based on classes in use by the application. In addition, Java SE library classes and methods may be stored here.
+Classes may get collected (unloaded) if the JVM finds they are no longer needed and space may be needed for other classes. The permanent generation is included in a full garbage collection. And Perm Gen was available till Java 7, it is removed from Java 8 onwards and JVM uses native memory for the representation of class metadata which is called MetaSpace.
+There is a flag MaxMetaspaceSize, to limit the amount of memory used for class metadata. If we do not specify the value for this, the Metaspace re-sizes at runtime as per the demand of the running application.
 
 
 
+**<u>How Garbage collection works:</u>**
+
+When new objects are first created, they are stored in the eden space of Young Generation and at that time both Survivor spaces are empty. When the eden space is filled, then a minor garbage collection is triggered. All the unused or un-referenced objects are cleared from the eden space and the used objects are moved to first Survivor space S0.
+At the next minor garbage collection, same process happens, un-referenced objects are cleared from the eden space but this time, the surviving objects are moved to Survivor space S1. In addition, the objects that were in S0 will also be matured and they also get moved to S1. Once all surviving objects are moved to S1, both eden and S0 are cleared.
+At the next minor GC, the same process repeats. When surviving objects reached a certain threshold, they get promoted from Young generation to Old generation. These minor GC will continue to occur and objects will continue to be promoted to the Old generation.
+Eventually, a major GC will be performed on the Old generation which cleans up and compacts the space.
+
+**<u>Types of Garbage collector</u>**
+
+**Serial GC:**
+Serial GC is designed for smaller applications that have small heap sizes of up to a few hundred MBs. It only uses single virtual CPU for its garbage collection and the collection is done serially. It takes around couple of second for Full garbage collections.
+
+It can be turned on by using `-XX:+UseSerialGC`
+
+> java -Xmx12m -Xms3m -Xmn1m -XX:PermSize=20m -XX:MaxPermSize=20m -XX:+UseSerialGC -jar C:\temp\test.jar
+
+
+**Parallel/Throughput GC:**
+
+Parallel garbage collector uses multiple threads to perform the garbage collection. By default, on a host with N CPUs, this collector uses N garbage collector threads for collection. The number of collector threads can be controlled with the command line option: `-XX:ParallelGCThreads=<N>`
+It is called Throughput collector as it uses multiple CPUs to speed up the application throughput. A drawback of this collector is that it pauses the application threads while performing minor or full GC, so it is best suited for applications where long pauses are acceptable. It is the default collector in JDK 8.
+
+It can be turned on by using below 2 options:
+
+> -XX:+UseParallelGC
+
+With this command line option, you get a multi-thread young generation collector with a single-threaded old generation collector. The option also does single-threaded compaction of old generation.
+
+> java -Xmx12m -Xms3m -Xmn1m -XX:PermSize=20m -XX:Max-PermSize=20m -XX:+UseParallelGC -jar C:\temp\test.jar
+
+` -XX:+UseParallelOldGC`
+
+“With this option, the GC is both a multithreaded young generation collector and multithreaded old generation collector. It is also a multithreaded compacting collector.
+Compacting describes the act of moving objects in a way that there are no holes between objects. After a garbage collection sweep, there may be holes left between live objects. Compacting moves objects so that there are no remaining holes. This compacting of memory makes it faster to allocate new chunks of memory to the heap.
+java -Xmx12m -Xms3m -Xmn1m -XX:PermSize=20m -XX:MaxPermSize=20m -XX:+UseParallelOldGC -jar C:\temp\test.jar
+
+**Concurrent Mark Sweep (CMS) Collector:**
+The CMS collector, also called as the concurrent low pause collector, collects the tenured generation. It attempts to minimize the pauses due to garbage collection, by doing most of the garbage collection work concurrently with the application threads.
+It can be turned on by passing -XX:+UseConcMarkSweepGC in the command line option.
+
+If you want to set number of threads with this collector, pass -XX:ParallelCMSThreads=<N>
+
+> java -Xmx12m -Xms3m -Xmn1m -XX:PermSize=20m -XX:Max-PermSize=20m -XX:+UseConcMarkSweepGC -XX:ParallelCMSThreads=2 -jar C:\temp\test.jar
+
+**G1 Garbage Collector:**
+
+
+“The Garbage First or G1 collector is a parallel, concurrent and incrementally compacting low-pause garbage collector
+G1 collector partitions the heap into a set of equal-sized heap regions. When G1 performs garbage collection then a concurrent global marking phase is performed to determine the liveliness of objects throughout the heap. After this mark phase is complete, G1 knows which regions are mostly empty. It collects unreachable objects from these regions first, which usually yields a large amount of free space, also called Sweeping. So G1 collects these regions (containing garbage) first, and hence the name Garbage-First.
+
+It can be turned on by passing `-XX:+UseG1GC` in the command line options
+> java –Xmx25g –Xms5g -XX:+UseG1GC -jar C:\temp\test.jar
+
+Java 8 has introduced one JVM parameter for reducing the unnecessary use of memory by creating too many instances of the same String. This optimizes the heap memory by removing duplicate String values to a global single char[] array. We can use the `-XX:+UseStringDeduplication` JVM argument to enable this optimization.
+G1 is the default garbage collector in JDK 9.
+
+
+Generics in Java
+----------------
 
 
 
