@@ -1169,7 +1169,9 @@ It can be turned on by using `-XX:+UseSerialGC`
 
 **Parallel/Throughput GC:**
 
-Parallel garbage collector uses multiple threads to perform the garbage collection. By default, on a host with N CPUs, this collector uses N garbage collector threads for collection. The number of collector threads can be controlled with the command line option: `-XX:ParallelGCThreads=<N>`
+Parallel garbage collector uses multiple threads to perform the garbage collection. By default, on a host with N CPUs, this collector uses N garbage collector threads for collection. 
+
+The number of collector threads can be controlled with the command line option: `-XX:ParallelGCThreads=<N>`
 
 It is called Throughput collector as it uses multiple CPUs to speed up the application throughput. A drawback of this collector is that it pauses the application threads while performing minor or full GC, so it is best suited for applications where long pauses are acceptable. It is the default collector in JDK 8.
 

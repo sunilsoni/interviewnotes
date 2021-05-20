@@ -1,6 +1,12 @@
 Spring
 =================
 
+PUT, POST, GET, DELETE and PATCH IN HTTP
+------------------
+
+POST is always for creating a resource ( does not matter if it was duplicated )
+PUT is for checking if resource is exists then update , else create new resource
+PATCH is always for update a resource
 
 
 
@@ -87,3 +93,4 @@ For more information:
 1. [Using Spring Boot for OAuth2 and JWT REST Protection](https://www.toptal.com/spring/spring-boot-oauth2-jwt-rest-protection)
 2. [Spring Boot Security + JWT (JSON Web Token) Authentication Example](https://www.techgeeknext.com/spring/spring-boot-security-token-authentication-jwt)
 3. [Spring Boot Security using OAuth2 with JWT](https://www.pixeltrice.com/spring-boot-security-using-oauth2-with-jwt/)
+4. [What is the difference between PUT, POST and PATCH? [closed]](https://stackoverflow.com/questions/31089221/what-is-the-difference-between-put-post-and-patch#:~:text=POST%20is%20always%20for%20creating,always%20for%20update%20a%20resource)
