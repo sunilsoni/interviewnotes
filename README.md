@@ -23,6 +23,7 @@ Interview questions and answers
   
 - **Java**
   - [Basic](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md)
+    * [Java 8 Features](https)
     * [Why String is Immutable?](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#why-string-is-immutable)
     * [StringBuffer and StringBuilder](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#stringbuffer-and-stringbuilder)
     * [equals and hashcode contract](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#equals-and-hashcode-contract)

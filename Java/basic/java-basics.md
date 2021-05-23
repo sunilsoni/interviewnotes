@@ -1,6 +1,23 @@
 Java
 ====
 
+Java 8 Features
+-------------
+
+- Lambda Expressions
+- Pipelines and Streams
+- Functional interfaces
+- Date and Time API
+- Default Methods
+- Type Annotations
+- Nashorn JavaScript Engine
+- Concurrent Accumulators
+- Parallel operations
+- PermGen Space Removed
+- TLS SNI
+
+
+
 
 Why String is Immutable?
 -----------------------
@@ -1222,5 +1239,5 @@ Generics in Java
 
 
 
-
-
+For more information:
+1. [Java 8 Features](https://javapapers.com/java/java-8-features/)
