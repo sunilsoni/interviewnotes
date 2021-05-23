@@ -431,18 +431,18 @@ Here's a summary of the type promotion rules that apply for method overloading:
 - float can be promoted to double
 
 
-
+**Static Binding**
+The ability to associate a specific method call to the method's body is known as binding.
+In the case of method overloading, the binding is performed statically at compile time, hence it's called static binding.
+The compiler can effectively set the binding at compile time by simply checking the methods' signatures.
 
 Method Overriding
 -------------------
 1. Method overriding is defining a method in the child class with the same method name and same method signature which is already written in the parent class.
 2. Return type of overridden method can be a subtype of the return type of parent class method.
-
-E.g. If the parent class method returns Vehicle then Subclass’s overridden method’s return type can be any subclass of Vehicle class, for example, Car can be a return type of overridden method in child class. (Assuming Vehicle as parent class and Car as a child class of Vehicle class).
-
+   E.g. If the parent class method returns Vehicle then Subclass’s overridden method’s return type can be any subclass of Vehicle class, for example, Car can be a return type of overridden method in child class. (Assuming Vehicle as parent class and Car as a child class of Vehicle class).
 3. It can’t have a lower access modifier.
    E.g. If the parent class method has a protected access modifier then the child class overridden method cannot have a private access modifier, but the public is allowed.
-
 4. Use @override annotation for the overridden method, so if we don’t follow the overriding rules then the compiler will show the error.
 5. Method overriding is called Dynamic Polymorphism because the method which is going to be called is decided at run time by the JVM.
 6. Static methods can’t be overridden, only instance methods are overridden.
@@ -457,18 +457,125 @@ The overriding method of child class must follow below rules:
 - It must not have a more restrictive access modifier (if parent method is public, then child method cannot be private/protected)
 
 
+**Example:** 
 
+Let's see now how to use method overriding by creating a simple, inheritance-based (“is-a”) relationship.
 
+Lets say `Vehicle` is the base class:
 
+```java
+public class Vehicle {
+    
+    public String accelerate(long mph) {
+        return "The vehicle accelerates at : " + mph + " MPH.";
+    }
+    
+    public String stop() {
+        return "The vehicle has stopped.";
+    }
+    
+    public String run() {
+        return "The vehicle is running.";
+    }
+}
+```
+And  a  subclass:
 
+```java
+public class Car extends Vehicle {
 
+    @Override
+    public String accelerate(long mph) {
+        return "The car accelerates at : " + mph + " MPH.";
+    }
+}
+```
+In this hierarchy , we've simply overridden the `accelerate()` method in order to provide a more refined implementation for the subtype Car.
 
+Here, it's clear to see that if an application uses instances of the Vehicle class, then it can work with instances of Car as well, as both implementations of the `accelerate()` method have the same signature and the same return type.
 
+Let's unit tests to check the Vehicle and `Car` classes:
 
+```java
+@Test
+public void whenCalledAccelerate_thenOneAssertion() {
+    assertThat(vehicle.accelerate(100))
+      .isEqualTo("The vehicle accelerates at : 100 MPH.");
+}
+    
+@Test
+public void whenCalledRun_thenOneAssertion() {
+    assertThat(vehicle.run())
+      .isEqualTo("The vehicle is running.");
+}
+    
+@Test
+public void whenCalledStop_thenOneAssertion() {
+    assertThat(vehicle.stop())
+      .isEqualTo("The vehicle has stopped.");
+}
 
+@Test
+public void whenCalledAccelerate_thenOneAssertion() {
+    assertThat(car.accelerate(80))
+      .isEqualTo("The car accelerates at : 80 MPH.");
+}
+    
+@Test
+public void whenCalledRun_thenOneAssertion() {
+    assertThat(car.run())
+      .isEqualTo("The vehicle is running.");
+}
+    
+@Test
+public void whenCalledStop_thenOneAssertion() {
+    assertThat(car.stop())
+      .isEqualTo("The vehicle has stopped.");
+}
+```
+Now, let's see some unit tests that show how the run() and stop() methods, which aren't overridden, return equal values for both Car and Vehicle:
 
+```java
+@Test
+public void givenVehicleCarInstances_whenCalledRun_thenEqual() {
+    assertThat(vehicle.run()).isEqualTo(car.run());
+}
+ 
+@Test
+public void givenVehicleCarInstances_whenCalledStop_thenEqual() {
+   assertThat(vehicle.stop()).isEqualTo(car.stop());
+}
+```
+In our case, we have access to the source code for both classes, so we can clearly see that calling the accelerate() method on a base Vehicle instance and calling accelerate() on a Car instance will return different values for the same argument.
 
+Therefore, the following test demonstrates that the overridden method is invoked for an instance of Car:
+
+```java
+@Test
+public void whenCalledAccelerateWithSameArgument_thenNotEqual() {
+    assertThat(vehicle.accelerate(100))
+      .isNotEqualTo(car.accelerate(100));
+}
+```
+
+**Type Substitutability**
+It's valid to make an overridden method to accept arguments of different types and return a different type as well, but with full adherence to these rules:
+
+- If a method in the base class takes argument(s) of a given type, the overridden method should take the same type or a supertype (a.k.a. contravariant method arguments)
+- If a method in the base class returns void, the overridden method should return void
+- If a method in the base class returns a primitive, the overridden method should return the same primitive
+- If a method in the base class returns a certain type, the overridden method should return the same type or a subtype (a.k.a. covariant return type)
+- If a method in the base class throws an exception, the overridden method must throw the same exception or a subtype of the base class exception
+
+**Dynamic Binding**
+
+Considering that method overriding can be only implemented with inheritance, where there is a hierarchy of a base type and subtype(s), the compiler can't determine at compile time what method to call, as both the base class and the subclasses define the same methods.
+
+As a consequence, the compiler needs to check the type of object to know what method should be invoked.
+
+As this checking happens at runtime, method overriding is a typical example of dynamic binding.
 
 
 For more information:
 1. [Method Overloading and Overriding in Java](https://www.baeldung.com/java-method-overload-override)
+2. [What Is Method Overloading and Method Overriding in Java?](https://medium.com/javarevisited/what-is-method-overloading-and-method-overriding-in-java-b3b094267fce)
