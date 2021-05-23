@@ -4,18 +4,21 @@ Java
 Java 8 Features
 -------------
 
-- Lambda Expressions
-- Pipelines and Streams
-- Functional interfaces
-- Date and Time API
-- Default Methods
-- Type Annotations
-- Nashorn JavaScript Engine
-- Concurrent Accumulators
-- Parallel operations
-- PermGen Space Removed
-- TLS SNI
-
+- **Lambda Expressions** : They enable you to treat functionality as a method argument, or code as data. Lambda expressions let you express instances of single-method interfaces (referred to as functional interfaces) more compactly.
+- **Method references** : Method references provide easy-to-read lambda expressions for methods that already have a name.
+- **Pipelines and Streams** New stream API to facilitate pipeline processing.
+- **Functional interfaces** : An Interface that contains only one abstract method is known as functional interface. It can have any number of default and static methods. It can also declare methods of object class.
+- **Date and Time API**: Date and Time API give us a  new package java.time package.
+- **Default Methods:** Default methods enable new functionality to be added to the interfaces of libraries and ensure binary compatibility with code written for older versions of those interfaces.
+- **Type Annotations**: Before Java 8 Java annotations can be applied to type declarations. From this Java 8 release onwards, annotations can be applied to type use. Annotations can be applied wherever a type is used like in new instance creates, exception throws clause etc. This will help to enforce stronger type checks and using this feature we can come up with a type checking framework itself.
+- **Nashorn JavaScript Engine**: Using this we can develop standalone JavaScript applications in Java. Pre Java 8, we got JDK with a JavaScript engine based on Rhino. It is a developed from scratch. It will provide better compatibility with ECMA normalized JavaScript specification and better performance than Rhino.
+- **Concurrent Accumulators**: java.util.concurrent.atomic package is getting additional classes as part of Java 8 release. These will help to sum values from across multiple threads.
+- **Parallel operations**: Iterating over a collection can be done in parallel using the aggregate operations easily. Pre Java 8 Iterators are used to parse the elements of a collection one by on explicitly. Now that can be done in parallel internally with the use of streams and aggregate operations. We can create multiple substreams and those substreams can be processed internally in parallel and then the results be combined. For this to be effective, we need to have multiple cores and data volume.
+- **PermGen Space Removed**: The PermGen space is removed from Java 8 and instead we have MetaSpace introduced. One of the most dreaded error, “java.lang.OutOfMemoryError: PermGen error” will no longer be seen from Java 8. Nice thing is that the MetaSpace default is unlimited and that the system memory itself becomes the memory.
+- **TLS SNI** : Server Name Indentification (SNI) is an extension of the TLS protocol used for identifying the certificate to serve based on the hostname specified by the client. This enables a server to have virtual host over HTTPS. The same IP address can be used for multiple hosts and their respective different security certificates.
+- **Optional**  : Emphasis on best practices to handle null values properly.
+- **Collection API improvements**: Some new methods added in Collection API Iterator default method forEachRemaining(Consumer action),Collection default method removeIf(Predicate filter)
+- **Concurrency API improvements:** ConcurrentHashMap compute(), forEach(), forEachEntry(), forEachKey(), forEachValue(), merge(), reduce() and search() methods.
 
 
 
