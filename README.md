@@ -14,11 +14,11 @@ Interview questions and answers
     * [Why Java 8 has introduced default methods?](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#why-java-8-has-introduced-default-methods)
     * [Why Java 8 has introduced static methods?](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#why-java-8-has-introduced-static-methods)
     * [Why Java does not allow multiple inheritance?](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#why-java-does-not-allow-multiple-inheritance)
-    * [Method Overloading and Overriding](https)
-      * [Method Overloading](https)
-      * [Rules for Method Overloading](https)
-      * [Method Overriding](https)
-      * [Rules for Method Overriding](https)
+    * [Method Overloading and Overriding](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#method-overloading-and-overriding)
+      * [Method Overloading](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#method-overloading)
+      * [Rules for Method Overloading](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#rules-for-method-overloading)
+      * [Method Overriding](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#method-overriding)
+      * [Rules for Method Overriding](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#rules-for-method-overriding)
       * [Test](https)
   
 - **Java**
