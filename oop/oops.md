@@ -282,3 +282,193 @@ Output:
 ```log
 Syntax error on token ",". expected.
 ```
+
+Method Overloading and Overriding
+-------------------------
+There are 2 ways by which we can achieve polymorphic behavior
+
+1. Method Overloading
+2. Method Overriding
+
+
+Method Overloading
+-------------------
+1. Method overloading means two or more methods in a class having the same name but different parameters(arguments).
+2. Methods may or may not have a different return type.
+3. Method overloading reduces duplicate code and allows us to use the same method name for different purposes.
+4. Method overloading is also called Compile time polymorphism because, at the time of compiling the code, the compiler decides which method is going to be called based on the method name, return type, and arguments.
+5. Overloading can also happen in the case of inheritance. This is because the Child class already has one version of inherited methods from the parent class and can also write another overloaded version of that method.
+
+Simply put, we can implement method overloading in _two different ways_:
+1. implementing two or more methods that have the same name but take different numbers of arguments
+2. implementing two or more methods that have the same name but take arguments of different types
+
+
+Rules for Method Overloading
+-------------------
+Two methods can be called overloaded if they follow rules:
+- Both have same method name
+- Both have different arguments
+
+If both methods follow these two rules, then they **may or may not**:
+- Have different access modifiers
+- Have different return types
+- Throw different checked or unchecked exceptions
+
+
+**Example 1:** Different Numbers of Arguments
+
+The Multiplier class shows how to overload the multiply() method by simply defining two implementations that take different numbers of arguments:
+
+```java
+public class Multiplier {
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+    public int multiply(int a, int b, int c) {
+        return a * b * c;
+    }
+}
+```
+
+
+
+**Example 2:** Arguments of Different Types
+Similarly, we can overload the multiply() method by making it accept arguments of different types:
+```java
+public class Multiplier {
+
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+
+    public double multiply(double a, double b) {
+        return a * b;
+    }
+}
+
+```
+it's legitimate to define the Multiplier class with both types of method overloading:
+```java
+public class Multiplier {
+
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+
+    public int multiply(int a, int b, int c) {
+        return a * b * c;
+    }
+
+    public double multiply(double a, double b) {
+        return a * b;
+    }
+}
+```
+however, that it's not possible to have two method implementations that differ only in their return types.
+
+To understand why – let's consider the one example:
+
+```java
+public int multiply(int a, int b) { 
+    return a * b; 
+}
+ 
+public double multiply(int a, int b) { 
+    return a * b; 
+}
+
+```
+In this case, the code simply **wouldn't compile** because of the method call ambiguity – the compiler wouldn't know which implementation of multiply() to call.
+
+
+**Example 3:** Type Promotion
+
+One neat feature provided by method overloading is the so-called type promotion, a.k.a. widening primitive conversion.
+
+In simple terms, one given type is implicitly promoted to another one when there's no matching between the types of the arguments passed to the overloaded method and a specific method implementation.
+
+To understand more clearly how type promotion works, consider the following implementations of the multiply() method:
+
+
+```java
+public double multiply(int a, long b) {
+    return a * b;
+}
+
+public int multiply(int a, int b, int c) {
+    return a * b * c;
+}
+
+
+```
+Now, calling the method with two int arguments will result in the second argument being promoted to long, as in this case there's not a matching implementation of the method with two int arguments.
+
+Let's see a quick unit test to demonstrate type promotion:
+```java
+@Test
+public void whenCalledMultiplyAndNoMatching_thenTypePromotion() {
+    assertThat(multiplier.multiply(10, 10)).isEqualTo(100.0);
+}
+```
+
+Conversely, if we call the method with a matching implementation, type promotion just doesn't take place:
+
+```java
+@Test
+public void whenCalledMultiplyAndMatching_thenNoTypePromotion() {
+    assertThat(multiplier.multiply(10, 10, 10)).isEqualTo(1000);
+}
+```
+
+
+Here's a summary of the type promotion rules that apply for method overloading:
+- byte can be promoted to short, int, long, float, or double
+- short can be promoted to int, long, float, or double
+- char can be promoted to int, long, float, or double
+- int can be promoted to long, float, or double
+- long can be promoted to float or double
+- float can be promoted to double
+
+
+
+
+Method Overriding
+-------------------
+1. Method overriding is defining a method in the child class with the same method name and same method signature which is already written in the parent class.
+2. Return type of overridden method can be a subtype of the return type of parent class method.
+
+E.g. If the parent class method returns Vehicle then Subclass’s overridden method’s return type can be any subclass of Vehicle class, for example, Car can be a return type of overridden method in child class. (Assuming Vehicle as parent class and Car as a child class of Vehicle class).
+
+3. It can’t have a lower access modifier.
+   E.g. If the parent class method has a protected access modifier then the child class overridden method cannot have a private access modifier, but the public is allowed.
+
+4. Use @override annotation for the overridden method, so if we don’t follow the overriding rules then the compiler will show the error.
+5. Method overriding is called Dynamic Polymorphism because the method which is going to be called is decided at run time by the JVM.
+6. Static methods can’t be overridden, only instance methods are overridden.
+
+Rules for Method Overriding
+-------------------
+The overriding method of child class must follow below rules:
+- It must have same method name as that of parent class method
+- It must have same arguments as that of parent class method
+- It must have either the same return type or covariant return type (child classes are covariant types to their parents)
+- It must not throw broader checked exceptions
+- It must not have a more restrictive access modifier (if parent method is public, then child method cannot be private/protected)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+For more information:
+1. [Method Overloading and Overriding in Java](https://www.baeldung.com/java-method-overload-override)

@@ -14,6 +14,12 @@ Interview questions and answers
     * [Why Java 8 has introduced default methods?](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#why-java-8-has-introduced-default-methods)
     * [Why Java 8 has introduced static methods?](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#why-java-8-has-introduced-static-methods)
     * [Why Java does not allow multiple inheritance?](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#why-java-does-not-allow-multiple-inheritance)
+    * [Method Overloading and Overriding](https)
+      * [Method Overloading](https)
+      * [Rules for Method Overloading](https)
+      * [Method Overriding](https)
+      * [Rules for Method Overriding](https)
+      * [Test](https)
   
 - **Java**
   - [Basic](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md)
