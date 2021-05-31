@@ -172,6 +172,83 @@ public Class B{
 
 There is also a Field injection, where Spring injects the required dependencies directly into the fields when those fields are annotated with `@Autowired` annotation.
 
+Constructor Vs Setter injection 
+-----------------------
+The differences are:
+- Partial dependency is not possible with Constructor based injection, but it is possible with Setter based injection. Suppose there are 4 properties in a class and the class has setter methods and a constructor with 4 parameters. In this case, if you want to inject only one/two property, then it is only possible with setter methods (unless you can define a new parametrized constructor with the needed properties)
+- Cyclic dependency is also not possible with Constructor based injection. Suppose class A has dependency on class B and class B has dependency on class A and we are using constructor based injection, then when Spring tries to create object of class A, it sees that it needs class B object, then it tries to resolve that dependency first. But when it tries to create object of class B, it finds that it needs class A object, which is still under construction. Here Spring recognizes that a circular reference may have occurred and you will get an error in this case. This problem can easily be solved by using Setter based injection because dependencies are not injected at the object creation time
+- While using Constructor injection, you will have to remember the order of parameters in a constructor when the number of constructor parameters increases. This is not the case with Setter injection
+- Constructor injection helps in creating immutable objects, because a bean object is created using constructor and once the object is created, its dependencies cannot be altered anymore. Whereas with Setter injection, it’s possible to inject dependency after object creation which leads to mutable objects.
+
+Use constructor-based injection, when you want your class to not even be instantiated if the class dependencies are not resolved because Spring container will ensure that all the required dependencies are passed to the constructor.
+
+
+BeanFactory and ApplicationContext
+-----------------------
+The differences are:
+
+- BeanFactory is the most basic version of IOC containers which should be preferred when memory consumption is critical whereas ApplicationContext extends BeanFactory, so you get all the benefits of BeanFactory plus some advanced features for enterprise applications
+- BeanFactory instantiates beans on-demand i.e. when the method getBean(beanName) is called, it is also called Lazy initializer whereas ApplicationContext instantiates beans at the time of creating the container where bean scope is Singleton, so it is an Eager initializer
+- BeanFactory only supports 2 bean scopes, singleton and prototype whereas ApplicationContext supports all bean scopes
+- ApplicationContext automatically registers BeanFactoryPostProcessor and BeanPostProcessor at startup, whereas BeanFactory does not register these interfaces automatically
+- Annotation based dependency injection is not supported by BeanFactory whereas ApplicationContext supports it
+- If you are using plain BeanFactory, features like transactions and AOP will not take effect (not without some extra steps), even if nothing is wrong with the configuration whereas in ApplicationContext, it will work
+- ApplicationContext provides additional features like MessageSource access (i18n or Internationalization) and Event Publication 
+
+Use an ApplicationContext unless you have a really good reason for not doing so.
+
+Spring Bean life-cycle
+-----------------------
+Spring beans are java classes that are managed by Spring container and the bean life-cycle is also managed by Spring container.
+
+The bean life-cycle has below steps:
+- Bean instantiated by container
+- Required dependencies of this bean are injected by container
+- Custom Post initialization code to be executed (if required)
+- Bean methods are used
+- Custom Pre destruction code to be executed (if required)
+
+When you want to execute some custom code that should be executed before the bean is in usable state, you can specify an init() method and if some custom code needs to be executed before the bean is destroyed, then a destroy() method can be specified.
+There are various ways to define these init() and destroy() method for a bean:
+
+By using xml file,
+<bean> tag has 2 attributes that can be used to specify its init  and destroy methods,
+
+You can give any name to your initialization and destroy methods, and here is our Test class
+
+```java
+package com.demo;
+public Class Test{
+
+public void init() throws Exception{
+        System.out.prinln("Init Method");
+        }
+
+
+public void destroy() throws Exception{
+        System.out.prinln("Destroy Method");
+        }
+
+        }
+```
+
+By implementing InitializingBean and DisposableBean interfaces
+
+InitializingBean interface has afterPropertiesSet() method which can be used to execute some initialization task for a bean and DisposableBean interface has a destroy() method which can be used to execute some cleanup task.
+
+Here is our Test class,
+
+```java
+package com.demo;
+
+
+```
+
+
+
+
+
+
 
 Spring Boot Security using OAuth2 with JWT
 -----------------------
