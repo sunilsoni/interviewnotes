@@ -70,10 +70,10 @@ Interview questions and answers
   
 - **Spring**
   - [Spring](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#spring)
-    * [Dependency Injection](https)
-      * [Types of Dependency Injection](https)
-      * [Constructor-based DI](https)
-      * [Setter-method injection](https)
+    * [Dependency Injection](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#dependency-injection)
+      * [Types of Dependency Injection](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#types-of-dependency-injection)
+      * [Constructor-based DI](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#constructor-based-di-)
+      * [Setter-method injection](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#setter-method-injection)
     * [Spring Boot Security using OAuth2 with JWT](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#spring-boot-security-using-oauth2-with-jwt) 
     * [OAuth2 Terminology](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#oauth2-terminology)
     * [Json Web Token(JWT)](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#json-web-tokenjwt)

@@ -95,10 +95,10 @@ public Class B{
 }
 ```
 
-Before Spring version 4.3, @Autowired annotation was needed for constructor dependency injection, however, in newer Spring versions, @Autowired is optional, if the class has only one constructor.
+Before Spring version 4.3, `@Autowired` annotation was needed for constructor dependency injection, however, in newer Spring versions, @Autowired is optional, if the class has only one constructor.
 But, if the class has multiple constructors, we need to explicitly
 
-But, if the class has multiple constructors, we need to explicitly add `@Autowired` to one of the constructors so that Spring knows which constructor to use for injecting the dependencies.
+But, if the class has multiple constructors, we need to explicitly add ``@Autowired`` to one of the constructors so that Spring knows which constructor to use for injecting the dependencies.
 
 
 Setter-method injection: 
@@ -142,7 +142,7 @@ public Class B{
 ```
 **Using Java based configuration:**
 
-The setter method needs to be annotated with @Autowired annotation. 
+The setter method needs to be annotated with `@Autowired` annotation. 
 
 ```java
 package com.demo;
@@ -170,7 +170,7 @@ public Class B{
 }
 ```
 
-There is also a Field injection, where Spring injects the required dependencies directly into the fields when those fields are annotated with @Autowired annotation.
+There is also a Field injection, where Spring injects the required dependencies directly into the fields when those fields are annotated with `@Autowired` annotation.
 
 
 Spring Boot Security using OAuth2 with JWT
