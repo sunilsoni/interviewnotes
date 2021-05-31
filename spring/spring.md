@@ -9,6 +9,169 @@ PUT is for checking if resource is exists then update , else create new resource
 PATCH is always for update a resource
 
 
+Dependency Injection
+-------------------
+
+Dependency Injection is the most important feature of Spring framework. Dependency Injection is a design pattern where the dependencies of a class are injected from outside, like from an xml file. It ensures loose-coupling between classes.
+
+In a Spring MVC application, the controller class has dependency of service layer classes and the service layer classes have dependencies of DAO layer classes.
+
+Suppose class A is dependent on class B. In normal coding, you will create an object of class B using ‘new’ keyword and call the required method of class B. However, what if you can tell someone to pass the object of class B in class A? Dependency injection does this. You can tell Spring, that class A needs class B object and Spring will create the instance of class B and provide it in class A.
+
+In this example, we can see that we are passing the control of objects to Spring framework, this is called Inversion of Control (IOC) and Dependency injection is one of the principles that enforce IOC.
+
+
+Types of Dependency Injection
+-----------------------------
+Spring framework provides 2 ways to inject dependencies:
+- By Constructor
+- By Setter method
+
+**Constructor-based DI** :
+-----------------------------
+
+when the required dependencies are provided as arguments to the constructor, then it is known as constructor-based dependency injection, see the examples below:
+
+_Using XML based configuration:_
+Injecting a dependency is done through the bean-configuration file, for this <constructor-arg> xml tag is used:
+
+```xml
+ <bean id="classB" class="com.demo.B" />
+
+<bean id="classA" class="com.demo.A">
+         <constructor-arg ref="classB" /> 
+</bean>
+```
+
+In case of more than 1 dependency, the order sequence of constructor arguments should be followed to inject the dependencies.
+Java Class A:
+```java
+package com.demo;
+public Class A{
+    B b;
+    A(B b){
+        this.b=b;
+        }
+}
+```
+Java Class B:
+
+```java
+package com.demo;
+public Class B{
+   
+}
+```
+
+**Using Java Based Configuration:**
+
+When using Java based configuration, the constructor needs to be annotated with `@Autowired` annotation to inject the dependencies,
+
+Classes A and B will be annotated with `@Component` (or any other stereotype annotation), so that they will be managed by Spring.
+
+```java
+package com.demo;
+package org.springframework.beans.factory.annotation.Autowired;
+package  org.springframework.stereotype.Component;
+
+@Component
+public Class A{
+    B b;
+    @Autowired
+    A(B b){
+            this.b=b;
+    }
+}
+```
+Java class B:
+
+```java
+package com.demo;
+package org.springframework.stereotype.Component;
+
+@Component
+public Class B{
+
+}
+```
+
+Before Spring version 4.3, @Autowired annotation was needed for constructor dependency injection, however, in newer Spring versions, @Autowired is optional, if the class has only one constructor.
+But, if the class has multiple constructors, we need to explicitly
+
+But, if the class has multiple constructors, we need to explicitly add `@Autowired` to one of the constructors so that Spring knows which constructor to use for injecting the dependencies.
+
+
+Setter-method injection: 
+------------------------
+
+in this, the required dependencies are provided as the field parameters to the class and the values are set using setter methods of those properties. See the examples below.
+
+**Using XML based configuration:**
+Injecting a dependency is done through the bean configuration file and <property> xml tag is used where ‘name’ attribute defines the name of the field of java class. 
+
+
+```xml
+ <bean id="classB" class="com.demo.B" />
+
+<bean id="classA" class="com.demo.A">
+<property name="b">
+         <constructor-arg ref="classB" />
+</property>
+</bean>
+```
+
+
+
+Java Class A:
+```java
+package com.demo;
+public Class A{
+    B b;
+    public void setB(B b){
+        this.b=b;
+        }
+}
+```
+Java Class B:
+
+```java
+package com.demo;
+public Class B{
+
+        }
+```
+**Using Java based configuration:**
+
+The setter method needs to be annotated with @Autowired annotation. 
+
+```java
+package com.demo;
+package org.springframework.beans.factory.annotation.Autowired;
+package  org.springframework.stereotype.Component;
+
+@Component
+public Class A{
+    B b;
+    @Autowired
+    public void setB(B b){
+            this.b=b;
+    }
+}
+```
+Java class B:
+
+```java
+package com.demo;
+package org.springframework.stereotype.Component;
+
+@Component
+public Class B{
+
+}
+```
+
+There is also a Field injection, where Spring injects the required dependencies directly into the fields when those fields are annotated with @Autowired annotation.
+
 
 Spring Boot Security using OAuth2 with JWT
 -----------------------
