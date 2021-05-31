@@ -219,17 +219,13 @@ You can give any name to your initialization and destroy methods, and here is ou
 ```java
 package com.demo;
 public Class Test{
-
-public void init() throws Exception{
+    public void init() throws Exception{
         System.out.prinln("Init Method");
-        }
-
-
-public void destroy() throws Exception{
+    }
+    public void destroy() throws Exception{
         System.out.prinln("Destroy Method");
-        }
-
-        }
+    }
+}
 ```
 
 By implementing InitializingBean and DisposableBean interfaces
