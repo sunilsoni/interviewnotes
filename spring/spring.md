@@ -358,6 +358,125 @@ Spring uses CGLIB to create the proxy object and the proxy object delegates meth
 
 To avoid CGLIB usage, configure the proxy mode with ScopedProxyMode.INTERFACES and it will use JDK dynamic proxy. 
 
+Stereotype Annotations
+----------------------
+
+`@Component`, `@Controller`, `@Service` and `@Repository` annotations are called stereotype annotations and they are present in org.springframework.stereotype package.
+
+@Component: it is a general purpose stereotype annotation which indicates that the class annotated with it, is a spring managed component.
+
+@Controller, @Service and @Repository are special types of @Component, these 3 themselves are annotated with @Component,
+
+```java
+package org.springframework.stereotype;
+
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+@Target({ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Indexed
+public @interface Component {
+    String value() default "";
+}
+
+
+
+```
+
+```java
+
+package org.springframework.stereotype;
+
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+import org.springframework.core.annotation.AliasFor;
+
+@Target({ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Component
+public @interface Controller {
+    @AliasFor(
+            annotation = Component.class
+    )
+    String value() default "";
+}
+```
+
+
+
+
+```java
+package org.springframework.stereotype;
+
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+import org.springframework.core.annotation.AliasFor;
+
+@Target({ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Component
+public @interface Service {
+    @AliasFor(
+        annotation = Component.class
+    )
+    String value() default "";
+}
+```
+
+```java
+
+package org.springframework.stereotype;
+
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+import org.springframework.core.annotation.AliasFor;
+
+@Target({ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Component
+public @interface Repository {
+    @AliasFor(
+        annotation = Component.class
+    )
+    String value() default "";
+}
+```
+
+
+So, the classes annotated with these annotations gets picked up in Component scanning and they are managed by Spring.
+
+- **@Controller:** the classes annotated with `@Controller` will act as Spring MVC controllers. DispatcherServlet looks for `@RequestMapping` in classes that are annotated with `@Controller`. That means you cannot replace `@Controller` with `@Component`, if you just replace it with `@Component` then yes it will be managed by Spring but it will not be able to handle the requests.
+(Note: if a class is registered with Spring using `@Component`,  then @RequestMapping annotations within class can be picked up, if the class itself is annotated with @RequestMapping)
+
+- **@Service:** The service layer classes that contain the business logic should be annotated with `@Service`. Apart from the fact that it is used to indicate that the class contains business logic, there is no special meaning to this annotation, however it is possible that Spring may add some additional feature to `@Service` in future, so it is always good idea to follow the convention.
+
+- **@Repository:** The classes annotated with this annotation defines data repositories. It is used in DAO layer classes. @Repository has one special feature that it catches platform specific exceptions and re-throw them as one of the Spring’s unified unchecked exception i.e. `DataAccessException` .
+
+
+@Controller vs @RestController annotation
+-----------------------
+
+
+@Qualifier annotation
+-----------------------
+
 
 Spring Boot Security using OAuth2 with JWT
 -----------------------
