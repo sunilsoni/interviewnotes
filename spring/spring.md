@@ -259,11 +259,104 @@ When you define a bean scope to be singleton, that means only one instance will 
 
 Spring framework gets only one chance to inject the dependencies, so if you try to inject a prototyped scoped bean inside a singleton scoped bean, Spring will instantiate the singleton bean and will inject one instance of prototyped scoped bean. This one instance of prototyped scoped bean is the only instance that is ever supplied to the singleton scoped bean.
 
+So here, whenever the singleton bean is requested, `you will get the same instance of prototyped scoped bean`.
 
 How to inject a prototype scope bean in a singleton scope bean?
 ------------------
+We have discussed in the previous question that when a prototyped scoped bean is injected in a singleton scoped bean, then on each request of singleton bean, we will get the same instance of prototype scoped bean, but there are certain ways where we can get a new instance of prototyped scoped bean also.
+
+The solutions are:
+- Injecting an ApplicationContext in Singleton bean and then getting the new instance of prototyped scoped bean from this ApplicationContext
+- Lookup method injection using @Lookup
+- Using scoped proxy
+
+**Injecting ApplicationContext:**
+
+To inject the ApplicationContext in Singleton bean, we can either use @Autowired annotation or we can implement ApplicationContextAware interface,
+
+```java
+package com.demo;
+
+import org.springframework.beans.BeansException;
+import org.springframework.context.ApplicationContextAware;
+import org.springframework.context. ApplicationContext;
+import org.springframework.sterotype.Component;
+
+@Component
+public class SingletonBean implements ApplicationContextAware{
+    
+    private ApplicationContext applicationContext;
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException{
+        this.applicationContext=applicationContext;
+    }
+
+    public PrototypeBeann getProtoTypeBean(){
+        return. applicationContext.getBean(PrototypeBean.class);
+    }
+}
+
+```
+
+Here, whenever the getPrototypeBean() method is called, it will return a new instance of PrototypeBean.
+But this approach contradicts with Spring IOC (Inversion of Control), as we are requesting the dependencies directly from the container.
 
 
+
+**Lookup Method Injection using @Lookup:**
+
+```java
+package com.demo;
+
+import org.springframework.beans.factory.annotations.Lookup;
+import org.springframework.sterotype.Component;
+
+@Component
+public class SingletonBean {
+    @Lookup
+    public PrototypeBeann getProtoTypeBean(){
+        return null;
+    }
+}
+
+```
+
+Here, Spring will dynamically overrides getPrototypeBean() method annotated with @Lookup and it will look up the bean which is the return type of this method. Spring uses CGLIB library to do this.
+
+**Using Scoped Proxy**
+
+```java
+package com.demo;
+
+import org.springframework.beans.factory.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
+import org.springframework.sterotype.Component;
+
+import java.beans.BeanProperty;
+
+@Component
+public class SingletonBean {
+
+    private ApplicationContext applicationContext;
+
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        this.applicationContext = applicationContext;
+    }
+
+    @Bean
+    @Scope(value=ConfigurableBeanFactory.ScopedProxyMode,
+    proxyMode=ScopedProxyMode.TARGET_CLASS)
+    public PrototypeBean getProtoTypeBean() {
+        return new PrototypeBean();
+    }
+}
+
+```
+
+Spring uses CGLIB to create the proxy object and the proxy object delegates method calls to the real object. In the above example, we are using ScopedProxyMode.TARGET_CLASS which causes an AOP proxy to be injected at the target injection point. The default Proxy mode is ScopedProxyMode.NO .
+
+To avoid CGLIB usage, configure the proxy mode with ScopedProxyMode.INTERFACES and it will use JDK dynamic proxy. 
 
 
 Spring Boot Security using OAuth2 with JWT
