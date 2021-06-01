@@ -472,10 +472,18 @@ So, the classes annotated with these annotations gets picked up in Component sca
 
 @Controller vs @RestController annotation
 -----------------------
+The differences are:
 
+- `@Controller` annotation is used to mark a class as Spring MVC controller where the response is a view name which will display the Model object prepared by controller, whereas @RestController annotation is a specialization of @Controller and it is used in RESTful web services where the response is usually JSON/XML.
+- `@RestController` is made up of 2 annotations, @Controller and @ResponseBody. @ResponseBody annotation is used to attach the generated output directly into the body of http response.
+- `@Controller` can be used with @ResponseBody which will have same effect as @RestController. @ResponseBody annotation can be used at the class level or at the individual methods also. When it is used at the method level, Spring will use HTTP Message Converters to convert the return value to HTTP response body (serialize the object to response body).
 
 @Qualifier annotation
 -----------------------
+Let’s consider an example to understand @Qualifier annotation better. Suppose we have an interface called Shape and there are 2 classes Rectangle and Circle that are implementing this interface. We are autowiring our Shape interface in our controller class using @Autowired, now here a conflict will happen, because there are 2 beans of the same type.
+
+
+
 
 
 Spring Boot Security using OAuth2 with JWT
