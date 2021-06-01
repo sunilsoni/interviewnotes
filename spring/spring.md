@@ -240,8 +240,28 @@ package com.demo;
 
 ```
 
+Spring Bean Scopes
+------------------
+Spring framework supports 5 scopes: 
+- **singleton** – only one bean instance per Spring IOC container
+- **prototype** – it produces a new instance each and every time a bean is requested
+- **request** – a single instance will be created and made available during complete life-cycle of an HTTP request
+- **session** – a single instance will be created and made available during complete life-cycle of an HTTP session
+- **global session** – a single instance will be created during the life-cycle of a ServletContext
+
+`@Scope` annotation or scope attribute of bean tag can be used to define bean scopes in Spring. 
+
+Default scope of a bean is `Singleton` that means only one instance per context. 
+
+What happens when we inject a prototype scope bean in a singleton scope bean?
+------------------
+When you define a bean scope to be singleton, that means only one instance will be created and whenever we request for that bean, that same instance will be returned by the Spring container, however, a prototype scoped bean returns a new instance every time it is requested.
+
+Spring framework gets only one chance to inject the dependencies, so if you try to inject a prototyped scoped bean inside a singleton scoped bean, Spring will instantiate the singleton bean and will inject one instance of prototyped scoped bean. This one instance of prototyped scoped bean is the only instance that is ever supplied to the singleton scoped bean.
 
 
+How to inject a prototype scope bean in a singleton scope bean?
+------------------
 
 
 
