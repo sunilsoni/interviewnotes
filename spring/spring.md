@@ -560,9 +560,73 @@ public class ShapeCOntroller{
 @Transactional annotation
  -----------------------
 
+Spring provides Declarative Transaction Management via `@Transactional` annotation. When a method is applied with `@Transactional`, then it will execute inside a database transaction. '@Transactional' annotation can be applied at the class level also, in that case, all methods of that class will be executed inside a database transaction.
+
+**How @Transactional works:**
+
+When '@Transactional' annotation is detected by Spring, then it creates a proxy object around the actual bean object. So, whenever the method annotated with '@Transactional' is called, the request first comes to the proxy object and this proxy object invokes the same method on the target bean. These proxy objects can be supplied with interceptors. Spring creates a TransactionInterceptor and passes it to the generated proxy object. So, when the '@Transactional' annotated method is called, it gets called on the proxy object first, which in turn invokes the TransactionInterceptor that begins a transaction. Then the proxy object calls the actual method of the target bean. When the method finishes, the TransactionInterceptor commits/rollbacks the transaction.
+
+One thing to remember here is that the Spring wraps the bean in the proxy, the bean has no knowledge of it. So, only the external calls go through the proxy. As for the internal calls ('@Transactional' method calling the same bean method), they are called using ‘this’.
+Using '@Transactional' annotation, the transaction’s propagation and isolation can be set directly, like: 
+
+```java
+
+ @Transactional(propogation = Propogationn.REQUIRES_NEW,
+        isolation = Isolation.READ_UNCOMMITTES
+        rollbackFor = Exception.class)
+ public String process(){
+            return "Success";
+        }
+ 
+```
+Also, you can specify a ‘rollbackFor’ attribute and specify which exception types must cause a transaction rollback (a transaction with Runtime exceptions and errors are by default rolled back).
+If your process() method is calling another bean method, then you can also annotate that method with '@Transactional' and set the propagation level to decide whether this method should execute in the same transaction or it requires a new transaction.
 
 @ControllerAdvice annotation
 -----------------------
+`@ControllerAdvice` annotation is used to intercept and handle the exceptions thrown by the controllers across the application, so it is a global exception handler. You can also specify @ControllerAdvice for a specific package,
+
+```java
+@ControllerAdvice(basePackage = com.demo.controller")
+public class Test{
+
+}
+```
+
+Or a specific controller,
+```java
+@ControllerAdvice(assignableTypes=  = DemoController.class)
+public class Test{
+
+}
+```
+
+Or even a specific annotation,
+```java
+@ControllerAdvice(annotations=  = RestController.class)
+public class Test{
+
+}
+```
+`@ExceptionHandler` annotation is used to handle specific exceptions thrown by controllers, like,
+```java
+@ControllerAdvice
+public class Test{
+    ExceptioHandler(SQLException.class)
+    public String handleSQLException(){
+        return null;
+    }
+    
+    ExceptioHandler(UserNotFoundException.class)
+    public String handleUserNotFoundException(){
+        return null;
+    }
+}
+```
+
+Here, we have defined a global exception handler using `@ControllerAdvice`. If a SQLException gets thrown from a controller, then `handleSQLException()` method will be called. In this method, you can customize the exception and send a particular error page/error code. Also, custom exceptions can be handled.
+
+If you don’t want to create a global exception handler, then you can also define some `@ExceptionHandler` methods in a particular controller itself.
 
 
 
