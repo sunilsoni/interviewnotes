@@ -382,10 +382,7 @@ import java.lang.annotation.Target;
 @Indexed
 public @interface Component {
     String value() default "";
-}
-
-
-
+} 
 ```
 
 ```java
@@ -483,6 +480,89 @@ The differences are:
 Let’s consider an example to understand @Qualifier annotation better. Suppose we have an interface called Shape and there are 2 classes Rectangle and Circle that are implementing this interface. We are autowiring our Shape interface in our controller class using @Autowired, now here a conflict will happen, because there are 2 beans of the same type.
 
 
+```java
+public interface Shape{
+
+}
+
+@Service 
+public class Rectangle implements Shape{
+
+
+}
+
+@Service 
+public class Circle implements Shape{
+
+}
+
+
+@RestController
+public class ShapeCOntroller{
+
+
+@Autowired
+Shape shape;
+
+}
+```
+
+When you try to start your application, you will get
+
+```log
+Could not autowire. There is more than one bean of 'Shape' type.
+Beans:
+circle (Circle.java) rectangle  (Rectangle.java) 
+```
+
+Now, to resolve this you can give names to your Rectangle and Circle class, like: 
+
+
+```java
+public interface Shape{
+
+}
+
+@Service("rectangle")
+public class Rectangle implements Shape{
+
+
+}
+
+@Service("circle") 
+public class Circle implements Shape{
+
+}
+```
+
+And you will use @Qualifier annotation to specify which bean should be autowired, like:
+```java
+@RestController
+public class ShapeCOntroller{
+    @Autowired
+    @Qualifier("circle")
+    Shape shape;
+}
+```
+
+Now, Spring will not get confused as to what bean it has to autowire.
+NOTE , you can also use @Qualifier annotation to give names to your Rectangle and Circle classes, like
+```java
+@RestController
+public class ShapeCOntroller{
+    @Autowired
+    @Qualifier("rectangle")
+    Shape shape;
+}
+```
+
+
+@Transactional annotation
+ -----------------------
+
+
+@ControllerAdvice annotation
+-----------------------
 
 
 

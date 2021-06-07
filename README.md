@@ -83,6 +83,8 @@ Interview questions and answers
     * [Stereotype Annotations](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#stereotype-annotations)
     * [@Controller vs @RestController annotation](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#controller-vs-restcontroller-annotation:)
     * [@Qualifier annotation](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#qualifier-annotation)
+    * [@Transactional annotation](https:)
+    * [@ControllerAdvice annotation](https:)
     * [Spring Boot Security using OAuth2 with JWT](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#spring-boot-security-using-oauth2-with-jwt) 
     * [OAuth2 Terminology](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#oauth2-terminology)
     * [Json Web Token(JWT)](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#json-web-tokenjwt)
