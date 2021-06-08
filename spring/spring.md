@@ -628,6 +628,9 @@ Here, we have defined a global exception handler using `@ControllerAdvice`. If a
 
 If you don’t want to create a global exception handler, then you can also define some `@ExceptionHandler` methods in a particular controller itself.
 
+@Bean annotation
+-----------------
+
 
 
 Spring Boot Security using OAuth2 with JWT
