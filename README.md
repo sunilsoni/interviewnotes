@@ -102,7 +102,12 @@ Interview questions and answers
       * [timeout](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#isolation)
 
 - **Hibernate**
-  - [Hibernate](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#spring)
+  - [Hibernate](https://github.com/sunilsoni/interview-notes/blob/main/hibernate/hibernate.md)
+    * [JPA vs Hibernate](https)
+    * [@Entity annotation](https)
+    * [@Id & @GeneratedValue](https)
+    * [get() and load() methods of Hibernate Session](https)
+    * [save(), saveOrUpdate() and persist() method of Hibernate Session](https)
   
 
 - **Angular interview questions and answers**
