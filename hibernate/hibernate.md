@@ -51,3 +51,40 @@ The differences between save() and persist() are:
 - Both behave differently when they are executed outside the transaction boundaries. persist() method ensures that it will not execute an INSERT when it is called outside of a transaction boundary whereas save() method does not guarantee this, it returns an identifier and if an INSERT query has to be executed to get the identifier then this INSERT happens immediately and it does not matter if the save() is called inside or outside of a transaction
 -  persist() method is useful in long-running conversation with an extended Session context because it does not execute an INSERT outside of a transaction. On the other hand, save() method is not good in a long-running conversation with an extended Session context
 
+
+Session and SessionFactory
+------------------
+SessionFactory creates and manages the Session objects.
+
+**Some points about SessionFactory:**
+- it is one instance per datasource/database
+- it is thread-safe
+- it is an immutable and heavy-weight object as it maintains Sessions, mappings, hibernate configurations etc.
+- SessionFactory provides second level cache in hibernate also called application-level cache
+
+**Some points about Session:**
+- Session objects are created using sessionFactory.openSession()
+- It is one instance per client/thread/transaction
+- It is not thread-safe
+- It is light-weight
+- Session provides first level cache, which is short-lived
+
+First Level and Second Level Cache
+------------------
+Hibernate framework provides caching at two levels, first-level cache which is at the Session level and second-level cache which is at the application level.
+
+**The first level cache** minimizes the database access for the same object if it is requested from the same Session. The first level cache is by default enabled. When you call session.get() method then it hits the database, and while returning, it also saves this object in the first-level cache. So, the subsequent requests for this same object from the same session will not hit the database and the object from cache will be used.
+
+But, since this cache is associated with the Session object, which is a short-lived object in Hibernate, as soon as the session is closed, all the information held in the cache is also lost. So, if we try to load the same object using the get() method, Hibernate will go to the database again and fetch the record.
+
+This poses a significant performance challenge in an application where multiple sessions are used, Hibernate provides second-level cache for this and it can be shared among multiple sessions.
+
+**The second level cache** is maintained at the SessionFactory level, this cache is by default disabled, to enable second level cache in hibernate, it needs to be configured in hibernate configuration file, i.e. hibernate.cfg.xml file. There are various providers of second level cache, like EhCache, OSCache etc.
+
+Once second level cache is configured, then object request will first go to the first-level cache, if it is not found there, then it will look for this object in second-level cache, if found then it will be returned from the second-level cache and it will also save a copy in first-level cache.
+
+But, If the object is not found in the second-level cache also, then it will hit the database and if it present in database, this object will be put into both first and second level cache, so that if any other session requests for this object then it will be returned from the cache.
+
+
+
+

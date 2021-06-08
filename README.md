@@ -107,8 +107,15 @@ Interview questions and answers
     * [@Entity annotation](https://github.com/sunilsoni/interview-notes/blob/main/hibernate/hibernate.md#entity-annotation)
     * [@Id & @GeneratedValue](https://github.com/sunilsoni/interview-notes/blob/main/hibernate/hibernate.md#id--generatedvalue)
     * [get() and load() methods of Hibernate Session](https://github.com/sunilsoni/interview-notes/blob/main/hibernate/hibernate.md#get-and-load-methods-of-hibernate-session)
-    * [save(), saveOrUpdate() and persist() method of Hibernate Session](https://github.com/sunilsoni/interview-notes/blob/main/hibernate/hibernate.md#save-saveorupdate-and-persist-method-of-hibernate-session)
-  
+    * [Session and SessionFactory](https)
+    * [First Level and Second Level Cache](https)
+    * [Test](https)
+    * [Test](https)
+    * [Test](https)
+    * [Test](https)
+    * [Test](https)
+    * [Test](https)
+
 
 - **Angular interview questions and answers**
   - [Angular](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md)
