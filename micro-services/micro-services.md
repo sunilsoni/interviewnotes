@@ -166,8 +166,17 @@ There are two types of inter-service communication in Microservices:
  2. **Asynchronous communication** : one service will communicate with another service through the asynchronous messaging. The calling service will not wait to respond by the caller service. First, it will return a response to the user, then the remaining services will process the request. Asynchronous communication in Microservices will be achieved through the messaging brokers like Apache Kafka, Apache ActiveMQ, etc.
 
 
-
-
+SOAP vs REST
+-------------
+The differences are:
+- SOAP stands for Simple Object Access Protocol and REST stands for Representational State Transfer
+- SOAP is a protocol whereas REST is an architectural style
+- SOAP cannot use REST because it is a protocol whereas REST can use SOAP web services as the underlying protocol, because it is just an architectural pattern
+- SOAP uses service interfaces to expose its functionality to client applications whereas REST uses URI to expose its functionality
+- SOAP defines standards that needs to be strictly followed for communication to happen between client and server whereas REST does not follow any strict standard
+- SOAP requires more bandwidth and resources than REST because SOAP messages contain a lot of information whereas REST requires less bandwidth than SOAP because REST messages mostly just contains a simple JSON message
+- SOAP only works with XML format whereas REST allows different data formats like Plain text, HTML, XML, JSON etc.
+- SOAP defines its own security whereas REST inherits the security 
 
 
 
