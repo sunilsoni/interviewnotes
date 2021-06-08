@@ -630,7 +630,13 @@ If you don’t want to create a global exception handler, then you can also defi
 
 @Bean annotation
 -----------------
+`@Bean` annotation is used when you want to explicitly declare and register a bean into application context, so that it will be managed by Spring.
 
+Some points to remember:
+- When using `@Bean`, you have the control over the bean creation logic.
+- `@Bean` is a method level annotation, the body of the method contains the logic for creating the bean instance and this method returns the instance which will be registered in the spring application context.
+- Using `@Bean`, you can register the classes from 3rd party libraries into the application context
+- `@Bean` annotation is usually declared in configuration classes.
 
 
 Spring Boot Security using OAuth2 with JWT

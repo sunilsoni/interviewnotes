@@ -85,7 +85,7 @@ Interview questions and answers
     * [@Qualifier annotation](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#qualifier-annotation)
     * [@Transactional annotation](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#transactional-annotation)
     * [@ControllerAdvice annotation](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#controlleradvice-annotation)
-    * [@Bean annotation](https)
+    * [@Bean annotation](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#bean-annotation)
     * [Spring Boot Security using OAuth2 with JWT](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#spring-boot-security-using-oauth2-with-jwt) 
     * [OAuth2 Terminology](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#oauth2-terminology)
     * [Json Web Token(JWT)](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#json-web-tokenjwt)
