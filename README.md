@@ -157,8 +157,8 @@ Interview questions and answers
     * [SOAP vs REST](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#soap-vs-rest)
     * [Eureka Naming Server](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#eureka-naming-server)
     * [Zuul](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#zuul)
-    * [Zipkin](https)
-    * [Hysterix](https)
+    * [Zipkin](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#zipkin)
+    * [Hysterix](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#hysterix)
 
 - **Kafka**
   - [Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md)
