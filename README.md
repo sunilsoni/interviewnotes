@@ -101,6 +101,10 @@ Interview questions and answers
       * [readOnly](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#isolation)
       * [timeout](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#isolation)
 
+- **Hibernate**
+  - [Hibernate](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#spring)
+  
+
 - **Angular interview questions and answers**
   - [Angular](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md)
     * [Angular Routing and Navigation](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-routing.md#1-angular-routing-and-navigation)
