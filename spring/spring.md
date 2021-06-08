@@ -638,6 +638,16 @@ Some points to remember:
 - Using `@Bean`, you can register the classes from 3rd party libraries into the application context
 - `@Bean` annotation is usually declared in configuration classes.
 
+@Component vs @Bean annotation
+-----------------
+The differences are:
+
+- `@Component` auto-detects and configures the beans using classpath scanning, whereas @Bean explicitly declares a single bean rather than letting Spring do it automatically
+- `@Component` is a class level annotation, whereas @Bean is a method level annotation
+- `@Component` has different specializations called stereotype annotations like `@Controller`, `@Service` and @Repository, whereas @Bean has no specializations
+- `@Bean` lets you create and configure beans exactly how you choose it to be, whereas in @Component, Spring has the control
+- `@Bean` lets you configure classes from 3rd party libraries where you are not the owner of the source code, but you can’t use @Component in this case 
+
 
 Spring Boot Security using OAuth2 with JWT
 -----------------------
