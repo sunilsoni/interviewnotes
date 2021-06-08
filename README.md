@@ -155,6 +155,8 @@ Interview questions and answers
     * [How does Microservice Architecture work?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#how-does-microservice-architecture-work)
     * [Communicating Between Microservices](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#communicating-between-microservices)
     * [SOAP vs REST](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#soap-vs-rest)
+    * [Eureka Naming Server](https)
+    * [Zuul](https)
 
 - **Kafka**
   - [Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md)
