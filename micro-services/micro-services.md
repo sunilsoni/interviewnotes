@@ -193,10 +193,29 @@ Zuul is an API gateway server. It handles all the requests that are coming to yo
 
 Zipkin
 -----
+To understand Zipkin use-case, let’s consider an example. Suppose you have a chain of 50 micro-services where first micro-service is calling the second and second calling third and so on. Now, if there is an error in, say 35th micro-service, then how you will be able to identify your request that you made to the first micro-service, from all the logs that gets generated in all 35 micro-services. I know this is an extreme example
 
+Zipkin helps in distributed tracing, especially in a micro-service architecture. It assigns an ‘id’ to each request and gives you a dashboard, where you can see the complete request and a lot more details, like the entire call-chain, how much time one micro-service took and which service failed etc.
 
 Hysterix
 -----
+Hysterix is a library that makes our micro-service, fault-tolerant. Suppose, you have a chain of 10 micro-services calling each other and the 6th one fails for some reason, then your application will stop working until the failed micro-service is fixed.
+
+You can use Hysterix here and provide a fallback method in case of a service failure.
+
+```java
+@GetMappinng("/getByName/{name}")
+@HystrixCommannd(fallbackMethod = "handlerMethod")
+public String.  getMapping(@PathVariable String name){
+    return "Get";
+}
+
+public String handleMethod(){
+    return "Service is down";
+}
+```
+
+If the GET service is getting failed, then the fallback method will be executed.
 
 
 For more information:
