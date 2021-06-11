@@ -1,5 +1,5 @@
 Data Structures
-------------
+===============
 
 
 - [Lists](#lists)
@@ -42,7 +42,8 @@ Data Structures
 
 ---
 
-### Lists
+Lists
+---------------
 
 #### ArrayList
 
@@ -69,7 +70,8 @@ Data Structures
 | remove(i)       | O(n) Remove and move all elements | O(n)  Iterate then remove |
 | iterator.remove | O(n)                              | O(1)                      |
 
-#### Stack
+Stack
+------ 
 
 - For stack operations push/pop/peek.
 - Not used anymore. Recommended to use Deque implementations.
@@ -96,7 +98,8 @@ Data Structures
 
 ---
 
-### Sets
+Sets
+-------- 
 
 Collection of unique elements. No duplicates.
 
@@ -147,7 +150,8 @@ Collection of unique elements. No duplicates.
 
 ---
 
-### Maps
+Maps
+------ 
 
 #### HashMap
 
@@ -195,7 +199,8 @@ Collection of unique elements. No duplicates.
 
 ---
 
-### Queues
+ Queues
+---------------
 
 #### LinkedList
 
@@ -257,7 +262,8 @@ Collection of unique elements. No duplicates.
 
 ---
 
-### Collections class
+ Collections class
+ ---------------
 
 #### Utility methods
 
