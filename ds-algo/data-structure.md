@@ -282,5 +282,5 @@ Collection of unique elements. No duplicates.
 
 ### Hierarchy and classes
  
-<img src="./images/ollection-hierarchy-2.png" width="800" border="2" />
+<img src="./images/ollection-hierarchy-2.png" width="800" border="2" /> 
 <img src="./images/map-hierarchy-2.png" width="800" border="2" /> 
