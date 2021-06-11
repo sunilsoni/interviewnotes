@@ -77,7 +77,7 @@ Data Structures
 #### Vector
 
 - Synchronized version of list.
-- Not used anymore. Recommended below mentioned alternatives.
+- Not used anymore. Recommended other list alternatives.
 
 #### CopyOnWriteArrayList
 

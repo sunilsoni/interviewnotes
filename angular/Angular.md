@@ -48,7 +48,7 @@ export class HelloWorldComponent {
 }
 ```
 
-To use this component, you write the following in a template:
+To use this component, you write the  in a template:
 
 ```typescript
 <hello-world > </hello-world>
@@ -104,7 +104,7 @@ export class HelloWorldInterpolationComponent {
 }
 ```
 
-When the application loads the component and its template, the user sees the following:
+When the application loads the component and its template, the user sees:
 
 ```typescript
 <p>Hello, World! < /p>
@@ -179,7 +179,7 @@ You can add additional functionality to your templates through the use of direct
 Angular are <B>*ngIf</B> and <B>*ngFor</B>. You can use directives to perform a variety of tasks, such as dynamically
 modifying the DOM structure. And you can also create your own custom directives to create great user experiences.
 
-The following code is an example of the *ngIf directive.
+The code is an example of the *ngIf directive.
 
 hello-world-ngif.component.ts
 

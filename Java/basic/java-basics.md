@@ -247,7 +247,7 @@ static keyword
 --------------
 In Java, a static member is a member of a class that isn’t associated with an instance of a class. Instead, the member belongs to the class itself.
 
-In Java, Static is applicable for the following:
+In Java, Static is applicable for the:
 1.  Variable
 2.  Method
 3.  Block

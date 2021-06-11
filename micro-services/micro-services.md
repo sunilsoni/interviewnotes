@@ -37,7 +37,7 @@ However, there are various disadvantages of monolith architecture as well:
 - A bug in any module can bring down the entire application
 - It is very difficult to adopt any new technology in a monolith application, as it affects the whole application, both in terms of time and cost
 
-Micro-service architecture gives following advantages: 
+Micro-service architecture gives some advantages: 
 
 - Micro-services are easier to manage as they are relatively smaller in size
 - Scalability is a major advantage of using a micro-service architecture, each micro-service can be scaled independently
@@ -142,7 +142,7 @@ Microservices vs Monolithic Architecture
 
 How does Microservice Architecture work?
 -----------------
-A microservice architecture has the following components:
+A microservice architecture has the components:
 
 - **Clients** – Different users from various devices send requests.
 - **Identity Providers** – Authenticates user or clients identities and issues security tokens.

@@ -656,7 +656,7 @@ OAuth2 is an authorization framework superseding it first version OAuth, created
 
 The main goal of the OAuth2 framework is to provide a simple flow of authorization that can be implemented on the web application, mobile phones, desktop application, and even on the devices used in our living rooms.
 
-OAuth2 defines the following server-side roles:
+OAuth2 defines the  server-side roles:
 
 - **Resource Owner**: The service responsible for controlling resources’ access
 - **Resource Server**: The service who actually supplies the resources

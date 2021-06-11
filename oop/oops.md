@@ -388,7 +388,7 @@ One neat feature provided by method overloading is the so-called type promotion,
 
 In simple terms, one given type is implicitly promoted to another one when there's no matching between the types of the arguments passed to the overloaded method and a specific method implementation.
 
-To understand more clearly how type promotion works, consider the following implementations of the multiply() method:
+To understand more clearly how type promotion works, consider the  implementations of the multiply() method:
 
 
 ```java
@@ -548,7 +548,7 @@ public void givenVehicleCarInstances_whenCalledStop_thenEqual() {
 ```
 In our case, we have access to the source code for both classes, so we can clearly see that calling the accelerate() method on a base Vehicle instance and calling accelerate() on a Car instance will return different values for the same argument.
 
-Therefore, the following test demonstrates that the overridden method is invoked for an instance of Car:
+Therefore, the  test demonstrates that the overridden method is invoked for an instance of Car:
 
 ```java
 @Test

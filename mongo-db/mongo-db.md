@@ -46,7 +46,7 @@ Collection
 A collection in MongoDB is a group of documents. If a document is the MongoDB analog of a row in a relational database, then a collection can be thought of as the analog to a table.
 Documents within a single collection can have any number of different “shapes.”, i.e. collections have dynamic schemas.
 
-For example, both of the following documents could be stored in a single collection:
+For example, both  documents could be stored in a single collection:
 ```json
 {"greeting" : "Hello world!", "views": 3}
 {"signoff": "Good bye"}
@@ -122,7 +122,7 @@ Feature  | Description  |
 
 Indexes in MongoDB
 --------------
-MongoDB supports the following types of the index for running a query.
+MongoDB supports the  types of the index for running a query.
 1. Single Field Index
 2. Compound Index
 3. Multikey Index

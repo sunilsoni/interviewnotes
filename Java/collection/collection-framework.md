@@ -586,7 +586,7 @@ Some points to remember:
 - TreeMap is not synchronized, so it is not thread-safe. We can make it thread-safe by using utility method, Collections.synchronizedSortedMap(treeMap)
 - TreeMap internally uses Red-Black tree based NavigableMap implementation.
 
-Red-Black tree algorithm has the following properties:
+Red-Black tree algorithm has the  properties:
 
 - Color of every node in the tree is either red or black.
 - Root node must be Black in color.
