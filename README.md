@@ -133,13 +133,13 @@ Interview questions and answers
       * [timeout](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#isolation)
         
 - **HTTP Verbs**
-  - [HTTP Verbs](https://github.com/sunilsoni/interview-notes/blob/main/hibernate/hibernate.md)
-    - [GET](https)
-    - [POST](https)
-    - [PUT](https)
-    - [DELETE](https)
-    - [PATCH](https)
-    - [OPTIONS](https)
+  - [HTTP Verbs](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#http-verbs)
+    - [GET](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#get)
+    - [POST](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#post)
+    - [PUT](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#put)
+    - [DELETE](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#delete)
+    - [PATCH](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#patch)
+    - [OPTIONS](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#options)
   
 - **Hibernate**
   - [Hibernate](https://github.com/sunilsoni/interview-notes/blob/main/hibernate/hibernate.md)
