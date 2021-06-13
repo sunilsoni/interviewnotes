@@ -1,11 +1,9 @@
 UNIX
 =====
 
+Table of Contents
+--------------------
 
-
-### Table of Contents
-
-* [Resources](#resources)
 * [Find](#find)
 * [Search](#search)
 * [Processes](#processes)
@@ -20,7 +18,8 @@ UNIX
 * [Miscellaneous](#miscellaneous)
 
 
-### Find
+Find
+--------------------
 
 - `find dir -type f` Find all files in the directory
 - `find dir -type d` File all directories within this directory
@@ -29,7 +28,8 @@ UNIX
 - `find dir -type f -print0 | xargs -0 grep -l "word"` List file names with matching word
 - `find dir -type f -print0 | xargs -0 mv -t` Move all files from dir tree into single directory
 
-### Search
+Search
+--------------------
 
 - `grep “word” file` All matching lines in the file
 - `grep -i “word” file` All matching lines - Ignore case
@@ -41,7 +41,8 @@ UNIX
 - `grep -l -r “word” dir` List file names with matching word
 - `find dir -type f -print0 | xargs -0 grep -l "word"` List file names with matching word
 
-### Processes
+Processes
+--------------------
 
 - `nohup program.sh > mylog.txt 2>&1 &`
     + `&` starts process as child process in the background
@@ -56,7 +57,8 @@ UNIX
 - `ps -ef | grep word` find process with matching word
 - `echo $?` print output of last process
 
-### File permissions
+File permissions
+--------------------
 
 - `chmod file` Change
 - `chmod +x file` Add execute permission
@@ -68,26 +70,30 @@ UNIX
 - Numbers: 1=x, 2=w, 3=w+x, 4=r, 5=r+x, 6=r+w, 7=r+w+x
 - References: u=user, g=group, o=others, a=all
 
-### List files
+List files
+--------------------
 
 - `ls` list files in this directory
 - `ls -ltr` list files in this directory with more details and in reverse chronological order
 - `ls -ltra` same as above + list hidden files (names starting with `.`)
 - `ls -ltr | grep "^l"` Lists all symlinks (`ls -ltr` lists symlinks with `l` as first character of output)
 
-### Symlinks
+Symlinks
+--------------------
 
 - Symbolic or soft links. Pointer to a file.
 - `ln -s /java/jdk7 jdk` create symlink jdk which points to `/java/jdk7`
 - `ln -ns /java/jdk8 jdk` update symlink jdk to point to `/java/jdk8`
 
 
-### Checking logs
+Checking logs
+--------------------
 
 - `tail -f logfile` output appended data as file grows (f=follow)
 - `less +F logfile` open file, and output appended data as file grows
 
-### Text manipulation
+Text manipulation
+--------------------
 
 - `head file` display first 10 lines
 - `head -20 file` display first 20 lines
@@ -99,7 +105,8 @@ UNIX
 - `cut -c3-6 file` display characters from 3rd to 6th position for each line
 - `cut -c7- file` display characters from 7th to end of each line
 
-### Sed
+Sed
+--------------------
 
 - `sed s/unix/linux file` replace first occurrence of "unix with "linux"
 - `sed s/unix/linux/3 file` replace 3rd occurrence
@@ -109,13 +116,15 @@ UNIX
 - `sed -i '$ d' file` delete footer of file
 - `sed –n '10 p' file` print 10th line of the file
 
-### Networking
+Networking
+--------------------
 
 - `ping hostname` or `telnet hostname port` check if remote host is alive
 - `scp /dir/file user@hostname:/targetdir/file` copy file to different host
 - `netstat -a | grep "port"` check host connected to machine's port
 
-### Space
+Space
+--------------------
 
 - `df -h` space in current drive (`-h` is human readable format)
 - `du -h .` sizes of all files in current directory
@@ -123,7 +132,8 @@ UNIX
 - `du /bin/* | sort -n` sort all files based on size (asc)
 
 
-### Miscellaneous
+Miscellaneous
+--------------------
 
 - `lsof file` list processes using the file
 - `rev file` reverses the text in each line

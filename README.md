@@ -256,7 +256,19 @@ Interview questions and answers
   - [Maven](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#Maven)
   
 - **Unix**
-  - [Unix](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#Maven)
+  - [Unix](https://github.com/sunilsoni/interview-notes/blob/main/unix/Unix.md#unix)
+    - [Find](https://github.com/sunilsoni/interview-notes/blob/main/unix/Unix.md#find)
+    - [Search](https://github.com/sunilsoni/interview-notes/blob/main/unix/Unix.md#search)
+    - [Processes](https://github.com/sunilsoni/interview-notes/blob/main/unix/Unix.md#processes)
+    - [File permissions](https://github.com/sunilsoni/interview-notes/blob/main/unix/Unix.md#file-permissions)
+    - [List files](https://github.com/sunilsoni/interview-notes/blob/main/unix/Unix.md#list-files)
+    - [Symlinks](https://github.com/sunilsoni/interview-notes/blob/main/unix/Unix.md#symlinks)
+    - [Checking logs](https://github.com/sunilsoni/interview-notes/blob/main/unix/Unix.md#checking-logs)
+    - [Text manipulation](https://github.com/sunilsoni/interview-notes/blob/main/unix/Unix.md#text-manipulation)
+    - [Sed](https://github.com/sunilsoni/interview-notes/blob/main/unix/Unix.md#sed)
+    - [Networking](https://github.com/sunilsoni/interview-notes/blob/main/unix/Unix.md#networking)
+    - [Space](https://github.com/sunilsoni/interview-notes/blob/main/unix/Unix.md#space)
+    - [Miscellaneous](https://github.com/sunilsoni/interview-notes/blob/main/unix/Unix.md#miscellaneous)
   
 - **DevOps Tools**
   - [Docker](https)
