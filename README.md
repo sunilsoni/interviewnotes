@@ -140,6 +140,7 @@ Interview questions and answers
     - [DELETE](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#delete)
     - [PATCH](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#patch)
     - [OPTIONS](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#options)
+    - [HEAD](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#head)
   
 - **Hibernate**
   - [Hibernate](https://github.com/sunilsoni/interview-notes/blob/main/hibernate/hibernate.md)
