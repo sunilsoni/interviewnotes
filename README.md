@@ -239,8 +239,7 @@ Interview questions and answers
     *  [Features of MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#features-of-mongodb)
     *  [Indexes in MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#indexes-in-mongodb)
     *  [MongoDB](https)
-- **Database**
-  - [Database](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#database)
+- **Database**(https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#database)
   - [SQL](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#sql)
     - [Joins](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#joins)
     - [Keys](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#keys)
