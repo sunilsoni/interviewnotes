@@ -239,21 +239,25 @@ Interview questions and answers
     *  [Features of MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#features-of-mongodb)
     *  [Indexes in MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#indexes-in-mongodb)
     *  [MongoDB](https)
-- **Database**(https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#database)
-  - [SQL](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#sql)
-    - [Joins](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#joins)
-    - [Keys](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#keys)
-    - [Indexes](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#indexes)
-    - [Queries](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#queries)
-  - [Frequently asked queries](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
-    - [Find all departments with sales more than 1000](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
-    - [Print all employee ids with their manager ids](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
-    - [Print all manager names with count of directs](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
-    - [Print 10th highest salary](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
+- **Database**
+    [Database](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#database)
+    - [SQL](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#sql)
+      - [Joins](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#joins)
+      - [Keys](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#keys)
+      - [Indexes](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#indexes)
+      - [Queries](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#queries)
+    - [Frequently asked queries](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
+      - [Find all departments with sales more than 1000](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
+      - [Print all employee ids with their manager ids](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
+      - [Print all manager names with count of directs](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
+      - [Print 10th highest salary](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
   
 - **Maven**
   - [Maven](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#Maven)
-
+  
+- **Unix**
+  - [Unix](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#Maven)
+  
 - **DevOps Tools**
   - [Docker](https)
   - [Git](https://github.com/sunilsoni/interview-notes/blob/main/devops/git/git.md#git)
