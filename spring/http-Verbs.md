@@ -13,10 +13,10 @@ According to the design of the HTTP specification, GET (along with HEAD) request
 Do not expose unsafe operations via GET—it should never modify any resources on the server.
 
 **Examples:**
+- GET http://www.example.com/customers/12345
+- GET http://www.example.com/customers/12345/orders
+- GET http://www.example.com/buckets/sample
 
-GET http://www.example.com/customers/12345
-GET http://www.example.com/customers/12345/orders
-GET http://www.example.com/buckets/sample
 POST
 ----
 POST affects the related resources attached to a targeted resource. POST allows an API to submit an attribute or entity to a given resource; in practice, this means the targeted resource receives a subordinate resource that is part of a larger collection
@@ -28,9 +28,8 @@ On successful creation, return HTTP status 201, returning a Location header with
 POST is neither safe nor idempotent. It is therefore recommended for non-idempotent resource requests. Making two identical POST requests will most-likely result in two resources containing the same information.
 
 **Examples:**
-
-POST http://www.example.com/customers
-POST http://www.example.com/customers/12345/orders
+- POST http://www.example.com/customers
+- POST http://www.example.com/customers/12345/orders
 
 PUT
 ----
@@ -49,10 +48,9 @@ PUT is not a safe operation, in that it modifies (or creates) state on the serve
 If, for instance, calling PUT on a resource increments a counter within the resource, the call is no longer idempotent. Sometimes that happens and it may be enough to document that the call is not idempotent. However, it's recommended to keep PUT requests idempotent. It is strongly recommended to use POST for non-idempotent requests.
 
 **Examples:**
-
-PUT http://www.example.com/customers/12345
-PUT http://www.example.com/customers/12345/orders/98765
-PUT http://www.example.com/buckets/secret_stuff
+- PUT http://www.example.com/customers/12345
+- PUT http://www.example.com/customers/12345/orders/98765
+- PUT http://www.example.com/buckets/secret_stuff
 
 DELETE
 ----
@@ -67,10 +65,9 @@ HTTP-spec-wise, DELETE operations are idempotent. If you DELETE a resource, it's
 There is a caveat about DELETE idempotence, however. Calling DELETE on a resource a second time will often return a 404 (NOT FOUND) since it was already removed and therefore is no longer findable. This, by some opinions, makes DELETE operations no longer idempotent, however, the end-state of the resource is the same. Returning a 404 is acceptable and communicates accurately the status of the call.
 
 **Examples:**
-
-DELETE http://www.example.com/customers/12345
-DELETE http://www.example.com/customers/12345/orders
-DELETE http://www.example.com/bucket/sample
+- DELETE http://www.example.com/customers/12345
+- DELETE http://www.example.com/customers/12345/orders
+- DELETE http://www.example.com/bucket/sample
 
 PATCH
 ----
@@ -83,10 +80,9 @@ This resembles PUT, but the body contains a set of instructions describing how a
 PATCH is neither safe nor idempotent. However, a PATCH request can be issued in such a way as to be idempotent, which also helps prevent bad outcomes from collisions between two PATCH requests on the same resource in a similar time frame. Collisions from multiple PATCH requests may be more dangerous than PUT collisions because some patch formats need to operate from a known base-point or else they will corrupt the resource. Clients using this kind of patch application should use a conditional request such that the request will fail if the resource has been updated since the client last accessed the resource. For example, the client can use a strong ETag in an If-Match header on the PATCH request.
 
 **Examples:**
-
-PATCH http://www.example.com/customers/12345
-PATCH http://www.example.com/customers/12345/orders/98765
-PATCH http://www.example.com/buckets/secret_stuff
+- PATCH http://www.example.com/customers/12345
+- PATCH http://www.example.com/customers/12345/orders/98765
+- PATCH http://www.example.com/buckets/secret_stuff
 
 OPTIONS
 ----
