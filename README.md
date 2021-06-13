@@ -131,7 +131,16 @@ Interview questions and answers
       * [isolation](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#isolation)
       * [readOnly](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#isolation)
       * [timeout](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#isolation)
-
+        
+- **HTTP Verbs**
+  - [HTTP Verbs](https://github.com/sunilsoni/interview-notes/blob/main/hibernate/hibernate.md)
+    - [GET](https)
+    - [POST](https)
+    - [PUT](https)
+    - [DELETE](https)
+    - [PATCH](https)
+    - [OPTIONS](https)
+  
 - **Hibernate**
   - [Hibernate](https://github.com/sunilsoni/interview-notes/blob/main/hibernate/hibernate.md)
     * [JPA vs Hibernate](https://github.com/sunilsoni/interview-notes/blob/main/hibernate/hibernate.md#jpa-vs-hibernate)
