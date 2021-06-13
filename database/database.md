@@ -18,8 +18,7 @@ Inner join
 ---------
 The INNER JOIN creates a new result table by combining column values of two tables (table1 and table2) based upon the join-predicate. The query compares each row of table1 with each row of table2 to find all pairs of rows which satisfy the join-predicate. When the join-predicate is satisfied, column values for each matched pair of rows of A and B are combined into a result row.
 
-Syntax
-The basic syntax of the INNER JOIN is as follows.
+Syntax - 
 ```sql
 SELECT table1.column1, table2.column2...
 FROM table1
@@ -42,8 +41,7 @@ The SQL LEFT JOIN returns all rows from the left table, even if there are no mat
 
 This means that a left join returns all the values from the left table, plus matched values from the right table or NULL in case of no matching join predicate.
 
-Syntax
-The basic syntax of a LEFT JOIN is as follows.
+Syntax- 
 ```sql
 SELECT table1.column1, table2.column2...
 FROM table1
@@ -65,8 +63,7 @@ The SQL RIGHT JOIN returns all rows from the right table, even if there are no m
 
 This means that a right join returns all the values from the right table, plus matched values from the left table or NULL in case of no matching join predicate.
 
-Syntax
-The basic syntax of a RIGHT JOIN is as follow.
+Syntax- 
 ```sql
 SELECT table1.column1, table2.column2...
 FROM table1
@@ -86,8 +83,7 @@ The SQL FULL JOIN combines the results of both left and right outer joins.
 
 The joined table will contain all records from both the tables and fill in NULLs for missing matches on either side.
 
-Syntax
-The basic syntax of a FULL JOIN is as follows −
+Syntax −
 ```sql
 SELECT table1.column1, table2.column2...
 FROM table1
@@ -121,8 +117,8 @@ Cross join
 ---------
 The CARTESIAN JOIN or CROSS JOIN returns the Cartesian product of the sets of records from two or more joined tables. Thus, it equates to an inner join where the join-condition always evaluates to either True or where the join-condition is absent from the statement.
 
-Syntax
-The basic syntax of the CARTESIAN JOIN or the CROSS JOIN is as follows −
+Syntax  −
+
 ```sql
 SELECT table1.column1, table2.column2...
 FROM  table1, table2 [, table3 ]
@@ -137,8 +133,8 @@ Self Join
 ---------
 The SQL SELF JOIN is used to join a table to itself as if the table were two tables; temporarily renaming at least one table in the SQL statement.
 
-Syntax
-The basic syntax of SELF JOIN is as follows −
+Syntax−
+
 ```sql
 SELECT a.column_name, b.column_name...
 FROM table1 a, table1 b
