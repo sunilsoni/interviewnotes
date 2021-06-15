@@ -143,12 +143,19 @@ Interview questions and answers
     - [HEAD](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#head)
   
 - **HTTP Status Codes**
-  - [HTTP Status Codes](https )
-    - [1×× Informational](https)
-    - [2×× Success](https)
-    - [3×× Redirection](https)
-    - [4×× Client Error](https)
-    - [5×× Server Errorl](https)
+  - [HTTP Status Codes](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#http-status-codes )
+    - [1×× Informational](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#1-informational)
+    - [2×× Success](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#2-success)
+      - [200 OK](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#2-success)
+      - [201 Created](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#2-success)
+      - [202 Accepted](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#2-success)
+      - [204 No Content](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#2-success)
+      - [205 Reset Content](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#2-success)
+      
+    - [3×× Redirection](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#3-redirection)
+      - [300 Multiple Choices](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#3-redirection)
+    - [4×× Client Error](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#4-client-error)
+    - [5×× Server Errorl](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#5-server-error)
   
 - **Hibernate**
   - [Hibernate](https://github.com/sunilsoni/interview-notes/blob/main/hibernate/hibernate.md)
