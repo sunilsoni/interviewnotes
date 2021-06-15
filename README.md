@@ -142,6 +142,14 @@ Interview questions and answers
     - [OPTIONS](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#options)
     - [HEAD](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#head)
   
+- **HTTP Status Codes**
+  - [HTTP Status Codes](https )
+    - [1×× Informational](https)
+    - [2×× Success](https)
+    - [3×× Redirection](https)
+    - [4×× Client Error](https)
+    - [5×× Server Errorl](https)
+  
 - **Hibernate**
   - [Hibernate](https://github.com/sunilsoni/interview-notes/blob/main/hibernate/hibernate.md)
     * [JPA vs Hibernate](https://github.com/sunilsoni/interview-notes/blob/main/hibernate/hibernate.md#jpa-vs-hibernate)
