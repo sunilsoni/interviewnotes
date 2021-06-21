@@ -182,7 +182,7 @@ Interview questions and answers
         * [Templates](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md#templates)
         * [Dependency injection](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md#dependency-injection)
         * [Angular Routing and Navigation](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md#angular-routing-and-navigation)
-    * [Angular Module](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md#angularjs-vs-angular)
+    * [Angular Module](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md#angular-module)
     * [Angular Services](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-services.md#angular-services)
     * [Angular Routing and Navigation](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-routing.md#1-angular-routing-and-navigation)
     * [Angular Component](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-components.md)
