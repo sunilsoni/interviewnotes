@@ -230,6 +230,7 @@ Interview questions and answers
       * [Observable creation functions](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#observable-creation-functions)
       * [What will happen if you do not supply handler for observer?](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#what-will-happen-if-you-do-not-supply-handler-for-observer)
       * [Promise vs Observable](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#promise-vs-observable)
+      * [Async Pipe](htt)
   
   
 - **Design Patterns interview questions and answers**

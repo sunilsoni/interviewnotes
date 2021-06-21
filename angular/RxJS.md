@@ -423,4 +423,21 @@ Promise vs Observable
 | Subscribe method is used for error handling which makes centralized and predictable error handling| Push errors to the child promises |
 | Provides chaining and subscription to handle complex applications | Uses only .then() clause |
 
+Async Pipe
+------------ 
 
+The AsyncPipe subscribes to an observable or promise and returns the latest value it has emitted. When a new value is emitted, the pipe marks the component to be checked for changes.
+Lets take a time observable which continuously updates the view for every 2 seconds with the current time.
+
+```typescript
+@Component({
+    selector: 'async-observable-pipe',
+    template: `<div><code>observable|async</code>:
+        Time: {{ time | async }}</div>`
+})
+export class AsyncObservablePipeComponent {
+    time = new Observable(observer =>
+    setInterval(() => observer.next(new Date().toString()), 2000)
+    );
+}
+```
