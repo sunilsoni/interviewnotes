@@ -448,6 +448,19 @@ The NgModule decorator has three options
 * The bootstrap option tells Angular which Component to bootstrap in the application
 
 
+What is Interpolation?
+------------------
+
+Interpolation is a special syntax that Angular converts into property binding. It is a convenient alternative to property binding. It is represented by double curly braces(`{{ }}`). The text between the braces is often the name of a component property. Angular replaces that name with the string value of the corresponding component property.
+
+```html
+<h3>
+  {{title}}
+  <img src="{{url}}" style="height:30px">
+</h3>
+```
+
+In the example , Angular evaluates the title and url properties and fills in the blanks, first displaying a bold application title and then a URL.
 
 
 For more information:
