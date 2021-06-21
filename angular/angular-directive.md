@@ -255,7 +255,7 @@ Element.nativeElement.innerText= “Text is changed by changeText Directive.”;
 In the above file, there is a class known as `ChangeTextDirective`, and also a constructor.
 
 
-Difference between Structural Directive and Attribute Directive:
+Structural Directive vs Attribute Directive:
 ----------------
 
 |  Structural Directive       |  Attribute Directive  |
@@ -263,7 +263,7 @@ Difference between Structural Directive and Attribute Directive:
 | Structural directives are applied to `<template>` elements and used to add or remove content (stamp and template).      | The component has their view (HTML and styles) because of that, there can be one component on a host element, but multiple directives.       |
 
 
-Difference between component and directive:
+Component vs Directive:
 ----------------
 <img src="./images-directives/difference-between-directives-components.png" width="300" border="2" />
 
