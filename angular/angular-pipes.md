@@ -15,6 +15,20 @@ Syntax to use Pipes in Angular Application:
 ---------------
 <img src="./images-pipes/anular-pipes.png" width="472" border="2" />
 
+
+A pipe takes in data as input and transforms it to a desired output. For example, let us take a pipe to transform a component birthday property into a human-friendly date using **date** pipe.
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-birthday',
+  template: `<p>Birthday is {{ birthday | date }}</p>`
+})
+export class BirthdayComponent {
+  birthday = new Date(2002, 6, 18); // June 18, 2002
+}
+```
+
 ## Types of Pipes in Angular: 
 
 The Angular Framework divided the Pipes into two types i.e. 
@@ -131,6 +145,91 @@ Square root of 625 is: {{625 | sqrt}}
 Square root of 169 is: {{169 | sqrt}}
 
 ```
+
+Parameterized Pipe
+-----------------
+
+A pipe can accept any number of optional parameters to fine-tune its output. The parameterized pipe can be created by declaring the pipe name with a colon (` : `) and then the parameter value. If the pipe accepts multiple parameters, separate the values with colons. Lets take a birthday example with a particular format(dd/mm/yyyy)
+
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-birthday',
+  template: `<p>Birthday is {{ birthday | date:'dd/mm/yyyy'}}</p>` // 18/06/2002
+})
+export class BirthdayComponent {
+  birthday = new Date(2002, 6, 18);
+}
+```
+
+*Note: The parameter value can be any valid template expression, such as a string literal or a component property.*
+
+Custom Pipe
+-----------------
+
+A pipe is a class decorated with pipe metadata `@Pipe()` decorator, which you import from the core Angular library
+
+```typescript
+@Pipe({name: 'myCustomPipe'})
+```
+The pipe class implements the **PipeTransform()** interface transform method that accepts an input value followed by optional parameters and returns the transformed value.
+
+```typescript
+interface PipeTransform {
+  transform(value: any, ...args: any[]): any
+}
+```
+The `@Pipe()` decorator allows to define the pipe name that you'll use within template expressions. It must be a valid JavaScript identifier.
+```typescript
+template: `{{someInputValue | myCustomPipe: someOtherValue}}`
+```
+Example:
+```typescript
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({name: 'customFileSizePipe'})
+export class FileSizePipe implements PipeTransform {
+  transform(size: number, extension: string = 'MB'): string {
+    return (size / (1024 * 1024)).toFixed(2) + extension;
+  }
+}
+```
+Now you can use the above pipe in template expression as below,
+```typescript
+  template: `
+    <h2>Find the size of a file</h2>
+    <p>Size: {{288966 | customFileSizePipe: 'GB'}}</p>
+  `
+```
+
+Pure vs Impure Pipe
+------------------
+
+
+A pure pipe is only called when Angular detects a change in the value or the parameters passed to a pipe. For example, any changes to a primitive input value (String, Number, Boolean, Symbol) or a changed object reference (Date, Array, Function, Object). An impure pipe is called for every change detection cycle no matter whether the value or parameters changes. i.e, An impure pipe is called often, as often as every keystroke or mouse-move.
+
+**impure-pipe** works for every change in the component  
+**pure-pipe** works only when the component is loaded.
+
+```typescript
+@Pipe({
+  name: 'sort',
+  pure: false // true makes it pure and false makes it impure
+})
+export class myPipe implements PipeTransform {
+
+  transform(value: any, args?: any): any {
+     // your logic here and return the result
+  }
+}
+```
+
+```html
+<div> {{ arrayOfElements | sort }}<div>
+```
+
+
 
 
 For more information:
