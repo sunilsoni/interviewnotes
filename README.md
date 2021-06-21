@@ -186,6 +186,20 @@ Interview questions and answers
     * [Angular Data Binding](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-data-binding.md)
     * [Angular Lazy Loading](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-lazy-loading.md)
     * [Angular Lifecycle Hooks](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-lifecycle-hooks.md#angular-lifecycle-hooks)
+    * [RxJS](https)
+      * [Utility functions provided by RxJS](https)
+      * [RxJS Operator](https)
+      * [What is subscribing](https)
+      * [Observable](https)
+      * [Observer](https)
+      * [Error handling in observables](https)
+      * [Observable creation functions](https)
+      * [What will happen if you do not supply handler for observer?](https)
+      * [Promise vs Observable](https)
+      * [RxJS](https)
+      * [RxJS](https)
+      * [RxJS](https)
+  
   
 - **Design Patterns interview questions and answers**
   - [Design Patterns](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md)

@@ -1,6 +1,13 @@
 What is Angular?
 =================
 
+Why Angular
+-----------
+
+
+
+
+
 Angular is a development platform, built on TypeScript. As a platform, Angular includes:
 
 * A component-based framework for building scalable web applications
