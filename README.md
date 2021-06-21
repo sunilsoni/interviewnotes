@@ -170,7 +170,6 @@ Interview questions and answers
     * [Test](https)
     * [Test](https)
     * [Test](https)
-    * [Test](https)
 
 
 - **Angular interview questions and answers**
@@ -187,7 +186,14 @@ Interview questions and answers
     * [Angular Routing and Navigation](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-routing.md#1-angular-routing-and-navigation)
     * [Angular Component](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-components.md)
       * [What Is an Angular Component?](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-components.md#what-is-an-angular-component)
+        * [Template](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-components.md#template)
+        * [Class](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-components.md#class)
+        * [Component Metadata](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-components.md#component-metadata)
       * [Communication Between Components](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-components.md#communication-between-components)
+        * [Parent to Child](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-components.md#communication-between-components)
+        * [Child to Parent](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-components.md#communication-between-components)
+        * [Child to Parent](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-components.md#communication-between-components)
+        * [Unrelated Components](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-components.md#communication-between-components)
 
     * [Angular Directive](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-directive.md)
       * [Components Directives](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-directive.md#components-directives)

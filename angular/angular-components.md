@@ -1,6 +1,26 @@
 What Is an Angular Component?
 ==================
 
+
+Components are the most basic UI building block of an Angular app which formed a tree of Angular components. These components are subset of directives. Unlike directives, components always have a template and only one component can be instantiated per an element in a template.
+
+```typescript
+import { Component } from '@angular/core';
+
+@Component ({
+    selector: 'my-app',
+    template: ` <div>
+        <h1>{{title}}</h1>
+        <div>Angular components example</div>
+    </div> `,
+})
+
+export class AppComponent {
+    title: string = 'Welcome to Angular world';
+}
+```
+
+
 Angular Component = HTML Template + Component Class + Component Metadata
 
  <img src="./images-components/angular-component.png" width="300" border="2" />
