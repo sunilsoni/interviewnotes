@@ -190,6 +190,15 @@ Interview questions and answers
       * [4. Two-way data binding](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-data-binding.md)
     * [Angular Lazy Loading](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-lazy-loading.md)
     * [Angular Lifecycle Hooks](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-lifecycle-hooks.md#angular-lifecycle-hooks)
+      * [ngOnChanges](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-lifecycle-hooks.md#angular-lifecycle-hooks)
+      * [ngOnInit](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-lifecycle-hooks.md#angular-lifecycle-hooks)
+      * [ngDoCheck](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-lifecycle-hooks.md#angular-lifecycle-hooks)
+      * [ngAfterContentInit](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-lifecycle-hooks.md#angular-lifecycle-hooks)
+      * [ngAfterContentChecked](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-lifecycle-hooks.md#angular-lifecycle-hooks)
+      * [ngAfterViewInit](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-lifecycle-hooks.md#angular-lifecycle-hooks)
+      * [ngAfterViewChecked](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-lifecycle-hooks.md#angular-lifecycle-hooks)
+      * [ngOnDestroy](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-lifecycle-hooks.md#angular-lifecycle-hooks)
+      * [constructor() vs ngOnInit()](https)
     * [RxJS](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#rxjs)
       * [Utility functions provided by RxJS](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#utility-functions-provided-by-rxjs)
       * [RxJS Operator](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#rxjs-operator)
@@ -200,7 +209,7 @@ Interview questions and answers
       * [Observable creation functions](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#observable-creation-functions)
       * [What will happen if you do not supply handler for observer?](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#what-will-happen-if-you-do-not-supply-handler-for-observer)
       * [Promise vs Observable](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#promise-vs-observable)
-      * [RxJS](https)
+      * [Test](https)
   
   
 - **Design Patterns interview questions and answers**

@@ -22,6 +22,24 @@ Description of each lifecycle hook.
 - **ngAfterViewChecked** − This is called in response after Angular checks the component's views and child views.
 - **ngOnDestroy** − This is the cleanup phase just before Angular destroys the directive/component.
 
+constructor() vs ngOnInit()
+---------
+
+TypeScript classes has a default method called `constructor()` which is normally used for the initialization purpose. Whereas `ngOnInit()` method is specific to Angular, especially used to define Angular bindings. Even though `constructor()` getting called first, it is preferred to use `ngOnInit()` method for Angular bindings.
+
+Example
+
+```typescript
+export class App implements OnInit{
+    constructor(){
+        //called first time before the ngOnInit()
+    }
+
+    ngOnInit(){
+        //called after the constructor and called  after the first ngOnChanges()
+    }
+}
+```
 
 For more information:
 1. [Angular Lifecycle Hooks: ngOnChanges, ngOnInit, and more](https://www.freecodecamp.org/news/angular-lifecycle-hooks/)
