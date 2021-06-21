@@ -184,6 +184,10 @@ Interview questions and answers
     * [Angular Directive](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-directive.md)
     * [Angular Pipes](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-pipes.md)
     * [Angular Data Binding](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-data-binding.md)
+      * [1. Interpolation](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-data-binding.md)
+      * [2. Property binding](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-data-binding.md)
+      * [3. Event binding](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-data-binding.md)
+      * [4. Two-way data binding](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-data-binding.md)
     * [Angular Lazy Loading](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-lazy-loading.md)
     * [Angular Lifecycle Hooks](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-lifecycle-hooks.md#angular-lifecycle-hooks)
     * [RxJS](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#rxjs)
@@ -196,8 +200,6 @@ Interview questions and answers
       * [Observable creation functions](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#observable-creation-functions)
       * [What will happen if you do not supply handler for observer?](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#what-will-happen-if-you-do-not-supply-handler-for-observer)
       * [Promise vs Observable](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#promise-vs-observable)
-      * [RxJS](https)
-      * [RxJS](https)
       * [RxJS](https)
   
   

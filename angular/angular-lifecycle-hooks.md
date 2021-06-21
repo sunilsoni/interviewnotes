@@ -1,6 +1,9 @@
 
 # Angular Lifecycle Hooks
 
+Angular creates and renders components along with their children, checks when their data-bound properties change, and destroys them before removing them from the DOM.
+
+Angular offers lifecycle hooks that provide visibility into these key life moments and the ability to act when they occur.
 
 Angular 2 application goes through an entire set of processes or has a lifecycle right from its initiation to the end of the application.
 
