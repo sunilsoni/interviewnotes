@@ -265,6 +265,48 @@ Structural Directive vs Attribute Directive:
 
 Component vs Directive:
 ----------------
+
+
+A component is also a type of directive with template, styles and logic part.
+
+| Component | Directive |
+|---------- |-----------|
+| To register a component we use @Component meta-data annotation  | To register directives we use @Directive meta-data annotation |
+| Components are typically used to create UI widgets| Directive is used to add behavior to an existing DOM element |
+| Component is used to break up the application into smaller components| Directive is use to design re-usable components|
+| Only one component can be present per DOM element | Many directives can be used per DOM element |
+| @View decorator or templateurl/template are mandatory | Directive does not use View|
+
+
+Example:
+
+```typescript
+import { Component, HostListener, HostBinding, Directive, ElementRef } from '@angular/core';
+
+@Directive({
+  selector: '[appHighlight]'
+})
+export class HighlightDirective {
+  constructor(el: ElementRef) {
+    el.nativeElement.style.backgroundColor = 'red';
+ }
+}
+
+@Component({
+  selector: 'app-root',
+  template: `
+    <div *ngIf='myBool' appHighlight>Hi there</div>
+  `,
+  styleUrls: ['./app.component.scss'],
+})
+export class AppComponent  {
+
+  myBool:boolean = true;
+
+}
+```
+
+
 <img src="./images-directives/difference-between-directives-components.png" width="300" border="2" />
 
 
