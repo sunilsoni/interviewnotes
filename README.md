@@ -183,7 +183,7 @@ Interview questions and answers
         * [Dependency injection](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md#dependency-injection)
         * [Angular Routing and Navigation](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md#angular-routing-and-navigation)
     * [Angular Module](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md#angular-module)
-    * [Bootstrapping Module](https)
+    * [Bootstrapping Module](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md#bootstrapping-module)
     * [Angular Services](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-services.md#angular-services)
     * [What is Interpolation](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md#what-is-interpolation)
     * [Angular Routing and Navigation](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-routing.md#1-angular-routing-and-navigation)
