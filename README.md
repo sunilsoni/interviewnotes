@@ -175,9 +175,14 @@ Interview questions and answers
 
 - **Angular interview questions and answers**
   - [Angular](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md)
-    * [AngularJS vs Angular](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-services.md#angular-services)
-      * [AngularJS](https)
-      * [Angular](https)
+    * [AngularJS vs Angular](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md#angularjs-vs-angular)
+      * [AngularJS](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md#a-angularjs)
+      * [Angular](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md#b-angular)
+      * [Why Angular](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md#why-angular)
+        * [Components](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md#components)
+        * [Templates](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md#templates)
+        * [Dependency injection](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md#dependency-injection)
+        * [Angular Routing and Navigation](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md#angular-routing-and-navigation)
     * [Angular Services](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-services.md#angular-services)
     * [Angular Routing and Navigation](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-routing.md#1-angular-routing-and-navigation)
     * [Angular Component](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-components.md)
