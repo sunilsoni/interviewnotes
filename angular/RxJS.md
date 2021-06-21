@@ -441,3 +441,61 @@ export class AsyncObservablePipeComponent {
     );
 }
 ```
+
+HttpClient
+------------ 
+
+3 steps need to be followed for the usage of HttpClient.
+
+**Step 01**: Import `HttpClient` into root module
+
+```typescript
+import { HttpClientModule } from '@angular/common/http';
+@NgModule({
+  imports: [
+    ...
+    HttpClientModule
+  ],
+  ......
+  })
+  export class AppModule {}
+```
+**Step 02**: Inject the HttpClient into the application
+
+Lets create a `userProfileService(userprofile.service.ts)` as an example. It also defines get method of HttpClient
+```typescript
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+const userProfileUrl: string = 'assets/data/profile.json';
+
+@Injectable()
+export class UserProfileService {
+  constructor(private http: HttpClient) { }
+
+  getUserProfile() {
+    return this.http.get(this.userProfileUrl);
+  }
+}
+```
+**Step 03**: Create a component for subscribing service
+
+Lets create a component called `UserProfileComponent(userprofile.component.ts)` which inject UserProfileService and invokes the service method,
+```typescript
+fetchUserProfile() {
+  this.userProfileService.getUserProfile()
+    .subscribe((data: User) => this.user = {
+        id: data['userId'],
+        name: data['firstName'],
+        city:  data['city']
+    });
+}
+```
+Since the above service method returns an Observable which needs to be subscribed in the component.
+
+**Advantages**
+* Contains testability features
+* Provides typed request and response objects
+* Intercept request and response
+* Supports Observalbe APIs
+* Supports streamlined error handling
