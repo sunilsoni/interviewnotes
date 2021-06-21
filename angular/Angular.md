@@ -1,12 +1,66 @@
 What is Angular?
 =================
 
-Why Angular
+AngularJS vs Angular
+-----------
+
+Angular is a completely revived component-based framework in which an application is a tree of individual
+components.
+
+
+| AngularJS                                         | Angular                                             |
+|---------------------------------------------------|-----------------------------------------------------|
+|JavaScript-based framework for creating SPA.       |Complete re-write of AngularJS version.       |
+|Still supported but no longer will be developed.   |It is updated version regularly released because of Semantic Versioning.|
+|The architecture of AngularJS is based on MVC.     |The architecture of Angular 2 is component based|
+|AngularJS was not developed with a mobile base in mind.|Angular 2 is a mobile-oriented framework.|
+|AngularJS code can write by using only ES5, ES6, and Dart.|We can use ES5, ES6, Typescript to write an Angular 2 code.|
+|Factory, service, provider, value and constant are used for services|The class is the only method to define services in Angular2|
+|Run on only client-side                             |Runs on client-side & server-side|
+|ng-app and angular bootstrap function are used to initialize | bootstrapmodule() function is used to initialize|
+
+**a.) AngularJS**
 -----------
 
 
+**Advantages**
+
+* It has great MVC data binding that makes app development fast.
+* Using HTML as a declarative language makes it very intuitive.
+* It is a comprehensive solution for rapid front-end development since it does not need any other frameworks or plugins.
+* AngularJS apps can run on every significant program and advanced cells including iOS and Android-based phones and tablets.
+* Two-way data binding
+* Directives
+* Dependency injection
+
+**Disadvantages**
+
+* It is big and complicated due to the multiple ways of doing the same thing.
+* Implementations scale poorly.
+* If a user of an AngularJS application disables JavaScript, nothing but the basic page is visible.
+* There is a lagging UI if there are more than 200 watchers.
 
 
+**b.) Angular**
+-----------
+
+
+**Advantages**
+
+* Component-based architecture that provides a higher quality of code
+* Reusability: Components of similar nature are well encapsulated, in other words, self-sufficient. Developers can reuse them across different parts of an application.
+* Unit-test friendly: The independent nature of components simplifies unit tests, quality assurance procedures aimed at verifying the performance of the smallest parts of the application, units.
+* Maintainability: Components that are easily decoupled from each other can be easily replaced with better implementations.
+
+
+**Disadvantages**
+
+* Angular is verbose and complex
+* Steep learning curve
+* Migrating legacy systems from AngularJS to Angular requires time
+
+Why Angular
+-----------
 
 Angular is a development platform, built on TypeScript. As a platform, Angular includes:
 

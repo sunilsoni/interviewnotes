@@ -175,6 +175,9 @@ Interview questions and answers
 
 - **Angular interview questions and answers**
   - [Angular](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md)
+    * [AngularJS vs Angular](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-services.md#angular-services)
+      * [AngularJS](https)
+      * [Angular](https)
     * [Angular Services](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-services.md#angular-services)
     * [Angular Routing and Navigation](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-routing.md#1-angular-routing-and-navigation)
     * [Angular Component](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-components.md)
