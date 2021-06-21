@@ -198,7 +198,7 @@ Interview questions and answers
       * [ngAfterViewInit](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-lifecycle-hooks.md#angular-lifecycle-hooks)
       * [ngAfterViewChecked](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-lifecycle-hooks.md#angular-lifecycle-hooks)
       * [ngOnDestroy](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-lifecycle-hooks.md#angular-lifecycle-hooks)
-      * [constructor() vs ngOnInit()](https)
+      * [constructor() vs ngOnInit()](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-lifecycle-hooks.md#constructor-vs-ngoninit)
     * [RxJS](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#rxjs)
       * [Utility functions provided by RxJS](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#utility-functions-provided-by-rxjs)
       * [RxJS Operator](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#rxjs-operator)
