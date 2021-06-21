@@ -384,6 +384,34 @@ Angular Routing and Navigation
   - The attribute/directive for binding a clickable HTML element to a route which denotes link/view name to load/show
     in `(<router-outlet>)`
 
+
+
+Angular Module
+-----------------
+
+In Angular, a module is a mechanism to group components, directives, pipes and services that are related, in such a way that can be combined with other modules to create an application.
+
+```typescript
+import { NgModule }      from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent }  from './app.component';
+
+@NgModule ({
+    imports:      [ BrowserModule ],
+    declarations: [ AppComponent ],
+    bootstrap:    [ AppComponent ]
+})
+export class AppModule { }
+```
+
+The NgModule decorator has three options
+* The imports option is used to import other dependent modules. The BrowserModule is required by default for any web based angular application
+* The declarations option is used to define components in the respective module
+* The bootstrap option tells Angular which Component to bootstrap in the application
+
+
+
+
 For more information:
 
 1. [Angular Routing and Navigation](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-routing.md#1-angular-routing-and-navigation)
