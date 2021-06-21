@@ -292,6 +292,44 @@ build, maintain, and update.
 Dependency injection
 -----------------
 
+Dependency Injection (DI) allows a class receive dependencies from another class. Most of the time in Angular, dependency injection is done by injecting a service class into a component or module class.
+
+```typescript
+import { Injectable } from '@angular/core';
+
+@Injectable()
+export class PopcornService {
+
+  constructor() {
+    console.log("Popcorn has been injected!");
+  }
+
+  cookPopcorn(qty) {
+    console.log(qty, "bags of popcorn cooked!");
+  }
+}
+```
+*AppComponent.ts*
+```typescript
+import { Component } from '@angular/core';
+import { PopcornService } from './popcorn.service';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+  providers: [PopcornService]
+})
+export class AppComponent {
+  constructor(private popcorn: PopcornService) {}
+
+  cookIt(qty) {
+    this.popcorn.cookPopcorn(qty);
+  }
+}
+```
+
+
 Dependency injection allows you to declare the dependencies of your TypeScript classes without taking care of their
 instantiation. Instead, Angular handles the instantiation for you. This design pattern allows you to write more testable
 and flexible code. Even though understanding dependency injection is not critical to start using Angular, we strongly
