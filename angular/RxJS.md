@@ -493,6 +493,26 @@ fetchUserProfile() {
 ```
 Since the above service method returns an Observable which needs to be subscribed in the component.
 
+Error handling
+------------ 
+
+If the request fails on the server or failed to reach the server due to network issues then HttpClient will return an error object instead of a successful reponse. In this case, we need to handle in the component by passing error object as a second callback to subscribe() method.
+
+```typescript
+fetchUser() {
+  this.userService.getProfile()
+    .subscribe(
+      (data: User) => this.userProfile = { ...data }, // success path
+      error => this.error = error // error path
+    );
+}
+```
+
+It is always a good idea to give the user some meaningful feedback instead of displaying the raw error object returned from HttpClient.
+
+
+
+
 **Advantages**
 * Contains testability features
 * Provides typed request and response objects

@@ -240,7 +240,8 @@ Interview questions and answers
       * [What will happen if you do not supply handler for observer?](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#what-will-happen-if-you-do-not-supply-handler-for-observer)
       * [Promise vs Observable](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#promise-vs-observable)
       * [Async Pipe](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#async-pipe)
-      * [HttpClient](https)
+      * [HttpClient](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#httpclient)
+        * [Error handling](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#httpclient)
   
   
 - **Design Patterns interview questions and answers**
