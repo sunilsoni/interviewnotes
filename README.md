@@ -241,7 +241,7 @@ Interview questions and answers
       * [Promise vs Observable](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#promise-vs-observable)
       * [Async Pipe](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#async-pipe)
       * [HttpClient](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#httpclient)
-        * [Error handling](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#httpclient)
+        * [Error handling](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#error-handling)
   
   
 - **Design Patterns interview questions and answers**
