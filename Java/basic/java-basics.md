@@ -1389,6 +1389,15 @@ result of a.a() is 2
 !!! done
 ```
 
+
+String, StringBuffer, StringBuilder
+----------------
+The class `String` is immutable ( the immutable ) - modify an object of this class can not, we can only replace it with a new instance.
+
+The class is `StringBuffer` mutable - StringBuffer should be used when it is necessary to frequently modify the content.
+
+The class `StringBuilder` was added in Java 5 and is identical to the class in every StringBuffer way, except that it is not synchronized and therefore its methods are much faster.
+
 Generics in Java
 ----------------
 

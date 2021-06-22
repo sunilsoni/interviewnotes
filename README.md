@@ -39,6 +39,7 @@ Interview questions and answers
       * [Types of garbage collectors](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#types-of-garbage-collectors)
       * [Garbage Collection and types of Garbage Collectors](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#garbage-collection-and-types-of-garbage-collectors)
       * [final, finally and finalize()](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#final-finally-and-finalize)
+    * [String, StringBuffer, StringBuilder](https)
     * [Generics in Java](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#generics-in-java)
     * [Test](https)
   - [Collection Framework](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#collection-framework)
