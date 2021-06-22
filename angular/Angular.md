@@ -492,6 +492,194 @@ import { AppComponent } from './app.component';
 export class AppModule { }
 ```
 
+JIT vs AOT compilation
+---------------------
+
+Angular has 2 types of build dev build or prod build
+
+**JIT**  
+Just-in-Time (JIT) is a type of compilation that compiles app in the browser at runtime. JIT compilation is the default when you run the ng build (build only) or ng serve (build and serve locally) CLI commands. i.e, the below commands used for JIT compilation,
+
+```javascript
+ng build
+ng serve
+```
+**AOT**  
+Ahead-of-Time (AOT) is a type of compilation that compiles app at build time. For AOT compilation, include the `--aot` option with the ng build or ng serve command as below,
+
+```javascript
+ng build --aot
+ng serve --aot
+```
+
+```
+ng build or ng build --dev   -  this is for development build
+ng build --prod              -  this is for production build
+```
+
+|Dev Build	                                |Production build                           |
+|-------------------------------------------|-------------------------------------------|
+|Source maps(.js.map files) are generated	  |Source maps not generated                  |
+|Dev Build is not minified and uglified	    |Production Build is minified and uglified  |
+|Dev build is not tree shaked	              |Production build is tree shaked            |
+|No AOT compilation	                        |AOT compilation takes place                |
+
+
+* **minification** - process of removing excess whitespace, comments and optinal tokens like curly braces and semi colons
+* **uglification** - process of transforming code to use short variable and function names
+* **tree shaking** -  is the process of removing any code that we are not actually using in our application from the final bundle
+
+*Note: The ng build command with the --prod meta-flag (`ng build --prod`) compiles with AOT by default.*
+
+
+Advantages of AOT
+----------------
+
+1. **Faster rendering** The browser downloads a pre-compiled version of the application. So it can render the application immediately without compiling the app.
+2. **Fewer asynchronous requests** It inlines external HTML templates and CSS style sheets within the application javascript which eliminates separate ajax requests.
+3. **Smaller Angular framework download size** Does not require downloading the Angular compiler. Hence it dramatically reduces the application payload.
+4. **Detect template errors earlier** Detects and reports template binding errors during the build step itself
+5. **Better security** It compiles HTML templates and components into JavaScript.  So there wont be any injection attacks.
+
+
+What are the ways to control AOT compilation?
+----------------
+
+
+You can control your app compilation in two ways
+1. By providing template compiler options in the `tsconfig.json` file
+2. By configuring Angular metadata with decorators
+
+
+How to optimize loading large data in angular?
+---------------
+
+**Load Time Performance**
+
+1. **AOT**: The Angular Ahead-of-Time (AOT) compiler converts your Angular HTML and TypeScript code into efficient JavaScript code during the build phase before the browser downloads and runs that code. Compiling your application during the build process provides a faster rendering in the browser.
+2. **Tree-shaking**: This is the process of removing unused code resulting in smaller build size. In **angular-cli**, Tree-Shaking is enabled by default.
+3. **Uglify**: It is the process where the code size is reduced using various code transformations like mangling, removal of white spaces, removal of comments etc. For webpack use uglify plugin and with angular-cli specify the “prod” flag to perform the uglification process.
+4. **Lazy loading**: Lazy loading is the mechanism where instead of loading complete app, we load only the modules which are required at the moment thereby reducing the initial load time.
+5. **Ivy Render Engine**: It results in much smaller bundle size than the current engine with improved debugging experience.
+6. **RxJS**: RxJS makes the whole library more tree-shakable thereby reducing the final bundle size. However, it has some breaking changes like operators chaining is not possible instead, pipe() function (helps in better tree shaking) is introduced to add operators.
+7. **Service worker cache**: A service worker is a script that runs in the web browser and manages caching for an application.
+8. **defer attribute**: Mentioning defer attribute to script tag will defer the loading of the scripts (sychronous) until the document is not parsed thus making site interactive quicker.
+9. **async attribute**: async delays the loading of scripts until the document is not parsed but without respecting the order of loading of the scripts.
+10. **ChangeDetectionStrategy.OnPush**: `ChangeDetectionStrategy.OnPush` tells Angular that the component only depends on his Inputs ( aka pure ) and needs to be checked in only the following cases:  
+    i). The `Input` reference changes.  
+    ii). An event occurred from the component or one of his children.  
+    iii). You run change detection explicitly by calling `detectChanges()/tick()/markForCheck()`
+
+Example
+
+```typescript
+@Component({
+  selector: 'my-select',
+  template: `
+    ...
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+```
+
+11. **TrackBy**: If we provide a trackBy function, Angular can track which items have been added or removed according to the unique identifier and only create or destroy the things that have changed.
+
+Example:
+
+```typescript
+@Component({
+  selector: 'my-app',
+  template: `
+    <ul>
+      <li *ngFor="let item of collection;trackBy: trackByFn">{{item.id}}</li>
+    </ul>
+    <button (click)="getItems()">Refresh items</button>
+  `,
+})
+export class App {
+
+  constructor() {
+    this.collection = [{id: 1}, {id: 2}, {id: 3}];
+  }
+  getItems() {
+    this.collection = this.getItemsFromServer();
+  }
+  getItemsFromServer() {
+    return [{id: 1}, {id: 2}, {id: 3}, {id: 4}];
+  }
+  trackByFn(index, item) {
+    return index; // or item.id
+  }
+}
+```
+
+
+
+How an Angular application gets started or loaded?
+------------
+
+The **main.ts** file, that is the first code which gets executed. The job of main.ts is to bootstrap the application. It loads everything and controls the startup of the application.
+
+**main.ts**
+
+```typescript
+import { enableProdMode } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+import { AppModule } from './app/app.module';
+import { environment } from './environments/environment';
+
+if (environment.production) {
+  enableProdMode();
+}
+
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err));
+```
+
+Most importantly here is the line where bootstraps start our angular app by passing app module to the method. AppModule refers to the app.module.ts file.
+
+**app.module.ts**
+
+```typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule, ErrorHandler } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule
+  ],
+  providers: [ ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+When angular starts, it bootstrap array in `@NgModule`. It basically there is a list of all components which should be known to Angular at the point of time it analyzes **index.html** file.
+
+**index.html**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Angular 8</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+    <app-root>Loading...</app-root>
+  </body>
+</html>
+```
 
 For more information:
 
