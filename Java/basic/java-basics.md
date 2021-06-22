@@ -1334,7 +1334,60 @@ The operator `finally` guarantees that a section of code defined in it will be e
 
 The method `finalize()` is called before the garbage collector performs object disposal.
 
+Example:
 
+```java
+public class MainClass {
+
+	public static void main(String args[]) {
+		TestClass a = new TestClass();
+		System.out.println("result of a.a() is " + a.a());
+		a = null;
+		System.gc(); // Принудительно зовём сборщик мусора
+		a = new TestClass();
+		System.out.println("result of a.a() is " + a.a());
+		System.out.println("!!! done");
+	}
+
+}
+```
+
+```java
+public class TestClass {
+
+	public int a() {
+		try {
+			System.out.println("!!! a() called");
+			throw new Exception("");
+		} catch (Exception e) {
+			System.out.println("!!! Exception in a()");
+			return 2;
+		} finally {
+			System.out.println("!!! finally in a() ");
+		}
+	}
+
+	@Override
+	protected void finalize() throws Throwable {
+		System.out.println("!!! finalize() called");
+		super.finalize();
+	}
+}
+```
+
+Execution result:
+```log
+!!! a() called
+!!! Exception in a()
+!!! finally in a()
+result of a.a() is 2
+!!! a() called
+!!! Exception in a()
+!!! finally in a()
+!!! finalize() called
+result of a.a() is 2
+!!! done
+```
 
 Generics in Java
 ----------------
