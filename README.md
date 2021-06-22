@@ -166,11 +166,6 @@ Interview questions and answers
     * [Session and SessionFactory](https://github.com/sunilsoni/interview-notes/blob/main/hibernate/hibernate.md#session-and-sessionfactory)
     * [First Level and Second Level Cache](https://github.com/sunilsoni/interview-notes/blob/main/hibernate/hibernate.md#first-level-and-second-level-cache)
     * [Test](https)
-    * [Test](https)
-    * [Test](https)
-    * [Test](https)
-    * [Test](https)
-
 
 - **Angular interview questions and answers**
   - [Angular](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md)
