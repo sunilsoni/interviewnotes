@@ -1220,10 +1220,10 @@ Types of garbage collectors
 ---------------------
 The Java HotSpot VM provides four different garbage collectors to choose from:
 
-**Serial** is the easiest option for applications with low data volume and low latency requirements. At the moment, it is used relatively rarely, but on weak computers it can be selected by the virtual machine as the default collector. The use of Serial GC is enabled by option `-XX:+UseSerialGC`.
-**Parallel** - inherits assembly approaches from the sequential collector, but adds parallelism to some operations, as well as the ability to automatically adjust to the required performance parameters. Parallel collector is enabled by option `-XX:+UseParallelGC`.
-**Concurrent Mark Sweep (CMS)** - aims to reduce maximum latency by performing some of the garbage collection work in parallel with the main threads of the application. Suitable for dealing with relatively large amounts of data in memory. The use of CMS GC is enabled by option `-XX:+UseConcMarkSweepGC`.
-**Garbage-First (G1)** - designed to replace CMS, especially in server applications running on multiprocessor servers and handling large amounts of data. G1 is enabled by Java option `-XX:+UseG1GC`.
+-  **Serial** is the easiest option for applications with low data volume and low latency requirements. At the moment, it is used relatively rarely, but on weak computers it can be selected by the virtual machine as the default collector. The use of Serial GC is enabled by option `-XX:+UseSerialGC`.
+-  **Parallel** - inherits assembly approaches from the sequential collector, but adds parallelism to some operations, as well as the ability to automatically adjust to the required performance parameters. Parallel collector is enabled by option `-XX:+UseParallelGC`.
+-  **Concurrent Mark Sweep (CMS)** - aims to reduce maximum latency by performing some of the garbage collection work in parallel with the main threads of the application. Suitable for dealing with relatively large amounts of data in memory. The use of CMS GC is enabled by option `-XX:+UseConcMarkSweepGC`.
+-  **Garbage-First (G1)** - designed to replace CMS, especially in server applications running on multiprocessor servers and handling large amounts of data. G1 is enabled by Java option `-XX:+UseG1GC`.
 
 Garbage Collection and types of Garbage Collectors
 --------------------------------------------------
