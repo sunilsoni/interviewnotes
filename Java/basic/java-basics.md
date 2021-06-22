@@ -1343,7 +1343,7 @@ public class MainClass {
 		TestClass a = new TestClass();
 		System.out.println("result of a.a() is " + a.a());
 		a = null;
-		System.gc(); // Принудительно зовём сборщик мусора
+        System . gc (); // Forced to call the garbage collector 
 		a = new TestClass();
 		System.out.println("result of a.a() is " + a.a());
 		System.out.println("!!! done");
