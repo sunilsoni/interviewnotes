@@ -1204,7 +1204,7 @@ most objects created quickly become garbage;
 there are few links between objects that were created in the past and newly created objects.
 
 How does the garbage collector work?
---------------------------------------------------
+-------------------------------------
 
 Garbage collection is the process of freeing space on the heap so that new objects can be added.
 
@@ -1216,6 +1216,14 @@ Memory is freed by the garbage collector at its own discretion. The program can 
 
 Garbage is collected by the system automatically, without user or programmer intervention, but this does not mean that this process does not require attention at all. The need to create and delete a large number of objects has a significant impact on the performance of applications and, if program performance is an important factor, you should carefully consider decisions related to the creation of objects - this, in turn, will reduce the amount of garbage to be disposed of.
 
+Types of garbage collectors
+---------------------
+The Java HotSpot VM provides four different garbage collectors to choose from:
+
+**Serial** is the easiest option for applications with low data volume and low latency requirements. At the moment, it is used relatively rarely, but on weak computers it can be selected by the virtual machine as the default collector. The use of Serial GC is enabled by option `-XX:+UseSerialGC`.
+**Parallel** - inherits assembly approaches from the sequential collector, but adds parallelism to some operations, as well as the ability to automatically adjust to the required performance parameters. Parallel collector is enabled by option `-XX:+UseParallelGC`.
+**Concurrent Mark Sweep (CMS)** - aims to reduce maximum latency by performing some of the garbage collection work in parallel with the main threads of the application. Suitable for dealing with relatively large amounts of data in memory. The use of CMS GC is enabled by option `-XX:+UseConcMarkSweepGC`.
+**Garbage-First (G1)** - designed to replace CMS, especially in server applications running on multiprocessor servers and handling large amounts of data. G1 is enabled by Java option `-XX:+UseG1GC`.
 
 Garbage Collection and types of Garbage Collectors
 --------------------------------------------------
@@ -1310,6 +1318,22 @@ It can be turned on by passing `-XX:+UseG1GC` in the command line options
 Java 8 has introduced one JVM parameter for reducing the unnecessary use of memory by creating too many instances of the same String. This optimizes the heap memory by removing duplicate String values to a global single char[] array. We can use the `-XX:+UseStringDeduplication` JVM argument to enable this optimization.
 
 G1 is the default garbage collector in JDK 9.
+
+final, finally and finalize()
+----------------
+
+Modifier `final`:
+
+-  The class cannot have descendants;
+-  The method cannot be overridden in inherited classes;
+-  The field cannot change its value after initialization;
+-  Local variables cannot be changed once a value has been assigned to them;
+-  Method parameters cannot change their value inside a method.
+
+The operator `finally` guarantees that a section of code defined in it will be executed regardless of what exceptions were raised and caught in the block try-catch.
+
+The method `finalize()` is called before the garbage collector performs object disposal.
+
 
 
 Generics in Java
