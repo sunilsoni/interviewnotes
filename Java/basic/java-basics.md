@@ -1419,3 +1419,4 @@ Generics in Java
 
 For more information:
 1. [Java 8 Features](https://javapapers.com/java/java-8-features/)
+2. [java-interview](https://github.com/enhorse/java-interview)
