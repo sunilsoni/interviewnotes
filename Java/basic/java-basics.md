@@ -1141,6 +1141,82 @@ If you are thinking why null is printed when we tried to know which classloader 
 
 We can also create our own custom class loader by extending the ClassLoader class.
 
+Garbage Collector
+---------------
+The Garbage Collector has only two things to do:
+
+- Find garbage - unused objects. (An object is considered unused if none of the entities in the code currently executing contains references to it, or the chain of links that could connect the object with some application entity is broken);
+- Free memory from garbage.
+
+There are two approaches to detecting garbage:
+- Reference counting ;
+- Tracing
+
+Counting the Reference (reference counting). The essence of this approach is that each object has a counter. A counter stores information about how many references are pointing to an object. When the link is destroyed, the counter is decremented. If the counter value is zero, the object can be considered garbage. The main disadvantage of this approach is the difficulty of ensuring the accuracy of the meter. Also, with this approach, it is difficult to detect circular dependencies (when two objects point to each other, but no living object refers to them), which leads to memory leaks.
+
+The main idea of the Tracing approach (tracing) is the assertion that only those objects that we can reach from the root points ( GC Root ) and those objects that are accessible from the living object can be considered alive. Everything else is rubbish.
+
+There are 4 types of root points:
+- Local variables and method parameters;
+- Streams;
+- Static variables;
+- Links from JNI.
+
+The simplest java application will have root points:
+
+- Local variables inside the main()method and main()method parameters ;
+- The thread that executes main();
+- Static variables of the class inside which the main() method is located .
+
+Thus, if we represent all objects and links between them as a tree, then we will need to go from root nodes (points) along all edges. At the same time, the nodes that we can get to are not garbage, all the rest are garbage. With this approach, cyclical dependencies are easily identified. HotSpot VM takes exactly this approach.
+
+There are two main methods for cleaning up memory from garbage:
+
+- Copying collectors
+- Mark-and-sweep
+
+With the copying collectors approach, memory is divided into two parts "from-space" and "to-space", while the principle of operation is as follows:
+- Objects are created in "from-space";
+- When the "from-space" is full, the application is suspended;
+- The garbage collector starts. Live objects are found in "from-space" and copied to "to-space";
+- When all objects are copied, "from-space" is completely cleared;
+- "To-space" and "from-space" are swapped.
+
+The main advantage of this approach is that objects densely clog up memory. Cons of the approach:
+
+1. The application must be stopped for the time it takes to complete the garbage collection cycle;
+2. In the worst case (when all objects are alive) "form-space" and "to-space" will have to be the same size.
+
+The mark-and-sweep algorithm can be described as:
+- Objects are created in memory;
+- At the moment when the garbage collector needs to be started, the application is suspended;
+- The collector walks through the object tree, marking live objects;
+- The collector loops through the entire memory, finding all unmarked chunks of memory and storing them in the "free list";
+- When new objects start to be created they are created in memory available in the "free list"
+
+**Cons of this method:**
+The application does not run while garbage collection is in progress;
+The stopping time directly depends on the size of the memory and the number of objects;
+If you do not use "compacting" the memory will not be used efficiently.
+The HotSpot VM garbage collectors use a combined Generational Garbage Collection approach that allows different algorithms to be used for different stages of garbage collection. This approach relies on the fact that:
+
+most objects created quickly become garbage;
+there are few links between objects that were created in the past and newly created objects.
+
+How does the garbage collector work?
+--------------------------------------------------
+
+Garbage collection is the process of freeing space on the heap so that new objects can be added.
+
+Objects are created through the operator new, thereby assigning a reference to the object. To finish working with an object, you just need to stop referring to it, for example, by assigning a reference to another object or value to a variable null; terminate the execution of the method so that its local variables expire naturally. Objects, links to which are not usually called garbage ( garbage ), which will be removed.
+
+The Java virtual machine, using the garbage collection mechanism, ensures that any object that has references remains in memory - all objects that are unreachable from the executable code, due to the lack of references to them, are deleted, freeing the memory allocated for them. More precisely, an object is outside the scope of the garbage collection process if it is reachable through a chain of links starting at the GC Root , i.e. a link that directly exists in the executable code.
+
+Memory is freed by the garbage collector at its own discretion. The program can successfully complete its work without exhausting the resources of free memory or not even approaching this limit, and therefore it will not need the "services" of the garbage collector.
+
+Garbage is collected by the system automatically, without user or programmer intervention, but this does not mean that this process does not require attention at all. The need to create and delete a large number of objects has a significant impact on the performance of applications and, if program performance is an important factor, you should carefully consider decisions related to the creation of objects - this, in turn, will reduce the amount of garbage to be disposed of.
+
+
 Garbage Collection and types of Garbage Collectors
 --------------------------------------------------
 
