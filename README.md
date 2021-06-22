@@ -202,7 +202,6 @@ Interview questions and answers
         * [Child to Parent](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-components.md#communication-between-components)
         * [Child to Parent](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-components.md#communication-between-components)
         * [Unrelated Components](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-components.md#communication-between-components)
-
     * [Angular Directive](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-directive.md)
       * [Components Directives](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-directive.md#components-directives)
       * [Structural Directives](https://github.com/sunilsoni/interview-notes/blob/main/angular/angular-directive.md#structural-directives)
