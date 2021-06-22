@@ -1398,6 +1398,19 @@ The class is `StringBuffer` mutable - StringBuffer should be used when it is nec
 
 The class `StringBuilder` was added in Java 5 and is identical to the class in every StringBuffer way, except that it is not synchronized and therefore its methods are much faster.
 
+Reflection
+----------------
+Reflection is a mechanism for obtaining data about a program at runtime. In Java, Reflection is implemented using the Java Reflection API , which consists of the package classes java.langand java.lang.reflect.
+
+Java Reflection API features:
+- Object class definition;
+- Getting information about class modifiers, fields, methods, constructors and superclasses;
+- Defining the interfaces implemented by the class;
+- Creating an instance of the class;
+- Getting and setting the values of the object's fields;
+- Calling object methods;
+- Creation of a new array.
+
 Generics in Java
 ----------------
 
