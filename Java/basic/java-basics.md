@@ -1470,9 +1470,12 @@ The memory area occupied by a java process consists of several parts. The type O
 
 Generics in Java
 ----------------
+Java Generics provides a way to reuse the same code with different inputs. 
 
-
-
+Advantages:
+- Generics provide compile-time type safety that allows programmers to catch invalid types at compile time.
+- When using Generics, there is no need of type-casting.
+- By using generics, programmers can implement generic algorithms that work on collections of different types, can be customized and are type safe and easier to read.
 
 For more information:
 1. [Java 8 Features](https://javapapers.com/java/java-8-features/)
