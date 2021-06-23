@@ -1426,9 +1426,46 @@ Checked and Unchecked Exception
 ----------------
 In Java, all exceptions are of two types:
 
-- **checked (checked / checked exceptions)** must be handled by the block catchor described in the method header (for example throws IOException). The presence of such a handler / modifier in the method header is checked at compile time;
+- **checked (checked / checked exceptions)** must be handled by the block catch or described in the method header (for example throws IOException). The presence of such a handler / modifier in the method header is checked at compile time;
+  Examples: ArithmeticException, ClassCastException, ConcurrentModificationException, IllegalArgumentException, IllegalStateException, IndexOutOfBoundsException, NoSuchElementException, NullPointerException, UnsupportedOperationException.
+  
 - **unchecked (unchecked / unchecked exceptions)** , which include errors Error(for example OutOfMemoryError), which are not recommended to be handled, and runtime exceptions presented by the class RuntimeExceptionand its descendants (for example NullPointerException), which may not be handled by the block catchand not described in the method header.
+  Class errors `Error` are the most serious problems at the JVM level. For example, exceptions of this kind are thrown if the memory available to the virtual machine runs out. It is not prohibited to handle such errors, but it is not recommended to do so.
+  
+Custom exception:
+----------------
+You must inherit from the base class of the required type of exception (for example, from `Exception` or `RuntimeException`).
 
+```java
+
+class CustomException extends Exception {
+    public CustomException() {
+        super();
+    }
+
+    public CustomException(final String string) {
+        super(string + " is invalid");
+    }
+
+    public CustomException(final Throwable cause) {
+        super(cause);
+    }
+}
+
+
+```
+
+OutOfMemoryError
+----------------
+OutOfMemoryError thrown when the Java virtual machine cannot create (allocate) an object due to insufficient memory, and the garbage collector cannot reclaim enough memory.
+
+The memory area occupied by a java process consists of several parts. The type OutOfMemoryErrordepends on which one is running out of space:
+
+
+- `java.lang.OutOfMemoryError`: Java heap space: There is not enough space in the heap, namely, in the area of memory in which objects created in the application programmatically are placed. Usually the problem lies in a memory leak. The size is set by the parameters -Xmsand -Xmx.
+- `java.lang.OutOfMemoryError`: PermGen space: (up to Java 8) This error occurs when there is not enough space in the Permanent area, the size of which is set by the -XX:PermSizeand parameters -XX:MaxPermSize.
+- `java.lang.OutOfMemoryError`: GC overhead limit exceeded: This error can occur both when the first and second areas are overflowed. It is connected with the fact that there is little memory left and the garbage collector is constantly working, trying to free up some space. This error can be disabled using the parameter -XX:-UseGCOverheadLimit.
+- `java.lang.OutOfMemoryError`: unable to create new native thread: Thrown out when it is not possible to create new streams.
 
 
 Generics in Java
