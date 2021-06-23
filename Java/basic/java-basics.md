@@ -1411,6 +1411,26 @@ Java Reflection API features:
 - Calling object methods;
 - Creation of a new array.
 
+
+Exceptions
+----------------
+
+Exceptions are divided into several classes, but they all have a common ancestor - a class `Throwable` whose descendants are classes `Exception` and `Error`.
+
+- **Errors** are more serious problems that, according to the Java specification, should not be handled in a native program, as they are related to JVM-level problems. For example, exceptions of this kind are thrown if the memory available to the virtual machine runs out.
+
+- **Exceptions** are the result of problems in the program that are, in principle, solvable, predictable, and the consequences of which can be eliminated within the program. For example, an integer was dividing by zero.
+
+
+Checked and Unchecked Exception
+----------------
+In Java, all exceptions are of two types:
+
+- **checked (checked / checked exceptions)** must be handled by the block catchor described in the method header (for example throws IOException). The presence of such a handler / modifier in the method header is checked at compile time;
+- **unchecked (unchecked / unchecked exceptions)** , which include errors Error(for example OutOfMemoryError), which are not recommended to be handled, and runtime exceptions presented by the class RuntimeExceptionand its descendants (for example NullPointerException), which may not be handled by the block catchand not described in the method header.
+
+
+
 Generics in Java
 ----------------
 
