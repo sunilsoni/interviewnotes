@@ -42,7 +42,7 @@ Why use Lambda Expression
 - Less coding.
 - Lambda Expressions enable you to encapsulate a single unit of behavior and pass it to other code. You can use lambda expressions if you want a certain action performed on each element of a collection, when a process is completed, or when a process encounters an error.
 
-Lambda Expressions
+Lambda Expressions Syntax
 -----------
 Java Lambda Expression Syntax
 ```java
