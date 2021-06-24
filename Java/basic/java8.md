@@ -75,9 +75,22 @@ Java Lambda Expression Syntax :
 Lambda Expressions Examples
 -----------
 
+
 Functional Interface
 -----------
+- An Interface that contains exactly one abstract method is known as a functional interface.
+- It can have any number of `default`, `static` methods but can contain only one abstract method. It can also declare methods of the object class.
+- Functional Interface is also known as Single Abstract Method Interfaces or SAM Interfaces. It is a new feature in Java 8, which helps to achieve a functional programming approach.
+- A functional interface can extend another interface only when it does not have any abstract method.
+- The Java API has many one-method interfaces such as `Runnable`, `Callable`, `Comparator`, `ActionListener`, and others. They can be implemented and instantiated using anonymous class syntax.
 
+-  A functional interface is an interface that has exactly one abstract method.
+-  Since default methods have an implementation, they are not abstract so a functional interface can have any number of them.
+-  If an interface declares an abstract method with the signature of one of the methods of java.lang.Object, it doesn't count toward the functional interface method count.
+-  A functional interface is valid when it inherits a method that is equivalent but not identical to another.
+-  An empty interface is not considered a functional interface.
+-  A functional interface is valid even if the @FunctionalInterface annotation would be omitted.
+-  Functional interfaces are the basis of lambda expressions
 
 For more information:
 1. [Java 8 Lambda Expressions](https://www.javaguides.net/2018/07/java-8-lambda-expressions.html)

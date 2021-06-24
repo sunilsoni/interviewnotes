@@ -31,7 +31,7 @@ Interview questions and answers
       * [Lambda Expressions Syntax](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#lambda-expressions-1)
       * [Lambda Expressions Syntax](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#java-lambda-expression-syntax-)
       * [Lambda Expressions Examples](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#lambda-expressions-examples)
-      * [Test](https)
+      * [Functional Interface](https)
       * [Test](https)
       * [Test](https)
       * [Test](https)
