@@ -183,7 +183,7 @@ Example :
 public class PredicateExample {
     public static void main(String[] args) {
         Predicate < Person > predicate = (person) -> person.getAge() > 28;
-        boolean result = predicate.test(new Person("ramesh", 29));
+        boolean result = predicate.test(new Person("James", 29));
         System.out.println(result);
     }
 }
@@ -235,7 +235,7 @@ public class FunctionExample {
         Function < PersonEntity, PersonDTO > function = (entity) -> {
             return new PersonDTO(entity.getName(), entity.getAge());
         };
-        PersonDTO personDTO = function.apply(new PersonEntity("ramesh", 20));
+        PersonDTO personDTO = function.apply(new PersonEntity("James", 20));
         System.out.println(personDTO.getName());
         System.out.println(personDTO.getAge());
     }
@@ -294,7 +294,7 @@ public class SuppliersExample {
    public static void main(String[] args) {
   
        Supplier<Person> supplier = () -> { 
-           return new Person("Ramesh", 30 );
+           return new Person("John", 30 );
        };
   
        Person p = supplier.get();
@@ -346,7 +346,7 @@ public class ConsumersExample {
            System.out.println(person.getName());
            System.out.println(person.getAge());
         };
-        consumer.accept(new Person("Ramesh", 30));
+        consumer.accept(new Person("John", 30));
     }
 }
 
@@ -384,8 +384,8 @@ public class BiFunctionExample {
            return p1.getAge() + p2.getAge();
        };
   
-       int totalAge = biFunction.apply(new Person("Ramesh", 10), 
-                               new Person("ram", 10));
+       int totalAge = biFunction.apply(new Person("John", 10), 
+                               new Person("James", 10));
        System.out.println(totalAge);
   
     }
@@ -425,7 +425,7 @@ public class BiConsumersExample {
              System.out.println(p2.getName());
        };
   
-       biConsumer.accept(new Person("Ramesh", 10), new Person("ram", 10));
+       biConsumer.accept(new Person("John", 10), new Person("James", 10));
     }
 }
 
