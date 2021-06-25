@@ -31,6 +31,7 @@ Interview questions and answers
       * [Lambda Expressions Syntax](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#lambda-expressions-1)
       * [Lambda Expressions Syntax](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#java-lambda-expression-syntax-)
       * [Lambda Expressions Examples](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#lambda-expressions-examples)
+      * [Stream](https)
       * [Functional Interface](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#functional-interface)
         * [Custom Functional Interface](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#custom-functional-interface)
         * [Predefined Functional Interfaces](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#predefined-functional-interfaces)
