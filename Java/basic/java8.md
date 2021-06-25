@@ -92,6 +92,86 @@ Functional Interface
 -  A functional interface is valid even if the @FunctionalInterface annotation would be omitted.
 -  Functional interfaces are the basis of lambda expressions
 
+Custom Functional Interface
+-----------
+
+```java
+@FunctionalInterface
+interface Sayable{
+    void say(String msg);   // abstract method   
+} 
+```
+
+```java
+public class FunctionalInterfacesExample {
+
+    public static void main(String[] args) {
+
+        Sayable sayable = (msg) -> {
+            System.out.println(msg);
+        };
+        sayable.say("Say something ..");
+    }
+}  
+```
+
+
+
+Predefined Functional Interfaces
+-----------
+Java 8 provides predefined functional interfaces to deal with functional programming by using lambda and method references.
+
+```java
+@Setter
+@Getter
+public class Person {
+    private String name;
+    private int age;
+    public Person(String name, int age) {
+        super();
+        this.name = name;
+        this.age = age;
+    }
+}
+```
+
+Predicate
+-----------
+
+
+
+Function
+-----------
+
+Supplier
+-----------
+
+Consumer
+-----------
+
+BiFunction
+-----------
+
+BiConsumer
+-----------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 For more information:
 1. [Java 8 Lambda Expressions](https://www.javaguides.net/2018/07/java-8-lambda-expressions.html)
 
