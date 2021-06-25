@@ -434,6 +434,19 @@ public class BiConsumersExample {
 You can also define your own custom functional interface. Following is the list of a functional interface that is placed in java.util.function package.
 
 
+Method References
+-----------------
+
+Method reference is used to refer method of the functional interface. It is a compact and easy form of a lambda expression. Each time when you are using a lambda expression to just referring a method, you can replace your lambda expression with method reference.
+
+Method References Types:
+-----------------
+
+- Reference to a static method : `ContainingClass::staticMethodName`
+- Reference to an instance method of a particular object : `containingObject::instanceMethodName`
+- Reference to an instance method of an arbitrary object of a particular type : `ContainingType::methodName`
+- Reference to a constructor: `ClassName::new`
+
 
 
 

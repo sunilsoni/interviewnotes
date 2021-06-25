@@ -40,6 +40,8 @@ Interview questions and answers
         * [Consumer](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#consumer)
         * [BiFunction](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#bifunction)
         * [BiConsumer](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#biconsumer)
+      * [Method References](https)
+        * [Method References Types](https)
       * [Test](https)
     * [Why String is Immutable?](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#why-string-is-immutable)
     * [StringBuffer and StringBuilder](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#stringbuffer-and-stringbuilder)
