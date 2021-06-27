@@ -504,8 +504,39 @@ The differences are:
 - `wait()` method is non-static, it gets called on an object on which synchronization block is locked while `sleep()` is a static method, we call this method like Thread.sleep(), that means it always affects the currently executing thread
 - `wait()` is normally called when a condition is fulfilled like if the buffer size of queue is full then producer thread will wait, whereas `sleep()` method can be called without a condition
 
-
 Executor Framework
+-------------
+
+With an Executor framework, we only have to implement the Runnable objects and send them to the executor. The executor is responsible for their execution, instantiation, and running with necessary threads. But it goes beyond that and improves performance using a pool of threads. When you send a task to the executor, it tries to use a pooled thread for the execution of this task, to avoid continuous spawning of threads.
+
+Another important advantage of the Executor framework is the Callable interface. It's similar to the Runnable interface, but offers two improvements, which are as follows:
+1. The main method of this interface, named call(), may return a result.
+2. When you send a Callable object to an executor, you get an object that implements the Future interface. You can use this object to control the status and the result of the Callable object.
+
+- At a low level, we can create a thread in two ways, either by implementing Runnable or by subclassing Thread and overriding the run() method.
+- At a high-level, we use Executors, which use thread pools, which in turn use worker threads.
+- One type of thread pool is the fixed thread pool, which has a fixed number of threads running. We can also use single-thread pools.
+- ExecutorService has methods to execute thread pools that either take a Runnable or Callable task. A Callable returns a result and throws a checked exception.
+- The submit() method returns a Future object that represents the result of the task (if the task is a Runnable, null is returned).
+- An executor has to be shutdown to close the pool thread with either shutdown() (gracefully) or shutdownNow() (forcefully).
+- A deadlock situation occurs when two or more threads are blocked forever, waiting for each other to acquire/release some resource.
+- Starvation happens when a thread is constantly waiting for a lock, never able to take it because other threads with higher priority are continually acquiring it.
+- A livelock is like a deadlock in the sense that two (or more) threads are blocking each other, but in a livelock, each thread tries to resolve the problem on its own (live) instead of just waiting (dead).
+- A race condition is a situation where two threads compete to access or modify the same resource at the same time in a way that causes unexpected results.
+
+High level concurrency features Executor framework
+-------------
+- ExecutorService Interface
+- ScheduledExecutorService Interface
+- Future Interface
+- Executors newSingleThreadExecutor Method 
+- Executors newFixedThreadPool Method 
+- Executors newCachedThreadPool Method 
+- Executors newScheduledThreadPool Method 
+
+
+
+Executor Framework-2
 -------------
 With an Executor framework, we only have to implement the Runnable objects and send them to the executor. The executor is responsible for their execution, instantiation, and running with necessary threads. But it goes beyond that and improves performance using a pool of threads. When you send a task to the executor, it tries to use a pooled thread for the execution of this task, to avoid continuous spawning of threads.
 
