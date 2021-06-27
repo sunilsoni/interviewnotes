@@ -535,7 +535,120 @@ High level concurrency features Executor framework
 - Executors newCachedThreadPool Method 
 - Executors newScheduledThreadPool Method 
 
+Executor Interface
+-------------
 
+An object that executes submitted Runnable tasks. This interface provides a way of decoupling task submission from the mechanics of how each task will be run, including details of thread use, scheduling, etc. An Executor is normally used instead of explicitly creating threads.
+
+For example, rather than invoking `new Thread(new(RunnableTask())).start()` for each of a set of tasks, you might use:
+
+```java
+Executor executor = anExecutor;
+ executor.execute(new RunnableTask1());
+ executor.execute(new RunnableTask2());
+        ...
+```
+
+ExecutorService Interface
+-------------
+The `ExecutorService` interface supplements execute with a similar, but more versatile submit method. Like `execute`, `submit` accepts Runnable objects, but also accepts `Callable` objects, which allow the task to return a value. The submit method returns a `Future` object, which is used to retrieve the `Callable` return value and to manage the status of both `Callable` and `Runnable` tasks.
+
+`ExecutorService` also provides methods for submitting large collections of `Callable` objects. 
+Finally, `ExecutorService` provides a number of methods for managing the shutdown of the executor. To support an immediate shutdown, tasks should handle interrupts correctly.
+
+Source Code from JDK Library
+```java
+public interface ExecutorService extends Executor {
+
+    void shutdown();
+
+    List<Runnable> shutdownNow();
+
+    boolean isShutdown();
+
+    boolean isTerminated();
+
+    boolean awaitTermination(long timeout, TimeUnit unit)
+        throws InterruptedException;
+
+    <T> Future<T> submit(Callable<T> task);
+
+    <T> Future<T> submit(Runnable task, T result);
+
+    Future<?> submit(Runnable task);
+
+    <T> List<Future<T>> invokeAll(Collection<? extends Callable<T>> tasks)
+        throws InterruptedException;
+
+    <T> List<Future<T>> invokeAll(Collection<? extends Callable<T>> tasks,
+                                  long timeout, TimeUnit unit)
+        throws InterruptedException;
+    <T> T invokeAny(Collection<? extends Callable<T>> tasks)
+        throws InterruptedException, ExecutionException;
+
+    <T> T invokeAny(Collection<? extends Callable<T>> tasks,
+                    long timeout, TimeUnit unit)
+        throws InterruptedException, ExecutionException, TimeoutException;
+}
+```
+
+ExecutorService Interface Examples
+-------------
+
+By  using Executors.newSingleThreadExecutor() method to create an ExecutorService that uses a single worker thread for executing tasks.
+
+```java
+public class ExecutorServiceExample {
+    public static void main(String[] args) {
+
+        System.out.println("Thread main started");
+  
+       // Create a task
+        Runnable task = () -> {
+             for (int i = 0; i < 5; i++) {
+                 System.out.println("[" + Thread.currentThread().getName() + "] " + "Message " + i);
+             }
+        };
+
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+
+        executorService.execute(task);
+
+        executorService.shutdown();
+
+        System.out.println("Thread main finished");
+
+     }
+}
+```
+
+```log
+Thread main started
+Thread main finished
+[pool-1-thread-1] Message 0
+[pool-1-thread-1] Message 1
+[pool-1-thread-1] Message 2
+[pool-1-thread-1] Message 3
+[pool-1-thread-1] Message 4
+```
+
+Different Between execute() and submit() Methods
+-------------
+- The main difference is submit() method returns Future object for tracking the results but execute() method does't return anthing.
+- Both submit() and execute() methods are used to submit a task to Executor framework for asynchronous execution.
+- The submit() can accept both Runnable and Callable task but execute() can only accept the Runnable task.
+- You can access submit() and execute() from the ExecutorService interface because it also extends the Executor interface which declares the execute() method.
+
+ScheduledExecutorService Interface
+-------------
+```java
+
+```
+Future Interface
+-------------
+```java
+
+```
 
 Executor Framework-2
 -------------
