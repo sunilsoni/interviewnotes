@@ -1470,13 +1470,109 @@ The memory area occupied by a java process consists of several parts. The type O
 
 Generics in Java
 ----------------
-Java Generics provides a way to reuse the same code with different inputs. 
+Java Generics provides a way to reuse the same code with different inputs. The difference is that the inputs to formal parameters are values, while the inputs to type parameters are types.
 
 Advantages:
 - Generics provide compile-time type safety that allows programmers to catch invalid types at compile time.
 - When using Generics, there is no need of type-casting.
 - By using generics, programmers can implement generic algorithms that work on collections of different types, can be customized and are type safe and easier to read.
 
+Benefits of Generics
+----------------
+**1. Stronger type checks at compile time**
+
+A Java compiler applies strong type checking to generic code and issues errors if the code violates type safety. Fixing compile-time errors is easier than fixing runtime errors, which can be difficult to find.
+Example: In this example, List holds only a String type of objects in generics. It doesn’t allow to store other objects
+
+```java
+List<String> list = new ArrayList<String>(); 
+list.add("abc");
+```
+
+
+**2. Elimination of casts**
+
+Code snippet without generics requires casting:
+
+```java
+List list = new ArrayList();
+list.add("hello");
+String s = (String) list.get(0);
+
+```
+
+When re-written to use generics, the code does not require casting:
+
+```java
+List<String> list = new ArrayList<String>();
+list.add("hello");
+String s = list.get(0);   // no cast
+
+```
+
+Collection Framework examples for Generics.
+----------------
+
+For Example: `ArrayList` class declaration from java.util package.
+
+```java
+public class ArrayList<E> extends AbstractList<E>
+        implements List<E>, RandomAccess, Cloneable, java.io.Serializable
+{
+   .......
+}
+```
+
+For Example,  `HashSet` class declaration from java.util package.
+
+```java
+public class HashSet<E>
+    extends AbstractSet<E>
+    implements Set<E>, Cloneable, java.io.Serializable
+{
+ .....
+}
+```
+For Example,  `HashMap` class declaration from java.util package.
+
+```java
+public class HashMap<K,V> extends AbstractMap<K,V>
+    implements Map<K,V>, Cloneable, Serializable {
+....
+}
+```
+
+An `Iterable` interface from JDK 8 - java.lang package is an example for a Generic interface.
+
+
+```java
+public interface Iterable<T> {
+   
+    Iterator<T> iterator();
+
+    default void forEach(Consumer<? super T> action) {
+        Objects.requireNonNull(action);
+        for (T t : this) {
+            action.accept(t);
+        }
+    }
+
+    default Spliterator<T> spliterator() {
+        return Spliterators.spliteratorUnknownSize(iterator(), 0);
+    }
+}
+```
+
+
+One more example for Generic interface is `Comparable` interface.
+
+```java
+public interface Comparable<T> {
+    public int compareTo(T o);
+}
+```
+
 For more information:
 1. [Java 8 Features](https://javapapers.com/java/java-8-features/)
 2. [java-interview](https://github.com/enhorse/java-interview)
+2. [Java Generics Tutorial with Examples](https://www.javaguides.net/2018/08/java-generics-tutorial-with-examples.html)
