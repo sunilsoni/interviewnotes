@@ -509,10 +509,11 @@ Executor Framework
 
 With an Executor framework, we only have to implement the Runnable objects and send them to the executor. The executor is responsible for their execution, instantiation, and running with necessary threads. But it goes beyond that and improves performance using a pool of threads. When you send a task to the executor, it tries to use a pooled thread for the execution of this task, to avoid continuous spawning of threads.
 
-Another important advantage of the Executor framework is the Callable interface. It's similar to the Runnable interface, but offers two improvements, which are as follows:
+Another important advantage of the Executor framework is the Callable interface. It's similar to the Runnable interface, but offers two improvements, which are:
 1. The main method of this interface, named call(), may return a result.
 2. When you send a Callable object to an executor, you get an object that implements the Future interface. You can use this object to control the status and the result of the Callable object.
 
+**Summary**
 - At a low level, we can create a thread in two ways, either by implementing Runnable or by subclassing Thread and overriding the run() method.
 - At a high-level, we use Executors, which use thread pools, which in turn use worker threads.
 - One type of thread pool is the fixed thread pool, which has a fixed number of threads running. We can also use single-thread pools.
