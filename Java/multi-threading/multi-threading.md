@@ -641,13 +641,127 @@ Different Between execute() and submit() Methods
 
 ScheduledExecutorService Interface
 -------------
-```java
+A ScheduledExecutorService can schedule commands to run after a given delay or to execute periodically.
 
+The schedule() methods create tasks with various delays and return a task object that can be used to cancel or check execution. The scheduleAtFixedRate() and scheduleWithFixedDelay() methods create and execute tasks that run periodically until cancelled.
+
+Commands submitted using the Executor.execute(Runnable) and ExecutorService submit methods are scheduled with a requested delay of zero. Zero and negative delays (but not periods) are also allowed in schedule methods and are treated as requests for immediate execution.
+
+```java
+public class SchedulingTasksWithScheduledThreadPool {
+
+    public static void main(String[] args) throws InterruptedException {
+        System.out.println("Thread main started");
+
+        // Create a task
+        Runnable task1 = () -> {
+            System.out.println("Executing the task1 at: " + new Date());
+        };
+
+        // Create a task
+        Runnable task2 = () -> {
+            System.out.println("Executing the task2 at: " + new Date());
+        };
+
+        ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(2);
+
+        System.out.println("Scheduling task to run after 5 seconds... " + new Date());
+        scheduledExecutorService.schedule(task1, 5, TimeUnit.SECONDS);
+        scheduledExecutorService.schedule(task2, 5, TimeUnit.SECONDS);
+
+        scheduledExecutorService.shutdown();
+        System.out.println("Thread main finished");
+    }
+}
+```
+
+Output
+```log
+Thread main started
+Scheduling task to run after 5 seconds... Sat Sep 01 10:56:40 IST 2018
+Thread main finished
+Executing the task1 at: Sat Sep 01 10:56:45 IST 2018
+Executing the task2 at: Sat Sep 01 10:56:45 IST 2018
 ```
 Future Interface
 -------------
-```java
 
+Future is a generic interface that represents the value that will be returned by a Callable object. Because this value is obtained at some future time, the name Future is appropriate.
+
+Future is defined like this:
+
+```java
+public interface Future<V> {
+
+    boolean cancel(boolean mayInterruptIfRunning);
+
+    boolean isCancelled();
+
+    boolean isDone();
+
+    V get() throws InterruptedException, ExecutionException;
+
+    V get(long timeout, TimeUnit unit)
+        throws InterruptedException, ExecutionException, TimeoutException;
+}
+```
+Here, V specifies the type of the result. To obtain the returned value, you will call Future’s get( ) method, which has these two forms:
+
+```java
+V get( ) throws InterruptedException, ExecutionException
+V get(long wait, TimeUnit tu) throws InterruptedException, ExecutionException, TimeoutException
+```
+
+The first form waits for the result indefinitely. The second form allows you to specify a timeout period in wait.
+
+```java
+public class ReturnValuesUsingCallable {
+ 
+    public static void main(String[] args) throws InterruptedException, ExecutionException {
+  
+        System.out.println("Thread main started");
+  
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+        Future<Integer> returnedValues = executorService.submit(() -> {
+             int sum = 0;
+             for (int i = 1; i <= 5; i++) {
+    
+                sum += i;
+             try {
+                 Thread.sleep(200);
+             } catch (InterruptedException e) {
+                 e.printStackTrace();
+             }
+         }
+            System.out.println("[" + Thread.currentThread().getName() + "] of sum " + sum);
+            return sum;
+       });
+  
+        while(!returnedValues.isDone()) {
+             System.out.println("Task is still not done...");
+             Thread.sleep(200);
+         }
+   
+         System.out.println("Result of Future object:: " + returnedValues.get());
+         executorService.shutdown();
+  
+         System.out.println("Thread main finished");
+    }
+}
+```
+
+Output:
+```log
+Thread main started
+Task is still not done...
+Task is still not done...
+Task is still not done...
+Task is still not done...
+Task is still not done...
+Task is still not done...
+[pool-1-thread-1] of sum 15
+Result of Future object:: 15
+Thread main finished
 ```
 
 Executor Framework-2
@@ -766,6 +880,7 @@ void rejectedExecution(Runnable r , ThreadPoolExecutor executor );
 
 This method will be invoked by ThreadPoolExecutor when execute() cannot accept a task.
 Putting it all together:
+
 ```java  
 BlockingQueue<Runnable> blockingQueue = new ArrayBlockingQueue<Runnable>(50);
         CustomThreadPoolExecutor executor = new CustomThreadPoolExecutor(5,15, 5000, TimeUnit.MILLISECONDS, blockingQueue);
