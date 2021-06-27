@@ -1510,7 +1510,7 @@ String s = list.get(0);   // no cast
 
 ```
 
-Collection Framework examples for Generics.
+Collection Framework examples for Generics
 ----------------
 
 For Example: `ArrayList` class declaration from java.util package.
@@ -1571,6 +1571,67 @@ public interface Comparable<T> {
     public int compareTo(T o);
 }
 ```
+
+Type Parameter Naming Conventions
+----------------
+
+By convention, type parameter names are single, uppercase letters. The type parameters naming conventions are important to learn generics thoroughly.
+
+The most commonly used type parameter names are:
+- E - Element (used extensively by the Java Collections Framework)
+- K - Key
+- N - Number
+- T - Type
+- V - Value
+- S, U, V etc. - 2nd, 3rd, 4th types
+
+
+Multiple Type Parameters
+----------------
+A generic class can have multiple type parameters.
+**Example:** The generic OrderedPair class, which implements the generic Pair interface:
+
+```java
+public interface Pair<K, V> {
+  public K getKey();
+  public V getValue();
+}
+
+public class OrderedPair<K, V> implements Pair<K, V> {
+
+  private K key;
+  private V value;
+
+  public OrderedPair(K key, V value) {
+    this.key = key;
+    this.value = value;
+  }
+
+  public K getKey() { return key; }
+  public V getValue() { return value; }
+}
+
+```
+
+create two instantiations of the OrderedPair class
+```java
+Pair<String, Integer> p1 = new OrderedPair<String, Integer>("Even", 8);
+Pair<String, String>  p2 = new OrderedPair<String, String>("hello", "world");
+```
+
+HashMap class is a good example of Multiple Type Parameters.
+
+```java
+public class HashMap<K,V> extends AbstractMap<K,V>
+    implements Map<K,V>, Cloneable, Serializable {
+...
+}
+public interface Map<K,V> {
+...
+}
+```
+
+
 
 For more information:
 1. [Java 8 Features](https://javapapers.com/java/java-8-features/)
