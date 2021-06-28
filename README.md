@@ -196,7 +196,7 @@ Interview questions and answers
     - [@ConditionalOnBean and @ConditionalOnMissingBean](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#conditionalonbean-and-conditionalonmissingbean)
     - [@ConditionalOnProperty](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#conditionalonproperty)
     - [@ConditionalOnResource](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#conditionalonresource)
-    - [@ConditionalOnWebApplication and @ConditionalOnNotWebApplication](https)
+    - [@ConditionalOnWebApplication and @ConditionalOnNotWebApplication](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#conditionalonwebapplication-and-conditionalonnotwebapplication)
     - [@ConditionalExpression](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#conditionalonwebapplication-and-conditionalonnotwebapplication)
     - [@Conditional](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#conditional)
     
