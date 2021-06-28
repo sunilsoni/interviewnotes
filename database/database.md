@@ -453,5 +453,5 @@ For more information:
 - [Cheat sheet](http://files.zeroturnaround.com/pdf/zt_sql_cheat_sheet.pdf)
 - [Clustered vs Non-clustered indexes](https://docs.microsoft.com/en-us/sql/relational-databases/indexes/clustered-and-nonclustered-indexes-described)
 - [DB Index Wiki](https://en.wikipedia.org/wiki/Database_index)
-  https://phoenixnap.com/kb/sql-vs-nosql
-  https://www.imaginarycloud.com/blog/sql-vs-nosql/
+- [SQL vs NoSQL: What's the Difference?](https://phoenixnap.com/kb/sql-vs-nosql)
+- [SQL vs NoSQL: when to use?](https://www.imaginarycloud.com/blog/sql-vs-nosql/)
