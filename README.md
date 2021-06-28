@@ -381,6 +381,14 @@ Interview questions and answers
     - [SQL](NoSQL)
     - [NoSQL](NoSQL)
     - [SQL vs NoSQL](NoSQL)
+    - [Database Types](NoSQL)
+    - [Schema](NoSQL)
+    - [Data Model](NoSQL)
+    - [Ability to Scale](NoSQL)
+    - [ACID vs BASE](NoSQL)
+    - [Use Cases](NoSQL)
+    - [Reasons to use an SQL database](NoSQL)
+    - [Reasons to use a NoSQL database](NoSQL)
   
 - **Maven**
   - [Maven](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#Maven)

@@ -240,7 +240,8 @@ SQL vs NoSQL
 |  Disadvantages     |  Complex to maintain and inefficient if processing big data, complex relational database systems are difficult to export into other systems, not good for handling various data types                 | Data is less structured, NoSQL databases are not as reliable (no ACID support), NoSQL databases are newer and may offer less features than their SQL counterparts                |
 | Use cases      |  ACID support, complex queries, no changes or growth                 | Real-time data, volumes of data with no structure, agile business, cloud computing                |
 
-**Database Types**
+Database Types
+-------------
 
 Database types depend on the way the data is stored.
  `SQL` has a table-based database. Table database stores data into tables with fixed rows and columns.
@@ -252,6 +253,7 @@ Database types depend on the way the data is stored.
 4. Graph database – Optimized to capture and search the connections between data elements.
 
 **Schema**
+-------------
 
 A database schema is a structure that defines how a database is constructed. It defines how the data is organized and how the relations among data are associated. There are two types of schemas:
 
@@ -264,6 +266,7 @@ However, a NoSQL database does not require a predefined schema. NoSQL uses a dyn
 
 
 **Data Model**
+-------------
 
 The data model shows the logical structure of the database. It organizes elements of data and standardizes how they relate to each other. There are two types of data models:
 
@@ -278,14 +281,54 @@ NoSQL uses a `nonrelational data model` that does not use relationships. NoSQL d
 
 
 **Ability to Scale**
+-------------
+Database scalability is the ability to hold increasing amounts of data without sacrificing performance. There are two types of scalability:
 
+- Vertical
+- Horizontal
+
+SQL databases are vertically scalable. In vertical scaling, data resides on a single node, and the only way to scale up is by adding more hardware resources, such as CPU and RAM, to one existing machine. This makes vertical scaling more costly. An additional downside of vertical scaling is that it runs on one machine so if the server goes down, your application will go down too.
+
+NoSQL databases are horizontally scalable. In horizontal scaling, each node contains only part of the data which allows you to add more machines to the existing group of distributed systems. This makes horizontal scaling cheaper and quicker.
 
 **ACID vs BASE**
+-------------
+SQL databases use the ACID consistency model. ACID stands for:
 
+- Atomic – All operations in a transaction succeed or every operation is rolled back. Partial success is not allowed.
+- Consistent – Each transaction moves the database from one valid state to another. Transaction can’t leave the database in an inconsistent state.
+- Isolated – Transactions can’t interfere with each other.
+- Durable – The results of applying a transaction are permanent, even in the presence of failures.
 
+The main feature of the ACID model is consistency. When you complete a transaction, its data is consistent and stable.
 
+NoSQL databases use the BASE consistency model. BASE stands for:
 
+- Basically Available – All users can perform a query. The database spreads data across several systems so in case that a failure happens to a segment of data, the database will not experience a complete outage.
+- Soft State – Database state can change over time.
+- Eventual Consistency – If the system is functioning and we wait long enough, the database will eventually become consistent.
 
+The advantage of the BASE consistency model is that transactions are committed faster. Databases that use the BASE model prefer availability over consistency of replicated data.
+
+**Use Cases**
+-------------
+
+Not every database fits every business needs. Let’s take a closer look at use cases for both types of databases.
+
+Reasons to use an SQL database:
+-------------
+
+- When you need ACID support – With ACID support you get data consistency and 100% data integrity.
+- When you are working with complex queries and reports – SQL is a better fit for complex query environments when compared to NoSQL.
+- When you don’t anticipate a lot of changes or growth – If your business is not growing exponentially, there is no reason to use a system designed to support an increase in data volume.
+
+Reasons to use a NoSQL database:
+-------------
+
+- When you need real-time data – NoSQL does not require schemas, so it makes the information process quicker.
+- When you store volumes of data with no structure – NoSQL supports all data types.
+- When you run an agile business – NoSQL does not require the preparation process, so it reduces downtime.
+- When you want to make most out of cloud computing and storage – For a cloud solution to be scalable, the data must be easy to share across multiple servers.
 
 
 
