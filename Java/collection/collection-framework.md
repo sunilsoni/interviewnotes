@@ -7,6 +7,51 @@ Some points:
 - Iterable interface is the root interface for all collection classes, it has one abstract method iterator()
 - Collection interface extends the Iterable interface
 
+ArrayList
+-------
+- An ArrayList is a re-sizable array, also called a dynamic array. It grows its size to accommodate new elements and shrinks the size when the elements are removed.
+- ArrayList internally uses an array to store the elements. Just like arrays, It allows you to retrieve the elements by their index.
+- Java ArrayList allows duplicate and null values.
+- Java ArrayList is an ordered collection. It maintains the insertion order of the elements.
+- You cannot create an ArrayList of primitive types like int, char etc. You need to use boxed types like Integer, Character, Boolean etc.
+- Java ArrayList is not synchronized. If multiple threads try to modify an ArrayList at the same time, then the final outcome will be non-deterministic. You must explicitly synchronize access to an ArrayList if multiple threads are gonna modify it.
+
+Accessing elements
+-------
+- check if an ArrayList is empty using the `isEmpty()` method.
+- find the size of an ArrayList using the `size()` method.
+- access the element at a particular index in an ArrayList using the `get()` method.
+- modify the element at a particular index in an ArrayList using the `set()` method.
+
+Removing elements
+-----------
+- remove the element at a given index in an ArrayList using `remove(int index)`
+- remove an element from an ArrayList using `remove(Object o)`
+- remove all the elements from an ArrayList that exist in a given collection using `removeAll()`
+- remove all the elements matching a given predicate using `removeIf()`
+- clear an ArrayList using `clear()`
+
+Iterating over an ArrayList
+-----------
+- Java 8 forEach and lambda expression.
+- iterator().
+- iterator() and Java 8 forEachRemaining() method.
+- listIterator().
+- Simple for-each loop.
+- for loop with index.
+
+Searching for elements in an ArrayList
+----------
+- Check if an ArrayList contains a given element | contains()
+- Find the index of the first occurrence of an element in an ArrayList | indexOf()
+- Find the index of the last occurrence of an element in an ArrayList | lastIndexOf()
+
+Sorting an ArrayList
+----------
+- Sort an ArrayList using `Collections.sort()` method.
+- Sort an ArrayList using `ArrayList.sort()` method.
+- Sort an ArrayList of user defined objects with a custom comparator.
+
 
 HashMap
 -------
@@ -1074,3 +1119,7 @@ List: [1, 2, 3, 4, 4, 4]
 
 
 
+
+For more information:
+
+1. [Java ArrayList Tutorial with Examples](https://www.callicoder.com/java-arraylist/)
