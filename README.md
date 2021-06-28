@@ -82,6 +82,7 @@ Interview questions and answers
     * [TreeSet](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#treeset)
     * [fail-safe and fail-fast iterators](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#fail-safe-and-fail-fast-iterators)
     * [Lists](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#lists)
+      * [ArrayList](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#arraylist)
       * [LinkedList](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#linkedlist)
       * [Stack](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#stack)
       * [Vector](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#vector)
