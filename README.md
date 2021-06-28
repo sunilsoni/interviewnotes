@@ -360,7 +360,7 @@ Interview questions and answers
     * [Eureka Naming Server](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#eureka-naming-server)
     * [Zuul](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#zuul)
     * [Zipkin](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#zipkin)
-    * [Hysterix](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#hysterix)
+    * [Hystrix](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#hysterix)
 
 - **Kafka**
   - [Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md)

@@ -11,10 +11,10 @@ ArrayList
 -------
 - An ArrayList is a re-sizable array, also called a dynamic array. It grows its size to accommodate new elements and shrinks the size when the elements are removed.
 - ArrayList internally uses an array to store the elements. Just like arrays, It allows you to retrieve the elements by their index.
-- Java ArrayList allows duplicate and null values.
-- Java ArrayList is an ordered collection. It maintains the insertion order of the elements.
+- ArrayList allows duplicate and null values.
+- ArrayList is an ordered collection. It maintains the insertion order of the elements.
 - You cannot create an ArrayList of primitive types like int, char etc. You need to use boxed types like Integer, Character, Boolean etc.
-- Java ArrayList is not synchronized. If multiple threads try to modify an ArrayList at the same time, then the final outcome will be non-deterministic. You must explicitly synchronize access to an ArrayList if multiple threads are gonna modify it.
+- ArrayList is not synchronized. If multiple threads try to modify an ArrayList at the same time, then the final outcome will be non-deterministic. You must explicitly synchronize access to an ArrayList if multiple threads are gonna modify it.
 
 Accessing elements
 -------
