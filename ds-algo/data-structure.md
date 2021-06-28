@@ -4,8 +4,8 @@ Data Structures
 
 - [Lists](#lists)
     * [ArrayList](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#arraylist)
-    * [ArrayList](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#arraylist)
     * [LinkedList](#linkedlist)
+    * [ArrayList](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#arraylist)
     * [Stack](#stack)
     * [Vector](#vector)
     * [CopyOnWriteArrayList](#copyonwritearraylist)
