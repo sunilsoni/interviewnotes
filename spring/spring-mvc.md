@@ -1,6 +1,12 @@
 Spring MVC
 ==========
 
+Spring MVC(Model-View-Controller) provides a convenient way to develop a java based web application. 
+
+It has a central servlet called as DispatcherServlet which is well known as front controller that intercepts all the requests, identify the appropriate handler i.e. controllers and render views to the client. 
+
+It is defined at `org.springframework.web.servlet.DispatcherServlet` in `org.springframework.web` package.
+
 Spring MVC flow
 --------------
 In Spring Web MVC, `DispatcherServlet` class works as the front controller. It is responsible to manage the flow of the spring mvc application.
