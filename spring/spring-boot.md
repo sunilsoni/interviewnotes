@@ -2,6 +2,118 @@ Spring Boot
 ==========
 
 
+Spring Boot Annotations
+--------------------
+
+@SpringBootApplication
+--------------------
+
+We use this annotation to mark the main class of a Spring Boot application.
+
+`@SpringBootApplication` encapsulates `@Configuration`, `@EnableAutoConfiguration`, and `@ComponentScan` annotations with their default attributes.
+
+```java
+@SpringBootApplication
+class VehicleFactoryApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(VehicleFactoryApplication.class, args);
+    }
+}
+```
+
+@EnableAutoConfiguration
+--------------------
+@EnableAutoConfiguration, as its name says, enables auto-configuration. It means that Spring Boot looks for auto-configuration beans on its classpath and automatically applies them.
+
+Note, that we have to use this annotation with @Configuration:
+```java
+@Configuration
+@EnableAutoConfiguration
+class MyConfig {
+    
+}
+```
+
+@ConditionalOnClass and @ConditionalOnMissingClass
+--------------------
+Using these conditions, Spring will only use the marked auto-configuration bean if the class in the annotation's argument is present/absent:
+```java
+@Configuration
+@ConditionalOnClass(DataSource.class)
+class MySQLAutoconfiguration {
+    //...
+}
+```
+
+@ConditionalOnBean and @ConditionalOnMissingBean
+--------------------
+We can use these annotations when we want to define conditions based on the presence or absence of a specific bean:
+```java
+@Bean
+@ConditionalOnBean(name = "dataSource")
+LocalContainerEntityManagerFactoryBean entityManagerFactory() {
+        // ...
+}
+```
+
+
+@ConditionalOnProperty
+--------------------
+With this annotation, we can make conditions on the values of properties:
+
+```java
+@Bean
+@ConditionalOnProperty(
+        name = "usemysql",
+        havingValue = "local"
+)
+DataSource dataSource() {
+        // ...
+}
+```
+
+@ConditionalOnResource
+--------------------
+We can make Spring to use a definition only when a specific resource is present:
+```java
+@ConditionalOnResource(resources = "classpath:mysql.properties")
+Properties additionalProperties() {
+        // ...
+}
+```
+
+@ConditionalOnWebApplication and @ConditionalOnNotWebApplication
+--------------------
+With these annotations, we can create conditions based on if the current application is or isn't a web application:
+```java
+@ConditionalOnWebApplication
+HealthCheckController healthCheckController() {
+        // ...
+}
+```
+
+@ConditionalExpression
+--------------------
+We can use this annotation in more complex situations. Spring will use the marked definition when the SpEL expression is evaluated to true:
+```java
+@Bean
+@ConditionalOnExpression("${usemysql} && ${mysqlserver == 'local'}")
+DataSource dataSource() {
+        // ...
+}
+```
+
+@Conditional
+--------------------
+we can create a class evaluating the custom condition. We tell Spring to use this custom condition with @Conditional:
+
+```java
+@Conditional(HibernateCondition.class)
+Properties additionalProperties() {
+        //...
+}
+```
 
 
 Spring Boot Actuator

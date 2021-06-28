@@ -189,6 +189,16 @@ Interview questions and answers
     - [/info Endpoint](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#info-endpoint)
     - [/metrics Endpoint](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#metrics-endpoint)
     - [Custom Endpoint](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#custom-endpoint)
+  - [Spring Boot Annotations](https)
+    - [@SpringBootApplication](https)
+    - [@EnableAutoConfiguration](https)
+    - [@ConditionalOnClass and @ConditionalOnMissingClass](https)
+    - [@ConditionalOnBean and @ConditionalOnMissingBean](https)
+    - [@ConditionalOnProperty](https)
+    - [@ConditionalOnResource](https)
+    - [@ConditionalOnWebApplication and @ConditionalOnNotWebApplication](https)
+    - [@ConditionalExpression](https)
+    - [@Conditional](https)
     
 - **HTTP Verbs**
   - [HTTP Verbs](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#http-verbs)
