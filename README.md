@@ -183,8 +183,8 @@ Interview questions and answers
   
 - **Spring Boot**
   - [Spring Boot](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#spring-boot)
-  - [Spring Boot Primary Goals](https)
-  - [Key Spring Boot features](https)
+  - [Spring Boot Primary Goals](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#spring-boot-primary-goals)
+  - [Key Spring Boot features](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#key-spring-boot-features)
   - [Spring Boot Annotations](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#spring-boot-annotations)
     - [@SpringBootApplication](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#springbootapplication)
     - [@EnableAutoConfiguration](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#enableautoconfiguration)
