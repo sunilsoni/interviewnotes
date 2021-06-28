@@ -180,7 +180,16 @@ Interview questions and answers
       * [isolation](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#isolation)
       * [readOnly](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#isolation)
       * [timeout](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#isolation)
-        
+  
+- **Spring Boot**
+  - [Spring Boot](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#http-verbs)
+  - [Spring Boot Actuator](https)
+    - [pring-boot-actuator maven dependency](https)
+    - [Predefined Endpoints](https)
+    - [/info Endpoint](https)
+    - [/metrics Endpoint](https)
+    - [Custom Endpoint](https)
+    
 - **HTTP Verbs**
   - [HTTP Verbs](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#http-verbs)
     - [GET](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#get)

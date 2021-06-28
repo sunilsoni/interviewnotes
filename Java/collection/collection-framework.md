@@ -1123,3 +1123,4 @@ List: [1, 2, 3, 4, 4, 4]
 For more information:
 
 1. [Java ArrayList Tutorial with Examples](https://www.callicoder.com/java-arraylist/)
+2. [Guide to the Java ArrayList](https://www.baeldung.com/java-arraylist)
