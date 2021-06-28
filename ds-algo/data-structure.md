@@ -3,7 +3,7 @@ Data Structures
 
 
 - [Lists](#lists)
-    * [ArrayList](#arraylist)
+    * [ArrayList](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#arraylist)
     * [LinkedList](#linkedlist)
     * [Stack](#stack)
     * [Vector](#vector)
@@ -45,7 +45,8 @@ Data Structures
 Lists
 ---------------
 
-#### ArrayList
+ArrayList
+---------------
 
 - Backed by array (which are co-located in memory), thus fast iteration and get(i) operation.
 - Slow inserts when the backed array is full and has to double in size.
@@ -53,7 +54,8 @@ Lists
 - Add is O(n) - When element is added to middle of list, all elements on the right have to be moved.
 - [Use Case](http://stackoverflow.com/a/322742/3494368) - When iterations outnumber number of read/writes.
 
-#### LinkedList
+LinkedList
+---------------
 
 - Chain of nodes referencing each other (doubly linked list).
 - No co-location of nodes, pointers need to be chased for next element, thus slow iterations and get(i) operation.
