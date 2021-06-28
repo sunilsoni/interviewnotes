@@ -377,6 +377,10 @@ Interview questions and answers
       - [Print all employee ids with their manager ids](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
       - [Print all manager names with count of directs](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
       - [Print 10th highest salary](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
+  - [SQL vs NoSQL](https)
+    - [SQL](NoSQL)
+    - [NoSQL](NoSQL)
+    - [SQL vs NoSQL](NoSQL)
   
 - **Maven**
   - [Maven](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#Maven)

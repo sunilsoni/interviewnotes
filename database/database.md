@@ -211,8 +211,204 @@ SELECT Salary FROM
 AS Emp ORDER BY Salary LIMIT 1;
 ```
 
+SQL
+-------------
+SQL stands for Structured Query Language. SQL is a standard language for storing, manipulating, and retrieving data in relational database systems.
+
+NoSQL
+-------------
+NoSQL or `non-SQL` is a non-relational database that does not require a fixed schema and is easy to scale.
+
+NoSQL does not necessarily mean that a database does not support SQL. Instead, it means that the database is not an RDBMS.
+
+While traditional RDBMS rely on SQL syntax to store and query data, on the other hand, NoSQL database systems use other technologies and programming languages to store structured, unstructured or semi-structured data.
+
+
+SQL vs NoSQL
+-------------
+
+|Comparing       | SQL	                                |NoSQL   |
+|------------------|--------------------------|-------------------------------------------|
+|Query Language 	    |  Structured query language (SQL)                 | No declarative query language                |
+| Database type      |         Table          |     Key-value, document, wide-column, and graph            |
+|  Schema     |    Predefined               |    Dynamic             |
+| Data model      |   Relational                |  Non-relational               |
+|  Popular database examples     | MySQL, PostgreSQL, Oracle, and MS-SQL                  |  MongoDB, Apache HBase, Amazon DynamoDB, Redis, Couchbase, Cassandra, and Elasticsearch               |
+| Ability to scale      |  Vertical                 |   Horizontal              |
+| ACID vs BASE      |    ACID               |     BASE            |
+|  Advantages     |   Cross-platform support, secure and free                | Easy to use, high performance, and flexible tool                |
+|  Disadvantages     |  Complex to maintain and inefficient if processing big data, complex relational database systems are difficult to export into other systems, not good for handling various data types                 | Data is less structured, NoSQL databases are not as reliable (no ACID support), NoSQL databases are newer and may offer less features than their SQL counterparts                |
+| Use cases      |  ACID support, complex queries, no changes or growth                 | Real-time data, volumes of data with no structure, agile business, cloud computing                |
+
+**Database Types**
+
+Database types depend on the way the data is stored.
+ `SQL` has a table-based database. Table database stores data into tables with fixed rows and columns.
+
+`NoSQL` has 4 types of databases:
+1. Key-value database – Stores every data element as an attribute name or key together with its value.
+2. Document database – Stores data in JSON, BSON, or XML documents.
+3. Wide-column database – Stores and groups data into columns instead of rows.
+4. Graph database – Optimized to capture and search the connections between data elements.
+
+**Schema**
+
+A database schema is a structure that defines how a database is constructed. It defines how the data is organized and how the relations among data are associated. There are two types of schemas:
+
+- Predefined
+- Dynamic
+
+SQL needs a predefined schema for unstructured data. You need to predefine data structure in the form of tables before you start to use SQL to manipulate data.
+
+However, a NoSQL database does not require a predefined schema. NoSQL uses a dynamic schema for unstructured data. A dynamic schema allows storing data before applying schema. Schema completely depends on how you want to store data.
+
+
+**Data Model**
+
+The data model shows the logical structure of the database. It organizes elements of data and standardizes how they relate to each other. There are two types of data models:
+
+- Relational
+- Nonrelational
+
+We can observe differences between these data models by looking at the multiple entities. Consider an order from a restaurant as an example and two entities: Order and Delivery Address.
+
+SQL uses a `relational data model`. SQL relational model uses many-to-many relationship. In many-to-many relationship, a single Order row can relate to several Delivery Address rows. Similarly, each Delivery address row can relate to several Order rows.
+
+NoSQL uses a `nonrelational data model` that does not use relationships. NoSQL databases denormalize data by duplicating Delivery address in each Order row that contains that delivery address. Therefore, data is stored multiple times. This enables easy storage and data retrieval and increases the speed of the query.
+
+
+**Ability to Scale**
+
+
+**ACID vs BASE**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 For more information:
 
 - [Cheat sheet](http://files.zeroturnaround.com/pdf/zt_sql_cheat_sheet.pdf)
 - [Clustered vs Non-clustered indexes](https://docs.microsoft.com/en-us/sql/relational-databases/indexes/clustered-and-nonclustered-indexes-described)
 - [DB Index Wiki](https://en.wikipedia.org/wiki/Database_index)
+  https://phoenixnap.com/kb/sql-vs-nosql
+  https://www.imaginarycloud.com/blog/sql-vs-nosql/
