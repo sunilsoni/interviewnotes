@@ -182,13 +182,13 @@ Interview questions and answers
       * [timeout](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#isolation)
   
 - **Spring Boot**
-  - [Spring Boot](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#http-verbs)
-  - [Spring Boot Actuator](https)
-    - [pring-boot-actuator maven dependency](https)
-    - [Predefined Endpoints](https)
-    - [/info Endpoint](https)
-    - [/metrics Endpoint](https)
-    - [Custom Endpoint](https)
+  - [Spring Boot](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#spring-boot)
+  - [Spring Boot Actuator](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#spring-boot-actuator)
+    - [pring-boot-actuator maven dependency](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#spring-boot-actuator-maven-dependency)
+    - [Predefined Endpoints](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#predefined-endpoints)
+    - [/info Endpoint](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#info-endpoint)
+    - [/metrics Endpoint](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#metrics-endpoint)
+    - [Custom Endpoint](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#custom-endpoint)
     
 - **HTTP Verbs**
   - [HTTP Verbs](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#http-verbs)
