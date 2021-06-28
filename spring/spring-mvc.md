@@ -78,55 +78,176 @@ void saveVehicle(@RequestBody Vehicle vehicle) {
 
 @PathVariable
 -----------
+This annotation indicates that a method argument is bound to a URI template variable. We can specify the URI template with the @RequestMapping annotation and bind a method argument to one of the template parts with @PathVariable.
+
+We can achieve this with the name or its alias, the value argument:
 ```java
+@RequestMapping("/{id}")
+Vehicle getVehicle(@PathVariable("id") long id) {
+    // ...
+}
+```
+If the name of the part in the template matches the name of the method argument, we don't have to specify it in the annotation:
+```java
+@RequestMapping("/{id}")
+Vehicle getVehicle(@PathVariable long id) {
+    // ...
+}
+```
+Moreover, we can mark a path variable optional by setting the argument required to false:
+
+```java
+@RequestMapping("/{id}")
+Vehicle getVehicle(@PathVariable(required = false) long id) {
+    // ...
+}
 
 ```
 
 @RequestParam
 -----------
+We use @RequestParam for accessing HTTP request parameters:
+
+
 ```java
+@RequestMapping
+Vehicle getVehicleByParam(@RequestParam("id") long id) {
+    // ...
+}
+```
+It has the same configuration options as the @PathVariable annotation.
 
+In addition to those settings, with @RequestParam we can specify an injected value when Spring finds no or empty value in the request. To achieve this, we have to set the defaultValue argument.
 
-
+Providing a default value implicitly sets required to false:
+```java
+@RequestMapping("/buy")
+Car buyCar(@RequestParam(defaultValue = "5") int seatCount) {
+    // ...
+}
 ```
 
 Response Handling Annotations
 
 @ResponseBody
 -----------
+If we mark a request handler method with @ResponseBody, Spring treats the result of the method as the response itself:
 ```java
-
+@ResponseBody
+@RequestMapping("/hello")
+String hello() {
+    return "Hello World!";
+}
 ```
 
 @ExceptionHandler
 -----------
-```java
+With this annotation, we can declare a custom error handler method. Spring calls this method when a request handler method throws any of the specified exceptions.
 
+The caught exception can be passed to the method as an argument:
+```java
+@ExceptionHandler(IllegalArgumentException.class)
+void onIllegalArgumentException(IllegalArgumentException exception) {
+    // ...
+}
 ```
 
 @ResponseStatus
 -----------
-```java
+We can specify the desired HTTP status of the response if we annotate a request handler method with this annotation. We can declare the status code with the code argument, or its alias, the value argument.
 
+Also, we can provide a reason using the reason argument.
+
+We also can use it along with @ExceptionHandler:
+
+```java
+@ExceptionHandler(IllegalArgumentException.class)
+@ResponseStatus(HttpStatus.BAD_REQUEST)
+void onIllegalArgumentException(IllegalArgumentException exception) {
+    // ...
+}
 ```
 
 Other Web Annotations
 
 @Controller
 -----------
+We can define a Spring MVC controller with @Controller.@Controller is a class level annotation which tells the Spring Framework that this class serves as a controller in Spring MVC:
 ```java
-
+@Controller
+public class VehicleController {
+    // ...
+}
 ```
 
 @RestController
 -----------
+The @RestController combines @Controller and @ResponseBody.
+
+```java
+@Controller
+@ResponseBody
+class VehicleRestController {
+    // ...
+}
+```
+
+is same as :
+```java
+@RestController
+class VehicleRestController {
+    // ...
+}
+```
 
 @ModelAttribute
 -----------
+With this annotation we can access elements that are already in the model of an MVC @Controller, by providing the model key:
+```java
+@PostMapping("/assemble")
+void assembleVehicle(@ModelAttribute("vehicle") Vehicle vehicleInModel) {
+    // ...
+}
+```
+
+Like with @PathVariable and @RequestParam, we don't have to specify the model key if the argument has the same name:
+```java
+@PostMapping("/assemble")
+void assembleVehicle(@ModelAttribute Vehicle vehicle) {
+    // ...
+}
+```
+Besides, @ModelAttribute has another use: if we annotate a method with it, Spring will automatically add the method's return value to the model:
+```java
+@ModelAttribute("vehicle")
+Vehicle getVehicle() {
+    // ...
+}
+```
+Like before, we don't have to specify the model key, Spring uses the method's name by default:
+```java
+@ModelAttribute
+Vehicle vehicle() {
+    // ...
+}
+
+```
+Before Spring calls a request handler method, it invokes all @ModelAttribute annotated methods in the class.
+
+
 
 @CrossOrigin
 -----------
+@CrossOrigin enables cross-domain communication for the annotated request handler methods:
+If we mark a class with it, it applies to all request handler methods in it.
 
+```java
+@CrossOrigin
+@RequestMapping("/hello")
+String hello() {
+    return "Hello World!";
+}
+```
 
 
 For more information:
