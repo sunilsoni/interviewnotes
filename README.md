@@ -392,6 +392,15 @@ Interview questions and answers
   
 - **Maven**
   - [Maven](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#Maven)
+  - [pom.xml](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#pomxml)
+  - [Maven build life-cycle](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#maven-build-life-cycle)
+    - [validate](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#maven-build-life-cycle)
+    - [compile](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#maven-build-life-cycle)
+    - [test](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#maven-build-life-cycle)
+    - [package](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#maven-build-life-cycle)
+    - [verify](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#maven-build-life-cycle)
+    - [install](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#maven-build-life-cycle)
+    - [deploy](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#maven-build-life-cycle)
   
 - **Unix**
   - [Unix](https://github.com/sunilsoni/interview-notes/blob/main/unix/Unix.md#unix)
