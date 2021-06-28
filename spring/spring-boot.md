@@ -2,6 +2,28 @@ Spring Boot
 ==========
 
 
+Spring Boot is an opinionated addition to the Spring platform, focused on convention over configuration — highly useful for getting started with minimum effort and creating standalone, production-grade applications.
+
+Spring Boot is basically an extension of the Spring framework which eliminated the boilerplate configurations required for setting up a Spring application.
+
+Spring Boot is an opinionated framework that helps developers build Spring-based applications quickly and easily. The main goal of Spring Boot is to quickly create Spring-based applications without requiring developers to write the same boilerplate configuration again and again.
+
+Spring Boot Primary Goals
+--------------------
+- Provide a radically faster and widely accessible getting-started experience for all Spring development.
+- Be opinionated out of the box but get out of the way quickly as requirements start to diverge from the defaults.
+- Provide a range of non-functional features that are common to large classes of projects (such as embedded servers, security, metrics, health checks, and externalized configuration).
+- Absolutely no code generation and no requirement for XML configuration.
+
+Key Spring Boot features
+--------------------
+- Spring Boot starters
+- Spring Boot autoconfiguration
+- Elegant configuration management
+- Spring Boot actuator
+- Easy-to-use embedded servlet container support
+
+
 Spring Boot Annotations
 --------------------
 

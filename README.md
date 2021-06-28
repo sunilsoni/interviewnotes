@@ -183,12 +183,8 @@ Interview questions and answers
   
 - **Spring Boot**
   - [Spring Boot](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#spring-boot)
-  - [Spring Boot Actuator](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#spring-boot-actuator)
-    - [pring-boot-actuator maven dependency](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#spring-boot-actuator-maven-dependency)
-    - [Predefined Endpoints](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#predefined-endpoints)
-    - [/info Endpoint](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#info-endpoint)
-    - [/metrics Endpoint](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#metrics-endpoint)
-    - [Custom Endpoint](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#custom-endpoint)
+  - [Spring Boot Primary Goals](https)
+  - [Key Spring Boot features](https)
   - [Spring Boot Annotations](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#spring-boot-annotations)
     - [@SpringBootApplication](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#springbootapplication)
     - [@EnableAutoConfiguration](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#enableautoconfiguration)
@@ -199,6 +195,13 @@ Interview questions and answers
     - [@ConditionalOnWebApplication and @ConditionalOnNotWebApplication](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#conditionalonwebapplication-and-conditionalonnotwebapplication)
     - [@ConditionalExpression](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#conditionalonwebapplication-and-conditionalonnotwebapplication)
     - [@Conditional](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#conditional)
+  - [Spring Boot Actuator](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#spring-boot-actuator)
+    - [pring-boot-actuator maven dependency](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#spring-boot-actuator-maven-dependency)
+    - [Predefined Endpoints](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#predefined-endpoints)
+    - [/info Endpoint](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#info-endpoint)
+    - [/metrics Endpoint](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#metrics-endpoint)
+    - [Custom Endpoint](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#custom-endpoint)
+
     
 - **HTTP Verbs**
   - [HTTP Verbs](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#http-verbs)
