@@ -20,10 +20,118 @@ Spring MVC Execution Flow
  <img src="./images/spring-mvc-flow.png" width="500" border="2" />
 
 
+Spring Web Annotations
+--------------
+
+@RequestMapping
+--------------
+
+it can be configured using:
+
+- path, or its aliases, name, and value: which URL the method is mapped to
+- method: compatible HTTP methods
+- params: filters requests based on presence, absence, or value of HTTP parameters
+- headers: filters requests based on presence, absence, or value of HTTP headers
+- consumes: which media types the method can consume in the HTTP request body
+- produces: which media types the method can produce in the HTTP response body
+
+Example: 
+```java
+@Controller
+class VehicleController {
+
+    @RequestMapping(value = "/vehicles/home", method = RequestMethod.GET)
+    String home() {
+        return "home";
+    }
+}
+```
+
+this configuration has the same effect :
+
+```java
+@Controller
+@RequestMapping(value = "/vehicles", method = RequestMethod.GET)
+class VehicleController {
+
+    @RequestMapping("/home")
+    String home() {
+        return "home";
+    }
+}
+
+```
+
+Moreover, @GetMapping, @PostMapping, @PutMapping, @DeleteMapping, and @PatchMapping are different variants of @RequestMapping with the HTTP method already set to GET, POST, PUT, DELETE, and PATCH respectively.
+
+These are available since Spring 4.3 release.
+
+@RequestBody
+-----------
+maps the body of the HTTP request to an object.The deserialization is automatic and depends on the content type of the request.
+```java
+@PostMapping("/save")
+void saveVehicle(@RequestBody Vehicle vehicle) {
+    // ...
+}
+```
+
+@PathVariable
+-----------
+```java
+
+```
+
+@RequestParam
+-----------
+```java
 
 
 
+```
+
+Response Handling Annotations
+
+@ResponseBody
+-----------
+```java
+
+```
+
+@ExceptionHandler
+-----------
+```java
+
+```
+
+@ResponseStatus
+-----------
+```java
+
+```
+
+Other Web Annotations
+
+@Controller
+-----------
+```java
+
+```
+
+@RestController
+-----------
+
+@ModelAttribute
+-----------
+
+@CrossOrigin
+-----------
 
 
+
+For more information:
+
+1. [Spring MVC flow with Example](https://codenuclear.com/spring-mvc-flow-with-example/)
+2. [Spring Web Annotations](https://www.baeldung.com/spring-mvc-annotations)
 
 

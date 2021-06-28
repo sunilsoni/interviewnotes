@@ -184,7 +184,19 @@ Interview questions and answers
 - **Spring MVC**
   - [Spring MVC](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-mvc.md#spring-mvc)
   - [Spring MVC flow](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-mvc.md#spring-mvc-flow)
-  - [Test](https)
+  - [Spring Web Annotations](https)
+    * [@RequestMapping](https)
+    * [@RequestBody](https)
+    * [@PathVariable](https)
+    * [@RequestParam](https)
+    * [@ResponseBody](https)
+    * [@ExceptionHandler](https)
+    * [@ResponseStatus](https)
+    * [@Controller](https)
+    * [@RestController](https)
+    * [@ModelAttribute](https)
+    * [@CrossOrigin](https)
+    * [Test](https)
 
 - **Spring Boot**
   - [Spring Boot](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#spring-boot)
