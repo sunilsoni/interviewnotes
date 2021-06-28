@@ -48,6 +48,7 @@ Spring Boot takes an opinionated view of the application and configures various 
 Easy-to-Use Embedded Servlet Container Support
 --------------------
 Traditionally, while building web applications, you need to create WAR type modules and then deploy them on external servers like Tomcat, WildFly, etc. But by using Spring Boot, you can create a JAR type module and embed the servlet container in the application very easily so that the application will be a self-contained deployment unit.
+
 Also, during development, you can easily run the Spring Boot JAR type module as a Java application from the IDE or from the command-line using a build tool like Maven or Gradle.
 
 
@@ -304,9 +305,14 @@ Output:
 [ "This is message 1", "This is message 2" ]
 ```
 
+
+
+
+
 For more information:
 
 1. [Spring Boot Actuator](https://www.baeldung.com/spring-boot-actuators)
+2. [Getting Started with Spring Boot](https://www.javaguides.net/2018/09/getting-started-with-spring-boot.html)
 
 
 
