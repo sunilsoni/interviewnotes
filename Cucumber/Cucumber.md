@@ -60,6 +60,10 @@ Cucumber supports different software platforms like −
 - Spring Framework
 - Watir
 
+features in Cucumber
+-------------
+A feature can be defined as a unit or functionality or part of a project which is an independent functionality of the project. 
+A feature contains a group of scenarios that are to be tested as a feature. There are two parts in a feature in Cucumber tool which is called feature files having scenarios in it and the feature files containing automation steps or procedure to be executed. An example of a feature can be a login functionality of a website or chat functionality of a website, a news feed of a website, etc.
 
 Feature file
 -------------
@@ -139,6 +143,15 @@ BDD and TDD are both very similar as they are both testing strategies for a soft
 | TDD tests are written using programming languages such as Java, .Net, Python, Ruby, etc.           | BDD tests are written in a human-readable format using Given-When-Then steps. These tests are readable and understandable by non-technical persons also.                    |
 | TDD tests are difficult to read by non-programmers as they are written in specific programming languages.       | BDD tests are readable by non-programmers also as they are written in a human-readable format. |
 | In TDD, the developers write the test cases. | In BDD, the automated specifications are created by users or testers then the developers wiring them to the code under test.                              |
+
+Cucumber profiles
+-------------
+You can create Cucumber profiles to run a set of features and step definitions. Use the following command to execute a cucumber profile.
+
+```log
+cucumber features -p <profile_name>
+#Example: cucumber features -p acceptance
+```
 
 
 
