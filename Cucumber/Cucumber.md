@@ -284,6 +284,65 @@ Properties are,
 - `monochrome` – boolean value – display console output in a readable way
 
 
+Tags in cucumber-bdd
+-------------
+Cucumber tags are used to organize scenarios in your feature file. Example: `@regression`, `@sanity`, `@EndtoEnd`
+
+Tags are used to
+ - Group scenarios
+ - Ignore scenarios from execution
+ - Logically group (OR & AND)
+
+```log
+Feature: Validation of the Account Balance
+
+@regression @sanity
+Scenario: Verify Zero Balance
+Given I have $1000 in my account
+When I withdraw $1000
+Then I should have $0 balance
+```
+
+Cucumber Hooks
+-------------
+Cucumber Hooks are blocks of code that can be used to run before and after the scenarios using @before and @after methods. It helps us eliminates the redundant code steps that we write for every scenario and also manages our code workflow.
+
+```java
+public class Hooks {
+
+    @Before
+    public void before(){
+        System.out.println("This will execute before every Scenario");
+    }
+
+    @After
+    public void after(){
+        System.out.println("This will execute after every Scenario");
+    }
+}
+```
+
+Name any two testing framework that can be integrated with Cucumber?
+-------------
+
+- JUnit
+- TestNG
+
+What are the two files required to run a cucumber test?
+-------------
+- Feature file
+- Step Definition file
+
+Examples Table or Scenario Outline vs Data Table
+-------------
+
+| Scenario Outline       | Data Table                         | 
+|-----------------|-----------------------------------|-
+|This uses Example keyword to define the test data for the Scenario          | No keyword is used to define the test data | 
+| This works for the whole test	           | This works only for the single step, below which it is defined | 
+| Cucumber automatically run the complete test   the number of times equal to the number of data in the Test Set	      | A separate code needs to understand the test data and then it can be run single or multiple times but again just for the single step, not for the complete test |
+
+
 For more information:
 
 1. [Cucumber - Overview](https://www.tutorialspoint.com/cucumber/cucumber_overview.htm)
