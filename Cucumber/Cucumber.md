@@ -154,8 +154,134 @@ cucumber features -p <profile_name>
 ```
 
 
+Scenario Outline
+-------------
+Scenario outline is a way of parameterization of scenarios. It is used to execute scenarios multiple times using a different set of test data. 
+Multiple sets of test data are provided by using ‘`Examples`’ in a tabular structure separated by pipes (`| |`)
+
+```log
+Feature: Application Login
+Scenario Outline: Application Website Login
+Given Open browser
+When NewUser enters "<uname>" and "<password>" and "<send_text>"
+Then Message displayed Login Successful
+
+Examples: 
+| uname | password | send_text |
+| soude@unfpa.org | lT61m@e112 | automation laboratories |
+| akoueikou@unfpa.org | oK77f@g100 | automation laboratories |
+```
+
+Scenario and Scenario Outline
+-------------
+
+- **Scenario:** Copying and pasting scenarios to use different values can quickly become tedious and repetitive:
+
+```log
+Scenario: Eat 5 out of 12
+  Given there are 12 cucumbers
+  When I eat 5 cucumbers
+  Then I should have 7 cucumbers
+
+Scenario: Eat 5 out of 20
+  Given there are 20 cucumbers
+  When I eat 5 cucumbers
+  Then I should have 15 cucumbers
+```
 
 
+- **Scenario Outlines:**  allow us to more concisely express these examples through the use of a template with placeholders
+
+
+```log
+Scenario Outline: Eating
+  Given there are <start> cucumbers
+  When I eat <eat> cucumbers
+  Then I should have <left> cucumbers
+
+  Examples:
+    | start | eat | left |
+    |  12   |  5  |  7   |
+    |  20   |  5  |  15  |
+```
+
+The Scenario Outline steps provide a template which is never directly run. A Scenario Outline is run once for each row in the Examples section beneath it (except for the first header row).
+
+
+Step Definition
+-------------
+
+Step definition maps the test case steps in the feature files(introduced by Given/When/Then) to code which executes and checks the outcomes from the system under test. Step definitions file has the actual code implementation of the Scenario or Scenario Outline step.
+
+**Feature file:**
+```feature
+Feature:
+  Scenario:
+    Given verify two values 'text', 'test'
+```
+**Step Definition:**
+
+
+```java
+public class Test {
+    @Given("verify two values '(.*)', '(.*)'")
+    public void verify_two_values(String arg1, String arg2) {
+        Assert.assertEquals(arg1,arg2);
+    }
+```
+
+Background in a Feature file
+-------------
+
+Steps which are written under the Background keyword are executed before every scenario.
+
+For example: If you want to execute the same steps for every scenario like login to the website, you just write those common steps under the background keyword.
+
+
+```log
+Feature: Validation of Account Balance
+Background:
+Given I log in to the Application 
+Scenario: Verify Positive Balance
+Given I have $1000 in my account
+When I withdraw $50
+Then I should have $950 balance
+Scenario: Verify Zero Balance
+Given I have $1000 in my account
+When I withdraw $1000
+Then I should have $0 balance
+```
+
+Junit Test runner class
+-------------
+
+
+```java
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+import org.junit.runner.RunWith;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+        features="src/test/resources/features",
+        glue= "ca.testing.stepdefinitions",
+        tags = @regression,
+        dryRun = false,
+        strict = true,
+        monochrome = true)
+public class TestRunner{}
+```
+
+`@CucumberOptions` are used to set specific properties for your cucumber test.
+
+Properties are,
+
+- `Feature` – path to feature file
+- `Glue` – path to the step definition
+- `dryRun` – boolean value – check for missing step definition
+- `tags` – used to group cucumber scenarios in the feature file
+- `strict` – boolean value – fail the execution if there is a missing step
+- `monochrome` – boolean value – display console output in a readable way
 
 
 For more information:
