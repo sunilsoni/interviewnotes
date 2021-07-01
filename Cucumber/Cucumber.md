@@ -72,6 +72,6 @@ Cucumber supports over a dozen different software platforms like −
 
 
 
-
+For more information:
 
 1. [Cucumber - Overview](https://www.tutorialspoint.com/cucumber/cucumber_overview.htm)
