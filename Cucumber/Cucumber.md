@@ -337,7 +337,7 @@ Examples Table or Scenario Outline vs Data Table
 -------------
 
 | Scenario Outline       | Data Table                         | 
-|-----------------|-----------------------------------|-
+|-----------------|-----------------------------------|
 |This uses Example keyword to define the test data for the Scenario          | No keyword is used to define the test data | 
 | This works for the whole test	           | This works only for the single step, below which it is defined | 
 | Cucumber automatically run the complete test   the number of times equal to the number of data in the Test Set	      | A separate code needs to understand the test data and then it can be run single or multiple times but again just for the single step, not for the complete test |
