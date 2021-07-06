@@ -400,7 +400,7 @@ Interview questions and answers
   * [Ensure the system is configurable](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#ensure-the-system-is-configurable)
   * [Design considerations during design, development and deployment phases](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#design-considerations-during-design-development-and-deployment-phases)
 
-* [Identifying performance and/or memory issues in your Java/J2EE application](https)
+* [Identifying performance and/or memory issues in your Java/J2EE application](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#identifying-performance-andor-memory-issues-in-your-javaj2ee-application)
 
 - **Microservices**
   - [Microservices](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md)
