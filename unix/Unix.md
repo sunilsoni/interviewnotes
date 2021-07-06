@@ -23,22 +23,22 @@ Find
 
 - `find dir -type f` Find all files in the directory
 - `find dir -type d` File all directories within this directory
-- `find dir -name “a*.mp3” -print0` Find all files/directory with name like a***.mp3
-- `find dir -type f -name “a*.txt”` Find all files (recursively) with name like a***.txt
+- `find dir -name “a*.mp3" -print0` Find all files/directory with name like a***.mp3
+- `find dir -type f -name “a*.txt"` Find all files (recursively) with name like a***.txt
 - `find dir -type f -print0 | xargs -0 grep -l "word"` List file names with matching word
 - `find dir -type f -print0 | xargs -0 mv -t` Move all files from dir tree into single directory
 
 Search
 --------------------
 
-- `grep “word” file` All matching lines in the file
-- `grep -i “word” file` All matching lines - Ignore case
-- `grep -r “word” dir` All matching lines in (recursively) all files or directory
-- `grep -c “word” file` Count of matching lines
-- `grep “word” file | wc -l` Count of matching lines
-- `grep -v “word” file | wc -l` Count of non-matching lines
-- `grep -o -w “word” file | wc -w` Word count
-- `grep -l -r “word” dir` List file names with matching word
+- `grep “word" file` All matching lines in the file
+- `grep -i “word" file` All matching lines - Ignore case
+- `grep -r “word" dir` All matching lines in (recursively) all files or directory
+- `grep -c “word" file` Count of matching lines
+- `grep “word" file | wc -l` Count of matching lines
+- `grep -v “word" file | wc -l` Count of non-matching lines
+- `grep -o -w “word" file | wc -w` Word count
+- `grep -l -r “word" dir` List file names with matching word
 - `find dir -type f -print0 | xargs -0 grep -l "word"` List file names with matching word
 
 Processes

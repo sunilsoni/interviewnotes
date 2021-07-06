@@ -71,11 +71,11 @@ Example For NgIf:
   Only render if the *isNeeded* value has true value.
 </div>
 
-<div *ngIf=”movie”>{{movie.name}}</div>
+<div *ngIf="movie">{{movie.name}}</div>
 
-<div template=”ngIf movie”>{{movie.name}}</div>
+<div template="ngIf movie">{{movie.name}}</div>
 
-<ng-template [ngIf]=”movie”>
+<ng-template [ngIf]="movie">
   <div>{{movie.name}}</div>
 </ng-template>
 
@@ -248,7 +248,7 @@ Selector: ‘[changeText]’’
 Export class ChangeTextDirective {
 Constructor(Element: ElementRef) {
 Console.log(Element);
-Element.nativeElement.innerText= “Text is changed by changeText Directive.”;
+Element.nativeElement.innerText= “Text is changed by changeText Directive.";
 }
 }
 ```

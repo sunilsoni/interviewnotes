@@ -74,7 +74,7 @@ Features file contain a high-level description of the Test Scenario in simple la
 - `Scenario outline`: Scenario can be executed for multiple sets of data using scenario outline.
 - `Given`: It specifies the context of the text to be executed.
 - `When`: specifies the test action which has to perform.
-- `Then`: Expected outcome of the test can be represented by “Then”
+- `Then`: Expected outcome of the test can be represented by “Then"
 
 Step Definition
 -------------

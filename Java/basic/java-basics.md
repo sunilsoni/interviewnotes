@@ -1748,8 +1748,12 @@ As you can see in the output that the `MyImmutable` object has not been mutated.
 ```
 
 
+Pass by reference and Pass by value
+---------------------
+Other languages use `pass-by-reference` or `pass-by-pointer`. But in Java no matter what type of argument you pass the corresponding parameter (primitive variable or object reference) will get a copy of that data, which is
+exactly how pass-by-value (i.e. copy-by-value) works.
 
-
+In Java, if a calling method passes a reference of an object as an argument to the called method then the passed- in reference gets copied first and then passed to the called method. Both the original reference that was passed-in and the copied reference will be pointing to the same object. So no matter which reference you use, you will be always modifying the same original object, which is how the pass-by-reference works as well.
 
 
 

@@ -49,7 +49,7 @@ Overriding means when we have two methods with same name and same parameters in 
 
 Abstract Class
 ------------
-A class that is declared using “abstract” keyword is known as abstract class. It can have abstract methods (methods without body) as well as concrete methods (methods with body).
+A class that is declared using “abstract" keyword is known as abstract class. It can have abstract methods (methods without body) as well as concrete methods (methods with body).
 
 Some points to remember:
 - An abstract class cannot be instantiated, which means you are not allowed to create an object of the abstract class. This also means, an abstract class has no use unless it is extended by some other class
@@ -459,7 +459,7 @@ The overriding method of child class must follow below rules:
 
 **Example:** 
 
-Let's see now how to use method overriding by creating a simple, inheritance-based (“is-a”) relationship.
+Let's see now how to use method overriding by creating a simple, inheritance-based (“is-a") relationship.
 
 Lets say `Vehicle` is the base class:
 

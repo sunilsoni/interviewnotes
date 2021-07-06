@@ -44,7 +44,7 @@ Collection
 ----------
 
 A collection in MongoDB is a group of documents. If a document is the MongoDB analog of a row in a relational database, then a collection can be thought of as the analog to a table.
-Documents within a single collection can have any number of different “shapes.”, i.e. collections have dynamic schemas.
+Documents within a single collection can have any number of different “shapes.", i.e. collections have dynamic schemas.
 
 For example, both  documents could be stored in a single collection:
 ```json
