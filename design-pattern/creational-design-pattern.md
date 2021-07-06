@@ -506,6 +506,44 @@ When an object is required that is similar to existing object or when the creati
 
 💍 Singleton
 ------------
+
+A singleton is a class that can be instantiated only one time in a JVM per class loader. Repeated calls always
+return the same instance. Ensures that a class has only one instance, and provide a global point of access. It can be an issue if singleton class gets loaded by multiple class loaders or JVMs.
+
+```java
+public class OnlyOne {
+    private static OnlyOne one = new OnlyOne();
+    // private constructor. This class cannot be instantiated from outside and // prevents subclassing.
+    private OnlyOne(){}
+    public static OnlyOne getInstance() { 
+        return one;
+    } 
+}
+```
+To use it:
+
+```java
+//No matter how many times you call, you get the same instance of the object. 
+ OnlyOne myOne = OnlyOne.getInstance();
+
+```
+
+The constructor must be explicitly declared and should have the private access modifier, so that it cannot be instantiated from out side the class. The only way to instantiate an instance of class OnlyOne is through the getInstance() method with a public access modifier.
+
+- **When to use:**
+  Use it when only a single instance of an object is required in memory for a single point of access. For example the following situations require a single point of access, which gets invoked from various parts of the code.
+
+- Accessing application specific properties through a singleton object, which reads them for the first time from a properties file and subsequent accesses are returned from in-memory objects. Also there could be another piece of code, which periodically synchronizes the in-memory properties when the values get modified in the underlying properties file. This piece of code accesses the in-memory objects through the singleton object (i.e. global point of access).
+- Accessing in-memory object cache or object pool, or non-memory based resource pools like sockets, connections etc through a singleton object (i.e. global point of access).
+
+singleton class vs a static class
+------------
+
+Static class is one approach to make a class singleton by declaring all the methods as static so that you can’t create any instance of that class and can call the static methods directly.
+
+
+
+
 Real world example
 > There can only be one president of a country at a time. The same president has to be brought to action, whenever duty calls. President here is singleton.
 

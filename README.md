@@ -369,6 +369,7 @@ Interview questions and answers
       * [Builder](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/creational-design-pattern.md#-builder)
       * [Prototype](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/creational-design-pattern.md#-prototype)
       * [Singleton](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/creational-design-pattern.md#-singleton)
+      * [singleton class vs a static class](https)
     - [Structural Design Patterns](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/structural-design-pattern.md)
       * [Adapter](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/structural-design-pattern.md#-adapter)
       * [Bridge](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/structural-design-pattern.md#-bridge)
