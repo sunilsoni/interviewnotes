@@ -76,7 +76,10 @@ Interview questions and answers
       * [Immutable Class](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#immutable-class)
       * [Wrong way to write an immutable class](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#wrong-way-to-write-an-immutable-class)
       * [Right way to write an immutable class](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#right-way-to-write-an-immutable-class)
+    * [Pass by reference and Pass by value](https)
     * [Test](https)
+    * [Test](https)
+    
   - [Collection Framework](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#collection-framework)
     * [ArrayList](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#arraylist)
       * [Accessing elements](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#accessing-elements)

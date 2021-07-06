@@ -1755,12 +1755,8 @@ exactly how pass-by-value (i.e. copy-by-value) works.
 
 In Java, if a calling method passes a reference of an object as an argument to the called method then the passed- in reference gets copied first and then passed to the called method. Both the original reference that was passed-in and the copied reference will be pointing to the same object. So no matter which reference you use, you will be always modifying the same original object, which is how the pass-by-reference works as well.
 
-
-
-
-
-
-
+If  method call involves inter-process (e.g. between two JVMs) communication, then the reference of the calling method has a different address space to the called method sitting in a separate process (i.e. separate JVM). Hence inter-process communication involves calling method passing objects as arguments to called method
+by-value in a serialized form, which can have negative affect performance due to marshaling and unmarshaling cost.
 
 
 
