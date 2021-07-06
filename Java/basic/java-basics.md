@@ -1631,6 +1631,128 @@ public interface Map<K,V> {
 }
 ```
 
+Immutable object
+----------------
+
+Immutable objects whose state (i.e. the object’s data) does not change once it is instantiated (i.e. it becomes a read-only object after instantiation). Immutable classes are ideal for representing numbers (e.g. java.lang.Integer, java.lang.Float, java.lang.BigDecimal etc are immutable objects), enumerated types, colors (e.g. java.awt.Color is an immutable object), short lived objects like events, messages etc.
+
+
+Benefits of immutable objects
+----------------
+- • Immutable classes can greatly simplify programming by freely allowing you to cache and share the references to the immutable objects without having to defensively copy them or without having to worry about their values becoming stale or corrupted.
+- • Immutable classes are inherently thread-safe and you do not have to synchronize access to them to be used in a multi-threaded environment. So there is no chance of negative performance consequences.
+- • Eliminates the possibility of data becoming inaccessible when used as keys in HashMaps or as elements in Sets. These types of errors are hard to debug and fix. 
+
+Immutable Class
+----------------
+Writing an immutable class is generally easy but there can be some tricky situations. Follow the following guidelines:
+
+1. A class is declared `final` (i.e. final classes cannot be extended).
+```java
+   public final class MyImmutable { ... }
+   ```
+2. All its fields are final (final fields cannot be mutated once assigned).
+```java
+   private final int[] myArray; //do not declare as   private final int[] myArray = null;
+```
+3. Do not provide any methods that can change the state of the immutable object in any way – not just setXXX methods, but any methods which can change the state.
+4. The “`this`” reference is not allowed to escape during construction from the immutable class and the immutable class should have exclusive access to fields that contain references to mutable objects like arrays, collections and mutable classes like Date etc by:
+   - Declaring the mutable references as private.
+   - Not returning or exposing the mutable references to the caller (this can be done by defensive copying)
+
+- **Wrong way to write an immutable class**:
+-  Wrong way to write a constructor:
+```java
+public final class MyImmutable {
+    private final int[] myArray;
+    public MyImmutable(int[] anArray) { this.myArray = anArray; // wrong
+    }
+    public String toString() {
+        StringBuffer sb = new StringBuffer("Numbers are: "); for (int i = 0; i < myArray.length; i++) {
+            sb.append(myArray[i] + " "); }
+        return sb.toString(); }
+}   
+```
+The caller could change the array after calling the constructor.
+
+```java
+ int[] array = {1,2};
+        MyImmutable myImmutableRef = new MyImmutable(array) ; 
+        System.out.println("Before constructing " + myImmutableRef); array[1] = 5; // change (i.e. mutate) the element 
+    // System.out.println("After constructing " + myImmutableRef);
+```
+
+Out put:
+```log
+ Before constructing Numbers are: 1 2
+ After constructing Numbers are: 1 5
+```
+
+As you can see in the output that the “`MyImmutable`” object has been mutated. This is because the object reference gets copied
+
+- Wrong way to write an accessor. 
+A caller could get the array reference and then change the contents:
+
+```java
+public  int[] getArray() {
+        return myArray;
+} 
+```
+
+- **Right way to write an immutable class:**
+
+ Right way is to copy the array before assigning in the constructor:
+```java
+public final class MyImmutable {
+    private final int[] myArray;
+    public MyImmutable(int[] anArray) {
+        this.myArray = anArray.clone(); // defensive copy
+    }
+    public String toString() {
+        StringBuffer sb = new StringBuffer("Numbers are: "); for (int i = 0; i < myArray.length; i++) {
+            sb.append(myArray[i] + " "); }
+        return sb.toString(); }
+}   
+```
+
+The caller cannot change the array after calling the constructor.
+
+
+
+```java
+int[] array = {1,2};
+        MyImmutable myImmutableRef = new MyImmutable(array) ; 
+        System.out.println("Before constructing " + myImmutableRef); 
+        array[1] = 5; // change (i.e. mutate) the element 
+ System.out.println("After constructing " + myImmutableRef); 
+```
+
+Out put:
+```log
+Before constructing Numbers are: 1 2
+After constructing Numbers are: 1 2
+```
+As you can see in the output that the “MyImmutable” object has not been mutated.
+
+- Right way to write an accessor by cloning.
+```java
+ public int[] getAray() {
+        return (int[]) myArray.clone();
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 For more information:

@@ -87,7 +87,12 @@ Interview questions and answers
     * [TreeMap](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#treemap)
     * [TreeSet](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#treeset)
     * [fail-safe and fail-fast iterators](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#fail-safe-and-fail-fast-iterators)
-
+    * [Immutable object](htttt)
+      * [Benefits of immutable objects](htttt)
+      * [Immutable Class](htttt)
+      * [Wrong way to write an immutable class](htttt)
+      * [Right way to write an immutable class](htttt)
+    * [Test](htttt)
     
   - [Multi threading](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#multi-threading)
     * [Life Cycle of a Thread](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#life-cycle-of-a-thread)
