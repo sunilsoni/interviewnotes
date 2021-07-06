@@ -94,7 +94,7 @@ Client tier, business tier and data tier. Each tier can be further logically div
 
 Create a data model
 --------------------
-A data model is a detailed specification of data oriented structures. This is different from the class modeling because it focuses solely on data whereas class models allow you to define both data and behavior. Conceptual data models (aka domain models) are used to explore domain concepts with project stakeholders. Logical data models are used to explore the domain concepts, and their relationships. Logical data models depict entity types, data attributes and entity relationships (with Entity Relationship (ER) diagrams). Physical data models are used to design the internal schema of a database depicting the tables, columns, and the relationships between the tables. Data models can be created by performing the following tasks:
+A data model is a detailed specification of data oriented structures. This is different from the class modeling because it focuses solely on data whereas class models allow you to define both data and behavior. Conceptual data models (aka domain models) are used to explore domain concepts with project stakeholders. Logical data models are used to explore the domain concepts, and their relationships. Logical data models depict entity types, data attributes and entity relationships (with Entity Relationship (ER) diagrams). Physical data models are used to design the internal schema of a database depicting the tables, columns, and the relationships between the tables. Data models can be created by performing the tasks:
   - Identify entity types, attributes and relationships: use entity relationship (E-R) diagrams.
   - Apply naming conventions (e.g. for tables, attributes, indices, constraints etc): Your organization should have standards and guidelines applicable to data modeling.
   - Assign keys: surrogate keys (e.g. assigned by the database like Oracle sequences, Sybase identity columns, max()+1, universally unique identifiers UUIDs, etc), natural keys (e.g. Tax File Numbers, Social Security Numbers etc), and composite keys.
@@ -132,7 +132,7 @@ Ensure the system is configurable through property files, xml descriptor files, 
 
 Design considerations during design, development and deployment phases
 ----------------
-Designing a fast, secured, reliable, robust, reusable and flexible system require considerations in the following key areas:
+Designing a fast, secured, reliable, robust, reusable and flexible system require considerations in the  key areas:
 
 - Performance issues (network overheads, quality of the code etc): Can I make a single coarse-grained network call to my remote object instead of 3 fine-grained calls?
 - Concurrency issues (multi-threading): What if two threads access my object simultaneously will it corrupt the state of my object?
