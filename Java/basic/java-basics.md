@@ -1660,7 +1660,9 @@ Writing an immutable class is generally easy but there can be some tricky situat
    - Declaring the mutable references as private.
    - Not returning or exposing the mutable references to the caller (this can be done by defensive copying)
 
-- **Wrong way to write an immutable class**:
+Wrong way to write an immutable class
+---------------
+  
 -  Wrong way to write a constructor:
 
 ```java
@@ -1702,7 +1704,8 @@ public  int[] getArray() {
 } 
 ```
 
-- **Right way to write an immutable class:**
+Right way to write an immutable class
+---------------
 
  Right way is to copy the array before assigning in the constructor:
 ```java
