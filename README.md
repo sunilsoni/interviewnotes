@@ -80,7 +80,7 @@ Interview questions and answers
     * [Shallow cloning and Deep cloning](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#shallow-cloning-and-deep-cloning)
     * [Instance variable and a Static variable](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#instance-variable-and-a-static-variable)
     * [Local variables vs Instance and static variables](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#local-variables-vs-instance-and-static-variables)
-    * [Access Modifiers](https)
+    * [Access Modifiers](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#access-modifiers)
     * [Test](https)
     
   - [Collection Framework](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#collection-framework)
