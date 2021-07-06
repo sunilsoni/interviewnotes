@@ -716,7 +716,7 @@ sample JWT token
 eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBbGV4MTIzIiwic2N.v9A80eU1VDo2Mm9UqN2FyEpyT79IUmhg
 ```
 
-_Spring Boot Rest Authentication with JWT Token Flow_
+_Spring Boot Rest Authentication with JWT Token Flow
 ------------------
 - Customers sign in by submitting their credentials to the provider.
 - Upon successful authentication, it generates JWT containing user details and privileges for accessing the services and sets the JWT expiry date in payload.
@@ -724,6 +724,16 @@ _Spring Boot Rest Authentication with JWT Token Flow_
 - Based on the expiration set by the server, the customer/client stores the JWT for a restricted or infinite amount of time.
 - The client sends this JWT token in the header for all subsequent requests.
 - The client authenticates the user with this token. So we don't need the client to send the user name and password to the server during each authentication process, but only once the server sends the client a JWT.
+
+Web server and  application server
+------------------
+| Web Server       | Application Server                         |
+|-----------------|-----------------------------------|
+| Supports HTTP protocol. When the Web server receives an HTTP request, it responds with an HTTP response, such as sending back an HTML page (static content) or delegates the dynamic response generation to some other program such as CGI scripts or Servlets or JSPs in the application server.        | Exposes business logic and dynamic content to the client through various protocols such as HTTP, TCP/IP, IIOP, JRMP etc.                            |
+| Uses various scalability and fault-tolerance techniques.           | Uses various scalability and fault-tolerance techniques. In addition provides resource pooling, component life cycle management, transaction management, messaging, security etc.
+Provides services for components like Web container for servlet components and EJB container for EJB components.                    |
+
+
 
 
 
