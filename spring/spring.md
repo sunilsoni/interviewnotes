@@ -716,7 +716,7 @@ sample JWT token
 eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBbGV4MTIzIiwic2N.v9A80eU1VDo2Mm9UqN2FyEpyT79IUmhg
 ```
 
-_Spring Boot Rest Authentication with JWT Token Flow
+Spring Boot Rest Authentication with JWT Token Flow
 ------------------
 - Customers sign in by submitting their credentials to the provider.
 - Upon successful authentication, it generates JWT containing user details and privileges for accessing the services and sets the JWT expiry date in payload.
