@@ -1771,7 +1771,7 @@ The default behavior of an object’s clone() method automatically yields a shal
 
 - **Deep copy:** If a deep copy is performed on object-1 then not only object-1 has been copied but the objects contained within it have been copied as well. Serialization can be used to achieve deep cloning. Deep cloning through serialization is faster to develop and easier to maintain but carries a performance overhead.
 
- <img src="../images/Shallow-Vs-Deep-cloning.png" width="500" border="2" />
+ <img src="../images/Shallow-Vs-Deep-cloning.png" width="700" border="2" />
 
 
 `For example:`
