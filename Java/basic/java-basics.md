@@ -1763,6 +1763,34 @@ If  method call involves inter-process (e.g. between two JVMs) communication, th
 by-value in a serialized form, which can have negative affect performance due to marshaling and unmarshaling cost.
 
 
+Shallow cloning and Deep cloning
+---------------------
+The default behavior of an object’s clone() method automatically yields a shallow copy. So to achieve a deep copy the classes must be edited or adjusted.
+
+- **Shallow copy:** If a shallow copy is performed on object-1  then it is copied but its contained objects are not. The contained objects object-1 and object-2 are affected by changes to cloned Object-2. Java supports shallow cloning of objects by default when a class implements the java.lang.Cloneable interface.
+
+- **Deep copy:** If a deep copy is performed on object-1 then not only object-1 has been copied but the objects contained within it have been copied as well. Serialization can be used to achieve deep cloning. Deep cloning through serialization is faster to develop and easier to maintain but carries a performance overhead.
+
+`For example:`
+invoking clone() method on a collection like HashMap, List etc returns a shallow copy of HashMap, List, instances. This means if you clone a HashMap, the map instance is cloned but the keys and values themselves are not cloned. If you want a deep copy then a simple method is to serialize the HashMap to a ByteArrayOutputSream and then deserialize it. This creates a deep copy but does require that all keys and values in the HashMap are Serializable. Main advantage of this approach is that it will deep copy any arbitrary object graph. Alternatively you can provide a static factory method to deep copy. 
+
+Example: to deep copy a list of Car objects.
+
+```java
+public static List deepCopy(List listCars) {
+    List copiedList = new ArrayList(10);
+    for (Object object : listCars) { 
+        Car original = (Car)object;
+        Car carCopied = new Car(); //instantiate a new Car object 
+        carCopied.setColor((original.getColor())); 
+        copiedList.add(carCopied);
+    }
+        return copiedList;
+}
+```
+
+
+
 
 
 For more information:
