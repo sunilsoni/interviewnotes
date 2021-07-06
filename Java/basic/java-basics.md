@@ -1809,9 +1809,15 @@ Local variables vs Instance and static variables
 | The lifetime of a local variable is determined by execution path and local variables are also known as stack variables because they live on the stack.            | Instance and static variables are associated with objects and therefore live in the heap.                    |
 | For a local variable, it is illegal for code to fail to assign it a value. It is the best practice to declare local variables only where required as opposed to declaring them upfront and cluttering up your code with some local variables that never get used.       | Both the static and instance variables always have a value. If your code does not assign them a value then the run-time system will implicitly assign a default value (e.g. null/0/0.0/false). |
 
+Access modifiers
+---------------------
 
-
-
+| Modifier       | Used with                         | Description                |
+|-----------------|-----------------------------------|---------------------------|
+| public          | Outer classes, interfaces, constructors, Inner classes, methods and field variables                              | A class or interface may be accessed from outside the package. Constructors, inner classes, methods and field variables may be accessed wherever their class is accessed.                      |
+| protected           | Constructors, inner classes, methods, and field variables.                    | Accessed by other classes in the same package or any subclasses of the class in which they are referred (i.e. same package or different package).                      |
+| private       | Constructors, inner classes,methods and field variables, | Accessed only within the class in which they are declared |
+| No modifier: (Package by default). | Outer classes, inner classes, interfaces, constructors, methods, and field variables                             | Accessed only from within the package in which they are declared.                      |
 
 
 For more information:

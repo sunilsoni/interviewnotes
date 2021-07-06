@@ -78,8 +78,9 @@ Interview questions and answers
       * [Right way to write an immutable class](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#right-way-to-write-an-immutable-class)
     * [Pass by reference and Pass by value](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#pass-by-reference-and-pass-by-value)
     * [Shallow cloning and Deep cloning](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#shallow-cloning-and-deep-cloning)
-    * [Instance variable and a Static variable](https)
-    * [Local variables vs Instance and static variables](https)
+    * [Instance variable and a Static variable](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#instance-variable-and-a-static-variable)
+    * [Local variables vs Instance and static variables](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#local-variables-vs-instance-and-static-variables)
+    * [Access Modifiers](https)
     * [Test](https)
     
   - [Collection Framework](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#collection-framework)
