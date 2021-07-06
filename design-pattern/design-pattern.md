@@ -156,8 +156,29 @@ Designing a fast, secured, reliable, robust, reusable and flexible system requir
 
 
 
+Identifying performance and/or memory issues in your Java/J2EE application
+----------------
 
+Profiling can be used to identify any performance issues or memory leaks. Profiling can identify what lines of code the program is spending the most time in? What call or invocation paths are used to reach at these lines? What
+kinds of objects are sitting in the heap? Where is the memory leak? Etc.
 
+- There are many tools available for the optimization of Java code like JProfiler, Borland OptimizeIt etc. These tools are very powerful and easy to use. They also produce various reports with graphs.
+Optimizeit Request Analyzer provides advanced profiling techniques that allow developers to analyze the performance behavior of code across J2EE application tiers. Developers can efficiently prioritize the performance of Web requests, JDBC, JMS, JNDI, JSP, RMI, and EJB so that trouble spots can be proactively isolated earlier in the development lifecycle.
+Thread Debugger tools can be used to identify threading issues like thread starvation and contention issues that can lead to system crash.
+Code coverage tools can assist developers with identifying and removing any dead code from the applications.
+
+- Hprof which comes with JDK for free Simple tool.
+
+```java
+Java –Xprof myClass
+java -Xrunhprof:[help]|[<option>=<value>]
+java -Xrunhprof:cpu=samples, depth=6, heap=sites
+
+```
+
+- Use operating system process monitors like NT/XP Task Manager on PCs and commands like ps, iostat, netstat, vmstat, uptime, nfsstat etc on UNIX machines.
+
+- Write your own wrapper MemoryLogger and/or PerformanceLogger utility classes with the help of totalMemory() and freeMemory() methods in the Java Runtime class for memory usage and System.currentTimeMillis() method for performance. You can place these MemoryLogger and PerformanceLogger calls strategically in your code. Even better approach than utility classes is using Aspect Oriented Programming (AOP – e.g. Spring AOP Refer Q3 – Q5 in Emerging Technologies/Frameworks section) or dynamic proxies (Refer proxy design pattern in Q11 in How would you go about...? section) for pre and post memory and/or performance recording where you have the control of activating memory/performance measurement only when needed.
 
 
 
