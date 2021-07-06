@@ -390,6 +390,15 @@ Interview questions and answers
       * [Strategy](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/behavioral-design-pattern.md##-strategy)
       * [State](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/behavioral-design-pattern.md##-state)
       * [Template Method](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/behavioral-design-pattern.md##-template-method)
+
+* [Designing a Java/J2EE application](https)
+  * [Create a tiered architecture](https)
+  * [Create a data model](https)
+  * [Create a design model](https)
+  * [Design considerations when decomposing business use cases into relevant classes](https)
+  * [Vertical slicing](https)
+  * [Ensure the system is configurable](https)
+  * [Design considerations during design, development and deployment phases](https)
   
 - **Microservices**
   - [Microservices](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md)
