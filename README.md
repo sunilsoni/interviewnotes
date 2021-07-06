@@ -197,7 +197,7 @@ Interview questions and answers
     * [OAuth2 Terminology](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#oauth2-terminology)
     * [Json Web Token(JWT)](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#json-web-tokenjwt)
     * [Spring Boot Rest Authentication with JWT Token Flow](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#spring-boot-rest-authentication-with-jwt-token-flow)
-    * [Web server and  application server](https)
+    * [Web server and  application server](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#web-server-and--application-server)
     * [Spring Transaction Management](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#spring-transaction-management)
       * [Global Transactions](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#global-transactions)
       * [Local Transactions](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#local-transactions)

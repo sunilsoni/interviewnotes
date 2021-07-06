@@ -730,8 +730,7 @@ Web server and  application server
 | Web Server       | Application Server                         |
 |-----------------|-----------------------------------|
 | Supports HTTP protocol. When the Web server receives an HTTP request, it responds with an HTTP response, such as sending back an HTML page (static content) or delegates the dynamic response generation to some other program such as CGI scripts or Servlets or JSPs in the application server.        | Exposes business logic and dynamic content to the client through various protocols such as HTTP, TCP/IP, IIOP, JRMP etc.                            |
-| Uses various scalability and fault-tolerance techniques.           | Uses various scalability and fault-tolerance techniques. In addition provides resource pooling, component life cycle management, transaction management, messaging, security etc.
-Provides services for components like Web container for servlet components and EJB container for EJB components.                    |
+| Uses various scalability and fault-tolerance techniques.           | Uses various scalability and fault-tolerance techniques. In addition provides resource pooling, component life cycle management, transaction management, messaging, security etc.Provides services for components like Web container for servlet components and EJB container for EJB components.                    |
 
 
 
