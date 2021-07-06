@@ -14,7 +14,7 @@ Java 8 Features
 - **Nashorn JavaScript Engine**: Using this we can develop standalone JavaScript applications in Java. Pre Java 8, we got JDK with a JavaScript engine based on Rhino. It is a developed from scratch. It will provide better compatibility with ECMA normalized JavaScript specification and better performance than Rhino.
 - **Concurrent Accumulators**: java.util.concurrent.atomic package is getting additional classes as part of Java 8 release. These will help to sum values from across multiple threads.
 - **Parallel operations**: Iterating over a collection can be done in parallel using the aggregate operations easily. Pre Java 8 Iterators are used to parse the elements of a collection one by on explicitly. Now that can be done in parallel internally with the use of streams and aggregate operations. We can create multiple substreams and those substreams can be processed internally in parallel and then the results be combined. For this to be effective, we need to have multiple cores and data volume.
-- **PermGen Space Removed**: The PermGen space is removed from Java 8 and instead we have MetaSpace introduced. One of the most dreaded error, “java.lang.OutOfMemoryError: PermGen error” will no longer be seen from Java 8. Nice thing is that the MetaSpace default is unlimited and that the system memory itself becomes the memory.
+- **PermGen Space Removed**: The PermGen space is removed from Java 8 and instead we have MetaSpace introduced. One of the most dreaded error, “java.lang.OutOfMemoryError: PermGen error will no longer be seen from Java 8. Nice thing is that the MetaSpace default is unlimited and that the system memory itself becomes the memory.
 - **TLS SNI** : Server Name Indentification (SNI) is an extension of the TLS protocol used for identifying the certificate to serve based on the hostname specified by the client. This enables a server to have virtual host over HTTPS. The same IP address can be used for multiple hosts and their respective different security certificates.
 - **Optional**  : Emphasis on best practices to handle null values properly.
 - **Collection API improvements**: Some new methods added in Collection API Iterator default method forEachRemaining(Consumer action),Collection default method removeIf(Predicate filter)
@@ -1653,23 +1653,26 @@ Writing an immutable class is generally easy but there can be some tricky situat
    ```
 2. All its fields are final (final fields cannot be mutated once assigned).
 ```java
-   private final int[] myArray; //do not declare as   private final int[] myArray = null;
+   private final int[] myArray; //do not declare as ->  private final int[] myArray = null;
 ```
 3. Do not provide any methods that can change the state of the immutable object in any way – not just setXXX methods, but any methods which can change the state.
-4. The “`this`” reference is not allowed to escape during construction from the immutable class and the immutable class should have exclusive access to fields that contain references to mutable objects like arrays, collections and mutable classes like Date etc by:
+4. The `this` reference is not allowed to escape during construction from the immutable class and the immutable class should have exclusive access to fields that contain references to mutable objects like arrays, collections and mutable classes like Date etc by:
    - Declaring the mutable references as private.
    - Not returning or exposing the mutable references to the caller (this can be done by defensive copying)
 
 - **Wrong way to write an immutable class**:
 -  Wrong way to write a constructor:
+
 ```java
 public final class MyImmutable {
     private final int[] myArray;
     public MyImmutable(int[] anArray) { this.myArray = anArray; // wrong
     }
     public String toString() {
-        StringBuffer sb = new StringBuffer("Numbers are: "); for (int i = 0; i < myArray.length; i++) {
-            sb.append(myArray[i] + " "); }
+        StringBuffer sb = new StringBuffer("Numbers are: "); 
+        for (int i = 0; i < myArray.length; i++) {
+            sb.append(myArray[i] + " ");
+        }
         return sb.toString(); }
 }   
 ```
@@ -1677,9 +1680,9 @@ The caller could change the array after calling the constructor.
 
 ```java
  int[] array = {1,2};
-        MyImmutable myImmutableRef = new MyImmutable(array) ; 
-        System.out.println("Before constructing " + myImmutableRef); array[1] = 5; // change (i.e. mutate) the element 
-    // System.out.println("After constructing " + myImmutableRef);
+MyImmutable myImmutableRef = new MyImmutable(array) ; 
+System.out.println("Before constructing " + myImmutableRef); array[1] = 5; // change (i.e. mutate) the element 
+System.out.println("After constructing " + myImmutableRef);
 ```
 
 Out put:
@@ -1688,7 +1691,7 @@ Out put:
  After constructing Numbers are: 1 5
 ```
 
-As you can see in the output that the “`MyImmutable`” object has been mutated. This is because the object reference gets copied
+As you can see in the output that the `MyImmutable` object has been mutated. This is because the object reference gets copied
 
 - Wrong way to write an accessor. 
 A caller could get the array reference and then change the contents:
@@ -1732,7 +1735,7 @@ Out put:
 Before constructing Numbers are: 1 2
 After constructing Numbers are: 1 2
 ```
-As you can see in the output that the “MyImmutable” object has not been mutated.
+As you can see in the output that the `MyImmutable` object has not been mutated.
 
 - Right way to write an accessor by cloning.
 ```java
