@@ -1792,6 +1792,24 @@ public static List deepCopy(List listCars) {
 }
 ```
 
+Instance variable and a Static variable
+---------------------
+| Static variables       | Instance variables                         |
+|-----------------|-----------------------------------|
+| Class variables are called static variables. There is only one occurrence of a class variable per JVM per class loader. When a class is loaded the class variables (aka static variables) are initialized.          | Instance variables are non-static and there is one occurrence of an instance variable in each class instance (i.e. each object). Also known as a member variable or a field.                              |
+| A static variable is used in the singleton pattern           |  Instance variables we can not use                   |
+| A static variable is used with a final modifier to define constants.       |  Instance variables we can not use |
+
+Local variables vs Instance and static variables
+---------------------
+
+| Local variables       | Instance and static variables                         |  
+|-----------------|-----------------------------------| 
+| Local variables have a narrower scope than instance variables.          | Instance variables have a narrower scope than static variables.                            |
+| The lifetime of a local variable is determined by execution path and local variables are also known as stack variables because they live on the stack.            | Instance and static variables are associated with objects and therefore live in the heap.                    |
+| For a local variable, it is illegal for code to fail to assign it a value. It is the best practice to declare local variables only where required as opposed to declaring them upfront and cluttering up your code with some local variables that never get used.       | Both the static and instance variables always have a value. If your code does not assign them a value then the run-time system will implicitly assign a default value (e.g. null/0/0.0/false). |
+
+
 
 
 
