@@ -401,7 +401,6 @@ Interview questions and answers
   * [Design considerations during design, development and deployment phases](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#design-considerations-during-design-development-and-deployment-phases)
 
 * [Identifying performance and/or memory issues in your Java/J2EE application](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#identifying-performance-andor-memory-issues-in-your-javaj2ee-application)
-* [Distributed transactions within a microservices architecture](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#distributed-transactions-within-a-microservices-architecture)
 
 - **Microservices**
   - [Microservices](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md)
@@ -418,6 +417,7 @@ Interview questions and answers
     * [Zuul](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#zuul)
     * [Zipkin](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#zipkin)
     * [Hystrix](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#hystrix)
+    * [Distributed transactions within a microservices architecture](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#distributed-transactions-within-a-microservices-architecture)
 
 - **Kafka**
   - [Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md)
