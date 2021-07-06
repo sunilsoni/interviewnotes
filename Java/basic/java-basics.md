@@ -1771,6 +1771,9 @@ The default behavior of an object’s clone() method automatically yields a shal
 
 - **Deep copy:** If a deep copy is performed on object-1 then not only object-1 has been copied but the objects contained within it have been copied as well. Serialization can be used to achieve deep cloning. Deep cloning through serialization is faster to develop and easier to maintain but carries a performance overhead.
 
+ <img src="../images/Shallow-Vs-Deep-cloning.png" width="500" border="2" />
+
+
 `For example:`
 invoking clone() method on a collection like HashMap, List etc returns a shallow copy of HashMap, List, instances. This means if you clone a HashMap, the map instance is cloned but the keys and values themselves are not cloned. If you want a deep copy then a simple method is to serialize the HashMap to a ByteArrayOutputSream and then deserialize it. This creates a deep copy but does require that all keys and values in the HashMap are Serializable. Main advantage of this approach is that it will deep copy any arbitrary object graph. Alternatively you can provide a static factory method to deep copy. 
 
