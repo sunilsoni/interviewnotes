@@ -90,9 +90,9 @@ Interview questions and answers
     * [Immutable object](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#immutable-object)
       * [Benefits of immutable objects](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#benefits-of-immutable-objects)
       * [Immutable Class](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#immutable-class)
-      * [Wrong way to write an immutable class](https)
-      * [Right way to write an immutable class](https)
-    * [Test](htttt)
+      * [Wrong way to write an immutable class](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#wrong-way-to-write-an-immutable-class)
+      * [Right way to write an immutable class](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#right-way-to-write-an-immutable-class)
+    * [Test](https)
     
   - [Multi threading](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#multi-threading)
     * [Life Cycle of a Thread](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#life-cycle-of-a-thread)
