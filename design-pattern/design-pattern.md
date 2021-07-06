@@ -181,5 +181,11 @@ java -Xrunhprof:cpu=samples, depth=6, heap=sites
 - Write your own wrapper MemoryLogger and/or PerformanceLogger utility classes with the help of totalMemory() and freeMemory() methods in the Java Runtime class for memory usage and System.currentTimeMillis() method for performance. You can place these MemoryLogger and PerformanceLogger calls strategically in your code. Even better approach than utility classes is using Aspect Oriented Programming (AOP – e.g. Spring AOP Refer Q3 – Q5 in Emerging Technologies/Frameworks section) or dynamic proxies (Refer proxy design pattern in Q11 in How would you go about...? section) for pre and post memory and/or performance recording where you have the control of activating memory/performance measurement only when needed.
 
 
+Distributed transactions within a microservices architecture
+-------------
 
-
+1. [Patterns for distributed transactions within a microservices architecture](https://developers.redhat.com/blog/2018/10/01/patterns-for-distributed-transactions-within-a-microservices-architecture#what_is_a_distributed_transaction_)
+2. [Handling Distributed Transactions in the Microservice world](https://medium.com/swlh/handling-transactions-in-the-microservice-world-c77b275813e0)
+3. [Practical Transaction Handling in Microservice Architecture](https://dzone.com/articles/practical-transaction-handling-in-microservice-arc)
+4. [Solving distributed transaction management problem in microservices architecture using Saga](https://developer.ibm.com/depmodels/microservices/articles/use-saga-to-solve-distributed-transaction-management-problems-in-a-microservices-architecture/)
+5. [Pattern: Saga](https://microservices.io/patterns/data/saga.html)
