@@ -471,7 +471,7 @@ The methods wait, notify and notifyAll are present in the Object class, that mea
 
 if these methods were in Thread class, then thread T1 must know that another thread T2 is waiting for this particular resource, so T2 can be notified by something like T2.notify()
 
-But in java, the object itself is shared among all the threads, so one thread acquires the lock on this object’s monitor, runs the code and while releasing the lock, it calls the notify or notifyAll method on the object itself, so that any other thread which was “waiting on the same object’s monitor will be notified that now the shared resource is available. That is why these methods are defined in the Object class.
+But in java, the object itself is shared among all the threads, so one thread acquires the lock on this object’s monitor, runs the code and while releasing the lock, it calls the notify or notifyAll method on the object itself, so that any other thread which was "waiting on the same object’s monitor will be notified that now the shared resource is available. That is why these methods are defined in the Object class.
 
 Threads have no specific knowledge of each other. They can run asynchronously and are independent. They do not need to know about the status of other threads. They just need to call notify method on an object, so whichever thread is waiting on that resource will be notified.
 

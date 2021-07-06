@@ -368,7 +368,7 @@ public class ConsumersExample {
 BiFunction
 -----------
 
-To define lambdas with two arguments, we have to use additional interfaces that contain “Bi" keyword in their names: BiFunction, ToDoubleBiFunction, ToIntBiFunction, and ToLongBiFunction.
+To define lambdas with two arguments, we have to use additional interfaces that contain "Bi" keyword in their names: BiFunction, ToDoubleBiFunction, ToIntBiFunction, and ToLongBiFunction.
 BiFunction implementation that receives a key and an old value to calculate a new value for the salary and return it.
 
 It represents a function that accepts two arguments and returns a result.

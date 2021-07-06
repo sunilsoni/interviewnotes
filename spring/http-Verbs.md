@@ -4,9 +4,9 @@ HTTP Verbs
 
 GET
 ----
-The GET method is designed to request a specific resource. In essence, it literally “gets" the resource in question, and is pretty limited to just that action. GET requests should only retrieve data, leaving other methods to perform the other transformative actions.
+The GET method is designed to request a specific resource. In essence, it literally "gets" the resource in question, and is pretty limited to just that action. GET requests should only retrieve data, leaving other methods to perform the other transformative actions.
 
-The HTTP GET method is used to `read` (or retrieve) a representation of a resource. In the “happy" (or non-error) path, GET returns a representation in XML or JSON and an HTTP response code of 200 (OK). In an error case, it most often returns a 404 (NOT FOUND) or 400 (BAD REQUEST).
+The HTTP GET method is used to `read` (or retrieve) a representation of a resource. In the "happy" (or non-error) path, GET returns a representation in XML or JSON and an HTTP response code of 200 (OK). In an error case, it most often returns a 404 (NOT FOUND) or 400 (BAD REQUEST).
 
 According to the design of the HTTP specification, GET (along with HEAD) requests are used only to read data and not change it. Therefore, when used this way, they are considered safe. That is, they can be called without risk of data modification or corruption—calling it once has the same effect as calling it 10 times, or none at all. Additionally, GET (and HEAD) is idempotent, which means that making multiple identical requests ends up having the same result as a single request.
 
@@ -54,7 +54,7 @@ If, for instance, calling PUT on a resource increments a counter within the reso
 
 DELETE
 ----
-DELETE is the most clear-cut method on this list because it does exactly what’s on the tin – DELETE deletes a targeted resource. The typical response for a deletion method is simply to reply with an “OK" status – either the resource was deleted, or it was not.
+DELETE is the most clear-cut method on this list because it does exactly what’s on the tin – DELETE deletes a targeted resource. The typical response for a deletion method is simply to reply with an "OK" status – either the resource was deleted, or it was not.
 
 DELETE is pretty easy to understand. It is used to `delete` a resource identified by a URI.
 

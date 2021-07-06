@@ -248,7 +248,7 @@ Selector: ‘[changeText]’’
 Export class ChangeTextDirective {
 Constructor(Element: ElementRef) {
 Console.log(Element);
-Element.nativeElement.innerText= “Text is changed by changeText Directive.";
+Element.nativeElement.innerText= "Text is changed by changeText Directive.";
 }
 }
 ```
