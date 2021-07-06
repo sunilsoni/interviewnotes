@@ -391,14 +391,14 @@ Interview questions and answers
       * [State](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/behavioral-design-pattern.md##-state)
       * [Template Method](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/behavioral-design-pattern.md##-template-method)
 
-* [Designing a Java/J2EE application](https)
-  * [Create a tiered architecture](https)
-  * [Create a data model](https)
-  * [Create a design model](https)
-  * [Design considerations when decomposing business use cases into relevant classes](https)
-  * [Vertical slicing](https)
-  * [Ensure the system is configurable](https)
-  * [Design considerations during design, development and deployment phases](https)
+* [Designing a Java/J2EE application](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#designing-a-javaj2ee-application)
+  * [Create a tiered architecture](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#create-a-tiered-architecture)
+  * [Create a data model](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#create-a-data-model)
+  * [Create a design model](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#create-a-design-model)
+  * [Design considerations when decomposing business use cases into relevant classes](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#design-considerations-when-decomposing-business-use-cases-into-relevant-classes)
+  * [Vertical slicing](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#vertical-slicing)
+  * [Ensure the system is configurable](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#ensure-the-system-is-configurable)
+  * [Design considerations during design, development and deployment phases](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#design-considerations-during-design-development-and-deployment-phases)
   
 - **Microservices**
   - [Microservices](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md)
