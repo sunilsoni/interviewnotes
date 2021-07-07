@@ -248,7 +248,13 @@ Interview questions and answers
     - [/info Endpoint](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#info-endpoint)
     - [/metrics Endpoint](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#metrics-endpoint)
     - [Custom Endpoint](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#custom-endpoint)
-
+  - [Building an Application with Spring Boot](https)
+    - [Starting with Spring Initializer](https)
+    - [Create a Simple Web Application](https)
+    - [Create an Application class](https)
+    - [Run the Application](https)
+    - [Add Unit Tests](https)
+    - [Add Production-grade Services](https)
     
 - **HTTP Verbs**
   - [HTTP Verbs](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#http-verbs)

@@ -305,7 +305,89 @@ Output:
 [ "This is message 1", "This is message 2" ]
 ```
 
+Building an Application with Spring Boot
+---------------
 
+
+Spring Boot does not generate code or make edits to your files. Instead, when you start your application, Spring Boot dynamically wires up beans and settings and applies them to your application context.
+
+Starting with Spring Initializer
+---------------
+- Go to https://start.spring.io. This service pulls in all the dependencies you need for an application and does most of the setup for you.
+- Choose either Gradle or Maven and the language you want to use. This guide assumes that you chose Java.
+- Click Dependencies and select Spring Web.
+- Click Generate.
+- Download the resulting ZIP file, which is an archive of a web application that is configured with your choices.
+
+Create a Simple Web Application
+---------------
+
+Now you can create a web controller for a simple web application
+
+```java
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@RestController
+public class HelloController {
+	@RequestMapping("/")
+	public String index() {
+		return "Greetings from Spring Boot!";
+	}
+}
+```
+
+The class is marked as a `@RestController`, meaning it is ready for use by Spring MVC to handle web requests. @RequestMapping maps `/` to the index() method. When invoked from a browser or by using curl on the command line, the method returns pure text. That is because @RestController combines @Controller and @ResponseBody, two annotations that results in web requests returning data rather than a view.
+
+Create an Application class
+---------------
+The Spring Initializr creates a simple application class for you. However, in this case, it is too simple. You need to modify the application class to match the(from src/main/java/com/example/springboot/Application.java):
+
+```java
+package com.example.springboot;
+import java.util.Arrays;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
+@SpringBootApplication
+public class Application {
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class, args);
+	}
+	@Bean
+	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
+		return args -> {
+			System.out.println("Let's inspect the beans provided by Spring Boot:");
+			String[] beanNames = ctx.getBeanDefinitionNames();
+			Arrays.sort(beanNames);
+			for (String beanName : beanNames) {
+				System.out.println(beanName);
+			}
+		};
+	}
+}
+```
+@SpringBootApplication  annotation that adds:
+
+- `@Configuration`: Tags the class as a source of bean definitions for the application context.
+- `@EnableAutoConfiguration`: Tells Spring Boot to start adding beans based on classpath settings, other beans, and various property settings. For example, if spring-webmvc is on the classpath, this annotation flags the application as a web application and activates key behaviors, such as setting up a DispatcherServlet.
+- `@ComponentScan`: Tells Spring to look for other components, configurations, and services in the com/example package, letting it find the controllers.
+
+
+The main() method uses Spring Boot’s `SpringApplication.run()` method to launch an application.There is no web.xml file. This web application is 100% pure Java and you did not have to deal with configuring any plumbing or infrastructure.
+
+There is also a `CommandLineRunner` method marked as a `@Bean`, and this runs on start up. It retrieves all the beans that were created by your application or that were automatically added by Spring Boot. 
+
+Run the Application
+---------------
+
+Add Unit Tests
+---------------
+
+Add Production-grade Services
+---------------
 
 
 
@@ -313,6 +395,7 @@ For more information:
 
 1. [Spring Boot Actuator](https://www.baeldung.com/spring-boot-actuators)
 2. [Getting Started with Spring Boot](https://www.javaguides.net/2018/09/getting-started-with-spring-boot.html)
+3. [Building an Application with Spring Boot](https://spring.io/guides/gs/spring-boot/)
 
 
 
