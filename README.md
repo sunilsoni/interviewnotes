@@ -528,17 +528,16 @@ Interview questions and answers
     * [git commit a](https://github.com/sunilsoni/interview-notes/blob/main/devops/git/git.md#git-commit-a)
   - [Jenkins](https)
   - [Kubernetes](https)
-
-
+  
 - **Swagger**
-  - [Swagger](https)
-  - [Swagger API](https)
-  - [Swagger annotations](https)
-    - [@Api](https)
-    - [@ApiOperation](https)
-    - [@ApiResponse](https)
-    - [@ApiParam](https)
-  - [Maven plugin](https)
+  - [Swagger](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#swagger)
+  - [Swagger API](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#swagger-api)
+  - [Swagger annotations](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#swagger-annotations)
+    - [@Api](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#swagger-annotations)
+    - [@ApiOperation](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#swagger-annotations)
+    - [@ApiResponse](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#swagger-annotations)
+    - [@ApiParam](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#swagger-annotations)
+  - [Maven plugin](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#maven-plugin)
   
 - **Cucumber**
   - [Cucumber](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#cucumber)
