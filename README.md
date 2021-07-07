@@ -529,6 +529,17 @@ Interview questions and answers
   - [Jenkins](https)
   - [Kubernetes](https)
 
+
+- **Swagger**
+  - [Swagger](https)
+  - [Swagger API](https)
+  - [Swagger annotations](https)
+    - [@Api](https)
+    - [@ApiOperation](https)
+    - [@ApiResponse](https)
+    - [@ApiParam](https)
+  - [Maven plugin](https)
+  
 - **Cucumber**
   - [Cucumber](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#cucumber)
   - [Advantages of Cucumber](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#advantages-of-cucumber)
