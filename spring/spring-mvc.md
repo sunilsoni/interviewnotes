@@ -256,6 +256,21 @@ String hello() {
 ```
 
 
+Scheduler in cluster environment or run on multiple instances
+-----------
+
+Spring Scheduled Task running in clustered environment with ShedLock
+-----------
+
+
+Execute a Quartz Job only once in a multi-instance environment
+-----------
+
+
+
+
+
+
 For more information:
 
 1. [Spring MVC flow with Example](https://codenuclear.com/spring-mvc-flow-with-example/)

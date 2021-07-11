@@ -223,7 +223,9 @@ Interview questions and answers
     * [@RestController](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-mvc.md#restcontroller)
     * [@ModelAttribute](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-mvc.md#modelattribute)
     * [@CrossOrigin](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-mvc.md#crossorigin)
-    * [Test](https)
+    * [Scheduler in cluster environment or run on multiple instances](https)
+      * [Spring Scheduled Task running in clustered environment with ShedLock](https)
+      * [Execute a Quartz Job only once in a multi-instance environment](https)
 
 - **Spring Boot**
   - [Spring Boot](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#spring-boot)
