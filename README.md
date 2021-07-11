@@ -225,6 +225,9 @@ Interview questions and answers
     * [@CrossOrigin](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-mvc.md#crossorigin)
     * [Scheduler in cluster environment or run on multiple instances](https)
       * [Spring Scheduled Task running in clustered environment with ShedLock](https)
+      * [Configuration](https)
+      * [Creating Tasks](https)
+      * [Spring](https)
       * [Execute a Quartz Job only once in a multi-instance environment](https)
 
 - **Spring Boot**

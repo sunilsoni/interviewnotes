@@ -258,15 +258,176 @@ String hello() {
 
 Scheduler in cluster environment or run on multiple instances
 -----------
+Spring provides an easy to implement API for scheduling jobs. It works great until we deploy multiple instances of our application. Spring, by default, cannot handle scheduler synchronization over multiple instances – it executes the jobs simultaneously on every node instead.
+
+In this short tutorial, we'll look at ShedLock – a Java library that makes sure our scheduled tasks run only once at the same time and is an alternative to Quartz.
 
 Spring Scheduled Task running in clustered environment with ShedLock
 -----------
 
+To use ShedLock with Spring, we need to add the shedlock-spring dependency:
+
+```xml
+<dependency>
+    <groupId>net.javacrumbs.shedlock</groupId>
+    <artifactId>shedlock-spring</artifactId>
+    <version>2.2.0</version>
+</dependency>
+
+```
+
+Configuration
+------
+
+ShedLock works only in environments with a shared database by declaring a proper LockProvider. It creates a table or document in the database where it stores the information about the current locks.
+
+For this example,we can usein-memory H2 database.We need to provide the H2 database and the ShedLock's JDBC dependency:
+
+```xml
+<dependency>
+    <groupId>net.javacrumbs.shedlock</groupId>
+    <artifactId>shedlock-provider-jdbc-template</artifactId>
+    <version>2.1.0</version>
+</dependency>
+<dependency>
+<groupId>com.h2database</groupId>
+<artifactId>h2</artifactId>
+<version>1.4.200</version>
+</dependency>
+```
+
+Next, we need to create a database table for ShedLock to keep information about scheduler locks:
+
+
+```sql
+CREATE TABLE shedlock (
+   name VARCHAR(64),
+   lock_until TIMESTAMP(3) NULL,
+   locked_at TIMESTAMP(3) NULL,
+   locked_by VARCHAR(255),
+   PRIMARY KEY (name)
+)
+
+```
+
+application.yaml file configuration: 
+```properties
+spring:
+    datasource:
+        driverClassName: org.h2.Driver
+        url: jdbc:h2:mem:shedlock_DB;INIT=CREATE SCHEMA IF NOT EXISTS shedlock;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+        username: sa
+        password:
+```
+
+SchedulerConfiguration.java: 
+```java
+@Configuration
+public class SchedulerConfiguration {
+    @Bean
+    public LockProvider lockProvider(DataSource dataSource) {
+        return new JdbcTemplateLockProvider(dataSource);
+    }
+}
+```
+
+Application.java:
+```java
+@SpringBootApplication
+@EnableScheduling
+@EnableSchedulerLock(defaultLockAtMostFor = "PT30S")
+public class Application {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringApplication.class, args);
+    }
+}
+```
+
+Creating Tasks
+------
+To create a scheduled task handled by ShedLock, we simply put the @Scheduled and @SchedulerLock annotations on a method:
+
+
+TaskScheduler.java:
+```java
+@Component
+class TaskScheduler {
+
+    @Scheduled(cron = "0 0/15 * * * ?")
+    @SchedulerLock(name = "TaskScheduler_scheduledTask",
+            lockAtLeastForString = "PT5M", lockAtMostForString = "PT14M")
+    public void scheduledTask() {
+        // ...
+    }
+}
+```
+`@Scheduled` supports the cron format, with this expression meaning “every 15 minutes”.
+
+Next, taking a look at @SchedulerLock, the name parameter has to be unique, and ClassName_methodName is typically enough to achieve that. We don't want more than one run of this method happening at the same time, and ShedLock uses the unique name to achieve that.
+
+First, we've added lockAtLeastForString so that we can put some distance between method invocations. Using “`PT5M`” means that this method will hold the lock for 5 minutes, at a minimum. In other words, that means that this method can be run by ShedLock no more often than every five minutes.
+
+Next, we added lockAtMostForString to specify how long the lock should be kept in case the executing node dies. Using `PT14M` means that it will be locked for no longer than 14 minutes.
+
+In normal situations, ShedLock releases the lock directly after the task finishes. Now, we didn't have to do that because there is a default provided in `@EnableSchedulerLock`, but we've chosen to override that here.
+
+
 
 Execute a Quartz Job only once in a multi-instance environment
 -----------
+You have to configure Quartz to run in a clustered environment. Clustering currently only works with the JDBC jobstore, and works by having each node of the cluster to share the same database.
 
+-  Set the org.quartz.jobStore.isClustered property to true if you have multiple instances of Quartz that use the same set of database tables. This property is used to turn on the clustering features.
+-  Set the org.quartz.jobStore.clusterCheckinInterval property (milliseconds) which is the frequency at which this instance checks in with the other instances of the cluster.
+-  Set the org.quartz.scheduler.instanceId to AUTO so that each node in the cluster will have a unique instanceId.
 
+Each instance in the cluster should use the same copy of the quartz.properties file.  If you use clustering on separate machines ensure that their clocks are synchronized.
+
+Example Properties For A Clustered Scheduler
+```properties
+#============================================================================
+# Configure Main Scheduler Properties  
+#============================================================================
+
+org.quartz.scheduler.instanceName = MyClusteredScheduler
+org.quartz.scheduler.instanceId = AUTO
+
+#============================================================================
+# Configure ThreadPool  
+#============================================================================
+
+org.quartz.threadPool.class = org.quartz.simpl.SimpleThreadPool
+org.quartz.threadPool.threadCount = 25
+org.quartz.threadPool.threadPriority = 5
+
+#============================================================================
+# Configure JobStore  
+#============================================================================
+
+org.quartz.jobStore.misfireThreshold = 60000
+
+org.quartz.jobStore.class = org.quartz.impl.jdbcjobstore.JobStoreTX
+org.quartz.jobStore.driverDelegateClass = org.quartz.impl.jdbcjobstore.oracle.OracleDelegate
+org.quartz.jobStore.useProperties = false
+org.quartz.jobStore.dataSource = myDS
+org.quartz.jobStore.tablePrefix = QRTZ_
+
+org.quartz.jobStore.isClustered = true
+org.quartz.jobStore.clusterCheckinInterval = 20000
+
+#============================================================================
+# Configure Datasources  
+#============================================================================
+
+org.quartz.dataSource.myDS.driver = oracle.jdbc.driver.OracleDriver
+org.quartz.dataSource.myDS.URL = jdbc:oracle:thin:@polarbear:1521:dev
+org.quartz.dataSource.myDS.user = quartz
+org.quartz.dataSource.myDS.password = quartz
+org.quartz.dataSource.myDS.maxConnections = 5
+org.quartz.dataSource.myDS.validationQuery=select 0 from dual
+
+```
 
 
 
@@ -275,5 +436,8 @@ For more information:
 
 1. [Spring MVC flow with Example](https://codenuclear.com/spring-mvc-flow-with-example/)
 2. [Spring Web Annotations](https://www.baeldung.com/spring-mvc-annotations)
+3. [Quartz Configuration Reference](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/configuration/ConfigJDBCJobStoreClustering.html)
+4. [Guide to ShedLock with Spring](https://www.baeldung.com/shedlock-spring)
+5. [Introduction to Quartz](https://www.baeldung.com/quartz)
 
 
