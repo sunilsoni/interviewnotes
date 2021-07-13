@@ -67,6 +67,107 @@ Some points to remember:
 - Hashmap has a default initial capacity of 16, which means it has 16 buckets or bins to store map entries, each bucket is a singly linked list. The default load factor in HashMap is 0.75
 - Load factor is that threshold value which when crossed will double the hashmap’s capacity i.e. when you add 13th element in hashmap, the capacity will increase from 16 to 32
 
+HashMap Internal working
+-------
+
+- HashMap works on the principal of hashing.
+- HashMap in Java uses the `hashCode()` method to calculate a hash value. Hash value is calculated using the key object. This hash value is used to find the correct bucket where Entry object will be stored.
+- HashMap uses the `equals()` method to find the correct key whose value is to be retrieved in case of get() and to find if that key already exists or not in case of put().
+- With in the internal implementation of HashMap hashing collision means more than one key having the same hash value, in that case Entry objects are stored as a linked-list with in a same bucket.
+- With in a bucket values are stored as Entry objects which contain both key and value.
+- In Java 8 hash elements use balanced trees instead of linked lists after a certain threshold is reached while storing values. This improves the worst case performance from O(n) to O(log n).
+
+HashMap class in Java internally uses an array called table of type Node to store the elements which is defined in the HashMap class as-
+```java
+    /**
+ * The table, initialized on first use, and resized as
+ * necessary. When allocated, length is always a power of two.
+ * (We also tolerate length zero in some operations to allow
+ * bootstrapping mechanics that are currently not needed.)
+ */
+transient Node<K,V>[] table;
+```
+
+Node is defined as a static class with in a Hashmap.
+
+```java
+ static class Node<K,V> implements Map.Entry<K,V> {
+  final int hash;
+  final K key;
+  V value;
+  Node<K,V> next;
+
+  Node(int hash, K key, V value, Node<K,V> next) {
+    this.hash = hash;
+    this.key = key;
+    this.value = value;
+    this.next = next;
+  }
+
+  public final K getKey()        { return key; }
+  public final V getValue()      { return value; }
+  public final String toString() { return key + "=" + value; }
+
+  public final int hashCode() {
+    return Objects.hashCode(key) ^ Objects.hashCode(value);
+  }
+
+  public final V setValue(V newValue) {
+    V oldValue = value;
+    value = newValue;
+    return oldValue;
+  }
+
+  public final boolean equals(Object o) {
+    if (o == this)
+      return true;
+    if (o instanceof Map.Entry) {
+      Map.Entry<?,?> e = (Map.Entry<?,?>)o;
+      if (Objects.equals(key, e.getKey()) &&
+              Objects.equals(value, e.getValue()))
+        return true;
+    }
+    return false;
+  }
+}
+```
+
+For each element 4 things are stored in the  fields-
+
+ 1. **hash**- For storing Hashcode calculated using the key.
+ 2. **key**- For holding key of the element.
+ 3. **value**- For storing value of the element.
+ 4. **next**- To store reference to the next node when a bucket has more than one element and a linkedlist is formed with in a bucket to store elements.
+
+Objects are stored internally in `table` array of the HashMap class.
+
+<img src="../images/hashMap-internal.png" width="700" border="2" />
+
+How put() method of HashMap works internally
+-----------------------------------
+There are 3 steps in the internal implementation of HashMap put() method-
+
+- Using `hashCode()` method, hash value will be calculated. In which bucket particular entry will be stored is ascertained using that hash.
+- `equals()` method is used to find if such a key already exists in that bucket, if not found then a new node is created with the map entry and stored within the same bucket. A linked-list is used to store those nodes.
+- If `equals()` method returns true, it means that the key already exists in the bucket. In that case, the new value will overwrite the old value for the matched key.
+
+How  HashMap get() method works internally
+-----------------------------------
+Using the key (passed in the get() method) hash value will be calculated to determine the bucket where that Entry object is stored, in case there are more than one Entry object with in the same bucket (stored as a linked-list) equals() method will be used to find out the correct key. As soon as the matching key is found get() method will return the value object stored in the Entry object.
+
+When null Key is inserted in a HashMap
+-----------------------------------
+HashMap in Java also allows null as key, though there can only be one null key in HashMap. While storing the Entry object HashMap implementation checks if the key is null, in case key is null, it is always mapped to bucket 0, as hash is not calculated for null keys.
+
+HashMap implementation changes in Java 8
+-----------------------------------
+HashMap implementation in Java provides constant time performance O(1) for get() and put() methods but that is in the ideal case when the Hash function distributes the objects evenly among the buckets.
+
+But the performance may worsen in the case hashCode() used is not proper and there are lots of hash collisions. As we know now that in case of hash collision entry objects are stored as a node in a linked-list and equals() method is used to compare keys. That comparison to find the correct key with in a linked-list is a linear operation so in a worst case scenario the complexity becomes O(n).
+
+To fix this issue in Java 8 hash elements use balanced trees instead of linked lists after a certain threshold is reached. Which means HashMap starts with storing Entry objects in linked list but after the number of items in a hash becomes larger than a certain threshold, the hash changes from using a linked list to a balanced tree, this improves the worst case performance from O(n) to O(log n).
+
+
 
 Interal working of put() and get() methods of HashMap :
 -----------------------------------
@@ -1124,3 +1225,4 @@ For more information:
 
 1. [Java ArrayList Tutorial with Examples](https://www.callicoder.com/java-arraylist/)
 2. [Guide to the Java ArrayList](https://www.baeldung.com/java-arraylist)
+3. (https://www.netjstech.com/2015/05/how-hashmap-internally-works-in-java.html)
