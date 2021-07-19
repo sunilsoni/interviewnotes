@@ -101,7 +101,7 @@ Interview questions and answers
       * [HashMap collisions](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#hashmap-collisions)
     * [equals and hashCode method in HashMap when the key is a custom class](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#equals-and-hashcode-method-in-hashmap-when-the-key-is-a-custom-class)
     * [Concurrent HashMap](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#concurrent-hashmap)
-      * [ConcurrentHashMap vs Synchronized HashMap](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#concurrent-hashmap)
+      * [ConcurrentHashMap vs Synchronized HashMap](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#concurrenthashmap-vs-synchronized-hashmap)
     * [HashSet class](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#hashset-class)
     * [TreeMap](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#treemap)
     * [TreeSet](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#treeset)
