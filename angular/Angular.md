@@ -10,11 +10,19 @@ A single-page application is an app that works inside a browser and does not req
 
 Pros of the Single-Page Application
 -----------
-
+- SPA is fast, as most resources (HTML+CSS+Scripts) are only loaded once throughout the lifespan of application. Only data is transmitted back and forth.
+- The development is simplified and streamlined. There is no need to write code to render pages on the server. It is much easier to get started because you can usually kick off development from a file file://URI, without using any server at all.
+- SPAs are easy to debug with Chrome, as you can monitor network operations, investigate page elements and data associated with it.
+- It’s easier to make a mobile application because the developer can reuse the same backend code for web application and native mobile application.
+- SPA can cache any local storage effectively. An application sends only one request, store all data, then it can use this data and works even offline.
 
 Cons of the Single-Page Application
 -----------
-
+- It is very tricky and not an easy task to make SEO optimization of a Single-Page Application. Its content is loaded by AJAX (Asynchronous JavaScript and XML) — a method of exchanging data and updating in the application without refreshing the page.
+- It is slow to download because heavy client frameworks are required to be loaded to the client.
+- It requires JavaScript to be present and enabled. If any user disables JavaScript in his or her browser, it won’t be possible to present application and its actions in a correct way.
+- Compared to the “traditional” application, SPA is less secure. Due to Cross-Site Scripting (XSS), it enables attackers to inject client-side scripts into web application by other users.
+- Memory leak in JavaScript can even cause powerful system to slow down
 
 
 Multiple-Page application(MPA)
@@ -28,11 +36,14 @@ we don’t have to worry that big and complex applications have to transfer a lo
 
 Pros of the Multiple-Page Application
 -----------
-
+- It’s the perfect approach for users who need a visual map of where to go in the application. Solid, few level menu navigation is an essential part of traditional Multi-Page Application.
+- Very good and easy for proper SEO management. It gives better chances to rank for different keywords since an application can be optimized for one keyword per page.
 
 Cons of the multiple-page application
 -----------
-
+- There is no option to use the same backend with mobile applications.
+- Frontend and backend development are tightly coupled.
+- The development becomes quite complex. The developer needs to use frameworks for either client and server side. This results in the longer time of application development.
 
 AngularJS vs Angular
 -----------
