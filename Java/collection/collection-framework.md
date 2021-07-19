@@ -651,9 +651,6 @@ hashmap size: 2
 ```
 Here, both e1 and e2 are equals as we are comparing the contents of them in our `equals()` method, so their hashCodes must be same, which they are. So value of e1 which was 100 got replaced by 200, and size of hashmap is 2.
 
-You can be asked to write the `equals()` and `hashCode()` methods implementation by hand also, so you should pay attention to how these are implemented.
-
-
 How to make a HashMap synchronized?
 
 Collections.synchronizedMap(map);
@@ -673,6 +670,22 @@ Some points to remember:
 - put() method acquires lock on the segment
 - get() method returns the most recently updated value
 - iterators returned by `ConcurrentHashMap` are fail-safe and never throw `ConcurrentModificationException`
+
+ConcurrentHashMap vs Synchronized HashMap
+------------------
+
+**Synchronized HashMap**：
+- Each method is synchronized using an object level lock. So the get and put methods on synchMap acquire a lock.
+- Locking the entire collection is a performance overhead. While one thread holds on to the lock, no other thread can use the collection.
+
+**ConcurrentHashMap** was introduced in JDK 5.
+- There is no locking at the object level,The locking is at a much finer granularity. For a ConcurrentHashMap, the locks may be at a hashmap bucket level.
+- The effect of lower level locking is that you can have concurrent readers and writers which is not possible for synchronized collections. This leads to much more scalability.
+- ConcurrentHashMap does not throw a ConcurrentModificationException if one thread tries to modify it while another is iterating over it.
+
+
+
+
 
 HashSet class
 --------------
