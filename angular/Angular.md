@@ -1,6 +1,39 @@
 What is Angular?
 =================
 
+Single-page application(SPA) vs. multiple-page application(MPA)
+-----------
+
+Single-Page Application
+-----------
+A single-page application is an app that works inside a browser and does not require page reloading during use. You are using this type of applications every day. These are, for instance: Gmail, Google Maps, Facebook or GitHub.
+
+Pros of the Single-Page Application
+-----------
+
+
+Cons of the Single-Page Application
+-----------
+
+
+
+Multiple-Page application(MPA)
+-----------
+
+Multiple-page applications work in a `traditional` way. Every change eg. display the data or submit data back to server requests rendering a new page from the server in the browser. These applications are large, bigger than SPAs because they need to be. Due to the amount of content, these applications have many levels of UI. 
+
+Luckily, it’s not a problem anymore. Thanks to AJAX, 
+we don’t have to worry that big and complex applications have to transfer a lot of data between server and browser. That solution improves and it allows to refresh only particular parts of the application. On the other hand, it adds more complexity and it is more difficult to develop than a single-page application.
+
+
+Pros of the Multiple-Page Application
+-----------
+
+
+Cons of the multiple-page application
+-----------
+
+
 AngularJS vs Angular
 -----------
 
