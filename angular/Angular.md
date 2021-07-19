@@ -24,7 +24,6 @@ Cons of the Single-Page Application
 - Compared to the “traditional” application, SPA is less secure. Due to Cross-Site Scripting (XSS), it enables attackers to inject client-side scripts into web application by other users.
 - Memory leak in JavaScript can even cause powerful system to slow down
 
-
 Multiple-Page application(MPA)
 -----------
 
