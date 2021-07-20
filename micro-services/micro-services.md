@@ -17,6 +17,24 @@ What is Micro Service?
  <img src="./images-ms/Beehive-Representation-Microservices.png" width="400" border="2" />
 
 
+
+SOA(Service-oriented architecture) vs Microservices
+-------------------------------------------------
+
+| SOA       | Microservices                         |
+|-----------------|-----------------------------------|
+|  SOA model has a single data storage layer which shared by all of the services in that application.     | Microservices apps mostly dedicate a database or other type of storage to services that need it.                     |
+| Focused on maximizes application service reusability.      |   More focused on decoupling.             |
+| Involves sharing data storage between services      | Each service can have independent data storage.              |
+| Better for large scale integrations      |  Better for small and web-based applications.              |
+| Less flexibility in deployment      | Quick and easy deployment.               |
+|  Uses enterprise service bus (ESB) for communication     |  Communicates through an API layer             |
+|  Less scalable architecture.     |  Highly scalable architecture.              |
+
+
+
+
+
 Advantages of Microservices Architecture
 -----------------
 

@@ -444,6 +444,7 @@ Interview questions and answers
 
 - **Microservices**
   - [Microservices](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md)
+    * [SOA(Service-oriented architecture) vs Microservices](https)
     * [Advantages of Microservices Architecture](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#advantages-of-microservices-architecture)
     * [Disadvantages of Microservices](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#disadvantages-of-microservices)
     * [Challenges of Microservices Architecture](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#challenges-of-microservices-architecture)
