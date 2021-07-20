@@ -601,8 +601,8 @@ Interview questions and answers
 
 
 - **Agile**
-  - [Agile Scrum Ceremonies](https://github.com/sunilsoni/interview-notes/blob/main/agille/agile.md#agile)
-    * [Sprint Planning](https://github.com/sunilsoni/interview-notes/blob/main/agille/agile.md#sprint-planning)
-    * [Daily Scrum](https://github.com/sunilsoni/interview-notes/blob/main/agille/agile.md#daily-scrum)
-    * [Sprint Review](https://github.com/sunilsoni/interview-notes/blob/main/agille/agile.md#sprint-review)
-    * [Sprint Retrospective](https://github.com/sunilsoni/interview-notes/blob/main/agille/agile.md#sprint-retrospective)
+  - [Agile Scrum Ceremonies](https://github.com/sunilsoni/interview-notes/blob/main/agile/agile.md#agile)
+    * [Sprint Planning](https://github.com/sunilsoni/interview-notes/blob/main/agile/agile.md#sprint-planning)
+    * [Daily Scrum](https://github.com/sunilsoni/interview-notes/blob/main/agile/agile.md#daily-scrum)
+    * [Sprint Review](https://github.com/sunilsoni/interview-notes/blob/main/agile/agile.md#sprint-review)
+    * [Sprint Retrospective](https://github.com/sunilsoni/interview-notes/blob/main/agile/agile.md#sprint-retrospective)
