@@ -92,3 +92,4 @@ Here in ShapeService class, it is autowring the shape Rectangle in two ways.
 For more information:
 
 1. [Spring – @Autowired](https://javabydeveloper.com/tutorial-on-spring-autowired/)
+2. [Core Spring Framework Annotations](https://medium.com/javarevisited/core-spring-framework-annotations-300493ba85da)
