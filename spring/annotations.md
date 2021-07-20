@@ -8,7 +8,7 @@ Annotations
 
 | Key       | @Inject                         |@Autowired                       |
 |-----------------|-----------------------------------|-----------------|
-|  Basic     | It is part of Java CDI  |  It is part of Spring framework  |
+|  Basic     | It is part of Java CDI(Contexts and Dependency Injection)   |  It is part of Spring framework  |
 |  Required   |  It has no required attribute    |  It has required attribute   |
 |  Default Scope   |    Default scope of the autowired beans is Singleton    | Default scope of the inject beans is prototype  |
 |  Ambiguity  |  In case of ambiguity in beans for injection then @Named qualifier should be added in your code.  |   In case of ambiguity in beans for injection then @Qualifer  qualifier should be added in your code. |

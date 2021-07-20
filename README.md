@@ -216,7 +216,7 @@ Interview questions and answers
       * [timeout](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#isolation)
   
 - **Spring Annotations**
-  - [@Inject vs @Autowired](https)
+  - [@Inject vs @Autowired](https://github.com/sunilsoni/interview-notes/blob/main/spring/annotations.md#inject-vs-autowired)
   - [Test](https)
   - [Test](https)
   - [Test](https)
