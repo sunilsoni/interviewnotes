@@ -214,6 +214,21 @@ Interview questions and answers
       * [isolation](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#isolation)
       * [readOnly](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#isolation)
       * [timeout](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#isolation)
+  
+- **Spring Annotations**
+  - [@Inject vs @Autowired](https)
+  - [Test](https)
+  - [Test](https)
+  - [Test](https)
+  - [Test](https)
+  - [Test](https)
+  - [Test](https)
+  - [Test](https)
+  - [Test](https)
+  - [Test](https)
+  - [Test](https)
+  
+
 
 - **Spring MVC**
   - [Spring MVC](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-mvc.md#spring-mvc)
