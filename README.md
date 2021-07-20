@@ -598,3 +598,11 @@ Interview questions and answers
   - [Name any two testing framework that can be integrated with Cucumber?](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#name-any-two-testing-framework-that-can-be-integrated-with-cucumber)
   - [What are the two files required to run a cucumber test?](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#what-are-the-two-files-required-to-run-a-cucumber-test)
   - [Examples Table or Scenario Outline vs Data Table](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#examples-table-or-scenario-outline-vs-data-table)
+
+
+- **Agile**
+  - [Agile Scrum Ceremonies](https)
+    * [Sprint Planning](https)
+    * [Daily Scrum](https)
+    * [Sprint Review](https)
+    * [Sprint Retrospective](https)
