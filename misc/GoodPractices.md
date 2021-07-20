@@ -81,6 +81,7 @@ Versioning is usually done with /v1/, /v2/, etc. added at the start of the API p
 
 
 
+For more information:
 
-
-
+1. [Best practices for REST API design](https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/#h-name-collections-with-plural-nouns)
+2. [REST: Good Practices for API Design](https://medium.com/hashmapinc/rest-good-practices-for-api-design-881439796dc9)
