@@ -30,3 +30,9 @@ Sprint Retrospective
 The Sprint Retrospective is the final scrum ceremony in the sequence that allows the team to look back on the work that was just completed and identify items that could be improved.
 
 The Scrum Master and the Development Team. The Product Owner is an optional attendee. There should be no outside stakeholders involved in the retro.
+
+
+
+For more information:
+
+[The 4 Agile Scrum Ceremonies Explained](https://thedigitalprojectmanager.com/scrum-ceremonies-made-simple/#planning)
