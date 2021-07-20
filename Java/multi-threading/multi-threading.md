@@ -82,7 +82,9 @@ class MyThread implements Runnable {
 }
 ```
 
-- **Difference between Runnable vs Thread**
+Difference between Runnable vs Thread
+--------------------------------------------------------
+
 
 - Implementing Runnable is the preferred way to do it. Here, you’re not really specializing or modifying the thread’s behavior. You’re just giving the thread something to run. That means composition is the better way to go.
 - Java only supports single inheritance, so you can only extend one class.
