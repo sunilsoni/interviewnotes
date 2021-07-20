@@ -113,7 +113,7 @@ Interview questions and answers
     * [Creating a Thread](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#creating-a-thread)
     * [Life Cycle of a Thread](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#life-cycle-of-a-thread)
     * [Creating a Thread](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#creating-a-thread)
-    * [Difference between Runnable vs Thread](https)
+    * [Difference between Runnable vs Thread](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#difference-between-runnable-vs-thread)
     * [synchronized keyword](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#synchronized-keyword)
     * [static synchronization](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#static-synchronization)
     * [What does join() method?](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#q-what-does-join-method)
