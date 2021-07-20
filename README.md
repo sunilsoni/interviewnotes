@@ -609,3 +609,18 @@ Interview questions and answers
     * [Daily Scrum](https://github.com/sunilsoni/interview-notes/blob/main/agile/agile.md#daily-scrum)
     * [Sprint Review](https://github.com/sunilsoni/interview-notes/blob/main/agile/agile.md#sprint-review)
     * [Sprint Retrospective](https://github.com/sunilsoni/interview-notes/blob/main/agile/agile.md#sprint-retrospective)
+
+- **Good Practices**
+  - [Good Practices for REST API Design](https)
+    * [Accept and respond with JSON](https)
+    * [Use nouns instead of verbs in endpoint paths](https)
+    * [Handle errors gracefully and return standard error codes](https)
+    * [Allow filtering, sorting, and pagination](https)
+    * [Maintain Good Security Practices](https)
+    * [Cache data to improve performance](https)
+    * [Versioning our APIs](https)
+    * [Test](https)
+    * [Test](https)
+    * [Test](https)
+    * [Test](https)
+    * [Test](https)
