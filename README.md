@@ -217,7 +217,7 @@ Interview questions and answers
   
 - **Spring Annotations**
   - [@Inject vs @Autowired](https://github.com/sunilsoni/interview-notes/blob/main/spring/annotations.md#inject-vs-autowired)
-  - [Test](https)
+  - [@Autowired](https)
   - [Test](https)
   - [Test](https)
   - [Test](https)
