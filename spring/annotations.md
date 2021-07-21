@@ -159,3 +159,4 @@ For more information:
 
 1. [Spring – @Autowired](https://javabydeveloper.com/tutorial-on-spring-autowired/)
 2. [Core Spring Framework Annotations](https://medium.com/javarevisited/core-spring-framework-annotations-300493ba85da)
+3. [Spring Component Scanning](https://www.baeldung.com/spring-component-scanning)
