@@ -77,6 +77,72 @@ Here in ShapeService class, it is autowring the shape Rectangle in two ways.
 |  Advantage   | It is a part of Java CDI so it is not dependent on any DI framework. It makes your system loosely coupled. | It makes your application tightly coupled with Spring framework. In the future , if you want to move to another DI framework then you need reconfigure your application.  |
 
 
+Component Scanning
+---------------------
+To do dependency injection, Spring creates a so-called application context.
+
+During startup, Spring instantiates objects and adds them to the application context. Objects in the application context are called “Spring beans” or “components”.
+
+Spring resolves dependencies between Spring beans and injects Spring beans into other Spring beans’ fields or constructors.
+
+The process of searching the classpath for classes that should contribute to the application context is called component scanning.
+
+When developing Spring Boot applications, you need to tell the Spring Framework where to look for Spring components. Using component scan is one method of asking Spring to detect Spring managed components. Spring needs the information to locate and register all the Spring components with the application context when the application starts.
+
+Spring can auto scan, detect, and instantiate components from pre-defined project packages. It can auto scan all classes annotated with the stereotype annotations @Component @Controller, @Service and @Repository
+
+
+@ComponentScan
+---------------
+@ComponentScan tells Spring in which packages you have annotated classes which should be managed by Spring. So, for example, if you have a class annotated with @Controller which is in a package which is not scanned by Spring, you will not be able to use it as Spring controller.
+
+Classes annotated with @Configuration is a new way of configuring Spring using annotations instead of XML files (it's called Java configuration). Spring needs to know which packages contain spring beans, otherwise you would have to register each bean individually. That's what @ComponentScan is used for.
+
+
+@ComponentScan Without Arguments
+---------------
+we use the @ComponentScan annotation along with the @Configuration annotation to specify the packages that we want to be scanned. @ComponentScan without arguments tells Spring to scan the current package and all of its sub-packages.
+```java
+@Configuration
+@ComponentScan
+public class DemoAppConfig {
+    //...
+}
+```
+
+@ComponentScan With Arguments
+---------------
+```java
+@Configuration
+@ComponentScan(basePackages = {"basic.ioc.autowire", "basic.ioc.setter"})
+public class AutowireBeanConfig {
+    //other configs
+}
+```
+
+@ComponentScan with Exclusions
+---------------
+
+Use a filter,with the pattern for the classes to exclude:
+
+```java
+    @Configuration
+@ComponentScan(basePackages = "com.demo",
+        includeFilters = @Filter(type = FilterType.REGEX, pattern = ".*Dao"),
+        excludeFilters = @Filter(Repository.class))
+public class AppConfig {
+        ...
+}
+```
+
+@ComponentScan in a Spring-Boot application
+---------------
+Spring-Boot application, we don’t need to specify the @Configuration annotation unless we want more control over the classpath scanning. This is because of the @SpringBootApplication , which is already a combination of below listed three annotations.
+
+- @Configuration
+- @EnableAutoConfiguration
+- @ComponentScan
+
 
 
 
