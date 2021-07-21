@@ -182,6 +182,12 @@ Interview questions and answers
      * [FibonacciSeries](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/misc/FibonacciSeries.java)
      * [BalancedBracketsUsingString](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/misc/BalancedBracketsUsingString.java)
      * [BalancedBracketsUsingDeque](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/misc/BalancedBracketsUsingDeque.java)
+     * [Anagrams](https://github.com/sunilsoni/interview-notes-code/tree/master/src/main/java/com/interview/notes/code/anagram)
+       * [Anagrams](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/anagram/Anagrams.java)
+       * [ValidAnagram](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/anagram/ValidAnagram.java)
+       * [PrintAnagramTogether](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/anagram/PrintAnagramTogether.java)
+       * [AnagramOfFirstAsSubstring](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/anagram/AnagramOfFirstAsSubstring.java)
+       * [GroupAnagramsTogether](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/anagram/GroupAnagramsTogether.java)
      * [Test](https)
   
 - **Spring**
