@@ -227,10 +227,10 @@ Interview questions and answers
     - [@ComponentScan With Arguments](https://github.com/sunilsoni/interview-notes/blob/main/spring/annotations.md#componentscan-with-arguments)
     - [@ComponentScan with Exclusions](https://github.com/sunilsoni/interview-notes/blob/main/spring/annotations.md#componentscan-with-exclusions)
     - [@ComponentScan in a Spring-Boot application](https://github.com/sunilsoni/interview-notes/blob/main/spring/annotations.md#componentscan-in-a-spring-boot-application)
-  - [Difference between @Component, @Repository & @Service annotations?](https)
-    - [@Repository](https)
-    - [@Service](https)
-    - [@Controller](https)
+  - [Difference between @Component, @Repository & @Service annotations?](https://github.com/sunilsoni/interview-notes/blob/main/spring/annotations.md#difference-between-component-repository--service-annotations)
+    - [@Repository](https://github.com/sunilsoni/interview-notes/blob/main/spring/annotations.md#repository)
+    - [@Service](https://github.com/sunilsoni/interview-notes/blob/main/spring/annotations.md#service)
+    - [@Controller](https://github.com/sunilsoni/interview-notes/blob/main/spring/annotations.md#controller)
     - [Test](https)
   
 
