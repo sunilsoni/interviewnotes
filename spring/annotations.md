@@ -145,13 +145,42 @@ Spring-Boot application, we don’t need to specify the @Configuration annotatio
 
 
 
+Difference between @Component, @Repository & @Service annotations?
+---------------
 
+From [Spring Documentation](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-stereotype-annotations):
 
+Spring provides  stereotype annotations: @Component, @Service, and @Controller. @Component is a generic stereotype for any Spring-managed component. @Repository, @Service, and @Controller are specializations of @Component for more specific use cases (in the persistence, service, and presentation layers, respectively). Therefore, you can annotate your component classes with @Component, but, by annotating them with @Repository, @Service, or @Controller instead, your classes are more properly suited for processing by tools or associating with aspects.
 
+@Repository
+-----------
+stereotype for persistence layer
 
+@Repository’s job is to catch persistence-specific exceptions and re-throw them as one of Spring’s unified unchecked exceptions.
 
+For this, Spring provides `PersistenceExceptionTranslationPostProcessor`, which we are required to add in our application context (already included if we're using Spring Boot):
+```java
+<bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
+```
+This bean post processor adds an advisor to any bean that’s annotated with @Repository.
 
+@Service
+---------
+stereotype for service layer
 
+We mark beans with @Service to indicate that they're holding the business logic. Besides being used in the service layer, there isn't any other special use for this annotation.
+
+@Controller
+-----------
+stereotype for presentation layer (spring-mvc)
+
+Instead of using @Component on a controller class in Spring MVC, we use @Controller, which is more readable and appropriate.
+
+By using that annotation we do two things, first, we declare that this class is a Spring bean and should be created and maintained by Spring ApplicationContext, but also we indicate that its a controller in MVC setup. This latter property is used by web-specific tools and functionalities.
+
+For example, DispatcherServlet will look for @RequestMapping on classes that are annotated using @Controller but not with @Component.
+
+This means @Component and @Controller are the same with respect to bean creation and dependency injection but later is a specialized form of former. Even if you replace @Controller annotation with @Compoenent, Spring can automatically detect and register the controller class but it may not work as you expect with respect to request mapping.
 
 
 
