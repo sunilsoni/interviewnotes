@@ -192,6 +192,7 @@ public interface Predicate<T> {
 ```
 
 
+
 Example :
 ```java
 public class PredicateExample {

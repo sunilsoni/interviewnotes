@@ -160,6 +160,7 @@ To use this component, you write the  in a template:
 
 When Angular renders this component, the resulting DOM looks like this:
 
+
 ```typescript
 <hello-world >
 <h2>Hello
