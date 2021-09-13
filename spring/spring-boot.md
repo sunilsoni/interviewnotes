@@ -33,6 +33,24 @@ One more example, when we add the `spring-boot-starter-web` dependency, it will 
 
 Not only does the `spring-boot-starter-web` add all these libraries but it also configures the commonly registered beans like DispatcherServlet, ResourceHandlers, MessageSource, etc. with sensible defaults.
 
+Spring Boot comes with over 40 different starter modules, which provide ready-to-use integration libraries for many different frameworks, such as database connections that are both relational and NoSQL, web services, social network integration, monitoring libraries, logging, template rendering, and so on.
+
+|Starter	                                |Description                           |
+|-------------------------------------------|-------------------------------------------|
+| spring-boot-starter	  | This is the core Spring Boot starter that provides you with all the foundational functionalities. It is depended upon by all other starters, so there is no need to declare it explicitly.                 |
+| spring-boot-starter-actuator	    | This starter provides you with a functionality to monitor, manage an application, and audit it. |
+| spring-boot-starter-jdbc	              |   This starter provides you with a support to connect and use JDBC databases, connection pools, and so on.          |
+| spring-boot-starter-data-jpa             | The JPA starter provides you with needed libraries in order to use Java Persistence API such as Hibernate, and others.               |
+| spring-boot-starter-data-*             |  Collection of data-* family starter components providing support for a number of data stores such as MongoDB, Data-Rest, or Solr.              |
+|spring-boot-starter-security              |  This brings in all the needed dependencies for spring-security.              |
+|spring-boot-starter-social-*              |This provides you with integration with Facebook, Twitter, and LinkedIn.                |
+| spring-boot-starter-test             | This is a starter that contains the dependencies for spring-test and assorted testing frameworks such as JUnit and Mockito among others.|
+| spring-boot-starter-web             | This gives you all the needed dependencies for web application development. It can be complimented with spring-boot-starter-hateoas, spring-boot-starter-websocket, spring-boot-starter-mobile, or spring-boot-starter-ws, and assorted template rendering starters such as sping-boot-starter-thymeleaf or spring-boot-starter-mustache.               |
+
+
+
+
+
 Spring Boot Autoconfiguration
 --------------------
 Spring Boot addresses the problem that Spring applications need complex configuration by eliminating the need to manually set up the boilerplate configuration.
