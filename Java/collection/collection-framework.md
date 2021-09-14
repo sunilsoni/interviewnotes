@@ -1241,3 +1241,4 @@ For more information:
 1. [Java ArrayList Tutorial with Examples](https://www.callicoder.com/java-arraylist/)
 2. [Guide to the Java ArrayList](https://www.baeldung.com/java-arraylist)
 3. [How HashMap Works Internally in Java](https://www.netjstech.com/2015/05/how-hashmap-internally-works-in-java.html)
+4. [Java 8 Collectors toMap with Examples](https://javadevcentral.com/java-8-collectors-tomap-with-examples)
