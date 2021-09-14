@@ -93,6 +93,7 @@ Interview questions and answers
       * [Sorting an ArrayList](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#sorting-an-arraylist)
     * [HashMap](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#hashmap)
       * [HashMap Internal working](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#hashmap-internal-working)
+      * [Sort Map By Value Example](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/datastructure/Map/SortMapByValueExample.java)
       * [How put() method of HashMap works internally](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#how-put-method-of-hashmap-works-internally)
       * [How  HashMap get() method works internally](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#how--hashmap-get-method-works-internally)
       * [When null Key is inserted in a HashMap](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#when-null-key-is-inserted-in-a-hashmap)

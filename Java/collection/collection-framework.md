@@ -143,6 +143,8 @@ Objects are stored internally in `table` array of the HashMap class.
 
 <img src="../images/hashMap-internal.png" width="700" border="2" />
 
+
+
 How put() method of HashMap works internally
 -----------------------------------
 There are 3 steps in the internal implementation of HashMap put() method-
