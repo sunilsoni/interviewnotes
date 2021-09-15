@@ -1832,6 +1832,14 @@ Volatile keyword
 9. Java volatile keyword doesn't mean atomic, its common misconception that after declaring volatile ++ will be atomic, to make the operation atomic you still need to ensure exclusive access using synchronized method or block in Java.
 10. If a variable is not shared between multiple threads, you don't need to use volatile keyword with that variable.
 
+synchronized vs volatile
+---------
+1. The volatile keyword in Java is a field modifier while synchronized modifies code blocks and methods.
+2. Synchronized obtains and releases the lock on monitor’s Java volatile keyword doesn't require that.
+3. Threads in Java can be blocked for waiting for any monitor in case of synchronized, that is not the case with the volatile keyword in Java.
+4. Synchronized method affects performance more than a volatile keyword in Java.
+5. Since volatile keyword in Java only synchronizes the value of one variable between Thread memory and "main" memory while synchronized synchronizes the value of all variable between thread memory and "main" memory and locks and releases a monitor to boot. Due to this reason synchronized keyword in Java is likely to have more overhead than volatile.
+6. You can not synchronize on the null object but your volatile variable in Java could be null.
 
 
 For more information:
