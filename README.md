@@ -82,7 +82,7 @@ Interview questions and answers
     * [Instance variable and a Static variable](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#instance-variable-and-a-static-variable)
     * [Local variables vs Instance and static variables](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#local-variables-vs-instance-and-static-variables)
     * [Access Modifiers](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#access-modifiers)
-    * [Volatile keyword](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#volatile)
+    * [Volatile keyword](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#volatile-keyword)
     * [Test](https)
     
   - [Collection Framework](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#collection-framework)
