@@ -1819,7 +1819,7 @@ Access modifiers
 | private       | Constructors, inner classes,methods and field variables, | Accessed only within the class in which they are declared |
 | No modifier: (Package by default). | Outer classes, inner classes, interfaces, constructors, methods, and field variables                             | Accessed only from within the package in which they are declared.                      |
 
-~~Volatile~~
+Volatile keyword
 ---------
 1. The volatile keyword is only applicable to a variable and using a volatile keyword with class and method is illegal.
 2. volatile keyword in Java guarantees that the value of the volatile variable will always be read from main memory and not from Thread's local cache.
