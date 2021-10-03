@@ -497,8 +497,7 @@ Interview questions and answers
       * [Can a refreshToken be never expiring? How to make refreshToken life long valid?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/Security%20in%20Microservices.md#can-a-refreshtoken-be-never-expiring-how-to-make-refreshtoken-life-long-valid)
       * [Generate AccessToken for Client Credentials.](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/Security%20in%20Microservices.md#generate-accesstoken-for-client-credentials)
       * [Why there is no RefreshToken support in Oauth2 Client Credentials workflow?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/Security%20in%20Microservices.md#why-there-is-no-refreshtoken-support-in-oauth2-client-credentials-workflow)
-      * [Security in inter-service communication](https)
-      * [Test](https)
+      * [Security in inter-service communication](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/Security%20in%20Microservices.md#security-in-inter-service-communication)
 
 - **API Gateway**
   - [API Gateway](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/API-Gateway.md#api-gateway)

@@ -363,3 +363,83 @@ On the other hand, Client Credentials workflow is always meant for machine to ma
 
 Security in inter-service communication
 -------
+
+There could be two usecases for inter service communication -
+1. Calling one service from another on behalf of user request.
+2. Using Service Client for internal service to service communication.
+   
+**Token Relay**
+
+In first case, we shall propagate the security context of user from one service to another.
+
+We can configure OAuth2RestTemplate to relay user token from service to service.
+
+This approach shall be used when a client (often a microservice) want to relay token to downstream service in order to access a protected resource on behalf of user.
+
+A Load Balanced OAuth2RestTemplate that Relays Token.
+
+```java
+@LoadBalanced
+@Bean
+@Autowired
+public OAuth2RestTemplate loadBalancedOauth2RestTemplate(OAuth2ClientContext oauth2ClientCont
+    return new OAuth2RestTemplate(details, oauth2ClientContext);
+}
+```
+
+Using OAuth2RestTemplate to make remote protected calls in another microservice..
+
+```java
+@Service
+public class RemoteMicroService {
+   @Autowired
+   private OAuth2RestTemplate oAuth2RestTemplate;
+    //Use this oAuth2RestTemplate to make protected remote calls with user's token relay.
+```
+
+
+**Client Credentials**
+
+In second case, we shall use Client Credentials issued by OAuth2 workflow for securing service to service communication. Here user’s security context is not propogated to the downstream server, instead the client’s credentials are used to secure the communication.
+
+<img src="./images-ms/Client Crendtials Sequence Diagram.png" width="800" border="2" />
+
+This approach shall mostly be used for scheduled jobs where we are not making remote service calls on behalf of end user.
+
+Creating a RestTemplate based on Client Credentials.
+
+```java
+@Configuration
+public class RestTemplateConfig {
+   //Client Credentials based oAuth2 RestTemplate for Service Client Inter Microservice Communic
+   @Bean(name = "oauthRestTemplate")
+   public RestTemplate oAuthRestTemplate() {
+      ClientCredentialsResourceDetails resourceDetails = new ClientCredentialsResourceDetails()
+      resourceDetails.setId("<Id>");
+      resourceDetails.setClientId("<clientId>");
+      resourceDetails.setClientSecret("<clientsecret>");
+// resourceDetails.setAccessTokenUri("<BaseUrl>/uaa/oauth/token");
+      resourceDetails.setScope(Collections.singletonList("openid"));
+      return new OAuth2RestTemplate(resourceDetails, new DefaultOAuth2ClientContext());
+   }
+```
+This restTemplate can now be used for internal service communication, for example -
+```java
+@Service
+public class ProfileImageSyncService {
+   private static final Logger logger = LoggerFactory.getLogger(ProfileImageSyncService.class);
+   @Autowired
+   @Qualifier("oauthRestTemplate")
+   private RestTemplate restTemplate;
+   public void doSomeRemoteWork() {
+      ResponseEntity<String> responseEntity = restTemplate.exchange(targetUrl, HttpMethod.GET, nu
+      ...Do something withr response.
+      ...
+    }
+
+```
+
+`Warning`
+We shall never use ResourceOwnerPasswordCredentials for internal service communication, thats a anti-pattern. Client Credentials should always be preferred when one service wants to talk to another service based on some scheduled job (not on behalf of user request), otherwise user’s security token should be relayed to the next service if request is initiated by end user.
+
+
