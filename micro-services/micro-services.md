@@ -235,6 +235,49 @@ public String handleMethod(){
 
 If the GET service is getting failed, then the fallback method will be executed.
 
+Versioning of microservices
+-----
+There are different ways to handle the versioning of your REST api to allow older consumers still consume the older endpoints. The ideal practice is that any non backward compatible change in a given REST endpoint shall lead to a new versioned endpoint.
+
+Different mechanisms of versioning are:
+- Add version in the URL itself
+- Add version in API request header
+Most common approach in versioning is the URL versioning itself. A versioned URL looks like the following:
+
+**Versioned URL**
+```log
+https://<host>:<port>/api/v1/... https://<host>:<port>/api/v2/...
+```
+As a API developer we must ensure that only backward compatible changes are accommodated in a single version of URL. Consumer-Driven-Tests can help identify potential issues with API upgrades at an early stage.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 For more information:
 1. [Top 50 Microservices Interview Questions You Must Prepare In 2020](https://www.edureka.co/blog/interview-questions/microservices-interview-questions/)

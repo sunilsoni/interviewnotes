@@ -564,6 +564,58 @@ The actuator exposes the endpoints like:
 
 
 
+Running Spring boot app at different port on server startup.
+-----
+**Why do we need that?**
+If we want to run multiple instances of single app on same server, then we need to assign a different port at runtime. To solve this problem we need to choose random available port at app startup. Since the app will register itself with eureka service registry, other apps can still discover this service through service registry.
+
+Spring boot provides a convenient class to determine if a port is available or not.
+
+**Assigning a random port in custom port range**
+
+Utility class that search available port in custom range.
+
+```java
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.util.SocketUtils;
+import org.springframework.util.StringUtils;
+public class SpringBootUtil {
+    final static Logger log = LoggerFactory.getLogger(SpringBootUtil.class);
+    public static void setRandomPort(int minPort, int maxPort) {
+    try {
+        String userDefinedPort = System.getProperty("server.port", System.getenv("SERVER_PORT
+        if(StringUtils.isEmpty(userDefinedPort)) {
+            int port = SocketUtils.findAvailableTcpPort(minPort, maxPort);
+            System.setProperty("server.port", String.valueOf(port));
+            log.info("Random Server Port is set to {}.", port);
+        }
+    } catch( IllegalStateException e) {
+        log.warn("No port available in range 5000-5100. Default embedded server configuration
+    }
+    }
+}
+
+```
+
+**Spring Boot Main Application.**
+```java
+public class Application {
+    private static final Logger logger = LoggerFactory.getLogger(Application.class);
+    public static void main(String[] args) {
+        SpringBootUtil.setRandomPort(5000, 5500);
+        ApplicationContext ctx = SpringApplication.run(Application.class, args);
+        logger.info("Application " + ctx.getApplicationName() + " started");
+    }
+...
+}
+
+```
+Calling the custom method to set the random available port within range [5000-5500]  and update the server.port property as well.
+
+**Tip**
+Always use Eureka Registry to fetch the service details e.g. host, port and protocol. Never use hardcoded host, port while communicating with one microservice from another. So you never need to know in advance what port and host a particular service has been deployed.
+
 
 For more information:
 
