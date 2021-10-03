@@ -489,9 +489,9 @@ Interview questions and answers
   - [When not to use Hystrix fallback on a particular microservice?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/API-Gateway.md#when-not-to-use-hystrix-fallback-on-a-particular-microservice)
   - [ignore certain exceptions in Hystrix fallback execution](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/API-Gateway.md#ignore-certain-exceptions-in-hystrix-fallback-execution)
   - [Request Collapsing feature in Hystrix](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/API-Gateway.md#request-collapsing-feature-in-hystrix)
-  - [Test](https)
-  - [Test](https)
-  - [Test](https)
+  - [Circuit Breaker and Hystrix](https)
+  - [Where exactly should I use Circuit Breaker Pattern?](https)
+  - [Where it should not be used?](https)
 - **Kafka**
   - [Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md)
     * [Advantages of Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#advantages-of-kafka)

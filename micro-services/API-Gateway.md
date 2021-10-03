@@ -242,6 +242,29 @@ We can front a HystrixCommand with a request collapser (HystrixCollapser is the 
 More Information.
 https://github.com/Netflix/Hystrix/wiki/How-it-Works#RequestCollapsing
 
+Circuit Breaker and Hystrix
+----
+Circuit Breaker is a fault tolerance design pattern, while Netflix’s Hystrix library provides an implementation for the circuit breaker pattern. We can easily apply circuit breakers to potentially-failing method calls (in JVM or over the network) using the Netflix Hystrix fault tolerance library.
+
+
+Where exactly should I use Circuit Breaker Pattern?
+----
+
+At all places on server side where we are making a service to service call, for example 
+1. API Gateway 
+2. Aggregator Services 
+3. Web Front that calls multiple microservices to render a single page
+All those places where remote calls can potentially fail are good candidate for using Circuit Breaker Pattern.
+
+Where it should not be used?
+----
+Lets say, you are calling a REST endpoint directly from a mobile client, and there is no inter-service calls involved in this case, except at API Gateway. So there is no need for the circuit breaker except at API gateway level. Android client should be designed to gracefully handle service failures in this case.
+
+
+
+
+
+
 
 
 
