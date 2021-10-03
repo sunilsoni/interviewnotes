@@ -564,7 +564,7 @@ The actuator exposes the endpoints like:
 
 
 
-Running Spring boot app at different port on server startup.
+Running Spring boot app at different port on server startup
 -----
 **Why do we need that?**
 If we want to run multiple instances of single app on same server, then we need to assign a different port at runtime. To solve this problem we need to choose random available port at app startup. Since the app will register itself with eureka service registry, other apps can still discover this service through service registry.

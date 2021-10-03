@@ -269,6 +269,7 @@ Interview questions and answers
 - **Spring Boot**
   - [Spring Boot](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#spring-boot)
   - [Spring Boot Primary Goals](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#spring-boot-primary-goals)
+  - [Running Spring boot app at different port on server startup](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#running-spring-boot-app-at-different-port-on-server-startup)
   - [Key Spring Boot features](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#key-spring-boot-features)
   - [Spring Boot Starters ](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#spring-boot-starters)
   - [Spring Boot Autoconfiguration ](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#spring-boot-autoconfiguration)
@@ -473,7 +474,7 @@ Interview questions and answers
     * [Zuul](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#zuul)
     * [Zipkin](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#zipkin)
     * [Distributed transactions within a microservices architecture](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#distributed-transactions-within-a-microservices-architecture)
-    * [Versioning of microservices](https)
+    * [Versioning of microservices](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#versioning-of-microservices)
 
 - **API Gateway**
   - [API Gateway](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/API-Gateway.md#api-gateway)
