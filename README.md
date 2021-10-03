@@ -479,6 +479,9 @@ Interview questions and answers
     * [What are best practices for microservices architecture?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#what-are-best-practices-for-microservices-architecture)
     * [Microservices caching](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#microservices-caching)
     * [SOLID (solid design principles)](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#solid-solid-design-principles)
+    * [Security in Microservices](https)
+      * [Why Basic Authentication is not suitable in Microservices Context?](https)
+      * [Security in Microservices](https)
 
 - **API Gateway**
   - [API Gateway](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/API-Gateway.md#api-gateway)
