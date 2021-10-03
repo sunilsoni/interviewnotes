@@ -605,7 +605,7 @@ Interview questions and answers
   
 - **Swagger**
   - [Swagger](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#swagger)
-  - [Swagger API](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#swagger-api)
+  - [Integrate Swagger into your microservices](https)
   - [Swagger annotations](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#swagger-annotations)
     - [@Api](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#swagger-annotations)
     - [@ApiOperation](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#swagger-annotations)
