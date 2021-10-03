@@ -476,7 +476,7 @@ Interview questions and answers
     * [Distributed transactions within a microservices architecture](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#distributed-transactions-within-a-microservices-architecture)
     * [Versioning of microservices](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#versioning-of-microservices)
     * [How to send custom business errors or exceptions from a RESTful microservice to client application?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#how-to-send-custom-business-errors-or-exceptions-from-a-restful-microservice-to-client-application)
-    * [What are best practices for microservices architecture?](https)
+    * [What are best practices for microservices architecture?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#what-are-best-practices-for-microservices-architecture)
 
 - **API Gateway**
   - [API Gateway](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/API-Gateway.md#api-gateway)
