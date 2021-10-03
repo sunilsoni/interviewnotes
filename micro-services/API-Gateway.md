@@ -242,7 +242,7 @@ We can front a HystrixCommand with a request collapser (HystrixCollapser is the 
 More Information.
 https://github.com/Netflix/Hystrix/wiki/How-it-Works#RequestCollapsing
 
-Circuit Breaker and Hystrix
+Circuit Breaker vs Hystrix
 ----
 Circuit Breaker is a fault tolerance design pattern, while Netflix’s Hystrix library provides an implementation for the circuit breaker pattern. We can easily apply circuit breakers to potentially-failing method calls (in JVM or over the network) using the Netflix Hystrix fault tolerance library.
 
