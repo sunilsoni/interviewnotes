@@ -32,7 +32,7 @@ OAuth2.0 is a delegation protocol where the Client (Mobile App or web app) does 
 
 OAuth2 Roles
 -------
- <img src="./images-ms/Four different roles in OAuth 2.0 protocol.png" width="400" border="2" />
+ <img src="./images-ms/Four different roles in OAuth 2.0 protocol.png" width="800" border="2" />
 
 Oauth2 defines four roles.
 1. **Resource Owner** - The person or the application that owns the data to be shared. When resource owner is a person, it is called as an end-user.
