@@ -28,4 +28,28 @@ Why OAuth2?
 7. A client application, often web application, acts on behalf of user, but with user’s approval.
 8. Interoperability with non-browser clients.
 
+OAuth2.0 is a delegation protocol where the Client (Mobile App or web app) does not need to know about the credentials of Resource Owner (end user).
+
+OAuth2 Roles
+-------
+ <img src="./images-ms/Four different roles in OAuth 2.0 protocol.png" width="400" border="2" />
+
+Oauth2 defines four roles.
+1. **Resource Owner** - The person or the application that owns the data to be shared. When resource owner is a person, it is called as an end-user.
+2. **Resource Server** - The application that holds the protected resources. It is usually a microservice.
+3. **Authorization Server** - the application that verifies the identity of the resource owner(users/clients). This server issues access tokens after obtaining the authorization.
+4. **Client** - the application that makes request to Resource Server on behalf of Resource Owner. It could be a mobile app or a web app (like stackoverflow).
+
+
+
+
+
+
+
+
+
+
+
+
+
 

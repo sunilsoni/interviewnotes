@@ -373,14 +373,6 @@ Reference:
 https://medium.zenika.com/solid-microservices-design-dc6a4044a050
 
 
-Security in Microservices
--------
-
-
-
-
-
-
 
 
 
