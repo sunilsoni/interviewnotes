@@ -475,6 +475,16 @@ Interview questions and answers
     * [Hystrix](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#hystrix)
     * [Distributed transactions within a microservices architecture](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#distributed-transactions-within-a-microservices-architecture)
 
+- **API Gateway**
+  - [Test](https)
+  - [Test](https)
+  - [Test](https)
+  - [Test](https)
+  - [Test](https)
+  - [Test](https)
+  - [Test](https)
+  - [Test](https)
+  - [Test](https)
 - **Kafka**
   - [Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md)
     * [Advantages of Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#advantages-of-kafka)
@@ -638,3 +648,10 @@ Interview questions and answers
     * [Clean Code](https://github.com/sunilsoni/interview-notes/blob/main/misc/GoodPractices.md#code-quality)
     * [Best Practices](https://github.com/sunilsoni/interview-notes/blob/main/misc/GoodPractices.md#code-quality)
     * [Exception Handling](https://github.com/sunilsoni/interview-notes/blob/main/misc/GoodPractices.md#exception-handling)
+  - [Common Java Vulnerabilities](https://github.com/sunilsoni/interview-notes/blob/main/misc/owasp.md#common-java-vulnerabilities)
+    * [Injection Flaws](https://github.com/sunilsoni/interview-notes/blob/main/misc/owasp.md#injection-flaws)
+    * [Cross Site Scripting (XSS)](https://github.com/sunilsoni/interview-notes/blob/main/misc/owasp.md#cross-site-scripting-xss)
+      * [How does XSS work?](https://github.com/sunilsoni/interview-notes/blob/main/misc/owasp.md#how-does-xss-work)
+    * [Cross Site Request Forgery(CSRF)](https://github.com/sunilsoni/interview-notes/blob/main/misc/owasp.md#cross-site-request-forgerycsrf)
+    * [Test](http)
+  
