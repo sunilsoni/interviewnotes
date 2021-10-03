@@ -291,20 +291,50 @@ Now in our Rest Controller, we can create an instance of this ServiceResponse an
 
 `12254` here is the business error code that api client would know how to deal with.
 
+What are best practices for microservices architecture?
+-----
+
+Microservices Architecture can become cumbersome & unmanageable if not done properly. There are best practices that help design a resilient & highly scalable system. The most important ones are -
 
 
+ <img src="./images-ms/Best Practices in Microservices Architecture.png" width="800" border="2" />
 
+**Partition correctly**
+Get to know the domain of your business, thats very very important. Only then you will be
+able to define the bounded context and partition your microservice correctly based on
+business capabilities.
 
+**DevOps culture**
+Typically, everything from continuous integration all the way to continuous delivery and deployment should be automated. Otherwise its a big pain to manage large fleet of microservices.
 
+**Design for stateless operations**
+We never know where a new instance of a particular microservice will be spun up for scaling out or for handling a failure, so maintaining a state inside service instance is a very bad idea.
 
+**Design for failures**
+Failures are inevitable in distributed systems, so we must design our system for handling failures gracefully. failures can be of different types and must be dealt accordingly, for
 
+example -
 
+1. Failure could be transient due to inherent brittle nature of the network, and the next retry may succeed. Such failures must be protected using retry operations.
+2. Failure may be due to a hung service which can have cascading effects on the calling service. Such failures must be protected using Circuit Breaker Patterns. A fallback mechanism can be used to provide degraded functionality in this case.
+3. A single component may fail and affect the health of entire system, bulkhead pattern must be used to prevent entire system from failing.
 
+**Design for versioning**
+We should try to make our services backward compatible, explicit versioning must be used to cater different versions of the RESt endpoints. Design for asynchronous communication b/w services Asynchronous communication should be preferred over synchronous communication in inter microservice communication. One of the biggest advantages of using asynchronous messaging is that the service does not block while waiting for a response from another service.
 
+**Design for eventual consistency**
+Eventual consistency is a consistency model used in distributed computing to achieve high availability that informally guarantees that, if no new updates are made to a given data item, eventually all accesses to that item will return the last updated value.
 
+**Design for idempotent operations**
+Since networks are brittle, we should always design our services to accept repeated calls without any side effects. We can add some unique identifier to each request so that service can ignore the duplicate request sent over the network due to network failure/retry logic.
 
+**Share as little as possible**
+In monolithic applications sharing is considered to be a best practice but thats not the case with Microservices. Sharing results in violation of Bounded Context Principle, so we shall refrain from creating any single unified shared model that works across microservices. For example, if different services need a common Customer model, then we should create one for each microservice with just the required fields for a given bounded context rather than creating a big model class that is shared in all services. The more dependencies we have between services, the harder it is to isolate the service changes, making it difficult to make change in a single service without effecting other service. Also, creating a unified model that works in all services brings complexity and ambiguity to the model itself, making it hard for anyone to understand the model.
 
+In a way are want to violate the DRY principle in microservices architecture when it comes to domain models.
 
+Reference:
+https://blogs.oracle.com/developers/getting-started-with-microservices-part-three
 
 
 
