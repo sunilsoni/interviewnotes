@@ -345,6 +345,34 @@ Reference:
 https://blogs.oracle.com/developers/getting-started-with-microservices-part-three
 
 
+Microservices caching
+------
+
+Caching is a technique of performance improvement for getting query results from a service. It helps minimize the calls to network, database, etc. We can use caching at multiple levels in microservices architecture -
+
+1. **Server Side Caching** - 
+   Distributed caching softwares like Redis/MemCache/etc are used to cache the results of business operations. The cache is distributed so all instances of a microservice can see the values from shared cache. This type of caching is opaque to clients.
+2. **Gateway Cache** - 
+   central API gateway can cache the query results as per business needs and provide an improved performance. This way we can achieve caching for multiple services at one place. Distributed caching software like Redis or Memcache can be used in this case.
+3. **Client Side Caching** - 
+   We can set cache-headers in http response and allow clients to cache the results for pre-defined time. This will drastically reduce load on servers since client will not make repeated calls to same resource. Servers can inform the clients when information is changed, thereby any changes in the query result can also be handled. E-Tags can be used for client side load balancing. If the end client is a microservice itself, then Spring Cache support can be used to cache the results locally.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
