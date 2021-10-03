@@ -44,6 +44,7 @@ OAuth 2.0 grant types (OAuth flows)
 -------
 
 An authorization grant is a credential representing the resource owner’s authorization (to access its protected resources) used by the client to obtain an access token.
+
  <img src="./images-ms/Five Grants in OAuth 2.0 protocol.png" width="800" border="2" />
 
 OAuth2 specification defines four grant types.
