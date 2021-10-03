@@ -359,3 +359,7 @@ Why there is no RefreshToken support in Oauth2 Client Credentials workflow?
 First of all we need to understand why RefreshToken grant type is provided in oauth2 specs. In Resource Owner Credentials workflow, a client (usually a mobile app) accesses protected resources on behalf of end user (resource owner). Now since client does not have access to user’s credentials, refresh token helps getting a new access token by its own, by presenting client’s credentials along with the refresh token to oauth server. This way an end user can be kept logged in to the mobile app for a much longer duration.
 
 On the other hand, Client Credentials workflow is always meant for machine to machine communication that is not on behalf of resource owner (human). Since client will always have access to its own credentials, so it can always present the credentials to oauth server and obtain a new access token after expiry.
+
+
+Security in inter-service communication
+-------
