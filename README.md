@@ -482,7 +482,7 @@ Interview questions and answers
     * [Security in Microservices](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/Security%20in%20Microservices.md#security-in-microservices)
       * [Why Basic Authentication is not suitable in Microservices Context?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/Security%20in%20Microservices.md#why-basic-authentication-is-not-suitable-in-microservices-context)
       * [Why OAuth2?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/Security%20in%20Microservices.md#why-oauth2)
-      * [OAuth2 Roles](https)
+      * [OAuth2 Roles](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/Security%20in%20Microservices.md#oauth2-roles)
       * [Test](https)
 
 - **API Gateway**
