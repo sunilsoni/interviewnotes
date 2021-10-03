@@ -56,6 +56,28 @@ zuul:
     <routename>.retryable: false
 ```
 
+Circuit Breaker
+-------
+Circuit breaker is used to gracefully degrade the functionality when one of the service/method call fails, without cascading the effect that can bring down the entire system.
+
+**The logic of Circuit Breaker is quite simple -.**
+Wrap a protected (mostly remote) call inside a circuit breaker object, which monitors for failures. Once the failures reach a certain threshold, trip the circuit and immediately return the error (or fallback response) without even making a actual remote call, thus giving failing service time to recover.
+
+**How it helps?.**
+If many of the caller threads are being timeout on a failed resource, we may quickly exhaust all our threads and the caller application will also get impacted due to this. Such failure can cascade and bring down the entire system. Circuit breaker does not allow this to happen by tripping off the circuits that are potentially failing. We achieve this faulttolerance at the expense of degraded functionality.
+
+What is difference between using a Circuit Breaker and a naive approach where we try/catch a remote method call and protect for failures?
+-------
+Lets say we want to handle service to service failure gracefully without using Circuit Breaker pattern. The naive approach would be to wrap the inter service REST call in try catch clause. But Circuit Breaker does lot more that try catch can not accomplish -
+
+1. Circuit Breaker does not even try calls once failure threshold is reached, doing so reduces the number of network calls. Also, number of threads consumed in making faulty calls are freed up.
+2. Circuit breaker provides fallback method execution for gracefully degrading the behavior. Try catch approach will not do this out of the box without additional boiler plate code.
+3. Circuit Breaker can be configured to use a limited number of threads for a particular host/API, doing so brings all the benefits of bulkhead design pattern. 
+   
+So instead of wrapping service to service calls with try/catch clause, we must use circuit breaker pattern to make our system resilient to failures.
+
+
+
 Circuit Breaker Pattern
 -------
 
@@ -170,10 +192,55 @@ public String reliable() {
 - Using `@HystrixCommand` annotation, we specify the fallback method to execute in case of exception.
 - fallback method should have same signature (return type) as that of original method. This method provides a graceful fallback behavior while circuit is in open or half-open state.
 
+When not to use Hystrix fallback on a particular microservice?
+----------
+You do not need to wrap each microservice call within hystrix, for example
+1. The api’s that will never be invoked from another microservice shall not be wrapped in hystrix command.
+2. If there is a service to service communication on behalf of a Batch Job (not end user), then probably you can skip hystrix integration depending upon your business needs.
+
+ignore certain exceptions in Hystrix fallback execution
+----------
+`@HystrixCommand` annotation provides attribute ignoreExceptions that can be used to provide list of ignored exceptions.
+
+Hystrix ignore exceptions.
+
+```java
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+import java.net.URI;
+@Service
+public class HystrixService {
+    @Autowired
+    private LoadBalancerClient loadBalancer;
+    @Autowired
+    private RestTemplate restTemplate;
+    @HystrixCommand(fallbackMethod = "reliable", ignoreExceptions = IllegalStateException.class,
+    public String readingList() {
+        ServiceInstance instance = loadBalancer.choose("product-service");
+        URI uri = URI.create("http://product-service/product/recommended");
+        return this.restTemplate.getForObject(uri, String.class);
+    }
+    public String reliable(Throwable e) {
+        return "Cloud Native Java (O'Reilly)";
+    }
+}
+
+```
+In this example, if the actual method call throws IllegalStateException, MissingServletRequestParameterException or TypeMismatchException then hystrix will not trigger the fallback logic (reliable method), instead the actual exception will be wrapped inside HystrixBadRequestException and re-thrown to the caller. It is taken care by javanica library under the hood.
+
+Reference: https://github.com/Netflix/Hystrix/tree/master/hystrix-contrib/hystrix-javanica#errorpropagation
 
 
+Request Collapsing feature in Hystrix
+----
+We can front a HystrixCommand with a request collapser (HystrixCollapser is the abstract parent) with which we can collapse multiple requests into a single back-end dependency call. Using request collapser reduces the number of threads and network connections needed to perform concurrent HystrixCommand executions, that too in an automated manner without forcing developers to coordinate the manual batching of requests.
 
-
+More Information.
+https://github.com/Netflix/Hystrix/wiki/How-it-Works#RequestCollapsing
 
 
 
