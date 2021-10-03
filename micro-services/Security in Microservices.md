@@ -43,40 +43,144 @@ Oauth2 defines four roles.
 OAuth 2.0 grant types (OAuth flows)
 -------
 
+An authorization grant is a credential representing the resource owner’s authorization (to access its protected resources) used by the client to obtain an access token.
+ <img src="./images-ms/Five Grants in OAuth 2.0 protocol.png" width="800" border="2" />
 
+OAuth2 specification defines four grant types.
+1. **Authorization Code** - its mostly used by web applications.
+2. **Resource Owner Password Credentials** - It is used mostly by trusted clients like Android/Mobile Apps.
+3. **Implicit** - Angular JS Applications and Mobile Apps where clientId and clientSecret can not be kept secret.
+4. **Client Credentials** - mostly used for inter service communication by service clients.
+5. **Refresh Token** - Used for generating a refresh token
 
 When shall I use resource owner credentials?
 -------
+When end user is a human, then resource resource owner credentials grant should be used. Important thing to note here is that resource owner’s credentials will be exposed to the client application. Thus it should only be used where client app is trusted application. For example, if you have your own inhouse oauth 2.0 server, then you can use resource owner credentials in your company’s android app.
 
+But if you are integrating with Google or Facebook, then this type of grant is not feasible, because end user will never trust your android app to enter Google’s credentials. Authorization Code grant is better alternative to such scenarios. Using Curl to get Access Token based on password grant_type..
 
+> curl https://clientId:clientSecret@api.host.com/uaa/oauth/token -d grant_type=password -d username=<username> -d password=<password> -d scope=openid
+
+Sample Response.
+
+```json
+{
+   "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI4NTkyM2RkZS0yNDIzLTRiYTMtOGN
+   "expires_in": 2628000,
+   "jti": "9114270c-ea4e-4814-a5b2-3f3e99dc4233",
+   "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI4NTkyM2RkZS0yNDIzLTRiYTMtOG
+   "scope": "read",
+   "token_type": "bearer",
+   "uid": "85923dde-2423-4ba3-8ca9-a833f6b80d83"
+}
+```
 
 
 When shall I use Authorization Code grant?
 -------
+It should be used in applications where clientId and clientSecret can be kept securely i.e. webapps. In this flow the oauth 2.0 client is redirected back to authorization server’s url for authentication purpose.
 
+This grant type is used when you want to integrate with Google/Facebook on your server side webapp.
 
 
 When shall I use client credentials?
 -------
+Client credentials should be used for inter service communication that is not on behalf of users i.e. scheduled batch jobs, reporting jobs etc. Unlike Basic Auth, OAuth 2.0 protocol distinguishes between User (Resource Owner) and Machines (Client) based on Resource Owner Credentials and Client Credentials. Thus if the end consumer of your web services is not a human, then client credentials should be used.
 
-
+Using Client Credentials to generate Access Token.
+> curl service-account-1:service-account-1-secret@localhost:8080/auth/oauth/token -d grant_type=client_credentials
 
 OAuth2 and Microservices
 -------
 
+ <img src="./images-ms/OAuth2 Use in Microservices Context.png" width="800" border="2" />
 
-
+1. Resource Servers are often microservices.
+2. Web App Clients uses Authorization Code Grant.
+3. Browser Clients (single page apps - angular JS, etc) uses Authorization Code Grant or implicit Grant.
+4. Mobile App and non-browser clients uses - password grant.
+5. Service Clients (intra-system) uses - client credentials or relay user tokens depending upon the requirements.
 
 What is JWT?
 -------
+JWT is acronym for JSON Web Token. JWT are an open, industry standard RFC 7519 method for representing claims securely between two parties (even on unsecured networks).
 
+JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and selfcontained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA.
+
+There are two important points here -
+
+1. JWT are compact so they can be sent through a URL, preferrably as a POST paramater or inside HTTP header.
+2. JWT contains all the required data about the user, so there is no need to query the database more than once (once during JWT generation).
+3. Because JWTs can be signed—for example, using public/private key pairs—you can be sure the senders are who they say they are.
+
+**Sources**
+https://tools.ietf.org/html/rfc7519
+https://jwt.io/introduction/
 
 What are use cases for JWT?
 -------
+There are many useful scenarios for leveraging power of JWT 
 
+**Authentication**
+
+Authentication is one of the most common scenario for using JWT, specifically in microservices architecture (but not limited to it). In microservices, oauth2 server generates a JWT at the time of login and all subsequent requests can include the JWT AccessToken as the means for authentication.
+
+Implementing Single Sign On by sharing JWT b/w different applications hosted in
+different domains.
+
+Information Exchange
+
+JWT can be signed, using public/private key pairs, you can be sure that the senders are who they say they are. Hence JWT is a good way of sharing information between two parties. Example usecase could be -
+1. Generating Single Click Action Emails e.g. Activate your account, delete this comment, add this item to favorites, Reset your password, etc. All required information for the action can be put into JWT.
+2. Timed sharing of a file download using a JWT link. Timestamp can be part of claim, so when the server time is past the time coded in JWT, link will automatically expire.
 
 How does JWT looks like?
 -------
+There are 3 parts in every JWT claim - Header, Claim and Signature. These 3 parts are separated by a dot. The entire JWT is encoded in Base64 format.
+
+> JWT = {header}.{payload}.{signature}
+
+A typical JWT is shown here for reference.
+
+**Encoded JSON Web Token**
+Entire JWT is encoded in Base64 format to make it compatibel with HTTP protocol. Encoded JWT looks like the following:
+
+ <img src="./images-ms/Encoded JWT Claim.png" width="800" border="2" />
+
+
+**Decoded JSON Web Token**
+
+**Header** : Header contains algorithm information e.g. HS256 and type e.g. JWT
+
+`Header Part.`
+
+```json
+{
+"alg": "HS256",
+"typ": "JWT"
+}
+```
+**Claim** : claim part has expiry, issuer, user_id, scope, roles, client_id etc. It is encoded as a JSON object. You can add custom attributes to the claim. This is the information that you want to exchange with the third party.
+
+Claim Part.
+```json
+ {
+   "uid": "2ce35360-ef8e-4f69-a8d7-b5d1aec78759",
+   "user_name": "user@mail.com",
+   "scope": ["read"],
+   "exp": 1520017228,
+   "authorities": ["ROLE_USER","ROLE_ADMIN"],
+   "jti": "5b42ca29-8b61-4a3a-8502-53c21e85a117",
+   "client_id": "acme-app"
+}
+```
+
+**Signature** : Signature is typically a one way hash of (header + payload), is calculated using HMAC  : SHA256 algorithm. The secret used for signing the claim should be kept private.  : Pubic/private key can also be used to encrypt the claim instead of using symmetric  : cryptography.
+
+Signature Part
+> HMACSHA256(base64(header) + "." + base64(payload), "secret")
+
+Tip: You can decode and test JWT using https://jwt.io . This is helpful for testing and debugging purpose
 
 
 What is AccessToken and RefreshToken?
