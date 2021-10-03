@@ -599,6 +599,7 @@ Interview questions and answers
     * [git pull origin](https://github.com/sunilsoni/interview-notes/blob/main/devops/git/git.md#git-pull-origin)
     * [git commit a](https://github.com/sunilsoni/interview-notes/blob/main/devops/git/git.md#git-commit-a)
   - [Jenkins](https)
+    * [Continuous delivery](htt)
   - [Kubernetes](https)
   
 - **Swagger**
