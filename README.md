@@ -477,7 +477,13 @@ Interview questions and answers
 
 - **API Gateway**
   - [API Gateway](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/API-Gateway.md#api-gateway)
-  - [Test](https)
+  - [How to retry failed requests at some other available instance using Client Side Load Balancer?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/API-Gateway.md#how-to-retry-failed-requests-at-some-other-available-instance-using-client-side-load-balancer)
+  - [Circuit Breaker Pattern](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/API-Gateway.md#circuit-breaker-pattern)
+  - [Open, Closed and Half-Open states of Circuit Breaker](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/API-Gateway.md#open-closed-and-half-open-states-of-circuit-breaker)
+  - [Use-cases for Circuit Breaker Pattern](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/API-Gateway.md#use-cases-for-circuit-breaker-pattern)
+  - [Benefits of using Circuit Breaker Pattern](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/API-Gateway.md#benefits-of-using-circuit-breaker-pattern)
+  - [What is Hystrix?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/API-Gateway.md#what-is-hystrix)
+  - [Features of Hystrix library](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/API-Gateway.md#features-of-hystrix-library)
   - [Test](https)
   - [Test](https)
   - [Test](https)
