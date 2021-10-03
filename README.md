@@ -478,6 +478,7 @@ Interview questions and answers
     * [How to send custom business errors or exceptions from a RESTful microservice to client application?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#how-to-send-custom-business-errors-or-exceptions-from-a-restful-microservice-to-client-application)
     * [What are best practices for microservices architecture?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#what-are-best-practices-for-microservices-architecture)
     * [Microservices caching](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#microservices-caching)
+    * [SOLID (solid design principles)](https)
 
 - **API Gateway**
   - [API Gateway](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/API-Gateway.md#api-gateway)
@@ -605,7 +606,7 @@ Interview questions and answers
   
 - **Swagger**
   - [Swagger](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#swagger)
-  - [Integrate Swagger into your microservices](https)
+  - [Integrate Swagger into your microservices](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#integrate-swagger-into-your-microservices)
   - [Swagger annotations](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#swagger-annotations)
     - [@Api](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#swagger-annotations)
     - [@ApiOperation](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#swagger-annotations)

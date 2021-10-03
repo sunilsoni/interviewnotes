@@ -357,9 +357,20 @@ Caching is a technique of performance improvement for getting query results from
 3. **Client Side Caching** - 
    We can set cache-headers in http response and allow clients to cache the results for pre-defined time. This will drastically reduce load on servers since client will not make repeated calls to same resource. Servers can inform the clients when information is changed, thereby any changes in the query result can also be handled. E-Tags can be used for client side load balancing. If the end client is a microservice itself, then Spring Cache support can be used to cache the results locally.
 
+SOLID (solid design principles)
+------
 
+SOLID is a mnemonic acronym for five design principles intended to make software designs more understandable, flexible and maintainable. The five design principles are,
+1. **Single responsibility principle** - a class should have only a single responsibility (i.e. changes to only one part of the software’s specification should be able to affect the specification of the class).
+2. **Open/Close Principle** - "software entities … should be open for extension, but closed for modification."
+3. **Liskov substitution principle** - "objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program."
+4. **Interface segregation principle** - "many client-specific interfaces are better than one general-purpose interface."
+5. **Dependency inversion principle** - one should "depend upon abstractions, [not] concretions."
 
+The principles are a subset of many principles promoted by Robert C. Martin.
 
+Reference:
+https://medium.zenika.com/solid-microservices-design-dc6a4044a050
 
 
 
