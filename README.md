@@ -476,7 +476,7 @@ Interview questions and answers
     * [Distributed transactions within a microservices architecture](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#distributed-transactions-within-a-microservices-architecture)
 
 - **API Gateway**
-  - [Test](https)
+  - [API Gateway](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/API-Gateway.md#api-gateway)
   - [Test](https)
   - [Test](https)
   - [Test](https)
