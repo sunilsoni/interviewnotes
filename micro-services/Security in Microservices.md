@@ -40,16 +40,69 @@ Oauth2 defines four roles.
 3. **Authorization Server** - the application that verifies the identity of the resource owner(users/clients). This server issues access tokens after obtaining the authorization.
 4. **Client** - the application that makes request to Resource Server on behalf of Resource Owner. It could be a mobile app or a web app (like stackoverflow).
 
+OAuth 2.0 grant types (OAuth flows)
+-------
+
+
+
+When shall I use resource owner credentials?
+-------
 
 
 
 
+When shall I use Authorization Code grant?
+-------
+
+
+
+When shall I use client credentials?
+-------
+
+
+
+OAuth2 and Microservices
+-------
 
 
 
 
+What is JWT?
+-------
+
+
+What are use cases for JWT?
+-------
+
+
+How does JWT looks like?
+-------
+
+
+What is AccessToken and RefreshToken?
+-------
 
 
 
+
+How to use a RefreshToken to request a new AccessToken?
+-------
+
+
+How to call the protected resource using AccessToken?
+-------
+
+
+Can a refreshToken be never expiring? How to make refreshToken life long valid?
+-------
+
+
+
+Generate AccessToken for Client Credentials.
+-------
+
+
+Why there is no RefreshToken support in Oauth2 Client Credentials workflow?
+-------
 
 
