@@ -16,3 +16,16 @@ for more info.
    https://docs.spring.io/springsecurity/site/docs/4.0.4.RELEASE/apidocs/org/springframework/security/crypto/bcrypt/BCryptPasswordEncoder.html
 5. If we use Basic Auth for a mobile application client, then we might have to store user’s credentials on the device to allow remember me feature. This is quite risky as anyone getting access to device may steal the plain credentials.
 
+Why OAuth2?
+-------
+
+1. Simple for Clients (client is often a microservice itself)
+2. AcessTokens can carry information beyond identity (like clientId, roles, issuer, userid, resourceId, expiry, scope, etc.).
+3. Distributed and Stateless. You can validate the token’s authenticity yourself.
+4. Refresh Token support
+5. Clear distinction between user and machines.
+6. Lightweight
+7. A client application, often web application, acts on behalf of user, but with user’s approval.
+8. Interoperability with non-browser clients.
+
+
