@@ -472,7 +472,6 @@ Interview questions and answers
     * [Eureka Naming Server](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#eureka-naming-server)
     * [Zuul](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#zuul)
     * [Zipkin](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#zipkin)
-    * [Hystrix](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#hystrix)
     * [Distributed transactions within a microservices architecture](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#distributed-transactions-within-a-microservices-architecture)
 
 - **API Gateway**

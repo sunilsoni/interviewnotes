@@ -131,6 +131,50 @@ More Details:
 - https://github.com/Netflix/Hystrix/wiki#principles
 - https://github.com/Netflix/Hystrix/wiki/How-it-Works
 
+How to use Hystrix for fallback execution?
+----------
+Hystrix can be used to specify the fallback method for execution in case actual method call fails. This can be useful for graceful degradation of functionality incase of failure in remote invocation.
+
+1. Add hystrix library to build.gradle.
+```xml
+dependencies {
+    compile('org.springframework.cloud:spring-cloud-starter-hystrix')
+```
+
+2. Enable Circuit Breaker in main application. This is important step
+```java
+@EnableCircuitBreaker
+@RestController
+@SpringBootApplication
+public class ReadingApplication {
+...
+}
+```
+
+Using HystrixCommand fallback method execution.
+
+
+```java
+@HystrixCommand(fallbackMethod = "reliable")
+public String readingList() {
+    URI uri = URI.create("http://localhost:8090/recommended");
+    return this.restTemplate.getForObject(uri, String.class);
+}
+public String reliable() {
+    return "Cached recommended response";
+}
+
+}
+```
+
+- Using `@HystrixCommand` annotation, we specify the fallback method to execute in case of exception.
+- fallback method should have same signature (return type) as that of original method. This method provides a graceful fallback behavior while circuit is in open or half-open state.
+
+
+
+
+
+
 
 
 
