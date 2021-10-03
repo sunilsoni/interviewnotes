@@ -186,17 +186,123 @@ Tip: You can decode and test JWT using https://jwt.io . This is helpful for test
 
 What is AccessToken and RefreshToken?
 -------
+In OAuth2, we receive two kind of tokens against authentication - AccessToken[mandatory] and RefreshToken[optional].
 
+JWT Access token is used to authenticate against protected API resources.
 
+JWT Refresh token is used to acquire new Access Token. Token refresh is handled by the following API endpoint: /api/auth/token. Refresh token should be used when existing accessToken has expired its validity.
+
+Generate Access Token using Curl.
+
+> curl trusted:secret@localhost:8081/oauth/token -d grant_type=password -d username=user -d password=password
+
+Sample AccessToken Response
+```json
+{
+"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIyY2UzNTM2MC1lZjhlLTRmNjktYTh
+"expires_in": 2627999,
+"jti": "5b42ca29-8b61-4a3a-8502-53c21e85a117",
+"refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiIyY2UzNTM2MC1lZjhlLTRmNjktYT
+"scope": "read",
+"token_type": "bearer",
+"uid": "2ce35360-ef8e-4f69-a8d7-b5d1aec78759"
+}
+```
 
 
 How to use a RefreshToken to request a new AccessToken?
 -------
+RefreshToken is used to create a new AccessToken once existing AccessToken is expired. The client requesting this operation must present its own clientId and clientSecret to oauth server to perform this operation.
+
+Using curl to generate a new AccessToken using RefreshToken
+
+Curl can be used at command line to generate the new AccessToken by presenting RefreshToken and client credentials to OAuth Server.
+
+Request.
+> curl <client-id>:<client-secret>@localhost:9999/uaa/oauth/token -d grant_type=refresh_token -d refresh_token=$REFRESH_TOKEN
+
+Response.
+```json
+{
+"access_token":"$ACCESS_TOKEN",
+"token_type":"bearer",
+"refresh_token":"$REFRESH_TOKEN",
+"expires_in":86399,
+"scope":"openid",
+"userId":1,
+"authorities":[ROLE_USER],
+"jti":"cd4ec2ad-ac88-4dd7-b937-18dd22e9410e"
+}
+```
+
+**Using RestTemplate to generate a new AccessToken using RefreshToken**
+
+Android Apps can use RestTemplate to renew their accessToken. The returned accessToken can be saved for subsequent calls to protected resources.
+
+
+```java
+public OAuthTokenDto renewToken(final OAuthTokenDto existingToken) {
+   String requestUrl = authBaseUrl + "oauth/token";
+   MultiValueMap<String, String> map = new LinkedMultiValueMap<>();
+   map.add("grant_type", "refresh_token");
+   map.add("refresh_token", existingToken.getRefresh_token());
+   map.add("scope", "read");
+   HttpAuthentication authHeader = new HttpBasicAuthentication(CLIENT_ID, CLIENT_SECRET);
+   HttpHeaders headers = new HttpHeaders();
+   headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
+   headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
+   headers.setAuthorization(authHeader);
+   HttpEntity<MultiValueMap<String, String>> entity = new HttpEntity<>(map, headers);
+   RestTemplate restTemplate = new RestTemplate();
+   final ResponseEntity<OAuthTokenDto> responseEntity =
+        restTemplate.exchange(requestUrl, HttpMethod.POST, entity, OAuthTokenDto.class);
+   return responseEntity.getBody();
+}
+```
+
 
 
 How to call the protected resource using AccessToken?
 -------
+Protected resources from microservices can be accessed by passing Authorization Bearer token in request headers, using curl the request looks like below - 
 
+> curl -H "Authorization: Bearer <AccessToken>" -v localhost:9090/user/info
+
+JSON Response.
+```json
+{
+"key": "value"
+...
+}
+
+```
+
+The same call can be made using RestTemplate, Retrofit, FeignClient, RestAssured api or POSTMAN interface.
+
+**Calling Protected Resource using RestTemplate**
+
+Create HTTP headers that populates Bearer Token, like shown below:
+
+```java
+public static HttpHeaders createHeaders() {
+   final String access_token = $ACCESS_TOKEN;
+   return new HttpHeaders() {
+         {
+            set("Authorization", "Bearer " + access_token);
+         }
+      };
+      }
+```
+
+ACCESS_TOKEN can be stored on Android Device SharedPreference and pciked up in this method.
+
+And then use the above created Headers in RestTemplate, like shown below-
+
+**RestTemplate Call**.
+```java
+HttpEntity<Object> httpEntity = new HttpEntity<>(ApplicationContext.createHeaders());
+ResponseEntity<String> responseEntity = restTemplate.exchange(url, HttpMethod.GET, httpEntity, String.class, uriVariables);
+```
 
 Can a refreshToken be never expiring? How to make refreshToken life long valid?
 -------
