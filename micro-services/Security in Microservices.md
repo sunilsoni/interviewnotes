@@ -306,14 +306,56 @@ ResponseEntity<String> responseEntity = restTemplate.exchange(url, HttpMethod.GE
 
 Can a refreshToken be never expiring? How to make refreshToken life long valid?
 -------
+We can set the validity for refreshToken to a negative value, zero or Integer.MAX_VALUE to make it never expiring.
 
+```java
+@Bean
+public AuthorizationServerTokenServices tokenServices() throws Exception {
+        DefaultTokenServices tokenServices = new DefaultTokenServices();
+        tokenServices.setTokenStore(tokenStore);
+        tokenServices.setSupportRefreshToken(true);
+        tokenServices.setClientDetailsService(clientDetailsService);
+        tokenServices.setRefreshTokenValiditySeconds(Integer.MAX_VALUE);
+        return tokenServices;
+        }
+```
+**Caution**
 
+It is not a good idea to make refreshToken never expiring due to security concerns. A better approach in this case could be to set reuseRefreshTokens(false) to create a new RefreshToken everytime a new AccessToken is created. This way, client credentials would still be required to generate the new refreshToken.
+
+AWS Cognito only allows 3650 days as the maximum interval for refresh token expiry. The default expiry is set to 30 days, though. AccessToken expiry is set to a fixed value of 1 hour which can not be changed.
 
 Generate AccessToken for Client Credentials.
 -------
+Client Credentials can be used by clients (client applications or microservices, that are not human) for inter service communication.
 
+Request using Curl.
+
+> curl service-account-1:service-account-1-secret@localhost:8080/auth/oauth/token -d grant_type=cli
+
+Token Response.
+
+```json
+{
+"access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXh
+"expires_in": 43199,
+"jti": "da93ce67-a97a-4a66-8778-417518c4aa08",
+"scope": "read write",
+"token_type": "bearer"
+}
+```
+Now this token can be used for making protected endpoint call on resource server.
+
+
+**Using AccessToken to access protected resource.**
+
+> curl -H "Authorization: Bearer $TOKEN" -v http://localhost:8082/api
+
+Where `$TOKEN` is the Access Token.
 
 Why there is no RefreshToken support in Oauth2 Client Credentials workflow?
 -------
 
+First of all we need to understand why RefreshToken grant type is provided in oauth2 specs. In Resource Owner Credentials workflow, a client (usually a mobile app) accesses protected resources on behalf of end user (resource owner). Now since client does not have access to user’s credentials, refresh token helps getting a new access token by its own, by presenting client’s credentials along with the refresh token to oauth server. This way an end user can be kept logged in to the mobile app for a much longer duration.
 
+On the other hand, Client Credentials workflow is always meant for machine to machine communication that is not on behalf of resource owner (human). Since client will always have access to its own credentials, so it can always present the credentials to oauth server and obtain a new access token after expiry.
