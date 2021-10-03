@@ -251,13 +251,45 @@ https://<host>:<port>/api/v1/... https://<host>:<port>/api/v2/...
 As a API developer we must ensure that only backward compatible changes are accommodated in a single version of URL. Consumer-Driven-Tests can help identify potential issues with API upgrades at an early stage.
 
 
+How to send custom business errors or exceptions from a RESTful microservice to client application?
+-----
 
+In RESTful applications, often is not enough to just send the HTTP error codes for representing the business errors. HTTP error codes can tell about the kind of failure but will not be able to point to business error codes. The solution to this is to wrap our service response inside a custom object that can reveal more information about the failure reason, error codes for machine and developers.
 
+The below class is an example showing how we can wrap additional information about the business exception such as errorCode, userMessage, developerMessage, etc. inside a service response.
 
+**Typical Implementation of ServiceResponse Wrapper Class.**
 
+```java
+public class ServiceResponse<T> {
+  T data;
+  boolean success;
+  int errorCode;
+  String moreInfo;
+  String userMessage;
+  String developerMessage;
+  List<String> errors = new ArrayList<>();
+//Getter and setters removed for brevity
+}
+```
 
+Now in our Rest Controller, we can create an instance of this ServiceResponse and send it back to the RestClient.
 
+**Rest Controller that Fetches Order Information.**
+```java
+    ServiceResponse<Order> response = new ServiceResponse<>();
+        Order order = //Get Order from remote microservices
+        if(order!=null) {
+          response.setData(order);
+          response.setSuccess(true);
+        } else {
+          response.setErrorCode(12254);
+          response.setSuccess(false);
+        }
+        return response;
+```
 
+`12254` here is the business error code that api client would know how to deal with.
 
 
 
