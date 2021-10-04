@@ -732,6 +732,28 @@ It is a REST based tool for dynamic service registry. It can be used for registe
 You have a option to choose any one of the above in your spring cloud based distributed application. In this book, we will focus more on the Netflix Eureka Server option.
 
 
+How does Eureka Server work?
+---------
+There are two main components in Eureka project: eureka-server and eureka-client.
+
+**Eureka Server**
+The central server (one per zone) that acts as a service registry. All microservices register with this eureka server during app bootstrap.
+
+**Eureka Client**
+Eureka also comes with a Java-based client component, the eureka-client, which makes interactions with the service much easier. The client also has a built-in load balancer that does basic round-robin load balancing. Each microservice in the distributed ecosystem much include this client to communicate and register with eureka-server.
+
+Typical usecase for Eureka
+
+ <img src="./images-ms/High Level Eureka Architecture.png" width="800" border="2" />
+
+There is usually one eureka server cluster per region (us, asia, europe, australia) which knows only about instances in its region. Services register with Eureka and then send heartbeats to renew their leases every 30 seconds. If the service can not renew their lease for few times, it is taken out of server registry in about 90 seconds. The registration information and the renewals are replicated to all the eureka nodes in the cluster. The clients from any zone can look up the registry information (happens every 30 seconds) to locate their services (which could be in any zone) and make remote calls.
+
+Eureka clients are built to handle the failure of one or more Eureka servers. Since Eureka clients have the registry cache information in them, they can operate reasonably well, even when all of the eureka servers go down.
+
+More Information about eureka: https://github.com/Netflix/eureka/wiki/Eureka-at-a-glance
+
+
+
 
 
 
