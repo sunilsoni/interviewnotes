@@ -668,12 +668,27 @@ Upon startup, Spring Cloud makes an HTTP(S) call to the Spring Cloud Config Serv
 
 application.yml contains the default configuration for the microservice and any configuration retrieved (from cloud config server) during the bootstrap process will override configuration defined in application.yml
 
+As per official Spring Cloud Documentation 
+> A Spring Cloud application operates by creating a "bootstrap" context, which is a parent context for the main application. Out of the box it is responsible for loading configuration properties from the external sources, and also decrypting properties in the local external configuration files.
+
+http://cloud.spring.io/spring-cloud-config/single/spring-cloud-config.html
+
+**Using YAML instead of Properties**
+
+YAML is a superset of JSON format and it is a very convenient format for specifying hierarchical configuration data. To support yaml based configuration in your Spring Boot project, you just need to add the following dependency:
 
 
+build.gradle.
+```xml
+compile('org.springframework.boot:spring-boot-starter')
+```
+
+**Tip**
+It is recommended to use YAML format over conventional properties format because yaml is compact & easy to read.
 
 
-
-
+Netflix Eureka Server : implement service discovery in microservices architecture:
+----------------------
 
 
 
