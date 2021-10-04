@@ -903,15 +903,23 @@ Wiring Normal RestTemplate using @Qualifier.
 private RestTemplate restTemplate;
 
 ```
- 
 
 Use of Eureka for service discovery in Ribbon Load Balancer
 -----------------------------------------------------------
 
-If both Ribbon and Eureka libraries are present on the classpath, Ribbon is automatically configured with Eureka i.e. Server list is populated from Eureka, Ping functionality is delegated to Eureka to check if a server is up. This approach is very convenient in any enterprise grade application.
+If both Ribbon and Eureka libraries are present on the classpath, Ribbon is automatically configured with Eureka i.e.
+Server list is populated from Eureka, Ping functionality is delegated to Eureka to check if a server is up. This
+approach is very convenient in any enterprise grade application.
 
 Can we use Ribbon without eureka?
 ---------------------------------
+
+
+
+
+
+
+
 
 For more information:
 
