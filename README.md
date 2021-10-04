@@ -491,7 +491,8 @@ Interview questions and answers
     * [Netflix Eureka Server : implement service discovery in microservices architecture](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#netflix-eureka-server--implement-service-discovery-in-microservices-architecture)
       * [Netflix Eureka Server](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#netflix-eureka-server)
       * [Consul Server](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#consul-server)
-      * [How does Eureka Server work?](Test)
+      * [How does Eureka Server work?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#how-does-eureka-server-work)
+    * [Externalize configuration in a distributed system](Test)
     * [Test](Test)
 
     * [Security in Microservices](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/Security%20in%20Microservices.md#security-in-microservices)

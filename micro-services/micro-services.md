@@ -753,7 +753,8 @@ Eureka clients are built to handle the failure of one or more Eureka servers. Si
 More Information about eureka: https://github.com/Netflix/eureka/wiki/Eureka-at-a-glance
 
 
-
+Externalize configuration in a distributed system
+------
 
 
 
