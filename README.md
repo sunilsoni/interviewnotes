@@ -499,7 +499,6 @@ Interview questions and answers
     * [Use both LoadBalanced as well as normal RestTemplate object in the single microservice](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#use-both-loadbalanced-as-well-as-normal-resttemplate-object-in-the-single-microservice)
     * [Use of Eureka for service discovery in Ribbon Load Balancer](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#use-of-eureka-for-service-discovery-in-ribbon-load-balancer)
     * [Test](Test)
-    * [Test](Test)
 
     * [Security in Microservices](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/Security%20in%20Microservices.md#security-in-microservices)
       * [Why Basic Authentication is not suitable in Microservices Context?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/Security%20in%20Microservices.md#why-basic-authentication-is-not-suitable-in-microservices-context)
