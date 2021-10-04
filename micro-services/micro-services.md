@@ -904,6 +904,7 @@ private RestTemplate restTemplate;
 
 ```
  
+
 Use of Eureka for service discovery in Ribbon Load Balancer
 -----------------------------------------------------------
 
