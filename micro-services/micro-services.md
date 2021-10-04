@@ -372,6 +372,106 @@ The principles are a subset of many principles promoted by Robert C. Martin.
 Reference:
 https://medium.zenika.com/solid-microservices-design-dc6a4044a050
 
+How frequent a microservice be released into production?
+-------
+There is no definitive answer to this question, there could be a release every ten minutes, every hour or once a week. It all depends on the extent of automation you have at different level of software development lifecycle - build automation, test automation, deployment automation and monitoring. And of course on the business requirements - how small lowrisk changes you care making in a single release.
+
+In an ideal world where boundaries of each microservices are clearly defined (bounded context), and a given service is not affecting other microservices, you can easily achieve multiple deployments a day without major complexity.
+
+**Examples of deployment/release frequency**
+
+Amazon is on record as making changes to production every 11.6 seconds on average in May of 2011.
+    https://www.thoughtworks.com/insights/blog/case-continuous-delivery
+2. Github is well known for its aggressive engineering practices, deploying code into production on an average 60 times a day.
+   https://githubengineering.com/move-fast/
+3. Facebook releases to production twice a day.
+4. Many Google services see releases multiple times a week, and almost everything in
+   Google is developed on mainline.
+5. Etsy Deploys More Than 50 Times a Day.
+   https://www.infoq.com/news/2014/03/etsy-deploy-50-times-a-day
+1. Each microservices must be autonomous with least possible dependency on other services. Principles like Bounded-Context, Single Responsibility Principle, async communication using messages can help here.
+2. Good level of automation at all levels of software development, so that a single commit in git repository can trigger the build, run automated testcases, deploy builds automatically.
+3. Each change must contain small set of low-risk business requirements.
+
+
+How to achieve zero-downtime during the deployments?
+-------
+As the name suggests, zero-downtime deployments do not bring outage in production environment. It is a clever way of deploying your changes to production where at any given point in time, atleast one service will remain available to customers.
+
+Blue-green deployment
+-------
+One way of achieving this is blue/green deployment. In this approach, two versions of a single microservice are deployed at a time. But only one version is taking real requests. Once the newer version is tested to the required satisfaction level, you can switch from older version to newer version.
+
+You can run a smoke-test suite to verify that the functionality is running correctly in the newly deployed version. Based on the results of smoke-test, newer version can be released to become the live version.
+
+**Changes required in client code to handle zero-downtime**
+
+Lets say you have two instances of a service running at same time, and both are registered in Eureka registry. Further, both the instances are deployed using two distinct hostnames:
+
+/src/main/resources/application.yml.
+
+```properties
+spring.application.name: books-service
+---
+spring.profiles: blue
+eureka.instance.hostname: books-service-blue.example.com
+---
+spring.profiles: green
+eureka.instance.hostname: books-service-green.example.com
+```
+Now the client app that needs to make api calls to books-service may look like below:
+
+/sample/ClientApp.java.
+```java
+@RestController
+@SpringBootApplication
+@EnableDiscoveryClient
+public class ClientApp {
+    @Bean
+    @LoadBalanced
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+    @RequestMapping("/hit-some-api")
+    public Object hitSomeApi() {
+        return restTemplate().getForObject("https://books-service/some-uri", Object.class);
+    }
+
+```
+
+We are calling the books-service using LoadBalanced RestTemplate.Now, when books-service-green.example.com goes down for upgrade, it gracefully shuts down
+and delete its entry from Eureka registry. But these changes will not be reflected in the
+
+ClientApp until it fetches the registry again (which happens every 30 seconds). So for upto 30 seconds, ClientApp’s @LoadBalanced RestTemplate may send the requests to books-servicegreen. example.com even if its down.
+
+To fix this, we can use Spring Retry support in Ribbon client-side load balancer. To enable Spring Retry, we need to follow the below steps:
+
+Add spring-retry to build.gradle dependencies.
+
+```xml
+compile("org.springframework.boot:spring-boot-starter-aop")
+compile("org.springframework.retry:spring-retry")
+```
+
+Now enable spring-retry mechanism in ClientApp using @EnableRetry annotation, as shown
+below:
+```java
+@EnableRetry
+@RestController
+@SpringBootApplication
+@EnableDiscoveryClient
+public class ClientApp {
+...
+}
+
+```
+Once this is done, Ribbon will automatically configure itself to use retry logic and any failed request to books-service-green.example.com will be retried to next available instance (in roundrobins fashion) by Ribbon. You can customize this behavior using the below properties:
+
+
+
+
+
+
 
 
 
