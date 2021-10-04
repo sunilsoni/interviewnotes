@@ -14,7 +14,7 @@ The microservice architecture enables the rapid, frequent and reliable delivery 
 What is Micro Service?
 > Micro Service is an architecture that allows the developers to develop and deploy services independently. Each service running has its own process and this achieves the lightweight model to support business applications.
 
- <img src="./images-ms/Beehive-Representation-Microservices.png" width="400" border="2" />
+ <img src="./images-ms/Beehive-Representation-Microservices.png" width="700" border="2" />
 
 
 
@@ -521,10 +521,17 @@ These are unique IDs like GUID that can be passed from one service to another se
 
 What are different layers of a single microservice?
 ------
+Like any typical Java application, a microservice has layered architecture. Most common layers in any microservice are:
 
+ <img src="./images-ms/Different Layers in a Single Microservice.png" width="700" border="2" />
 
+Note
+From layering perspective, any microservice is no different than any other 3-tier architecture application.
 
-
+1. **Resource Layer (Rest Endpoint)** - this layer is exposed to external world over HTTP.
+2. **Service Layer** - this layer contains the business logic
+3. **Domain and Repository** (Spring Data)
+4. **ORM/Data Mapper (Hibernate, JPA)** - contains mostly POJO that map a Java Object with database table(RDBMS) or collection(NoSql).
 
 
 
