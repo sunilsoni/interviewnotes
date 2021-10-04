@@ -380,7 +380,7 @@ In an ideal world where boundaries of each microservices are clearly defined (bo
 
 **Examples of deployment/release frequency**
 
-Amazon is on record as making changes to production every 11.6 seconds on average in May of 2011.
+1. Amazon is on record as making changes to production every 11.6 seconds on average in May of 2011.
     https://www.thoughtworks.com/insights/blog/case-continuous-delivery
 
 2. Github is well known for its aggressive engineering practices, deploying code into production on an average 60 times a day.
