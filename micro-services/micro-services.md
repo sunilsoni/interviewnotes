@@ -755,6 +755,25 @@ More Information about eureka: https://github.com/Netflix/eureka/wiki/Eureka-at-
 
 Externalize configuration in a distributed system
 ------
+Spring Cloud Config provides server and client side support for externalized configuration in a distributed system. With a config server we have a central place to manage external properties for applications across all environments. The default implementation of the config-server storage uses git so it easily supports labelled versions of configuration environments.
+
+ <img src="./images-ms/Config Server Architecture.png" width="800" border="2" />
+
+**Key features of Spring Cloud config-server**
+1. HTTP, resource-based API for external configuration (YAML or properties syntax)
+2. Encrypt and Decrypt property values - both symmetric and asymmetric encryption is supported
+3. Very easy to create a standalone config server with use of `@EnableConfigServer`
+
+**Key features in Spring Cloud config-client**
+1. Encrypt and Decrypt property values
+2. Bind to Config Server and Initialize Spring Environment with remote property sources.
+3. `@RefreshScope` for Spring @Beans that want to be re-initialized when configuration changes.
+
+
+
+
+
+
 
 
 
