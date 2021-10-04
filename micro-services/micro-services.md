@@ -690,10 +690,43 @@ It is recommended to use YAML format over conventional properties format because
 Netflix Eureka Server : implement service discovery in microservices architecture:
 ----------------------
 
+Servers come and go in a cloud environment, and new instances of same services can be deployed to cater increasing load of requests. So it becomes absolutely essential to have service registry & discovery that can queried for finding address (host, port & protocol) of a given server. We may also need to locate servers for the purpose of client side load balancing (Ribbon) and handling failover gracefully (Hystrix).
 
+Spring Cloud solves this problem by providing few ready made solutions for this challenge. There are mainly two options available for the service discovery - Netflix Eureka Server and Consul. Lets discuss both of these briefly:
 
+Netflix Eureka Server:
+------
 
+Eureka is a REST (Representational State Transfer) based service that is primarily used in the AWS cloud for locating services for the purpose of load balancing and failover of middle-tier servers. The main features of of Netflix Eureka are:
+1. It provides service-registry.
+2. zone aware service lookup is possible.
+3. eureka-client (used by microservices) can cache the registry locally for faster lookup. The client also has a built-in load balancer that does basic round-robin load balancing.
+   
 
+In round-robin(akka RR) load-balancing, equal share of calls are distributed among various instances of single service in a circular fashion. Please note that this technique does not take into account priority or cpu/memory load, thus trivial to implement. 
+
+Spring Cloud provides two dependencies - eureka-server and eureka-client. 
+
+Eureka server dependency is only required in eureka server’s build.gradle
+
+build.gradle - Eureka Server.
+
+> compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-server')
+
+On the other hand, each microservice need to include the eureka-client dependencies to enables eureka discovery.
+
+build.gradle - Eureka Client (to be included in all microservices).
+
+> compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
+
+Eureka server provides a basic dashboard for monitoring various instances and their health in service registry. The ui is written in freemarker and provided out of the box without any extra configuration. Screenshot for Eureka Server looks like the following.
+
+ <img src="./images-ms/Eureka Registry Screenshot.png" width="800" border="2" />
+
+It contains list all services that are registered with Eureka Server. Each server has information like zone, host, port and protocol.
+
+Consul Server
+---------
 
 
 For more information:

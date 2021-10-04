@@ -489,8 +489,8 @@ Interview questions and answers
     * [Spring Cloud](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#spring-cloud)
     * [application.yml vs bootstrap.yml](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#applicationyml-vs-bootstrapyml)
     * [Netflix Eureka Server : implement service discovery in microservices architecture](Test)
-    * [Test](Test)
-    * [Test](Test)
+      * [Netflix Eureka Server](Test)
+      * [Consul Server](Test)
     * [Test](Test)
     * [Test](Test)
 
