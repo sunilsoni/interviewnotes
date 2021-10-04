@@ -619,18 +619,63 @@ application.yml vs bootstrap.yml
 
 **application.yml**
 
-```yaml
+application.yml/application.properties file is specific to Spring Boot applications. Unless you change the location of external properties of an application, spring boot will always load `application.yml` from following location:
 
+> /src/main/resources/application.yml
+
+You can store all the external properties for you application in this file. Common properties that are available in any Spring Boot project can be found at: https://docs.spring.io/springboot/docs/current/reference/html/common-application-properties.html You can customize these properties as per your application needs. Sample file is shown below:
+
+/src/main/resources/application.yml.
+```yaml
+spring:
+  application:
+    name: foobar
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost/test
+server:
+  port: 9000
 
 ```
+Reference. https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-externalconfig.html
 
 **bootstrap.yml**
 
+bootstrap.yml on the other hand is specific to spring-cloud-config and is loaded before the application.yml
 
+bootstrap.yml is only needed if you are using Spring Cloud and your microservice configuration is stored on a remote Spring Cloud Config Server.
+
+1. When used with Spring Cloud Config server, you shall specify the application-name and config git location using below properties 
+>   /src/main/resources/bootstrap.yml.
+   
 ```yaml
-
+spring.application.name: <application-name>
+spring.cloud.config.server.git.uri: <git-uri-config>
 
 ```
+2. When used with microservices (other than cloud config server), we need to specify the application name and location of config server using below properties
+
+> /src/main/resources/bootstrap.yml.
+```yaml
+spring.application.name: <application-name>
+spring.cloud.config.uri: <http://localhost:8888>
+
+```
+3. This properties file can contain other configuration relevant to Spring Cloud environment for e.g. eureka server location, encryption/decryption related properties.
+
+**Tip**
+Upon startup, Spring Cloud makes an HTTP(S) call to the Spring Cloud Config Server with the name of the application and retrieves back that application’s configuration.
+
+application.yml contains the default configuration for the microservice and any configuration retrieved (from cloud config server) during the bootstrap process will override configuration defined in application.yml
+
+
+
+
+
+
+
+
+
 
 
 
