@@ -829,13 +829,11 @@ Under the hood, Ribbon Load Balancer uses the following 3 components-
 - **ServerList** - this can be static or dynamic. If it is dynamic (as used by DynamicServerListLoadBalancer), a background thread will refresh and filter the list at certain interval.
 
 
+We shall always use Ribbon, a client side load balancing library to distribute the load among various instance of a microservice deployment.
+1. Using Ribbon with RestTemplate.
+2. Using Ribbon with Feign Client.
 
 
-
-```java
-
-
-```
 Client side load-balancer Ribbon in your microservices architecture
 ------
 
