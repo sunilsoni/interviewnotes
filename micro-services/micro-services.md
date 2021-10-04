@@ -727,6 +727,13 @@ It contains list all services that are registered with Eureka Server. Each serve
 
 Consul Server
 ---------
+It is a REST based tool for dynamic service registry. It can be used for registering a new service, locating a service and health checkup of a service.
+
+You have a option to choose any one of the above in your spring cloud based distributed application. In this book, we will focus more on the Netflix Eureka Server option.
+
+
+
+
 
 
 For more information:

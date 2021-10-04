@@ -488,9 +488,9 @@ Interview questions and answers
     * [What are different layers of a single microservice?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#what-are-different-layers-of-a-single-microservice)
     * [Spring Cloud](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#spring-cloud)
     * [application.yml vs bootstrap.yml](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#applicationyml-vs-bootstrapyml)
-    * [Netflix Eureka Server : implement service discovery in microservices architecture](Test)
-      * [Netflix Eureka Server](Test)
-      * [Consul Server](Test)
+    * [Netflix Eureka Server : implement service discovery in microservices architecture](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#netflix-eureka-server--implement-service-discovery-in-microservices-architecture)
+      * [Netflix Eureka Server](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#netflix-eureka-server)
+      * [Consul Server](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#consul-server)
     * [Test](Test)
     * [Test](Test)
 
