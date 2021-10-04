@@ -490,18 +490,37 @@ If you have a single host machine and want to enable blue-green deployment strat
 2. https://www.quora.com/What-is-the-role-played-by-Netflix-Eureka-in-blue-greendeployment-done-on-Pivotal-Cloud-Foundry
 
 
+How to slowly move users from older version of application to newer version?
+------
+
+If you have two different versions of a single microservice, you can achieve slow migration by maintaining both version of the application in production and then using API gateway to forward only selected endpoints to newly developed microservice.
+
+This technique is also known as Canary Releasing. In Canary Releasing two versions coexist for a much longer time period compared to blue/green deployment.
+
+How will you monitor fleet of microservices in production?
+------
+
+Monitoring is an essential aspect when it comes to any production deployment. In Microservices Architecture, we have fleet of services deployed on different or same host machine, so it becomes absolutely necessary to keep track of health of each individual service and take proper action in case of a failure. There are various tools that can help us here -
+
+1. Graphite is an open source database that captures metrics from services in a time series database. By using Graphite we can capture essential metrics of multiple Microservices simultaneously. And we can use a dashboard like- Grafana to monitor these metrics in almost real time fashion. Graphite is built to handle large amount of data. It can record and show trends from few hours to few months within a few seconds. Many organizations like- Facebook etc use Graphite for monitoring. 
+   More information can be found herehttps://graphiteapp.org/
+   
+2. Spring Boot Admin is an open source project provided by Spring Boot Team. Spring Boot provides a basic UI for monitoring Health of service, logs/hystrix stats, JVM & memory Metrics, Datasource Metrics, Thread dump etc. More information can be found here
+   https://github.com/codecentric/spring-boot-admin
+   
+3. Some of the other tools to monitor Microservices are: `AppDynamics`, `DynaTrace`, etc. These are paid tools with some premium features.
+
+How will you troubleshoot a failed API request that is spread across multiple services?
+------
 
 
-```
+In distributed systems its really hard to find the place where service actually failed first. The cascading effects of failure will lead to error in upstream services. We can use Correlation IDs in microservices that are unique for each request and gets injected at the API gateway level. So if failure occurs, we can aggregate the logs for a single request and figure out the exact place where it failed first.
 
-```
+These are unique IDs like GUID that can be passed from one service to another service during an API call. By using a GUID and failure message associated with it we can find the source of failure as well as the impact of failure.
 
 
-
-```
-
-```
-
+What are different layers of a single microservice?
+------
 
 
 
