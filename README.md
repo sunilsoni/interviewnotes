@@ -479,9 +479,9 @@ Interview questions and answers
     * [What are best practices for microservices architecture?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#what-are-best-practices-for-microservices-architecture)
     * [Microservices caching](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#microservices-caching)
     * [SOLID (solid design principles)](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#solid-solid-design-principles)
-    * [How frequent a microservice be released into production?](https)
-    * [How to achieve zero-downtime during the deployments?](https)
-      * [Blue-green deployment](https)
+    * [How frequent a microservice be released into production?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#how-frequent-a-microservice-be-released-into-production)
+    * [How to achieve zero-downtime during the deployments?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#how-to-achieve-zero-downtime-during-the-deployments)
+      * [Blue-green deployment](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#blue-green-deployment)
 
     * [Security in Microservices](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/Security%20in%20Microservices.md#security-in-microservices)
       * [Why Basic Authentication is not suitable in Microservices Context?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/Security%20in%20Microservices.md#why-basic-authentication-is-not-suitable-in-microservices-context)

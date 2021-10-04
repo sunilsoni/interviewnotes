@@ -382,15 +382,21 @@ In an ideal world where boundaries of each microservices are clearly defined (bo
 
 Amazon is on record as making changes to production every 11.6 seconds on average in May of 2011.
     https://www.thoughtworks.com/insights/blog/case-continuous-delivery
+
 2. Github is well known for its aggressive engineering practices, deploying code into production on an average 60 times a day.
    https://githubengineering.com/move-fast/
+   
 3. Facebook releases to production twice a day.
-4. Many Google services see releases multiple times a week, and almost everything in
-   Google is developed on mainline.
+   
+4. Many Google services see releases multiple times a week, and almost everything in Google is developed on mainline.
+   
 5. Etsy Deploys More Than 50 Times a Day.
    https://www.infoq.com/news/2014/03/etsy-deploy-50-times-a-day
+   
 1. Each microservices must be autonomous with least possible dependency on other services. Principles like Bounded-Context, Single Responsibility Principle, async communication using messages can help here.
+   
 2. Good level of automation at all levels of software development, so that a single commit in git repository can trigger the build, run automated testcases, deploy builds automatically.
+   
 3. Each change must contain small set of low-risk business requirements.
 
 
@@ -468,12 +474,33 @@ public class ClientApp {
 Once this is done, Ribbon will automatically configure itself to use retry logic and any failed request to books-service-green.example.com will be retried to next available instance (in roundrobins fashion) by Ribbon. You can customize this behavior using the below properties:
 
 
+/src/main/resources/application.yml.
+
+```yaml
+ribbon:
+  MaxAutoRetries: 5
+    MaxAutoRetriesNextServer: 5
+    OkToRetryOnAllOperations: true
+    OkToRetryOnAllErrors: true
+```
+
+Note
+If you have a single host machine and want to enable blue-green deployment strategy, then you need to start microservice at a dynamically available random port (in a predefined range). So two versions can work parallelly without causing port conflicts.
+1. https://github.com/spring-cloud/spring-cloud-netflix/issues/1290
+2. https://www.quora.com/What-is-the-role-played-by-Netflix-Eureka-in-blue-greendeployment-done-on-Pivotal-Cloud-Foundry
 
 
 
 
+```
+
+```
 
 
+
+```
+
+```
 
 
 
