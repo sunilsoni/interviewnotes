@@ -558,6 +558,80 @@ Spring team has integrated number of battle-tested open source projects from com
 |   | Distributed Sessions   |Spring Cloud OAuth2 and Redis | 
 
 
+Spring Cloud makes it really easy to develop, deploy and operate JVM applications for the Cloud.
+
+Different release trains in Spring Cloud at the time of writing this handbook are (newest to oldest) - Finchley, Edgware, Dalston and Camden. Spring Cloud is always used in conjunction with Spring Boot.
+
+A bare minimum `build.gradle` for any Spring Cloud project will look like:
+
+**build.gradle**
+
+```properties
+buildscript {
+    ext {
+        springBootVersion = '1.5.12.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+dependencyManagement {
+    imports {
+        mavenBom ':spring-cloud-dependencies:Edgware.SR3'
+    }
+}
+dependencies {
+    compile ':spring-cloud-starter-config'
+    compile ':spring-cloud-starter-eureka'
+}
+
+```
+
+
+-  Edgware.SR3 is the spring-cloud train version.
+- Spring cloud dependencies (eureka client and config client)
+
+And a minimal version of `spring-cloud` Application:
+
+```java
+@SpringBootApplication
+@EnableDiscoveryClient
+public class Application {
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
+}
+
+```
+
+- Enables spring-boot in your application.
+- Enables discovery-client: a spring-cloud feature in your microservice that helps you discover other services in a given environment.
+
+Reference. http://projects.spring.io/spring-cloud/
+
+application.yml vs bootstrap.yml
+-----
+
+**application.yml**
+
+```yaml
+
+
+```
+
+**bootstrap.yml**
+
+
+```yaml
+
+
+```
+
 
 
 
