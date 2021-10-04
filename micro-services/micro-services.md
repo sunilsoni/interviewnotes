@@ -772,18 +772,97 @@ Spring Cloud Config provides server and client side support for externalized con
 Refresh configuration changes on the fly in Spring Cloud environment
 ------
 
+Using config-server, its possible to refresh the configuration on the fly. The configuration changes will only be picked by Beans that are declared with @RefreshScope annotation.
+
+The following code illustrates the same. The property message is defined in the config-server and changes to this property can be made at runtime without restarting the microservices.
+
+```java
+package hello;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+@SpringBootApplication
+public class ConfigClientApplication {
+    public static void main(String[] args) {
+        SpringApplication.run(ConfigClientApplication.class, args);
+    }
+}
+@RefreshScope
+@RestController
+class MessageRestController {
+    @Value("${message:Hello World}")
+    private String message;
+    @RequestMapping("/message")
+    String getMessage() {
+        return this.message;
+    }
+}
+
+```
+
+`@RefreshScope` makes it possible to dynamically reload the configuration for this bean.
+
+
 
 Achieve client side load balancing in Spring Microservices using Spring Cloud
 ------
 
+Naive approach would be to get list of instances of a microservice using discovery client and then randomly pickup one instance and make the call. But that’s not easy because that service instance may be down at the moment and we will have to retry the call again on next available instance.
+
+Ribbon does that all internally. Ribbon will do at-least the following-
+
+1. A central concept in Ribbon is that of the named client. more about named clients.
+2. Load balance based on some algorithm: round-robin (RR) rule by default or WeightedResponseTimeRule, AvailabilityFilteringRule, etc can be chosen.
+3. Make calls to next server if first one fails
+4. Its easy to use Hystrix with Ribbon and use circuit breaker for managing fault tolerance.
+5. Establishing affinity between clients and servers by dividing them into zones (like racks in a data center) and favor servers in the same zone to reduce latency.
+6. Keeping statistics of servers and avoid servers with high latency or frequent failures.
+7. Keeping statistics of zones and avoid zones that might be in outage.
+
+Under the hood, Ribbon Load Balancer uses the following 3 components-
+
+- **Rule** - a logic component to determine which server to return from a list
+- **Ping** - a component running in background to ensure liveness of servers
+- **ServerList** - this can be static or dynamic. If it is dynamic (as used by DynamicServerListLoadBalancer), a background thread will refresh and filter the list at certain interval.
+
+
+
+
+
+```java
+
+
+```
 Client side load-balancer Ribbon in your microservices architecture
 ------
 
+```java
+
+
+```
 Use both LoadBalanced as well as normal RestTemplate object in the single microservice
 ------
 
+```java
+
+
+```
 Use of Eureka for service discovery in Ribbon Load Balancer
 ------
+
+```java
+
+
+```
+
+
+
+
+
+
 
 
 For more information:
