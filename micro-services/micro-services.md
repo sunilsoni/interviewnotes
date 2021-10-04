@@ -837,25 +837,82 @@ We shall always use Ribbon, a client side load balancing library to distribute t
 Client side load-balancer Ribbon in your microservices architecture
 ------
 
-```java
 
+Ribbon - a client side load-balancer can be used in Spring Cloud powered microservices to distribute the API call load among different instances of a single service. Following steps need to be taken:
+
+**Add required dependency in build.gradle**
+
+> compile('org.springframework.cloud:spring-cloud-starter-ribbon')
+
+Now we need to configure the application.yml for proper Ribbon settings.
+/src/main/resources/application.yml.
+
+```yaml
+ribbon:
+    ConnectTimeout: 60000
+    ReadTimeout: 60000
+    MaxAutoRetries: 1
+    MaxAutoRetriesNextServer: 1
+    OkToRetryOnAllOperations: true
+    http:
+      client:
+        enabled: true
 
 ```
+
+**Create LoadBalanced RestTemplate Bean**
+
+Finally, you need to annotate RestTemplate bean with LoadBalanced annotation to enable Ribbon client side load-balancer.
+
+```java
+@LoadBalanced
+@Bean
+RestTemplate restTemplate(RestTemplateBuilder restTemplateBuilder) {
+    return restTemplateBuilder.build();
+}
+
+```
+Now whatever calls you make using this RestTemplate, will be load balanced using default round-robin fashion.
+
+
+
 Use both LoadBalanced as well as normal RestTemplate object in the single microservice
 ------
-
+We can create two different beans with different qualifiers, one with load balanced configuration another without ribbon load balancer.
+Defining Normal and LoadBalanced RestTemplate with two different Bean names.
 ```java
+@LoadBalanced
+@Bean(name = "loadBalancedRestTemplate")
+RestTemplate restTemplate(RestTemplateBuilder restTemplateBuilder) {
+    return restTemplateBuilder.build();
+}
 
+@Bean(name = "simpleRestTemplate")
+public RestTemplate simpleRestTemplate(RestTemplateBuilder restTemplateBuilder) {
+    RestTemplate restTemplate = restTemplateBuilder.build();
+    return restTemplate;
+}
 
 ```
+
+- Load Balanced RestTemplate bean
+- Normal RestTemplate bean
+
+Wiring Normal RestTemplate using @Qualifier.
+```java
+@Autowired
+@Qualifier("simpleRestTemplate")
+private RestTemplate restTemplate;
+
+```
+
 Use of Eureka for service discovery in Ribbon Load Balancer
 ------
+If both Ribbon and Eureka libraries are present on the classpath, Ribbon is automatically configured with Eureka i.e. Server list is populated from Eureka, Ping functionality is delegated to Eureka to check if a server is up. This approach is very convenient in any enterprise grade application.
 
-```java
 
-
-```
-
+Can we use Ribbon without eureka?
+------
 
 
 
