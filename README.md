@@ -493,6 +493,12 @@ Interview questions and answers
       * [Consul Server](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#consul-server)
       * [How does Eureka Server work?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#how-does-eureka-server-work)
     * [Externalize configuration in a distributed system](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#externalize-configuration-in-a-distributed-system)
+    * [Refresh configuration changes on the fly in Spring Cloud environment](Test)
+    * [Achieve client side load balancing in Spring Microservices using Spring Cloud](Test)
+    * [client side load-balancer Ribbon in your microservices architecture](Test)
+    * [Use both LoadBalanced as well as normal RestTemplate object in the single microservice](Test)
+    * [Use of Eureka for service discovery in Ribbon Load Balancer](Test)
+    * [Test](Test)
     * [Test](Test)
 
     * [Security in Microservices](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/Security%20in%20Microservices.md#security-in-microservices)

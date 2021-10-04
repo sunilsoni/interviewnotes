@@ -769,13 +769,21 @@ Spring Cloud Config provides server and client side support for externalized con
 2. Bind to Config Server and Initialize Spring Environment with remote property sources.
 3. `@RefreshScope` for Spring @Beans that want to be re-initialized when configuration changes.
 
+Refresh configuration changes on the fly in Spring Cloud environment
+------
 
 
+Achieve client side load balancing in Spring Microservices using Spring Cloud
+------
 
+Client side load-balancer Ribbon in your microservices architecture
+------
 
+Use both LoadBalanced as well as normal RestTemplate object in the single microservice
+------
 
-
-
+Use of Eureka for service discovery in Ribbon Load Balancer
+------
 
 
 For more information:
