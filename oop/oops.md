@@ -598,7 +598,30 @@ programming, you can say that both kinds of objects can be created and deleted i
 Aggregation is a stronger type of association. The aggregation between a professor and department can be represented as
 follows.
 
-![img.png](images/aggregation between a professor and department.png)
+<img src="./images/aggregation between a professor and department.png" width="600" />
+
+Let’s go deeper. Suppose that Professor X submits his resignation letter to his existing organization to join a new
+organization. Although both Professor X and his former institution can survive without each other, Professor X needs to
+associate himself with a department in an institution. In this situation, you’d say that the department is the owner of
+this relationship and the department has professors.
+
+Similarly, you can say that a human body has hands, a car has seats, a bike has tires, and so forth.
+
+**Note**
+> In general, you say that a department has a professor. This is why an association relationship is also known as “has-a” relationship. (You can note down the key difference with inheritance here. Inheritance is associated with the “is-a” relationship.
+
+# Composition
+
+Composition is a stronger form of aggregation, and this time you have a filled diamond in place.
+
+<img src="./images/Composition.png" width="600" />
+
+A department in a college cannot exist without the college. The college only creates or closes its departments. (You can
+argue that if there is no department at all, a college cannot exist, but you do not need to complicate things by
+considering this type of corner case.) In other words, the lifetime of a department entirely depends on its college.
+
+This is also known as a `death relationship` because if you destroy the college, all of its departments are destroyed
+automatically. Similarly, you can say the hands (or legs, etc.)of a human being cannot exist without the body.
 
 For more information:
 
