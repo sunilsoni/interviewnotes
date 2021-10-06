@@ -623,6 +623,21 @@ considering this type of corner case.) In other words, the lifetime of a departm
 This is also known as a `death relationship` because if you destroy the college, all of its departments are destroyed
 automatically. Similarly, you can say the hands (or legs, etc.)of a human being cannot exist without the body.
 
+# Association vs. Aggregation vs. Composition
+
+| Association  |  Aggregation   | Composition |
+| ----------------------- | ----------------- |---------------- |
+| Association relationship is represented using an arrow. | Aggregation relationship is represented by a straight line with an empty diamond at one end. | The composition relationship is represented by a straight line with a black diamond at one end. |
+| In UML, it can exist between two or more classes. | It is a part of the association relationship.    | It is a part of the aggregation relationship.|
+|It incorporates one-to-one, one-to-many, many-to-one, and many-to-many association between the classes.     |It exhibits a kind of weak relationship.     |It exhibits a strong type of relationship.|
+|It can associate one more objects together.| In an aggregation relationship, the associated objects exist independently within the scope of the system.    | In a composition relationship, the associated objects cannot exist independently within the scope of the system.|
+|In this, objects are linked together.     |In this, the linked objects are independent of each other.| Here the linked objects are dependent on each other.|
+|It may or may not affect the other associated element if one element is deleted. |Deleting one element in the aggregation relationship does not affect other associated elements. | It affects the other element if one of its associated element is deleted.|
+|Example: A tutor can associate with multiple students, or one student can associate with multiple teachers. | Example: A car needs a wheel for its proper functioning, but it may not require the same wheel. It may function with another wheel as well.| Example: If a file is placed in a folder and that is folder is deleted. The file residing inside that folder will also get deleted at the time of folder deletion.|
+
+<img src="./images/Association vs. Aggregation vs. Composition.png" width="600" />
+
+
 For more information:
 
 1. [Method Overloading and Overriding in Java](https://www.baeldung.com/java-method-overload-override)
