@@ -21,7 +21,7 @@ Interview questions and answers
       * [Rules for Method Overriding](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#rules-for-method-overriding)
     * [Association](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#association)
     * [Aggregation](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#aggregation)
-    * [Composition](https)
+    * [Composition](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#composition)
     * [Test](https)
   
 - **Java**
