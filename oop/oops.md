@@ -565,17 +565,42 @@ It's valid to make an overridden method to accept arguments of different types a
 - If a method in the base class returns void, the overridden method should return void
 - If a method in the base class returns a primitive, the overridden method should return the same primitive
 - If a method in the base class returns a certain type, the overridden method should return the same type or a subtype (a.k.a. covariant return type)
-- If a method in the base class throws an exception, the overridden method must throw the same exception or a subtype of the base class exception
+- If a method in the base class throws an exception, the overridden method must throw the same exception or a subtype of
+  the base class exception
 
 **Dynamic Binding**
 
-Considering that method overriding can be only implemented with inheritance, where there is a hierarchy of a base type and subtype(s), the compiler can't determine at compile time what method to call, as both the base class and the subclasses define the same methods.
+Considering that method overriding can be only implemented with inheritance, where there is a hierarchy of a base type
+and subtype(s), the compiler can't determine at compile time what method to call, as both the base class and the
+subclasses define the same methods.
 
 As a consequence, the compiler needs to check the type of object to know what method should be invoked.
 
 As this checking happens at runtime, method overriding is a typical example of dynamic binding.
 
+# Association
+
+Association can be one way or both ways. When you see this kind of UML diagram, it means ClassA knows about ClassB, but
+the reverse is not true.
+
+<img src="./images/Association.png" width="600" />
+
+The following diagram indicates a two-way association because both classes know each other.
+
+<img src="./images/two-way association.png" width="600" />
+
+Consider an example. In a college, a student can learn from multiple teachers, and a teacher can teach multiple
+students. There is no ownership in this kind of relationship. So, when you represent them with classes and objects in
+programming, you can say that both kinds of objects can be created and deleted independently.
+
+# Aggregation
+
+Aggregation is a stronger type of association. The aggregation between a professor and department can be represented as
+follows.
+
+![img.png](images/aggregation between a professor and department.png)
 
 For more information:
+
 1. [Method Overloading and Overriding in Java](https://www.baeldung.com/java-method-overload-override)
 2. [What Is Method Overloading and Method Overriding in Java?](https://medium.com/javarevisited/what-is-method-overloading-and-method-overriding-in-java-b3b094267fce)
