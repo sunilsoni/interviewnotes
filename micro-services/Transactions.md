@@ -169,4 +169,5 @@ process manager is responsible for listening to events and triggering endpoints.
 
 Reference:
 https://developers.redhat.com/blog/2018/10/01/patterns-for-distributed-transactions-within-a-microservices-architecture#possible_solutions
+
 https://dzone.com/articles/practical-transaction-handling-in-microservice-arc
