@@ -50,13 +50,14 @@ Takes a String parameter and prints it on the standard output
 > (String msg) -> { System.out.println(msg); }
 
 Takes a parameter and prints it on the standard output
+
 > msg -> System.out.println(msg)
 
 Takes a String parameter and returns its length
+
 > (String str) -> str.length()
 
 ```java
-
 @FunctionalInterface
 interface StringToIntMapper {
     int map(String str);
@@ -147,6 +148,19 @@ Java lambda expression consists of three components.
 - **Arrow-token**: It is used to link arguments-list and body of expression.
 - **Body:** It contains expressions and statements for the lambda expression.
 
+A lambda expression consists of a list of parameters and a body separated by an arrow (->). The list of parameters is
+declared the same way as the list of parameters for methods. The list of parameters is enclosed in parentheses, as is
+done for methods. The body of a lambda expression is a block of code enclosed in braces. Like a method’s body, the body
+of a lambda expression may declare local variables; use statements including break, continue, and return; throw
+exceptions, etc. Unlike a method, a lambda expression does not have the following four parts:
+
+• A lambda expression does not have a name. • A lambda expression does not have a return type. It is inferred by the
+compiler from the context of its use and from its body. • A lambda expression does not have a throws clause. It is
+inferred from the context of its use and its body. • A lambda expression cannot declare type parameters. That is, a
+lambda expression cannot be generic.
+
+Examples of Lambda Expressions and Equivalent Methods
+
 Java Lambda Expression Syntax :
 -------------------------------
 
@@ -164,9 +178,6 @@ Java Lambda Expression Syntax :
         return(x+y);
         };
 ```
-
-Lambda Expressions Examples
----------------------------
 
 Stream
 ------
@@ -240,7 +251,6 @@ Java 8 provides predefined functional interfaces to deal with functional program
 references.
 
 ```java
-
 @Setter
 @Getter
 public class Person {
@@ -265,7 +275,6 @@ Internal implementation of the Predicate interface: Predicate interface contains
 Note that it also contains a default, static methods.
 
 ```java
-
 @FunctionalInterface
 public interface Predicate<T> {
 
@@ -321,7 +330,6 @@ The function interface contains exactly one abstract method apply(T t). Note tha
 methods.
 
 ```java
-
 @FunctionalInterface
 public interface Function<T, R> {
     R apply(T t);
@@ -400,7 +408,6 @@ Internal implementation of the Supplier interface. The supplier interface contai
 Hence we can apply lambda expression to it.
 
 ```java
-
 @FunctionalInterface
 public interface Supplier<T> {
 
@@ -440,7 +447,6 @@ interface. The consumer interface contains exactly one abstract method accept(T 
 expression to it.
 
 ```java
-
 @FunctionalInterface
 public interface Consumer<T> {
     void accept(T arg0);
@@ -533,7 +539,6 @@ interface. BiConsumer interface contains exactly one abstract method accept(T ar
 expression to it.
 
 ```java
-
 @FunctionalInterface
 public interface BiConsumer<T, U> {
     void accept(T arg0, U arg1);
