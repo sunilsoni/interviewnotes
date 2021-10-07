@@ -3,6 +3,7 @@
 Interview questions and answers
 
 - **Object-oriented programming(OOPS)**
+
   - [OOPS](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#object-oriented-programmingoops)
     * [Abstraction](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#abstraction)
     * [Encapsulation](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#encapsulation)
@@ -23,18 +24,19 @@ Interview questions and answers
     * [Aggregation](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#aggregation)
     * [Composition](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#composition)
     * [Association vs. Aggregation vs. Composition](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#association-vs-aggregation-vs-composition)
-  
 - **Java**
+
   - [Basic](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md)
+
     * [Java 8](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#java-8)
       * [Java 8 Features](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#java-8-features)
       * [New features](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#new-features)
       * [Lambda Expressions](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#lambda-expressions)
       * [Lambda Expressions](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#lambda-expressions)
-        * [Why use Lambda Expression](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#why-use-lambda-expression)
-        * [ Examples of lambda expressions]()
-        * [Lambda Expressions Syntax](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#java-lambda-expression-syntax-)
-        * [Lambda Expressions Examples](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#lambda-expressions-examples)
+        1. [Examples of lambda expressions](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#examples-of-lambda-expressions)
+        1. [Why use Lambda Expression](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#why-use-lambda-expression)
+        1. [Lambda Expressions Syntax](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#java-lambda-expression-syntax-)
+        1. [Lambda Expressions Examples](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#lambda-expressions-examples)
       * [Stream](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#stream)
         * [Stream features](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#stream-features)
       * [Functional Interface](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#functional-interface)
@@ -89,8 +91,8 @@ Interview questions and answers
     * [Volatile keyword](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#volatile-keyword)
     * [synchronized vs volatile](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md#synchronized-vs-volatile)
     * [Test](https)
-    
   - [Collection Framework](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#collection-framework)
+
     * [ArrayList](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#arraylist)
       * [Accessing elements](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#accessing-elements)
       * [Removing elements](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#removing-elements)
@@ -113,9 +115,8 @@ Interview questions and answers
     * [TreeMap](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#treemap)
     * [TreeSet](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#treeset)
     * [fail-safe and fail-fast iterators](https://github.com/sunilsoni/interview-notes/blob/main/Java/collection/collection-framework.md#fail-safe-and-fail-fast-iterators)
-
-    
   - [Multi threading](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#multi-threading)
+
     * [Life Cycle of a Thread](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#life-cycle-of-a-thread)
     * [Creating a Thread](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#creating-a-thread)
     * [Life Cycle of a Thread](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#life-cycle-of-a-thread)
@@ -124,7 +125,7 @@ Interview questions and answers
     * [synchronized keyword](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#synchronized-keyword)
     * [static synchronization](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#static-synchronization)
     * [What does join() method?](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#q-what-does-join-method)
-    * [Deadlock](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#deadlock) 
+    * [Deadlock](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#deadlock)
     * [How to avoid deadlock?](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#how-to-avoid-deadlock)
     * [What will happen if I directly call the run() method and not the start() method to execute a thread?](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#what-will-happen-if-i-directly-call-the-run-method-and-not-the-start-method-to-execute-a-thread)
     * [Once a thread has been started can it be started again?](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#once-a-thread-has-been-started-can-it-be-started-again)
@@ -140,64 +141,64 @@ Interview questions and answers
       * [ScheduledExecutorService Interface](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#scheduledexecutorservice-interface)
       * [Future Interface](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#future-interface)
       * [Executor Framework-2](https://github.com/sunilsoni/interview-notes/blob/main/Java/multi-threading/multi-threading.md#executor-framework-2)
-
 - **Data Structures and Algorithms**
-    * [Lists](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#lists)
-      * [ArrayList](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#arraylist)
-      * [LinkedList](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#linkedlist)
-      * [Stack](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#stack)
-      * [Vector](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#vector)
-      * [CopyOnWriteArrayList](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#copyonwritearraylist)
-      * [Collections.synchronizedList](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#collectionssynchronizedlist)
-    * [Sets](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#sets)
-      * [HashSet](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#hashset)
-      * [LinkedHashSet](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#linkedhashset)
-      * [TreeSet](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#treeset)
-      * [ConcurrentSkipListSet](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#concurrentskiplistset)
-      * [CopyOnWriteArraySet](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#copyonwritearrayset)
-      * [EnumSet](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#enumset)
-    * [Maps](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#maps)
-      * [HashMap](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#hashmap)
-      * [HashMap implementation details](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#hashmap-implementation-details)
-      * [LinkedHashMap](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#linkedhashmap)
-      * [Hashtable](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#hashtable)
-      * [ConcurrentHashMap](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#concurrenthashmap)
-      * [TreeMap](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#treemap)
-      * [ConcurrentSkipListMap](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#concurrentskiplistmap)
-    * [Queues](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#queues)
-      * [LinkedList](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#linkedlist-1)
-      * [ArrayBlockingQueue](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#arrayblockingqueue)
-      * [LinkedBlockingQueue](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#linkedblockingqueue)
-      * [ConcurrentLinkedQueue](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#concurrentlinkedqueue)
-      * [Deque classes](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#deque-classes)
-      * [PriorityQueue](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#priorityqueue)
-      * [PriorityBlockingQueue](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#priorityblockingqueue)
-      * [DelayQueue](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#delayqueue)
-      * [SynchronousQueue](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#synchronousqueue)
-    * [equals and hashCode](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#equals-and-hashcode)
-    * [Hierarchy and classes](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#hierarchy-and-classes)
-   * [Frequently asked](https)
-     * [Stack](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/datastructure/Stack/Stack.java)
-     * [CustomStack](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/datastructure/Stack/CustomStack.java)
-     * [LinkedListStack](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/datastructure/Stack/LinkedListStack.java)
-     * [LinkedListReversal](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/linkedlist/LinkedListReversal.java)
-     * [MyLinkedList](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/linkedlist/MyLinkedList.java)
-     * [PrimesPrimeChecker](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/prime/PrimeChecker.java)
-     * [RemoveDuplicateFromString](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/misc/RemoveDuplicateFromString.java)
-     * [Palindrome](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/misc/Palindrome.java)
-     * [FindLargestThree](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/misc/FindLargestThree.java)
-     * [FibonacciSeries](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/misc/FibonacciSeries.java)
-     * [BalancedBracketsUsingString](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/misc/BalancedBracketsUsingString.java)
-     * [BalancedBracketsUsingDeque](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/misc/BalancedBracketsUsingDeque.java)
-     * [Anagrams](https://github.com/sunilsoni/interview-notes-code/tree/master/src/main/java/com/interview/notes/code/anagram)
-       * [Anagrams](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/anagram/Anagrams.java)
-       * [ValidAnagram](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/anagram/ValidAnagram.java)
-       * [PrintAnagramTogether](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/anagram/PrintAnagramTogether.java)
-       * [AnagramOfFirstAsSubstring](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/anagram/AnagramOfFirstAsSubstring.java)
-       * [GroupAnagramsTogether](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/anagram/GroupAnagramsTogether.java)
-     * [Test](https)
-  
+
+  * [Lists](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#lists)
+    * [ArrayList](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#arraylist)
+    * [LinkedList](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#linkedlist)
+    * [Stack](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#stack)
+    * [Vector](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#vector)
+    * [CopyOnWriteArrayList](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#copyonwritearraylist)
+    * [Collections.synchronizedList](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#collectionssynchronizedlist)
+  * [Sets](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#sets)
+    * [HashSet](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#hashset)
+    * [LinkedHashSet](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#linkedhashset)
+    * [TreeSet](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#treeset)
+    * [ConcurrentSkipListSet](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#concurrentskiplistset)
+    * [CopyOnWriteArraySet](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#copyonwritearrayset)
+    * [EnumSet](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#enumset)
+  * [Maps](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#maps)
+    * [HashMap](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#hashmap)
+    * [HashMap implementation details](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#hashmap-implementation-details)
+    * [LinkedHashMap](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#linkedhashmap)
+    * [Hashtable](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#hashtable)
+    * [ConcurrentHashMap](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#concurrenthashmap)
+    * [TreeMap](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#treemap)
+    * [ConcurrentSkipListMap](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#concurrentskiplistmap)
+  * [Queues](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#queues)
+    * [LinkedList](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#linkedlist-1)
+    * [ArrayBlockingQueue](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#arrayblockingqueue)
+    * [LinkedBlockingQueue](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#linkedblockingqueue)
+    * [ConcurrentLinkedQueue](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#concurrentlinkedqueue)
+    * [Deque classes](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#deque-classes)
+    * [PriorityQueue](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#priorityqueue)
+    * [PriorityBlockingQueue](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#priorityblockingqueue)
+    * [DelayQueue](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#delayqueue)
+    * [SynchronousQueue](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#synchronousqueue)
+  * [equals and hashCode](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#equals-and-hashcode)
+  * [Hierarchy and classes](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#hierarchy-and-classes)
+  * [Frequently asked](https)
+    * [Stack](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/datastructure/Stack/Stack.java)
+    * [CustomStack](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/datastructure/Stack/CustomStack.java)
+    * [LinkedListStack](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/datastructure/Stack/LinkedListStack.java)
+    * [LinkedListReversal](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/linkedlist/LinkedListReversal.java)
+    * [MyLinkedList](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/linkedlist/MyLinkedList.java)
+    * [PrimesPrimeChecker](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/prime/PrimeChecker.java)
+    * [RemoveDuplicateFromString](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/misc/RemoveDuplicateFromString.java)
+    * [Palindrome](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/misc/Palindrome.java)
+    * [FindLargestThree](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/misc/FindLargestThree.java)
+    * [FibonacciSeries](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/misc/FibonacciSeries.java)
+    * [BalancedBracketsUsingString](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/misc/BalancedBracketsUsingString.java)
+    * [BalancedBracketsUsingDeque](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/misc/BalancedBracketsUsingDeque.java)
+    * [Anagrams](https://github.com/sunilsoni/interview-notes-code/tree/master/src/main/java/com/interview/notes/code/anagram)
+      * [Anagrams](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/anagram/Anagrams.java)
+      * [ValidAnagram](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/anagram/ValidAnagram.java)
+      * [PrintAnagramTogether](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/anagram/PrintAnagramTogether.java)
+      * [AnagramOfFirstAsSubstring](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/anagram/AnagramOfFirstAsSubstring.java)
+      * [GroupAnagramsTogether](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/anagram/GroupAnagramsTogether.java)
+    * [Test](https)
 - **Spring**
+
   - [Spring](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#spring)
     * [Dependency Injection](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#dependency-injection)
       * [Types of Dependency Injection](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#types-of-dependency-injection)
@@ -216,7 +217,7 @@ Interview questions and answers
     * [@ControllerAdvice annotation](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#controlleradvice-annotation)
     * [@Bean annotation](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#bean-annotation)
     * [@Component vs @Bean annotation](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#component-vs-bean-annotation)
-    * [Spring Boot Security using OAuth2 with JWT](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#spring-boot-security-using-oauth2-with-jwt) 
+    * [Spring Boot Security using OAuth2 with JWT](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#spring-boot-security-using-oauth2-with-jwt)
     * [OAuth2 Terminology](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#oauth2-terminology)
     * [Json Web Token(JWT)](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#json-web-tokenjwt)
     * [Spring Boot Rest Authentication with JWT Token Flow](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#spring-boot-rest-authentication-with-jwt-token-flow)
@@ -230,8 +231,8 @@ Interview questions and answers
       * [isolation](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#isolation)
       * [readOnly](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#isolation)
       * [timeout](https://github.com/sunilsoni/interview-notes/blob/main/spring/Spring-Transaction-Management.md#isolation)
-  
 - **Spring Annotations**
+
   - [@Autowired](https://github.com/sunilsoni/interview-notes/blob/main/spring/annotations.md#autowired)
   - [@Inject vs @Autowired](https://github.com/sunilsoni/interview-notes/blob/main/spring/annotations.md#inject-vs-autowired)
   - [Component Scanning](https://github.com/sunilsoni/interview-notes/blob/main/spring/annotations.md#component-scanning)
@@ -245,10 +246,8 @@ Interview questions and answers
     - [@Service](https://github.com/sunilsoni/interview-notes/blob/main/spring/annotations.md#service)
     - [@Controller](https://github.com/sunilsoni/interview-notes/blob/main/spring/annotations.md#controller)
     - [Test](https)
-  
-
-
 - **Spring MVC**
+
   - [Spring MVC](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-mvc.md#spring-mvc)
   - [Spring MVC flow](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-mvc.md#spring-mvc-flow)
   - [Spring Web Annotations](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-mvc.md#spring-web-annotations)
@@ -269,8 +268,8 @@ Interview questions and answers
       * [Creating Tasks](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-mvc.md#creating-tasks)
       * [Spring](https)
       * [Execute a Quartz Job only once in a multi-instance environment](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-mvc.md#execute-a-quartz-job-only-once-in-a-multi-instance-environment)
-
 - **Spring Boot**
+
   - [Spring Boot](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#spring-boot)
   - [Spring Boot Primary Goals](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#spring-boot-primary-goals)
   - [Running Spring boot app at different port on server startup](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#running-spring-boot-app-at-different-port-on-server-startup)
@@ -301,8 +300,8 @@ Interview questions and answers
     - [Run the Application](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#run-the-application)
     - [Add Unit Tests](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#add-unit-tests)
     - [Add Production-grade Services](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#add-production-grade-services)
-    
 - **HTTP Verbs**
+
   - [HTTP Verbs](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#http-verbs)
     - [GET](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#get)
     - [POST](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#post)
@@ -311,23 +310,24 @@ Interview questions and answers
     - [PATCH](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#patch)
     - [OPTIONS](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#options)
     - [HEAD](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#head)
-  
 - **HTTP Status Codes**
+
   - [HTTP Status Codes](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#http-status-codes )
     - [1×× Informational](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#1-informational)
     - [2×× Success](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#2-success)
+
       - [200 OK](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#2-success)
       - [201 Created](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#2-success)
       - [202 Accepted](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#2-success)
       - [204 No Content](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#2-success)
       - [205 Reset Content](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#2-success)
-      
     - [3×× Redirection](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#3-redirection)
+
       - [300 Multiple Choices](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#3-redirection)
     - [4×× Client Error](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#4-client-error)
     - [5×× Server Errorl](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#5-server-error)
-  
 - **Hibernate**
+
   - [Hibernate](https://github.com/sunilsoni/interview-notes/blob/main/hibernate/hibernate.md)
     * [JPA vs Hibernate](https://github.com/sunilsoni/interview-notes/blob/main/hibernate/hibernate.md#jpa-vs-hibernate)
     * [@Entity annotation](https://github.com/sunilsoni/interview-notes/blob/main/hibernate/hibernate.md#entity-annotation)
@@ -335,10 +335,9 @@ Interview questions and answers
     * [get() and load() methods of Hibernate Session](https://github.com/sunilsoni/interview-notes/blob/main/hibernate/hibernate.md#get-and-load-methods-of-hibernate-session)
     * [Session and SessionFactory](https://github.com/sunilsoni/interview-notes/blob/main/hibernate/hibernate.md#session-and-sessionfactory)
     * [First Level and Second Level Cache](https://github.com/sunilsoni/interview-notes/blob/main/hibernate/hibernate.md#first-level-and-second-level-cache)
-    * [Test](https)   
-  
-
+    * [Test](https)
 - **Angular interview questions and answers**
+
   - [Single-page application(SPA) vs. Multiple-page application(MPA)](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md#single-page-applicationspa-vs-multiple-page-applicationmpa)
     - [Single-page application(SPA)](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md#single-page-application)
     - [Pros of the Single-Page Application](https://github.com/sunilsoni/interview-notes/blob/main/angular/Angular.md#pros-of-the-single-page-application)
@@ -419,9 +418,8 @@ Interview questions and answers
       * [Async Pipe](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#async-pipe)
       * [HttpClient](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#httpclient)
         * [Error handling](https://github.com/sunilsoni/interview-notes/blob/main/angular/RxJS.md#error-handling)
-  
-  
 - **Design Patterns interview questions and answers**
+
   - [Design Patterns](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md)
     - [Creational Design Patterns](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/creational-design-pattern.md)
       * [Simple Factory](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/creational-design-pattern.md#-simple-factory)
@@ -452,6 +450,7 @@ Interview questions and answers
       * [Template Method](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/behavioral-design-pattern.md##-template-method)
 
 * [Designing a Java/J2EE application](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#designing-a-javaj2ee-application)
+
   * [Create a tiered architecture](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#create-a-tiered-architecture)
   * [Create a data model](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#create-a-data-model)
   * [Create a design model](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#create-a-design-model)
@@ -459,10 +458,10 @@ Interview questions and answers
   * [Vertical slicing](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#vertical-slicing)
   * [Ensure the system is configurable](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#ensure-the-system-is-configurable)
   * [Design considerations during design, development and deployment phases](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#design-considerations-during-design-development-and-deployment-phases)
-
 * [Identifying performance and/or memory issues in your Java/J2EE application](https://github.com/sunilsoni/interview-notes/blob/main/design-pattern/design-pattern.md#identifying-performance-andor-memory-issues-in-your-javaj2ee-application)
 
 - **Microservices**
+
   - [Microservices](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md)
     * [SOA(Service-oriented architecture) vs Microservices](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#soaservice-oriented-architecture-vs-microservices)
     * [Advantages of Microservices Architecture](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#advantages-of-microservices-architecture)
@@ -484,6 +483,7 @@ Interview questions and answers
     * [SOLID (solid design principles)](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#solid-solid-design-principles)
     * [How frequent a microservice be released into production?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#how-frequent-a-microservice-be-released-into-production)
     * [How to achieve zero-downtime during the deployments?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#how-to-achieve-zero-downtime-during-the-deployments)
+
       * [Blue-green deployment](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#blue-green-deployment)
     * [How to slowly move users from older version of application to newer version?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#how-to-slowly-move-users-from-older-version-of-application-to-newer-version)
     * [How will you monitor fleet of microservices in production?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#how-will-you-monitor-fleet-of-microservices-in-production)
@@ -492,6 +492,7 @@ Interview questions and answers
     * [Spring Cloud](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#spring-cloud)
     * [application.yml vs bootstrap.yml](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#applicationyml-vs-bootstrapyml)
     * [Netflix Eureka Server : implement service discovery in microservices architecture](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#netflix-eureka-server--implement-service-discovery-in-microservices-architecture)
+
       * [Netflix Eureka Server](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#netflix-eureka-server)
       * [Consul Server](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#consul-server)
       * [How does Eureka Server work?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#how-does-eureka-server-work)
@@ -502,6 +503,7 @@ Interview questions and answers
     * [Use both LoadBalanced as well as normal RestTemplate object in the single microservice](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#use-both-loadbalanced-as-well-as-normal-resttemplate-object-in-the-single-microservice)
     * [Use of Eureka for service discovery in Ribbon Load Balancer](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/micro-services.md#use-of-eureka-for-service-discovery-in-ribbon-load-balancer)
     * [Managing transactions](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/Transactions.md#managing-transactions)
+
       * [ACID Transactions](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/Transactions.md#acid-transactions)
       * [What is a distributed transaction?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/Transactions.md#what-is-a-distributed-transaction)
       * [Two-phase commit (2pc) pattern](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/Transactions.md#two-phase-commit-2pc-pattern)
@@ -512,8 +514,8 @@ Interview questions and answers
       * [Disadvantages of the Saga pattern](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/Transactions.md#disadvantages-of-the-saga-pattern)
       * [Test](Test)
       * [Test](Test)
-
     * [Security in Microservices](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/Security%20in%20Microservices.md#security-in-microservices)
+
       * [Why Basic Authentication is not suitable in Microservices Context?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/Security%20in%20Microservices.md#why-basic-authentication-is-not-suitable-in-microservices-context)
       * [Why OAuth2?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/Security%20in%20Microservices.md#why-oauth2)
       * [OAuth2 Roles](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/Security%20in%20Microservices.md#oauth2-roles)
@@ -532,8 +534,8 @@ Interview questions and answers
       * [Generate AccessToken for Client Credentials.](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/Security%20in%20Microservices.md#generate-accesstoken-for-client-credentials)
       * [Why there is no RefreshToken support in Oauth2 Client Credentials workflow?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/Security%20in%20Microservices.md#why-there-is-no-refreshtoken-support-in-oauth2-client-credentials-workflow)
       * [Security in inter-service communication](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/Security%20in%20Microservices.md#security-in-inter-service-communication)
-
 - **API Gateway**
+
   - [API Gateway](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/API-Gateway.md#api-gateway)
   - [How to retry failed requests at some other available instance using Client Side Load Balancer?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/API-Gateway.md#how-to-retry-failed-requests-at-some-other-available-instance-using-client-side-load-balancer)
   - [Circuit Breaker](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/API-Gateway.md#circuit-breaker)
@@ -551,8 +553,8 @@ Interview questions and answers
   - [Circuit Breaker vs Hystrix](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/API-Gateway.md#circuit-breaker-and-hystrix)
   - [Where exactly should I use Circuit Breaker Pattern?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/API-Gateway.md#where-exactly-should-i-use-circuit-breaker-pattern)
   - [Where it should not be used?](https://github.com/sunilsoni/interview-notes/blob/main/micro-services/API-Gateway.md#where-it-should-not-be-used)
-
 - **Kafka**
+
   - [Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md)
     * [Advantages of Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#advantages-of-kafka)
     * [Offset in Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#offset-in-kafka)
@@ -571,37 +573,38 @@ Interview questions and answers
     * [Starting a Kafka server](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#starting-a-kafka-server)
     * [In the Producer, when does QueueFullException occur?](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#in-the-producer-when-does-queuefullexception-occur)
     * [Confluent Kafka vs. Apache Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#Confluent-Kafka-vs-Apache-Kafka)
-
 - **MongoDB**
+
   - [MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#mongodb)
-    *  [Key Components](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#key-components)
-    *  [Document](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#document)
-    *  [Collection](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#collection)
-    *  [Namespace](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#namespace)
-    *  [Databases in MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#databases-in-mongodb)
-    *  [Mongo Shell](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#mongo-shell)
-    *  [Advantages of MongoDB:](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#advantages-of-mongodb)
-    *  [Features of MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#features-of-mongodb)
-    *  [Indexes in MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#indexes-in-mongodb)
-    *  [MongoDB](https)
+    * [Key Components](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#key-components)
+    * [Document](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#document)
+    * [Collection](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#collection)
+    * [Namespace](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#namespace)
+    * [Databases in MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#databases-in-mongodb)
+    * [Mongo Shell](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#mongo-shell)
+    * [Advantages of MongoDB:](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#advantages-of-mongodb)
+    * [Features of MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#features-of-mongodb)
+    * [Indexes in MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#indexes-in-mongodb)
+    * [MongoDB](https)
 - **Database**
-   - [Database](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#database)
-    - [SQL](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#sql)
-      - [Joins](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#joins)
-        - [Inner join](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#inner-join)
-        - [Left outer join](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#left-outer-join)
-        - [Right outer join](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#right-outer-join)
-        - [Full join](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#full-join)
-        - [Cross join](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#cross-join)
-        - [Self Join](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#self-join)
-      - [Keys](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#keys)
-      - [Indexes](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#indexes)
-      - [Queries](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#queries)
-    - [Frequently asked queries](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
-      - [Find all departments with sales more than 1000](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
-      - [Print all employee ids with their manager ids](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
-      - [Print all manager names with count of directs](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
-      - [Print 10th highest salary](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
+
+  - [Database](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#database)
+  - [SQL](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#sql)
+    - [Joins](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#joins)
+      - [Inner join](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#inner-join)
+      - [Left outer join](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#left-outer-join)
+      - [Right outer join](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#right-outer-join)
+      - [Full join](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#full-join)
+      - [Cross join](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#cross-join)
+      - [Self Join](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#self-join)
+    - [Keys](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#keys)
+    - [Indexes](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#indexes)
+    - [Queries](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#queries)
+  - [Frequently asked queries](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
+    - [Find all departments with sales more than 1000](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
+    - [Print all employee ids with their manager ids](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
+    - [Print all manager names with count of directs](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
+    - [Print 10th highest salary](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
   - [SQL vs NoSQL](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#sql-vs-nosql)
     - [SQL](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#sql-1)
     - [NoSQL](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#nosql)
@@ -614,8 +617,8 @@ Interview questions and answers
     - [Use Cases](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#use-cases)
     - [Reasons to use an SQL database](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#reasons-to-use-an-sql-database)
     - [Reasons to use a NoSQL database](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#reasons-to-use-a-nosql-database)
-  
 - **Maven**
+
   - [Maven](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#Maven)
   - [pom.xml](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#pomxml)
   - [Maven build life-cycle](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#maven-build-life-cycle)
@@ -626,8 +629,8 @@ Interview questions and answers
     - [verify](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#maven-build-life-cycle)
     - [install](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#maven-build-life-cycle)
     - [deploy](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#maven-build-life-cycle)
-  
 - **Unix**
+
   - [Unix](https://github.com/sunilsoni/interview-notes/blob/main/unix/Unix.md#unix)
     - [Find](https://github.com/sunilsoni/interview-notes/blob/main/unix/Unix.md#find)
     - [Search](https://github.com/sunilsoni/interview-notes/blob/main/unix/Unix.md#search)
@@ -641,8 +644,8 @@ Interview questions and answers
     - [Networking](https://github.com/sunilsoni/interview-notes/blob/main/unix/Unix.md#networking)
     - [Space](https://github.com/sunilsoni/interview-notes/blob/main/unix/Unix.md#space)
     - [Miscellaneous](https://github.com/sunilsoni/interview-notes/blob/main/unix/Unix.md#miscellaneous)
-  
 - **DevOps Tools**
+
   - [Docker](https)
   - [Git](https://github.com/sunilsoni/interview-notes/blob/main/devops/git/git.md#git)
     * [Advantages of git](https://github.com/sunilsoni/interview-notes/blob/main/devops/git/git.md#advantages-of-git)
@@ -656,8 +659,8 @@ Interview questions and answers
   - [Jenkins](https)
     * [Continuous delivery](https://github.com/sunilsoni/interview-notes/blob/main/devops/jenkins/jenkins.md#continuous-delivery)
   - [Kubernetes](https)
-  
 - **Swagger**
+
   - [Swagger](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#swagger)
   - [Integrate Swagger into your microservices](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#integrate-swagger-into-your-microservices)
   - [Swagger annotations](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#swagger-annotations)
@@ -666,8 +669,8 @@ Interview questions and answers
     - [@ApiResponse](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#swagger-annotations)
     - [@ApiParam](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#swagger-annotations)
   - [Maven plugin](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#maven-plugin)
-  
 - **Cucumber**
+
   - [Cucumber](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#cucumber)
   - [Advantages of Cucumber](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#advantages-of-cucumber)
   - [Example](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#example)
@@ -691,16 +694,15 @@ Interview questions and answers
   - [Name any two testing framework that can be integrated with Cucumber?](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#name-any-two-testing-framework-that-can-be-integrated-with-cucumber)
   - [What are the two files required to run a cucumber test?](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#what-are-the-two-files-required-to-run-a-cucumber-test)
   - [Examples Table or Scenario Outline vs Data Table](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#examples-table-or-scenario-outline-vs-data-table)
-
-
 - **Agile**
+
   - [Agile Scrum Ceremonies](https://github.com/sunilsoni/interview-notes/blob/main/agile/agile.md#agile)
     * [Sprint Planning](https://github.com/sunilsoni/interview-notes/blob/main/agile/agile.md#sprint-planning)
     * [Daily Scrum](https://github.com/sunilsoni/interview-notes/blob/main/agile/agile.md#daily-scrum)
     * [Sprint Review](https://github.com/sunilsoni/interview-notes/blob/main/agile/agile.md#sprint-review)
     * [Sprint Retrospective](https://github.com/sunilsoni/interview-notes/blob/main/agile/agile.md#sprint-retrospective)
-
 - **Good Practices**
+
   - [Good Practices for REST API Design](https://github.com/sunilsoni/interview-notes/blob/main/misc/GoodPractices.md#good-practices-for-rest-api-design)
     * [Accept and respond with JSON](https://github.com/sunilsoni/interview-notes/blob/main/misc/GoodPractices.md#accept-and-respond-with-json)
     * [Use nouns instead of verbs in endpoint paths](https://github.com/sunilsoni/interview-notes/blob/main/misc/GoodPractices.md#use-nouns-instead-of-verbs-in-endpoint-paths)
@@ -722,4 +724,3 @@ Interview questions and answers
       * [How does XSS work?](https://github.com/sunilsoni/interview-notes/blob/main/misc/owasp.md#how-does-xss-work)
     * [Cross Site Request Forgery(CSRF)](https://github.com/sunilsoni/interview-notes/blob/main/misc/owasp.md#cross-site-request-forgerycsrf)
     * [Test](http)
-  
