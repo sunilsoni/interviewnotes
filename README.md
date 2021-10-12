@@ -617,6 +617,7 @@ Interview questions and answers
     - [Use Cases](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#use-cases)
     - [Reasons to use an SQL database](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#reasons-to-use-an-sql-database)
     - [Reasons to use a NoSQL database](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#reasons-to-use-a-nosql-database)
+
 - **Maven**
 
   - [Maven](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#Maven)
@@ -694,15 +695,20 @@ Interview questions and answers
   - [Name any two testing framework that can be integrated with Cucumber?](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#name-any-two-testing-framework-that-can-be-integrated-with-cucumber)
   - [What are the two files required to run a cucumber test?](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#what-are-the-two-files-required-to-run-a-cucumber-test)
   - [Examples Table or Scenario Outline vs Data Table](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#examples-table-or-scenario-outline-vs-data-table)
-- **Agile**
 
+- **Agile**
   - [Agile Scrum Ceremonies](https://github.com/sunilsoni/interview-notes/blob/main/agile/agile.md#agile)
     * [Sprint Planning](https://github.com/sunilsoni/interview-notes/blob/main/agile/agile.md#sprint-planning)
     * [Daily Scrum](https://github.com/sunilsoni/interview-notes/blob/main/agile/agile.md#daily-scrum)
     * [Sprint Review](https://github.com/sunilsoni/interview-notes/blob/main/agile/agile.md#sprint-review)
     * [Sprint Retrospective](https://github.com/sunilsoni/interview-notes/blob/main/agile/agile.md#sprint-retrospective)
-- **Good Practices**
 
+# Amazon Web Services (AWS)
+
+- [AWS](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#amazon-web-services-aws)
+
+
+- **Good Practices**
   - [Good Practices for REST API Design](https://github.com/sunilsoni/interview-notes/blob/main/misc/GoodPractices.md#good-practices-for-rest-api-design)
     * [Accept and respond with JSON](https://github.com/sunilsoni/interview-notes/blob/main/misc/GoodPractices.md#accept-and-respond-with-json)
     * [Use nouns instead of verbs in endpoint paths](https://github.com/sunilsoni/interview-notes/blob/main/misc/GoodPractices.md#use-nouns-instead-of-verbs-in-endpoint-paths)
