@@ -573,30 +573,32 @@ Interview questions and answers
     * [Starting a Kafka server](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#starting-a-kafka-server)
     * [In the Producer, when does QueueFullException occur?](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#in-the-producer-when-does-queuefullexception-occur)
     * [Confluent Kafka vs. Apache Kafka](https://github.com/sunilsoni/interview-notes/blob/main/kafka/kafka.md#Confluent-Kafka-vs-Apache-Kafka)
-- **MongoDB**
 
-  - [MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#mongodb)
-    * [Key Components](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#key-components)
-    * [Document](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#document)
-    * [Collection](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#collection)
-    * [Namespace](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#namespace)
-    * [Databases in MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#databases-in-mongodb)
-    * [Mongo Shell](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#mongo-shell)
-    * [Advantages of MongoDB:](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#advantages-of-mongodb)
-    * [Features of MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#features-of-mongodb)
-    * [Indexes in MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#indexes-in-mongodb)
-    * [MongoDB](https)
-- **Database**
+# MongoDB
 
-  - [Database](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#database)
-  - [SQL](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#sql)
-    - [Joins](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#joins)
-      - [Inner join](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#inner-join)
-      - [Left outer join](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#left-outer-join)
-      - [Right outer join](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#right-outer-join)
-      - [Full join](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#full-join)
-      - [Cross join](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#cross-join)
-      - [Self Join](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#self-join)
+- [MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#mongodb)
+  * [Key Components](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#key-components)
+  * [Document](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#document)
+  * [Collection](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#collection)
+  * [Namespace](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#namespace)
+  * [Databases in MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#databases-in-mongodb)
+  * [Mongo Shell](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#mongo-shell)
+  * [Advantages of MongoDB:](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#advantages-of-mongodb)
+  * [Features of MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#features-of-mongodb)
+  * [Indexes in MongoDB](https://github.com/sunilsoni/interview-notes/blob/main/mongo-db/mongo-db.md#indexes-in-mongodb)
+  * [MongoDB](https)
+
+# Database
+
+- [Database](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#database)
+- [SQL](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#sql)
+  - [Joins](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#joins)
+    - [Inner join](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#inner-join)
+    - [Left outer join](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#left-outer-join)
+    - [Right outer join](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#right-outer-join)
+    - [Full join](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#full-join)
+    - [Cross join](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#cross-join)
+    - [Self Join](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#self-join)
     - [Keys](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#keys)
     - [Indexes](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#indexes)
     - [Queries](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#queries)
@@ -618,7 +620,7 @@ Interview questions and answers
     - [Reasons to use an SQL database](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#reasons-to-use-an-sql-database)
     - [Reasons to use a NoSQL database](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#reasons-to-use-a-nosql-database)
 
-- **Maven**
+# Maven
 
   - [Maven](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#Maven)
   - [pom.xml](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#pomxml)
@@ -630,8 +632,8 @@ Interview questions and answers
     - [verify](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#maven-build-life-cycle)
     - [install](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#maven-build-life-cycle)
     - [deploy](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#maven-build-life-cycle)
-- **Unix**
 
+# Unix
   - [Unix](https://github.com/sunilsoni/interview-notes/blob/main/unix/Unix.md#unix)
     - [Find](https://github.com/sunilsoni/interview-notes/blob/main/unix/Unix.md#find)
     - [Search](https://github.com/sunilsoni/interview-notes/blob/main/unix/Unix.md#search)
@@ -645,8 +647,8 @@ Interview questions and answers
     - [Networking](https://github.com/sunilsoni/interview-notes/blob/main/unix/Unix.md#networking)
     - [Space](https://github.com/sunilsoni/interview-notes/blob/main/unix/Unix.md#space)
     - [Miscellaneous](https://github.com/sunilsoni/interview-notes/blob/main/unix/Unix.md#miscellaneous)
-- **DevOps Tools**
 
+# DevOps Tools
   - [Docker](https)
   - [Git](https://github.com/sunilsoni/interview-notes/blob/main/devops/git/git.md#git)
     * [Advantages of git](https://github.com/sunilsoni/interview-notes/blob/main/devops/git/git.md#advantages-of-git)
@@ -660,8 +662,8 @@ Interview questions and answers
   - [Jenkins](https)
     * [Continuous delivery](https://github.com/sunilsoni/interview-notes/blob/main/devops/jenkins/jenkins.md#continuous-delivery)
   - [Kubernetes](https)
-- **Swagger**
 
+# Swagger
   - [Swagger](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#swagger)
   - [Integrate Swagger into your microservices](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#integrate-swagger-into-your-microservices)
   - [Swagger annotations](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#swagger-annotations)
