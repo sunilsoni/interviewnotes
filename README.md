@@ -670,17 +670,18 @@ Interview questions and answers
     - [@ApiResponse](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#swagger-annotations)
     - [@ApiParam](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#swagger-annotations)
   - [Maven plugin](https://github.com/sunilsoni/interview-notes/blob/main/spring/swagger.md#maven-plugin)
-- **Cucumber**
 
-  - [Cucumber](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#cucumber)
-  - [Advantages of Cucumber](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#advantages-of-cucumber)
-  - [Example](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#example)
-  - [Features in Cucumber](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#features-in-cucumber)
-  - [Feature file](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#feature-file)
-  - [Step Definition](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#step-definition)
-  - [Gherkin](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#gherkin)
-  - [user login feature Example](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#user-login-feature-example)
-  - [Test harness in Cucumber](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#test-harness-in-cucumber)
+# Cucumber
+
+- [Cucumber](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#cucumber)
+- [Advantages of Cucumber](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#advantages-of-cucumber)
+- [Example](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#example)
+- [Features in Cucumber](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#features-in-cucumber)
+- [Feature file](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#feature-file)
+- [Step Definition](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#step-definition)
+- [Gherkin](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#gherkin)
+- [user login feature Example](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#user-login-feature-example)
+- [Test harness in Cucumber](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#test-harness-in-cucumber)
   - [Selenium vs Cucumber](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#selenium-vs-cucumber)
   - [TDD(Test-Driven Development)](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#tddtest-driven-development)
   - [BDD and TDD](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#bdd-and-tdd)
@@ -696,7 +697,7 @@ Interview questions and answers
   - [What are the two files required to run a cucumber test?](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#what-are-the-two-files-required-to-run-a-cucumber-test)
   - [Examples Table or Scenario Outline vs Data Table](https://github.com/sunilsoni/interview-notes/blob/main/Cucumber/Cucumber.md#examples-table-or-scenario-outline-vs-data-table)
 
-- **Agile**
+# Agile
   - [Agile Scrum Ceremonies](https://github.com/sunilsoni/interview-notes/blob/main/agile/agile.md#agile)
     * [Sprint Planning](https://github.com/sunilsoni/interview-notes/blob/main/agile/agile.md#sprint-planning)
     * [Daily Scrum](https://github.com/sunilsoni/interview-notes/blob/main/agile/agile.md#daily-scrum)
@@ -707,8 +708,7 @@ Interview questions and answers
 
 - [AWS](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#amazon-web-services-aws)
 
-
-- **Good Practices**
+# Good Practices
   - [Good Practices for REST API Design](https://github.com/sunilsoni/interview-notes/blob/main/misc/GoodPractices.md#good-practices-for-rest-api-design)
     * [Accept and respond with JSON](https://github.com/sunilsoni/interview-notes/blob/main/misc/GoodPractices.md#accept-and-respond-with-json)
     * [Use nouns instead of verbs in endpoint paths](https://github.com/sunilsoni/interview-notes/blob/main/misc/GoodPractices.md#use-nouns-instead-of-verbs-in-endpoint-paths)
