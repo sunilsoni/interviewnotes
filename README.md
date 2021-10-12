@@ -2,7 +2,7 @@
 
 Interview questions and answers
 
-- **Object-oriented programming(OOPS)**
+# Object-oriented programming(OOPS)
 
   - [OOPS](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#object-oriented-programmingoops)
     * [Abstraction](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#abstraction)
