@@ -381,7 +381,10 @@ Result:
 2 rows in set (0.00 sec)
 ```
 
-Reference: https://stackoverflow.com/questions/49925/what-is-the-difference-between-union-and-union-all
+Reference: 
+https://stackoverflow.com/questions/49925/what-is-the-difference-between-union-and-union-all
+https://www.javatpoint.com/mysql-union-vs-union-all
+
 
 For more information:
 
