@@ -352,7 +352,7 @@ SELECT 'foo' AS bar
 ```
 
 Result:
-
+```log
 +-----+
 | bar |
 +-----+
@@ -360,6 +360,7 @@ Result:
 | foo |
 +-----+
 2 rows in set (0.00 sec)
+```
 
 UNION ALL example:
 
@@ -369,6 +370,8 @@ UNION ALL
 SELECT 'foo' AS bar
 ```
 
+Result:
+```log
 +-----+
 | bar |
 +-----+
@@ -376,6 +379,7 @@ SELECT 'foo' AS bar
 | foo |
 +-----+
 2 rows in set (0.00 sec)
+```
 
 Reference: https://stackoverflow.com/questions/49925/what-is-the-difference-between-union-and-union-all
 
