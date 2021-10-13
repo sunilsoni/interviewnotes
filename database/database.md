@@ -320,7 +320,8 @@ Reasons to use an SQL database:
 
 - When you need ACID support – With ACID support you get data consistency and 100% data integrity.
 - When you are working with complex queries and reports – SQL is a better fit for complex query environments when compared to NoSQL.
-- When you don’t anticipate a lot of changes or growth – If your business is not growing exponentially, there is no reason to use a system designed to support an increase in data volume.
+- When you don’t anticipate a lot of changes or growth – If your business is not growing exponentially, there is no
+  reason to use a system designed to support an increase in data volume.
 
 Reasons to use a NoSQL database:
 -------------
@@ -328,125 +329,43 @@ Reasons to use a NoSQL database:
 - When you need real-time data – NoSQL does not require schemas, so it makes the information process quicker.
 - When you store volumes of data with no structure – NoSQL supports all data types.
 - When you run an agile business – NoSQL does not require the preparation process, so it reduces downtime.
-- When you want to make most out of cloud computing and storage – For a cloud solution to be scalable, the data must be easy to share across multiple servers.
+- When you want to make most out of cloud computing and storage – For a cloud solution to be scalable, the data must be
+  easy to share across multiple servers.
 
+## UNION vs UNION ALL
 
+UNION removes duplicate records (where all columns in the results are the same), UNION ALL does not.
 
+There is a performance hit when using UNION instead of UNION ALL, since the database server must do additional work to
+remove the duplicate rows, but usually you do not want the duplicates (especially when developing reports).
 
+To identify duplicates, records must be comparable types as well as compatible types. This will depend on the SQL
+system. For example the system may truncate all long text fields to make short text fields for comparison (MS Jet), or
+may refuse to compare binary fields (ORACLE)
 
+UNION Example:
 
+```sql
+SELECT 'foo' AS bar
+UNION
+SELECT 'foo' AS bar
+```
 
+Result:
 
++-----+ | bar | +-----+ | foo | +-----+ 1 row in set (0.00 sec)
 
+UNION ALL example:
 
+```sql
+SELECT 'foo' AS bar
+UNION ALL
+SELECT 'foo' AS bar
+```
 
++-----+ | bar | +-----+ | foo | +-----+ 1 row in set (0.00 sec)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Reference: https://stackoverflow.com/questions/49925/what-is-the-difference-between-union-and-union-all
 
 For more information:
 
