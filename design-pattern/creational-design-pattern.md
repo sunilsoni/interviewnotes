@@ -536,6 +536,8 @@ The constructor must be explicitly declared and should have the private access m
 - Accessing application specific properties through a singleton object, which reads them for the first time from a properties file and subsequent accesses are returned from in-memory objects. Also there could be another piece of code, which periodically synchronizes the in-memory properties when the values get modified in the underlying properties file. This piece of code accesses the in-memory objects through the singleton object (i.e. global point of access).
 - Accessing in-memory object cache or object pool, or non-memory based resource pools like sockets, connections etc through a singleton object (i.e. global point of access).
 
+Refer: https://dzone.com/articles/singleton-in-java
+
 singleton class vs a static class
 ------------
 
