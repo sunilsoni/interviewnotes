@@ -24,8 +24,8 @@ Interview questions and answers
     * [Aggregation](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#aggregation)
     * [Composition](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#composition)
     * [Association vs. Aggregation vs. Composition](https://github.com/sunilsoni/interview-notes/blob/main/oop/oops.md#association-vs-aggregation-vs-composition)
-- **Java**
 
+# Java
   - [Basic](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java-basics.md)
 
     * [Java 8](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#java-8)
