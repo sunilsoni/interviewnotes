@@ -642,9 +642,20 @@ Always use Eureka Registry to fetch the service details e.g. host, port and prot
 # Spring Boot CRUD Web Application with Thymeleaf, Spring MVC, Spring Data JPA, Hibernate, MySQL
 
 1. Create Spring Boot Project
-```xml
 
-```
+
+Step 1: Open Spring Initializr http://start.spring.io.
+
+Step 2: Select the Spring Boot version 2.4.0.
+
+Step 2: Provide the Group name.
+
+Step 3: Provide the Artifact Id. 
+
+Step 5: Add the dependencies Spring Web, Spring Data JPA, and H2/MySQL Database.
+
+Step 6: Click on the Generate button. When we click on the Generate button, it wraps the specifications in a Jar file and downloads it to the local system.
+
 2. Maven Dependencies
 
 pom.xml
@@ -987,9 +998,18 @@ Create new `index.html` file under "resources/templates" folder and add the foll
 $ mvn spring-boot:run
 ```
 
-Ref: https://github.com/RameshMF/springboot-thymeleaf-crud-pagination-sorting-webapp
 
 10. Extra or Additional features
+
+ - How to enable JPA Auditing
+ - Exception(Error) Handling for RESTful Services
+ - Customizing Error Response Structure
+
+Ref: https://github.com/RameshMF/springboot-thymeleaf-crud-pagination-sorting-webapp
+
+## CrudRepository vs. JpaRepository
+
+
 
 
 
