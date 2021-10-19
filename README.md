@@ -316,7 +316,8 @@ Interview questions and answers
     - [View Layer: Thymeleaf](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#view-layer-thymeleaf)
     - [Run Spring application and demo](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#run-spring-application-and-demo)
     - [ Unit Testing REST APIs](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#unit-testing-rest-apis)
-  
+    - [ CrudRepository vs. JpaRepository](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#crudrepository-vs-jparepository)
+
 
 
 

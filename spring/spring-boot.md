@@ -1155,7 +1155,7 @@ https://www.javaguides.net/2018/09/spring-boot-2-hibernate-5-mysql-crud-rest-api
 
 ## CrudRepository vs. JpaRepository
 
-
+https://www.javatpoint.com/spring-boot-crud-operations
 
 
 
