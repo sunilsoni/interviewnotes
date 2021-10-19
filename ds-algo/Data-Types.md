@@ -42,7 +42,6 @@ Below is the list of growth rates.
 
 One memory block is allocated for the entire array to hold the elements of the array. The array elements can be accessed in constant time by using the index of the particular element as the subscript.
 
-
 <img src="./images/Arrays.png" width="800"  />
 
 To access an array element, the address of an element is computed as an offset from the base address of the array and one multiplication is needed to compute what is supposed to be added to the base address to get the memory address of the element. First the size of an element of that data type is calculated and then it is multiplied with the index of the element to get the value to be added to the base address.
@@ -50,16 +49,17 @@ To access an array element, the address of an element is computed as an offset f
 This process takes one multiplication and one addition. Since these two operations take constant time, we can say the array access can be performed in constant time.
 
 ## Advantages of Arrays
+
 - Simple and easy to use
 - Faster access to the elements (constant access)
 
 ## Disadvantages of Arrays
 
 Preallocates all needed memory up front and wastes memory space for indices in the array that are empty.
+
 - Fixed size: The size of the array is static (specify the array size before using it).
 - One block allocation: To allocate the array itself at the beginning, sometimes it may not be possible to get the memory for the complete array (if the array size is big).
 - Complex position-based insertion: To insert an element at a given position, we may need to shift the existing elements. This will create a position for us to insert the new element at the desired position. If the position at which we want to add an element is at the beginning, then the shifting operation is more expensive.
-
 
 ## Dynamic Arrays
 
@@ -71,10 +71,10 @@ Similarly, reduce the array size to half if the elements in the array are less t
 
 Note: We will see the implementation for dynamic arrays in the Stacks, Queues and Hashing chapters.
 
-
 # Linked List
 
 A linked list is a data structure used for storing collections of data. A linked list has the following properties.
+
 - Successive elements are connected by pointers
 - The last element points to NULL
 - Can grow or shrink in size during execution of a program
@@ -82,7 +82,6 @@ A linked list is a data structure used for storing collections of data. A linked
 - Does not waste memory space (but takes some extra memory for pointers). It allocates memory as list grows.
 
   <img src="./images/LinkedList.png" width="800"  />
-
 
 ## Advantages of Linked Lists
 
@@ -98,8 +97,41 @@ Although the dynamic allocation of storage is a great advantage, the overhead wi
 
 Finally, linked lists waste memory in terms of extra reference points.
 
-
 ## Comparison of Linked Lists with Arrays & Dynamic Arrays
 
-  <img src="./images/Comparison of Linked Lists with Arrays & Dynamic Arrays.png" width="1000"  />
+<img src="./images/Comparison of Linked Lists with Arrays & Dynamic Arrays.png" width="1000"  />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
