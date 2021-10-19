@@ -396,14 +396,29 @@ https://www.javatpoint.com/mysql-union-vs-union-all
 
 
 ## TRUNCATE
-
+- TRUNCATE is a Data Definition Language(DDL) command.
+- TRUNCATE is executed using a table lock and the whole table is locked to remove all records.
+- TRUNCATE removes all rows from a table at once.
+- WHERE clause cannot be used with TRUNCATE.
+- It is faster performance-wise than DELETE as it only logs once in the transaction log.
+- TRUNCATE cannot be used with indexed views.
+- To use Truncate on a table, ALTER permission is required on the table.
 
 ##DELETE
-
+- DELETE is a Data Manipulation Language(DML) command.
+- DELETE is executed using a row lock mechanism, each row in the table is locked for deletion.
+- WHERE clause can be used with DELETE query to filter out records and then delete them.
+- DELETE maintains an entry in the transaction log for each row deleted. Hence it is slower than TRUNCATE.
+- DELETE permission is required on the table to delete the records.
+- The DELETE can be used with indexed views.
 
 
 ##DROP
-
+- The DROP command removes a table from the database.
+- All the tables’ rows, indexes, and privileges will also be removed.
+- No Data Manipulation Language(DML) triggers will be fired.
+- DROP is a Data Definition Language(DDL).
+- DELETE operations can be rolled back (undone), while DROP and TRUNCATE operations cannot be rolled back.
 
 
 Reference: https://medium.com/javarevisited/know-the-differences-between-truncate-delete-and-drop-4ee70bb736fb
