@@ -101,5 +101,5 @@ Finally, linked lists waste memory in terms of extra reference points.
 
 ## Comparison of Linked Lists with Arrays & Dynamic Arrays
 
-  <img src="./images/Comparison of Linked Lists with Arrays & Dynamic Arrays.png" width="800"  />
+  <img src="./images/Comparison of Linked Lists with Arrays & Dynamic Arrays.png" width="1000"  />
 
