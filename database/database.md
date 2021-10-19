@@ -385,6 +385,16 @@ Reference:
 https://stackoverflow.com/questions/49925/what-is-the-difference-between-union-and-union-all
 https://www.javatpoint.com/mysql-union-vs-union-all
 
+## TRUNCATE
+
+
+##DELETE
+
+
+
+##DROP
+
+
 
 For more information:
 
