@@ -319,12 +319,7 @@ Interview questions and answers
     - [ CrudRepository vs. JpaRepository](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#crudrepository-vs-jparepository)
 
 
-
-
-
-
-
-
+    
 
 # Spring AOP(Aspect Oriented Programming)
  - [Spring AOP(Aspect Oriented Programming)](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-aop.md#spring-aop)
