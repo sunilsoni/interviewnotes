@@ -31,10 +31,15 @@ Depending on the organization of the elements, data structures are classified in
   Elements of this data structure are stored/accessed in a non-linear order. Examples: Trees and graphs.
 
 
+# Commonly Used Rates of Growth
 
+The diagram below shows the relationship between different rates of growth.
 
+<img src="./images/rates of growth.png" width="800"  /> 
 
+Below is the list of growth rates.
 
+<img src="./images/growth rates.png" width="800"  /> 
 
 
 
