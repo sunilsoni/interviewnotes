@@ -385,6 +385,16 @@ Reference:
 https://stackoverflow.com/questions/49925/what-is-the-difference-between-union-and-union-all
 https://www.javatpoint.com/mysql-union-vs-union-all
 
+
+##TRUNCATE vs DELETE, vs  DROP
+
+|TRUNCATE       | DELETE	                                |DROP   |
+|------------------|--------------------------|-------------------------------------------|
+|  The TRUNCATE TABLE the command deletes the data inside a table, but not the table itself. TRUNCATE deletes all the rows of a table at once. It only logs once in the transaction log.| The DELETE query deletes all records from a table of a database without deleting the table schemas like columns, indexes, etc.  | The DROP TABLE statement is used to drop an existing table in a database. DROP TABLEquery removes the table definition and all data, indexes, triggers, constraints, and permissions for that table.      |
+|  TRUNCATE TABLE table_name;| DELETE FROM table_name WHERE condition;|  DROP TABLE table_name;     |
+
+
+
 ## TRUNCATE
 
 
@@ -393,6 +403,10 @@ https://www.javatpoint.com/mysql-union-vs-union-all
 
 
 ##DROP
+
+
+
+Reference: https://medium.com/javarevisited/know-the-differences-between-truncate-delete-and-drop-4ee70bb736fb
 
 
 
