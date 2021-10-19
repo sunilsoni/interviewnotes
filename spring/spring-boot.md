@@ -738,8 +738,11 @@ spring.jpa.hibernate.ddl-auto=update
   Employee.java  Let's create User model or domain class with following fields:
 
    **id** - primary key
+
    **firstName** - user first name
+
    **lastName** - user last name
+
    **emailId** - user email ID
 
    **createdAt** - user object created date
