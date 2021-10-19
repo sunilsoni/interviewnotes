@@ -997,6 +997,22 @@ Create new `index.html` file under "resources/templates" folder and add the foll
 ```bash
 $ mvn spring-boot:run
 ```
+SpringApplication is a static class that has a static method run, which takes two arguments our main class and the command-line argument for the main method.
+
+What `@SpringBootApplication` annotation does ?
+
+1). Set up the default configuration
+
+2). Starts Spring Application Context
+
+3). Performs a class-path scan
+
+4). Starts Tomcat server
+
+- Firstly, the application starts with a simple Java public static main method.
+- Next, Spring starts your Spring context by looking up the auto-config initializers, configurations, and annotations that direct how to initialize and start up the Spring context.
+- Lastly, it starts and auto-configures an embedded web server. The default application server is Tomcat for Spring Boot.
+
 
 ## Unit Testing REST APIs
 
@@ -1112,7 +1128,9 @@ public class SpringBootCrudRestApplicationTests {
  - Exception(Error) Handling for RESTful Services
  - Customizing Error Response Structure
 
-Ref: https://github.com/RameshMF/springboot-thymeleaf-crud-pagination-sorting-webapp
+Ref: 
+https://github.com/RameshMF/springboot-thymeleaf-crud-pagination-sorting-webapp
+https://www.javaguides.net/2018/09/spring-boot-2-hibernate-5-mysql-crud-rest-api-tutorial.html
 
 ## CrudRepository vs. JpaRepository
 
