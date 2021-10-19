@@ -61,7 +61,15 @@ Preallocates all needed memory up front and wastes memory space for indices in t
 - Complex position-based insertion: To insert an element at a given position, we may need to shift the existing elements. This will create a position for us to insert the new element at the desired position. If the position at which we want to add an element is at the beginning, then the shifting operation is more expensive.
 
 
+## Dynamic Arrays
 
+Dynamic array (also called as growable array, resizable array, dynamic table, or array list) is a random access, variable-size list data structure that allows elements to be added or removed.
+
+One simple way of implementing dynamic arrays is to initially start with some fixed size array. As soon as that array becomes full, create the new array double the size of the original array.
+
+Similarly, reduce the array size to half if the elements in the array are less than half.
+
+Note: We will see the implementation for dynamic arrays in the Stacks, Queues and Hashing chapters.
 
 
 # Linked List

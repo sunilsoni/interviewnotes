@@ -207,8 +207,10 @@ Interview questions and answers
     * [Arrays](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Data-Types.md#arrays)
       * [Advantages of Arrays](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Data-Types.md#advantages-of-arrays)
       * [Disadvantages of Arrays](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Data-Types.md#disadvantages-of-arrays)
+      * [Dynamic Arrays](https)
+      
     * [Linked List](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Data-Types.md#linked-list)
-    * [Test](https)
+
     * [Test](https)
     * [Test](https)
     * [Test](https)
