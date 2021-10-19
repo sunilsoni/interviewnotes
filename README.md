@@ -197,8 +197,13 @@ Interview questions and answers
       * [PrintAnagramTogether](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/anagram/PrintAnagramTogether.java)
       * [AnagramOfFirstAsSubstring](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/anagram/AnagramOfFirstAsSubstring.java)
       * [GroupAnagramsTogether](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/anagram/GroupAnagramsTogether.java)
+    * [Data Types](https)
+      * [System-defined data types (Primitive data types)](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Data-Types.md#system-defined-data-types-primitive-data-types)
+      * [User defined data types](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Data-Types.md#user-defined-data-types)
+    * [Data Structures](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Data-Types.md#data-structures)
     * [Test](https)
-
+    * [Test](https)
+    * [Test](https)
 # Spring
 
 - [Spring](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring.md#spring)

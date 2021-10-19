@@ -25,9 +25,9 @@ A data structure is a special format for organizing and storing data. General da
 
 Depending on the organization of the elements, data structures are classified into two types:
 
-**- Linear data structures:** 
+## Linear data structures:
   Elements are accessed in a sequential order but it is not compulsory to store all elements sequentially. Examples: Linked Lists, Stacks and Queues.
-**- Non – linear data structures:** 
+## Non – linear data structures:
   Elements of this data structure are stored/accessed in a non-linear order. Examples: Trees and graphs.
 
 
