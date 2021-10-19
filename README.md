@@ -212,7 +212,7 @@ Interview questions and answers
     * [Linked List](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Data-Types.md#linked-list)
         * [Advantages of Linked List](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Data-Types.md#advantages-of-linked-lists)
         * [Disadvantages of Linked List](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Data-Types.md#disadvantages-of-linked-lists)
-        * [Comparison of Linked Lists with Arrays & Dynamic Arrays](https)
+        * [Comparison of Linked Lists with Arrays & Dynamic Arrays](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Data-Types.md#comparison-of-linked-lists-with-arrays--dynamic-arrays)
 
     * [Test](https)
     * [Test](https)
