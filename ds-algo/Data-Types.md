@@ -41,9 +41,14 @@ Below is the list of growth rates.
 
 <img src="./images/growth rates.png" width="800"  /> 
 
+# Linked List
 
-
-
+A linked list is a data structure used for storing collections of data. A linked list has the following properties.
+• Successive elements are connected by pointers
+• The last element points to NULL
+• Can grow or shrink in size during execution of a program
+• Can be made just as long as required (until systems memory exhausts)
+• Does not waste memory space (but takes some extra memory for pointers). It allocates memory as list grows.
 
 
 
