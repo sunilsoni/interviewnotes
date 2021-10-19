@@ -386,7 +386,7 @@ https://stackoverflow.com/questions/49925/what-is-the-difference-between-union-a
 https://www.javatpoint.com/mysql-union-vs-union-all
 
 
-##TRUNCATE vs DELETE, vs  DROP
+## TRUNCATE vs DELETE, vs  DROP
 
 |TRUNCATE       | DELETE	                                |DROP   |
 |------------------|--------------------------|-------------------------------------------|
@@ -404,7 +404,7 @@ https://www.javatpoint.com/mysql-union-vs-union-all
 - TRUNCATE cannot be used with indexed views.
 - To use Truncate on a table, ALTER permission is required on the table.
 
-##DELETE
+## DELETE
 - DELETE is a Data Manipulation Language(DML) command.
 - DELETE is executed using a row lock mechanism, each row in the table is locked for deletion.
 - WHERE clause can be used with DELETE query to filter out records and then delete them.
@@ -413,7 +413,7 @@ https://www.javatpoint.com/mysql-union-vs-union-all
 - The DELETE can be used with indexed views.
 
 
-##DROP
+## DROP
 - The DROP command removes a table from the database.
 - All the tables’ rows, indexes, and privileges will also be removed.
 - No Data Manipulation Language(DML) triggers will be fired.
