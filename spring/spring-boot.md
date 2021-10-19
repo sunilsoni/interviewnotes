@@ -1001,20 +1001,23 @@ SpringApplication is a static class that has a static method run, which takes tw
 
 What `@SpringBootApplication` annotation does ?
 
-1). Set up the default configuration
+1). **Set up the default configuration**
 
 Spring Boot favors Convention over Configuration. It addresses the 80% use case. Default configuration addresses that 80 % use case and if we want to change something according to our requirement then we can do that.
 
-2). Starts Spring Application Context
+2). **Starts Spring Application Context**
+
 Spring is a container for all your code that you wrote in Java EE Application, that runs on an Application Server. Let’s understand this with the help of the scenario :
 
 Let’s assume you have your services, controllers, and data services. And Spring acts as a controller for all those different services and this container is called Application Context. So every Spring Application has this Application Context which runs when Spring Application runs.
 
-3). Performs a class-path scan
+3). **Performs a class-path scan**
+
 It also performing class-path scanning. The way we plugin code to Spring Boot application is by creating our own custom classes and annotating them with the intent or marker( means for controller @Controller and service @Service annotation). Depending on the marker it treated them differently. So for treating them, it scans the classpath where metadata is available.
 
 
-4). Starts Tomcat server
+4). **Starts Tomcat server**
+
 Due to the embedded or inbuilt Tomcat Spring Boot by default create a Standalone application. You don’t need to create a servlet container. Spring Boot by default has servlet containers due to this feature.
 
 - Firstly, the application starts with a simple Java public static main method.
@@ -1138,6 +1141,7 @@ public class SpringBootCrudRestApplicationTests {
 
 Ref: 
 https://github.com/RameshMF/springboot-thymeleaf-crud-pagination-sorting-webapp
+
 https://www.javaguides.net/2018/09/spring-boot-2-hibernate-5-mysql-crud-rest-api-tutorial.html
 
 ## CrudRepository vs. JpaRepository
