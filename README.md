@@ -305,6 +305,7 @@ Interview questions and answers
   - [Run the Application](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#run-the-application)
   - [Add Unit Tests](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#add-unit-tests)
   - [Add Production-grade Services](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-boot.md#add-production-grade-services)
+- [Spring Boot CRUD Web Application with Thymeleaf, Spring MVC, Spring Data JPA, Hibernate, MySQL](h)
 
 # Spring AOP(Aspect Oriented Programming)
  - [Spring AOP(Aspect Oriented Programming)](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-aop.md#spring-aop)
