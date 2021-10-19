@@ -201,8 +201,8 @@ Interview questions and answers
       * [System-defined data types (Primitive data types)](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Data-Types.md#system-defined-data-types-primitive-data-types)
       * [User defined data types](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Data-Types.md#user-defined-data-types)
     * [Data Structures](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Data-Types.md#data-structures)
-    * [Test](https)
-    * [Test](https)
+    * [Linear data structures](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Data-Types.md#linear-data-structures)
+    * [Non – linear data structures](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Data-Types.md#non--linear-data-structures)
     * [Test](https)
 # Spring
 
