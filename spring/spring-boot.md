@@ -733,16 +733,19 @@ spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
 spring.jpa.hibernate.ddl-auto=update
 ```
 
-4. Model Layer - Create JPA Entity - Employee.java
-   Let's create User model or domain class with following fields:
-   id - primary key
-   firstName - user first name
-   lastName - user last name
-   emailId - user email ID
-   createdAt - user object created date
-   createdBy - use object created by
-   updatedAt - user object updated by
-   updatedby - user object updated by
+4. Model Layer - Create JPA Entity - 
+
+  Employee.java  Let's create User model or domain class with following fields:
+
+   **id** - primary key
+   **firstName** - user first name
+   **lastName** - user last name
+   **emailId** - user email ID
+   **createdAt** - user object created date
+   **createdBy** - use object created by
+   **updatedAt** - user object updated by
+   **updatedby** - user object updated by
+
 
 ```java
 import javax.persistence.Column;
