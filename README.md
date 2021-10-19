@@ -203,7 +203,7 @@ Interview questions and answers
     * [Data Structures](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Data-Types.md#data-structures)
     * [Linear data structures](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Data-Types.md#linear-data-structures)
     * [Non – linear data structures](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Data-Types.md#non--linear-data-structures)
-    * [Commonly Used Rates of Growth](https)
+    * [Commonly Used Rates of Growth](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Data-Types.md#commonly-used-rates-of-growth)
     * [Test](https)
     * [Test](https)
     * [Test](https)
