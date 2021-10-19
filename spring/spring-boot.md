@@ -641,7 +641,7 @@ Always use Eureka Registry to fetch the service details e.g. host, port and prot
 
 # Spring Boot CRUD Web Application with Thymeleaf, Spring MVC, Spring Data JPA, Hibernate, MySQL
 
-1. Create Spring Boot Project
+##  Create Spring Boot Project
 
 
 Step 1: Open Spring Initializr http://start.spring.io.
@@ -656,7 +656,7 @@ Step 5: Add the dependencies Spring Web, Spring Data JPA, and H2/MySQL Database.
 
 Step 6: Click on the Generate button. When we click on the Generate button, it wraps the specifications in a Jar file and downloads it to the local system.
 
-2. Maven Dependencies
+##  Maven Dependencies
 
 pom.xml
 ```xml
@@ -727,7 +727,7 @@ pom.xml
     </build>
 </project>
 ```
-3. Configure and Setup MySQL Database
+##  Configure and Setup MySQL Database
 
 application.properties
 
@@ -744,7 +744,7 @@ spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
 spring.jpa.hibernate.ddl-auto=update
 ```
 
-4. Model Layer - Create JPA Entity - 
+##  Model Layer - Create JPA Entity - 
 
   Employee.java  Let's create User model or domain class with following fields:
 
@@ -795,7 +795,7 @@ public class Employee {
 ```
 
 
-5. Repository Layer - EmployeeRepository.java
+##  Repository Layer - EmployeeRepository.java
 
 ```java
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -810,7 +810,7 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long>{
 
 ```
 
-6. Service Layer
+##  Service Layer
 
 ```java
 import java.util.List;
@@ -873,7 +873,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 }
 
 ```
-7. Controller Layer - EmployeeController.java
+##  Controller Layer - EmployeeController.java
 
 
 ```java
@@ -940,7 +940,7 @@ public class EmployeeController {
 
 
 
-8. View Layer: Thymeleaf
+##  View Layer: Thymeleaf
    
 Create new `index.html` file under "resources/templates" folder and add the following content to it:
 
@@ -992,14 +992,121 @@ Create new `index.html` file under "resources/templates" folder and add the foll
 ```
 
 
-9. Run Spring application and demo
+##  Run Spring application and demo
 
 ```bash
 $ mvn spring-boot:run
 ```
 
+## Unit Testing REST APIs
 
-10. Extra or Additional features
+
+```java
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.boot.web.server.LocalServerPort;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.web.client.HttpClientErrorException;
+
+import com.companyname.springbootcrudrest.SpringBootCrudRestApplication;
+import com.companyname.springbootcrudrest.model.User;
+
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = SpringBootCrudRestApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+public class SpringBootCrudRestApplicationTests {
+
+    @Autowired
+    private TestRestTemplate restTemplate;
+
+    @LocalServerPort
+    private int port;
+
+    private String getRootUrl() {
+        return "http://localhost:" + port;
+    }
+
+    @Test
+    public void contextLoads() {
+
+    }
+
+    @Test
+    public void testGetAllUsers() {
+         HttpHeaders headers = new HttpHeaders();
+         HttpEntity<String> entity = new HttpEntity<String>(null, headers);
+
+         ResponseEntity<String> response = restTemplate.exchange(getRootUrl() + "/users",
+         HttpMethod.GET, entity, String.class);
+  
+         assertNotNull(response.getBody());
+    }
+
+    @Test
+    public void testGetUserById() {
+        User user = restTemplate.getForObject(getRootUrl() + "/users/1", User.class);
+        System.out.println(user.getFirstName());
+        assertNotNull(user);
+    }
+
+    @Test
+    public void testCreateUser() {
+        User user = new User();
+        user.setEmailId("admin@gmail.com");
+        user.setFirstName("admin");
+        user.setLastName("admin");
+        user.setCreatedBy("admin");
+        user.setUpdatedby("admin");
+
+        ResponseEntity<User> postResponse = restTemplate.postForEntity(getRootUrl() + "/users", user, User.class);
+        assertNotNull(postResponse);
+        assertNotNull(postResponse.getBody());
+    }
+
+    @Test
+    public void testUpdatePost() {
+         int id = 1;
+         User user = restTemplate.getForObject(getRootUrl() + "/users/" + id, User.class);
+         user.setFirstName("admin1");
+         user.setLastName("admin2");
+
+         restTemplate.put(getRootUrl() + "/users/" + id, user);
+
+         User updatedUser = restTemplate.getForObject(getRootUrl() + "/users/" + id, User.class);
+         assertNotNull(updatedUser);
+    }
+
+    @Test
+    public void testDeletePost() {
+         int id = 2;
+         User user = restTemplate.getForObject(getRootUrl() + "/users/" + id, User.class);
+         assertNotNull(user);
+
+         restTemplate.delete(getRootUrl() + "/users/" + id);
+    
+         try {
+              user = restTemplate.getForObject(getRootUrl() + "/users/" + id, User.class);
+         } catch (final HttpClientErrorException e) {
+         assertEquals(e.getStatusCode(), HttpStatus.NOT_FOUND);
+     }
+  }
+
+}
+
+
+
+```
+11. Extra or Additional features
 
  - How to enable JPA Auditing
  - Exception(Error) Handling for RESTful Services
