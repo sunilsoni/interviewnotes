@@ -741,9 +741,13 @@ spring.jpa.hibernate.ddl-auto=update
    **firstName** - user first name
    **lastName** - user last name
    **emailId** - user email ID
+
    **createdAt** - user object created date
+
    **createdBy** - use object created by
+
    **updatedAt** - user object updated by
+
    **updatedby** - user object updated by
 
 
