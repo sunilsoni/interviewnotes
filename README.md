@@ -650,10 +650,10 @@ Interview questions and answers
     - [Reasons to use an SQL database](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#reasons-to-use-an-sql-database)
     - [Reasons to use a NoSQL database](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#reasons-to-use-a-nosql-database)
 - [UNION vs UNION ALL](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#union-vs-union-all)
-- [TRUNCATE vs DELETE, vs  DROP](https)
-- [TRUNCATE](https)
-- [DELETE](https)
-- [DROP](https)
+- [TRUNCATE vs DELETE, vs  DROP](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#truncate-vs-delete-vs--drop)
+- [TRUNCATE](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#truncate)
+- [DELETE](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#delete)
+- [DROP](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#drop)
 
 # Maven
 
