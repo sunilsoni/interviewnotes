@@ -51,6 +51,6 @@ SELECT salary FROM Employee ORDER BY salary DESC LIMIT 2,1
 
 
 
-
+Ref: https://javarevisited.blogspot.com/2016/01/4-ways-to-find-nth-highest-salary-in.html
 
 
