@@ -347,11 +347,11 @@ Interview questions and answers
 # HTTP methods overview
 
 - [HTTP methods overview](https://github.com/sunilsoni/interview-notes/blob/main/misc/http.md#http-methods-overview)
-  - [Idempotency in HTTP](https)
-  - [Safe Methods](https)
-  - [Why DELETE method is defined as idempotent](https)
-  - [Why PATCH method is not idempotent](https)
-  - [PATCH](https)
+  - [Idempotency in HTTP](https://github.com/sunilsoni/interview-notes/blob/main/misc/http.md#idempotency-in-http)
+  - [Safe Methods](https://github.com/sunilsoni/interview-notes/blob/main/misc/http.md#safe-methods)
+  - [Why DELETE method is defined as idempotent](https://github.com/sunilsoni/interview-notes/blob/main/misc/http.md#why-delete-method-is-defined-as-idempotent)
+  - [Why PATCH method is not idempotent](https://github.com/sunilsoni/interview-notes/blob/main/misc/http.md#why-patch-method-is-not-idempotent)
+  - [Why is PUT idempotent?](https)
   - [OPTIONS](https)
   - [HEAD](https)
 
