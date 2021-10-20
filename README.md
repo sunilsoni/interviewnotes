@@ -344,16 +344,23 @@ Interview questions and answers
 # Spring AOP(Aspect Oriented Programming)
  - [Spring AOP(Aspect Oriented Programming)](https://github.com/sunilsoni/interview-notes/blob/main/spring/spring-aop.md#spring-aop)
 
-# HTTP Verbs
+# HTTP methods overview
 
-- [HTTP Verbs](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#http-verbs)
-  - [GET](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#get)
-  - [POST](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#post)
-  - [PUT](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#put)
-  - [DELETE](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#delete)
-  - [PATCH](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#patch)
-  - [OPTIONS](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#options)
-  - [HEAD](https://github.com/sunilsoni/interview-notes/blob/main/spring/http-Verbs.md#head)
+- [HTTP methods overview](https://github.com/sunilsoni/interview-notes/blob/main/misc/http.md#http-methods-overview)
+  - [Idempotency in HTTP](https)
+  - [Safe Methods](https)
+  - [Why DELETE method is defined as idempotent](https)
+  - [Why PATCH method is not idempotent](https)
+  - [PATCH](https)
+  - [OPTIONS](https)
+  - [HEAD](https)
+
+
+
+
+
+
+
 
 # HTTP Status Codes
 
