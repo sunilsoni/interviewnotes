@@ -351,7 +351,7 @@ Interview questions and answers
   - [Safe Methods](https://github.com/sunilsoni/interview-notes/blob/main/misc/http.md#safe-methods)
   - [Why DELETE method is defined as idempotent](https://github.com/sunilsoni/interview-notes/blob/main/misc/http.md#why-delete-method-is-defined-as-idempotent)
   - [Why PATCH method is not idempotent](https://github.com/sunilsoni/interview-notes/blob/main/misc/http.md#why-patch-method-is-not-idempotent)
-  - [Why is PUT idempotent?](https)
+  - [Why is PUT idempotent?](https://github.com/sunilsoni/interview-notes/blob/main/misc/http.md#why-is-put-idempotent)
   - [OPTIONS](https)
   - [HEAD](https)
 
