@@ -652,11 +652,7 @@ Interview questions and answers
     - [Keys](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#keys)
     - [Indexes](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#indexes)
     - [Queries](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#queries)
-  - [Frequently asked queries](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
-    - [Find all departments with sales more than 1000](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
-    - [Print all employee ids with their manager ids](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
-    - [Print all manager names with count of directs](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
-    - [Print 10th highest salary](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
+
   - [SQL vs NoSQL](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#sql-vs-nosql)
     - [SQL](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#sql-1)
     - [NoSQL](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#nosql)
@@ -674,7 +670,19 @@ Interview questions and answers
 - [TRUNCATE](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#truncate)
 - [DELETE](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#delete)
 - [DROP](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#drop)
-
+    
+  - [Frequently asked queries](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
+    - [Find all departments with sales more than 1000](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
+    - [Print all employee ids with their manager ids](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
+    - [Print all manager names with count of directs](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#frequently-asked-queries)
+    - [Find Nth highest salary in SQL - Oracle, MSSQL and MySQL](https)
+      -[Nth maximum salary in MySQL using LIMIT keyword](https)
+      -[2nd highest salary in MySQL without subquery](https)
+      -[3rd highest salary in MySQL using LIMIT clause](https)
+      -[Test](https)
+      -[Test](https)
+      -[Test](https)
+      -[Test](https)
 # Maven
 
   - [Maven](https://github.com/sunilsoni/interview-notes/blob/main/maven/maven.md#Maven)
