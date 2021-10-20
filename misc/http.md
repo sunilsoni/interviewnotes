@@ -118,7 +118,7 @@ When using PUT, it is assumed that you are sending the complete entity, and that
 
 Since PUT requests include the entire entity, if you issue the same request repeatedly, it should always have the same outcome (the data you sent is now the entire data of the entity). Therefore PUT is idempotent.
 
-
+Ref: https://stackoverflow.com/questions/28459418/use-of-put-vs-patch-methods-in-rest-api-real-life-scenarios
 
 
 
