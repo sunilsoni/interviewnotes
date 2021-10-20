@@ -5,7 +5,7 @@
 
 
 | Method      |      Scope   | Semantics | Idempotent | Safe |
-|-----------------|------- --------|------------|------------|-----|
+|-----------------|---------------|------------|------------|-----|
 |  GET       |  collection     | Retrieve all resources in a collection| Yes | Yes |
 |   GET     | collection     | Retrieve a single resource  |  Yes |Yes|
 |  HEAD      | collection     | Retrieve all resources in a collection (header only)   | Yes |Yes |
