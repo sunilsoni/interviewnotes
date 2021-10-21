@@ -34,4 +34,4 @@ Sorting is one of the important categories of algorithms in computer science and
 
 ##  Comparison of Sorting Algorithms
 
-<img src="./images-ms/Comparison of Sorting Algorithms.png" width="800"  />
+<img src="./images/Comparison of Sorting Algorithms.png" width="800"  />
