@@ -89,13 +89,13 @@ Given an array: 6 8 1 4 5 3 7 2 and the goal is to put them in ascending order.
 
 Worst case occurs when for every i the inner loop has to move all elements A[1], . . . , A[i – 1](which happens when A[i] = key is smaller than all of them), that takes Θ(i – 1) time.
 
-<img src="./images/Insertion Sort Worst case analysis.png" width="800"  />
+<img src="./images/Insertion Sort Worst case analysis.png" width="400"  />
 
 **Average case analysis**
 
 For the average case, the inner loop will insert A[i] in the middle of A[1], . . . , A[i – 1]. This takes Θ(i/2) time.
 
-<img src="./images/Insertion Sort Average case analysis.png" width="800"  />
+<img src="./images/Insertion Sort Average case analysis.png" width="400"  />
 
 
 
