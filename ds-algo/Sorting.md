@@ -69,11 +69,13 @@ Insertion sort is a simple and efficient comparison sort. In this algorithm, eac
 
 Every repetition of insertion sort removes an element from the input data, and inserts it into the correct position in the already-sorted list until no input elements remain. Sorting is typically done in-place. The resulting array after k iterations has the property where the first k + 1 entries are sorted.
 
-<img src="./images/Insertion Sort.png" width="1000"  />
+<img src="./images/Insertion Sort.png" width="800"  />
 
 Each element greater than x is copied to the right as it is compared against x.
 
 ### Implementation
+
+<img src="./images/Insertion Sort Implementation.png" width="1000"  />
 
 
 
