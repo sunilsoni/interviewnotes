@@ -114,11 +114,16 @@ If every element is greater than or equal to every element to its left, the runn
 | Worst case space complexity             |O(n2) total, O(1) auxiliary |
 
 
+### Comparisons to Other Sorting Algorithms
 
+Insertion sort is one of the elementary sorting algorithms with O(n2) worst-case time. Insertion sort is used when the data is nearly sorted (due to its adaptiveness) or when the input size is small(due to its low overhead). For these reasons and due to its stability, insertion sort is used as the recursive base case (when the problem size is small) for higher overhead divide-and-conquer sorting algorithms, such as merge sort or quick sort.
 
-
-
-
+**Notes:**
+- Bubble sort takes comparisons and swaps (inversions) in both average case and in worst case.
+- Selection sort takes comparisons and n swaps.
+- Insertion sort takes comparisons and swaps in average case and in the worst case they are double.
+- Insertion sort is almost linear for partially sorted input.
+- Selection sort is best suits for elements with bigger values and small keys.
 
 
 ## Shell Sort

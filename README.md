@@ -228,6 +228,7 @@ Interview questions and answers
     * [Example](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Sorting.md#example)
     * [Analysis](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Sorting.md#analysis)
     * [Performance](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Sorting.md#performance-2)
+    * [Comparisons to Other Sorting Algorithms](https)
   * [Shell Sort](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Sorting.md#shell-sort)
     * [Implementation](https)
     * [Performance](https)
