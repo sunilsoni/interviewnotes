@@ -54,6 +54,71 @@ Selection sort is an in-place sorting algorithm. Selection sort works well for s
 
 ## Insertion Sort
 
+Insertion sort is a simple and efficient comparison sort. In this algorithm, each iteration removes an element from the input data and inserts it into the correct position in the list being sorted. The choice of the element being removed from the input is random and this process is repeated until all input elements have gone through.
+
+### Advantages
+- Simple implementation
+- Efficient for small data
+- Adaptive: If the input list is presorted [may not be completely] then insertions sort takes O(n + d), where d is the number of inversions
+- Practically more efficient than selection and bubble sorts, even though all of them have O(n2) worst case complexity
+- Stable: Maintains relative order of input data if the keys are same
+- In-place: It requires only a constant amount O(1) of additional memory space
+- Online: Insertion sort can sort the list as it receives it
+
+### Algorithm
+
+Every repetition of insertion sort removes an element from the input data, and inserts it into the correct position in the already-sorted list until no input elements remain. Sorting is typically done in-place. The resulting array after k iterations has the property where the first k + 1 entries are sorted.
+
+<img src="./images/Insertion Sort.png" width="1000"  />
+
+Each element greater than x is copied to the right as it is compared against x.
+
+### Implementation
+
+
+
+### Example
+Given an array: 6 8 1 4 5 3 7 2 and the goal is to put them in ascending order.
+
+<img src="./images/Insertion Sort Example.png" width="800"  />
+
+### Analysis
+
+
+**Worst case analysis**
+
+Worst case occurs when for every i the inner loop has to move all elements A[1], . . . , A[i – 1](which happens when A[i] = key is smaller than all of them), that takes Θ(i – 1) time.
+
+<img src="./images/Insertion Sort Worst case analysis.png" width="800"  />
+
+**Average case analysis**
+
+For the average case, the inner loop will insert A[i] in the middle of A[1], . . . , A[i – 1]. This takes Θ(i/2) time.
+
+<img src="./images/Insertion Sort Average case analysis.png" width="800"  />
+
+
+
+### Performance
+
+If every element is greater than or equal to every element to its left, the running time of insertion sort is Θ(n). This situation occurs if the array starts out already sorted, and so an already-sorted array is the best case for insertion sort.
+
+
+| Type                                    | Complexity     |
+| ----------------------------------------- | ---------------- |
+| Worst case complexity                   | O(n2)          |
+| Best case complexity     | Θ(n)
+| Average case complexity | O(n2)          |
+| Worst case space complexity             |O(n2) total, O(1) auxiliary |
+
+
+
+
+
+
+
+
+
 ## Shell Sort
 
 ## Merge Sort
