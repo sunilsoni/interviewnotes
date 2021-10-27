@@ -245,6 +245,7 @@ The following guidelines indicate when the use of an index should be reconsidere
 - Columns that are frequently manipulated should not be indexed.
 
 
+`Ref:` https://www.tutorialspoint.com/sql/sql-indexes.htm
 
 
 Queries
