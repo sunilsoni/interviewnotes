@@ -698,7 +698,7 @@ Interview questions and answers
     - [Implicit Indexes](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#implicit-indexes)
     - [The DROP INDEX Command](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#the-drop-index-command)
     - [When should indexes be avoided?](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#when-should-indexes-be-avoided)
-    - [Test](https)
+    
   - [Queries](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#queries)
 
   - [SQL vs NoSQL](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#sql-vs-nosql)
