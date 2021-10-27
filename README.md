@@ -683,9 +683,9 @@ Interview questions and answers
     - [Full join](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#full-join)
     - [Cross join](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#cross-join)
     - [Self Join](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#self-join)
-    - [Keys](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#keys)
-    - [Indexes](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#indexes)
-    - [Queries](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#queries)
+  - [Keys](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#keys)
+  - [Indexes](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#indexes)
+  - [Queries](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#queries)
 
   - [SQL vs NoSQL](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#sql-vs-nosql)
     - [SQL](https://github.com/sunilsoni/interview-notes/blob/main/database/database.md#sql-1)
