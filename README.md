@@ -204,8 +204,11 @@ Interview questions and answers
     * [AnagramOfFirstAsSubstring](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/anagram/AnagramOfFirstAsSubstring.java)
     * [GroupAnagramsTogether](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/anagram/GroupAnagramsTogether.java)
   
-  * [Find the median of two positively ordered arrays](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Problems.md#anagram)
-    
+  * [Find the median of two positively ordered arrays](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Problems.md#find-the-median-of-two-positively-ordered-arrays)
+    * [What is the median of an array](hhhh)
+    * [Problem analysis](hhhh)
+    * [Code](hhhh)
+
 * [Data Types](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Data-Types.md#data-types)
   * [System-defined data types (Primitive data types)](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Data-Types.md#system-defined-data-types-primitive-data-types)
   * [User defined data types](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Data-Types.md#user-defined-data-types)

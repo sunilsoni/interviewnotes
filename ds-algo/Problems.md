@@ -74,7 +74,7 @@ There is also a method similar to counting and sorting, which is to count the nu
 
 Given two positive (small to large) arrays of size m and n, nums1 and nums2. Please find the median of these two positive arrays, and the time complexity of the algorithm is required to be O(log(m + n)). You can assume that nums1 and nums2 will not be empty at the same time.
 
-**What is the median of an array:** 
+## What is the median of an array
 The middle element is found by ordering all elements in sorted order and picking out the one in the middle (or if there are two middle numbers, taking the mean of those two numbers).
 
 ```log
@@ -94,6 +94,7 @@ The median is ( 2  +  3 ) / 2  =  2.5
 
 ## Problem analysis
 
+## Code
 
 ```java
 
