@@ -208,7 +208,7 @@ Interview questions and answers
     * [What is the median of an array](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Problems.md#what-is-the-median-of-an-array)
     * [Problem analysis](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Problems.md#problem-analysis-1)
     * [Code](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Problems.md#code)
-    * [Code (Brute Force approach)](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Problems.md#code)
+    * [Code (Brute Force approach)](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Problems.md#code-brute-force-approach)
 
 * [Data Types](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Data-Types.md#data-types)
   * [System-defined data types (Primitive data types)](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Data-Types.md#system-defined-data-types-primitive-data-types)
