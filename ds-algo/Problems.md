@@ -30,6 +30,7 @@ There is also a method similar to counting and sorting, which is to count the nu
 
 ## Code implementation (sorting)
 ```java
+//Time Complexity O(nlgn)
  public boolean isAnagram(String s, String t) {
         if ((s == null) || (t == null) || (t.length() != s.length())) {
             return false;
@@ -39,12 +40,14 @@ There is also a method similar to counting and sorting, which is to count the nu
         Arrays.sort(sArr1);
         Arrays.sort(sArr2);
         return Arrays.equals(sArr1, sArr2);
-        }
+}
 
 ```
 
 ## Code implementation (hash)
 ```java
+//Time Complexity O(n)
+//space complexity here is  butO(n)
  public boolean isAnagram(String s, String t) {
         if ((s == null) || (t == null) || (t.length() != s.length())) {
             return false;
