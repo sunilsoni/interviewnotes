@@ -178,6 +178,8 @@ Interview questions and answers
   * [SynchronousQueue](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#synchronousqueue)
 * [equals and hashCode](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#equals-and-hashcode)
 * [Hierarchy and classes](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/data-structure.md#hierarchy-and-classes)
+
+
 * [Frequently asked](https)
   * [Stack](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/datastructure/Stack/Stack.java)
   * [CustomStack](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/datastructure/Stack/CustomStack.java)
@@ -191,6 +193,10 @@ Interview questions and answers
   * [FibonacciSeries](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/misc/FibonacciSeries.java)
   * [BalancedBracketsUsingString](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/misc/BalancedBracketsUsingString.java)
   * [BalancedBracketsUsingDeque](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/misc/BalancedBracketsUsingDeque.java)
+  * [Anagrams](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Problems.md#anagram)
+    * [Problem analysis](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Problems.md#problem-analysis)
+    * [Code implementation (sorting)](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Problems.md#code-implementation-sorting)
+    * [Code implementation (hash)](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Problems.md#code-implementation-hash)
   * [Anagrams](https://github.com/sunilsoni/interview-notes-code/tree/master/src/main/java/com/interview/notes/code/anagram)
     * [Anagrams](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/anagram/Anagrams.java)
     * [ValidAnagram](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/anagram/ValidAnagram.java)
