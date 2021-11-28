@@ -193,7 +193,7 @@ Interview questions and answers
   * [FibonacciSeries](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/misc/FibonacciSeries.java)
   * [BalancedBracketsUsingString](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/misc/BalancedBracketsUsingString.java)
   * [BalancedBracketsUsingDeque](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/misc/BalancedBracketsUsingDeque.java)
-  * [Anagrams](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Problems.md#anagram)
+  * [Anagram](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Problems.md#anagram)
     * [Problem analysis](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Problems.md#problem-analysis)
     * [Code implementation (sorting)](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Problems.md#code-implementation-sorting)
     * [Code implementation (hash)](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Problems.md#code-implementation-hash)
