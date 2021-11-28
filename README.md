@@ -205,9 +205,9 @@ Interview questions and answers
     * [GroupAnagramsTogether](https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/anagram/GroupAnagramsTogether.java)
   
   * [Find the median of two positively ordered arrays](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Problems.md#find-the-median-of-two-positively-ordered-arrays)
-    * [What is the median of an array](hhhh)
-    * [Problem analysis](hhhh)
-    * [Code](hhhh)
+    * [What is the median of an array](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Problems.md#what-is-the-median-of-an-array)
+    * [Problem analysis](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Problems.md#problem-analysis-1)
+    * [Code](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Problems.md#code)
 
 * [Data Types](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Data-Types.md#data-types)
   * [System-defined data types (Primitive data types)](https://github.com/sunilsoni/interview-notes/blob/main/ds-algo/Data-Types.md#system-defined-data-types-primitive-data-types)
