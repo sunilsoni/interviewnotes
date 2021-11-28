@@ -97,7 +97,9 @@ The median is ( 2  +  3 ) / 2  =  2.5
 ## Code
 
 ```java
-
+ /* Time complexity is O(log(min(x,y))
+ * Space complexity is O(1)
+  */
 public class MedianOfTwoSortedArrayOfDifferentLength {
 
     public double findMedianSortedArrays(int input1[], int input2[]) {
@@ -153,9 +155,40 @@ public class MedianOfTwoSortedArrayOfDifferentLength {
 
 ```
 
+## Code (Brute Force approach)
 
-https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/LeetCode/MedianOfTwoSortedArrayOfDifferentLength.java
-https://github.com/MisterBooo/LeetCodeAnimation/blob/master/0004-median-of-two-sorted-arrays/Article/0004-median-of-two-sorted-arrays.md
+```java
+  public static double findMedianSortedArraysBruteForceApproach(int[] firstArray, int[] secondArray) {
+        int firstArrayLength = firstArray.length;
+        int secondArrayLength = secondArray.length;
+
+        int[] combinedArray = new int[firstArrayLength + secondArrayLength];
+        int k = 0;
+        for (int i : firstArray) {
+            combinedArray[k++] = i;
+        }
+
+        for (int i : secondArray) {
+            combinedArray[k++] = i;
+        }
+
+        Arrays.sort(combinedArray);
+        double median;
+        if (combinedArray.length % 2 == 0) {
+            median = combinedArray[combinedArray.length / 2];
+        } else {
+            median = (combinedArray[(combinedArray.length - 1) / 2]
+                    + combinedArray[(combinedArray.length + 1) / 2]) / 2;
+        }
+
+        return median;
+
+    }
+```
+
+Ref : 
+- https://github.com/sunilsoni/interview-notes-code/blob/master/src/main/java/com/interview/notes/code/LeetCode/MedianOfTwoSortedArrayOfDifferentLength.java
+- https://github.com/MisterBooo/LeetCodeAnimation/blob/master/0004-median-of-two-sorted-arrays/Article/0004-median-of-two-sorted-arrays.md
 
 
 
