@@ -217,6 +217,10 @@ Output: 2
 ```
 
 ## Code - Optimization by Hashmap
+Complexity 
+Time complexity : O(n).
+Space complexity : O(n).
+
 ```java
     public int subarraySumOptimizationHashmap(int[] nums, int k) {
         int count = 0, sum = 0;
@@ -238,6 +242,10 @@ Output: 2
 
 
 ## Code - Brute Force approach
+
+Complexity 
+Time complexity : O(n2).
+Space complexity : O(n).
 
 ```java
    public int subarraySum(int[] nums, int k) {
