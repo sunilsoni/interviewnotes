@@ -143,11 +143,17 @@ want to take in response to those events. You defi ne the action to take by sele
 which is an AWS resource. 
 
 Some targets you can choose from include the following:
+
 ■✓ Lambda functions
+
 ■✓ EC2 instances
+
 ■✓ SQS queues
+
 ■✓ SNS topics
+
 ■✓ ECS tasks
+
 CloudWatch responds to events as they occur, in real time. Unlike CloudWatch alarms,
 which take action when a metric crosses and remains crossing a numeric threshold,
 CloudWatch events trigger immediately. For example, you can create a CloudWatch event
