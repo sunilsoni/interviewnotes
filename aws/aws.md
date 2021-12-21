@@ -241,19 +241,24 @@ Figure :  Cost and usage report showing monthly costs grouped by service
 
 In addition to letting you create your own custom reports, Cost Explorer offers the following five default cost and usage reports:
 
-**Monthly costs by service** 
+- **Monthly costs by service** 
+- 
 Displays your top five most expensive services over the past six months. The top five services are graphed individually, while other services are aggregated and graphed as a single bar.
 
-**Monthly costs by linked account** 
+- **Monthly costs by linked account** 
+
 Shows your costs for your top five linked accounts over the past six months. The top five linked accounts are grouped individually, and the rest are aggregated and graphed as one bar.
 
-**Monthly EC2 running hours costs and usage**
+- **Monthly EC2 running hours costs and usage**
+
 Displays two monthly graphs showing the costs and running hours for your EC2 instances.
 
-**Daily costs** 
+- **Daily costs**
+
 Shows your monthly spend for the last six months and a forecast for the current month.
 
-**AWS marketplace**:
+- **AWS marketplace**:
+
 The Core Compute Services, the AWS Marketplace allows vendors to make their products and services available to you via AWS. License, subscription, and usage costs are bundled together and billed through AWS. This report shows you how much you’ve spent on AWS Marketplace solutions.
 
 
