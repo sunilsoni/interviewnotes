@@ -838,6 +838,22 @@ Interview questions and answers
 # Amazon Web Services (AWS)
 
 - [AWS](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#amazon-web-services-aws)
+- [Key components of AWS](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#key-components-of-aws)
+- [Elastic Cloud Compute (EC2)](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#elastic-cloud-compute-ec2)
+- [Relational Database Service (RDS)](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#relational-database-service-rds)
+- [Route 53](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#route-53)
+- [CloudWatch](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#cloudwatch)
+  *  [CloudWatch Metrics](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#cloudwatch-metrics)
+  - [CloudWatch Alarms](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#cloudwatch-alarms)
+  - [CloudWatch Dashboards](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#cloudwatch-dashboards)
+  - [CloudWatch Logs](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#cloudwatch-logs)
+  - [Metric Filters](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#metric-filters)
+  - [CloudWatch Events](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#cloudwatch-events)
+- [CloudTrail](http)
+- [Test](http)
+- [Test](http)
+- [Test](http)
+- [Test](http)
 
 # Good Practices
   - [Good Practices for REST API Design](https://github.com/sunilsoni/interview-notes/blob/main/misc/GoodPractices.md#good-practices-for-rest-api-design)
