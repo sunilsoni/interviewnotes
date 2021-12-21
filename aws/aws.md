@@ -57,7 +57,7 @@ CloudWatch Metrics is a feature that collects numeric performance metrics from b
 
 **Figure:** Using CloudWatch to graph the CPU Utilization metric for an EC2 Instance
 
-<img src="images/CloudWatch-Metrics.png" width="700"/>
+<img src="images/CloudWatch-Metrics.png" width="900"/>
 
 ## CloudWatch Alarms
 
