@@ -207,6 +207,63 @@ encryption keys (SSE-S3) or server-side encryption with AWS KMS-managed keys
 
 # Cost Explorer
 
+AWS Cost Explorer is a feature of AWS Billing and Cost Management that offers configurable reports and graphs to help you understand how each of your AWS services impacts your monthly bill.
+
+AWS Cost Explorer offers the following three categories of reports:
+- Cost and usage reports
+- Reservation reports
+- Reserved instance recommendations
+
+## Cost and Usage
+You can generate cost and usage reports to give you a graphical view of your daily and monthly costs and usage over time. Cost Explorer can also show you the forecast for the current month, 3 months out, and 12 months out, helping you plan ahead. Figure 6.18 shows the monthly costs for the last 12 months and a forecast for the current month.
+
+Figure: Cost and usage report showing monthly costs
+
+<img src="images/Cost and usage.png" width="900"/>
+
+You can go back as far as one year and filter or group by several parameters including but not limited to the following:
+
+- Service
+- Availability Zone
+- Region
+- Instance type
+- Usage type
+- Tag
+- API operation
+- Charge type
+- Platform
+
+This can help you quickly see which services are incurring the greatest costs and how those services costs are trending over time. Figure 6.19 shows the monthly costs for the last 12 months grouped by service.
+
+Figure :  Cost and usage report showing monthly costs grouped by service
+
+<img src="images/Cost and usage report showing monthly costs grouped by service.png" width="900"/>
+
+In addition to letting you create your own custom reports, Cost Explorer offers the following five default cost and usage reports:
+
+**Monthly costs by service** 
+Displays your top five most expensive services over the past six months. The top five services are graphed individually, while other services are aggregated and graphed as a single bar.
+
+**Monthly costs by linked account** 
+Shows your costs for your top five linked accounts over the past six months. The top five linked accounts are grouped individually, and the rest are aggregated and graphed as one bar.
+
+**Monthly EC2 running hours costs and usage**
+Displays two monthly graphs showing the costs and running hours for your EC2 instances.
+
+**Daily costs** 
+Shows your monthly spend for the last six months and a forecast for the current month.
+
+**AWS marketplace**:
+The Core Compute Services, the AWS Marketplace allows vendors to make their products and services available to you via AWS. License, subscription, and usage costs are bundled together and billed through AWS. This report shows you how much you’ve spent on AWS Marketplace solutions.
+
+
+## Reservation reports
+
+
+## Reserved instance recommendations
+
+
+
 
 # Amazon DynamoDB
 
