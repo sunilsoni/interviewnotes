@@ -258,11 +258,40 @@ The Core Compute Services, the AWS Marketplace allows vendors to make their prod
 
 
 ## Reservation reports
+Cost Explorer offers the following two built-in reservation reports to give you insight on how much you are saving—or could have saved—with instance reservations. Instance reservations allow you to save money by prepaying for compute instances including those used by Amazon EC2, Amazon Elasticsearch Service, Amazon ElastiCache, Amazon RDS, and Amazon Redshift.  
 
+## Reserved Instances Utilization
+
+The Reserved Instances (RI) Utilization report shows you the percentage of your reserved instances you’ve used and how much money you’ve saved or overspent by using reserved instances. The RI Utilization report also shows you your net savings from reserved instances, giving you insight into whether you’ve had too few or too many reserved instances. Figure 6.20 shows a sample reservation utilization for a six-month time range.
+
+**Figure** :  RI Utilization report
+
+<img src="images/RI Utilization report.png" width="900"/>
+
+## Reserved Instances Coverage
+
+The Reserved Instances Coverage report tells you how many of your running instance hours are covered by instance reservations, how much you’ve spent for on-demand instances, and how much you could have saved by purchasing reserved instances. Figure 6.21 shows a graph of reservation coverage for the past 12 months, as well as the average coverage percentage and the total on-demand costs.
+
+**Figure**:  RI Coverage report
+
+<img src="images/RI Coverage report.png" width="900"/>
 
 ## Reserved instance recommendations
 
+Cost Explorer can provide reserved instance recommendations to help reduce your costs.
+Here’s how recommendations work: Cost Explorer analyzes your on-demand instance
+usage over the past 7, 30, or 60 days. It then searches for all available reserved instances
+that would cover that usage. Finally, it selects the most cost-effective reserved instances and
+recommends them.
 
+Costs Explorer makes recommendations separately for each service such as EC2 or RDS.
+You can also customize the recommendations by selecting a reserved instance term and
+payment option.
+
+Keep in mind that for the purposes of making reserved instance recommendations, Cost
+Explorer ignores any usage that’s already covered by a reservation. So, if your instances
+are already fully covered by instance reservations, Cost Explorer will not make any
+recommendations.
 
 
 # Amazon DynamoDB
