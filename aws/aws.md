@@ -67,13 +67,13 @@ A CloudWatch alarm watches over the value of a single metric. If the metric cros
 The Simple Notification Service (SNS)allows applications, users, and devices to send and receive notifications from AWS. SNS uses a publisher-subscriber model, wherein a publisher such as an AWS service generates a notification and a subscriber such as an end user receives it. The communication channel that SNS uses to map publishers and subscribers is called a topic. 
 SNS can send notifications to subscribers via a variety of protocols including the following:
 
-- ■■ HTTP(S)
-- ■■ Simple Queue Service (SQS)
-- ■■ Lambda
-- ■■ Mobile push notification
-- ■■ Email
-- ■■ Email-JSON
-- ■■ Short Message Service (SMS) text messages
+- HTTP(S)
+- Simple Queue Service (SQS)
+- Lambda
+- Mobile push notification
+- Email
+- Email-JSON
+- Short Message Service (SMS) text messages
 
 **Auto Scaling action** 
 By specifying an EC2 Auto Scaling action, the EC2 Auto Scaling service can add or remove EC2 instances in response to changing demand. For example, if a metric indicates that instances are overburdened, you can have EC2 Auto Scaling respond by adding more instances.
