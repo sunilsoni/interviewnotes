@@ -61,6 +61,27 @@ CloudWatch Metrics is a feature that collects numeric performance metrics from b
 
 ## CloudWatch Alarms
 
+A CloudWatch alarm watches over the value of a single metric. If the metric crosses a threshold that you specify (and stays there), the alarm will take an action. For example, you might configure an alarm to take an action when the average CPU utilization for an instance exceeds 80% for five minutes. The action can be one of the following:
+
+**Notification using Simple Notification Service**
+The Simple Notification Service (SNS)allows applications, users, and devices to send and receive notifications from AWS. SNS uses a publisher-subscriber model, wherein a publisher such as an AWS service generates a notification and a subscriber such as an end user receives it. The communication channel that SNS uses to map publishers and subscribers is called a topic. SNS can send notifications to subscribers via a variety of protocols including the following:
+■■ HTTP(S)
+■■ Simple Queue Service (SQS)
+■■ Lambda
+■■ Mobile push notification
+■■ Email
+■■ Email-JSON
+■■ Short Message Service (SMS) text messages
+
+**Auto Scaling action** 
+By specifying an EC2 Auto Scaling action, the EC2 Auto Scaling service can add or remove EC2 instances in response to changing demand. For example, if a metric indicates that instances are overburdened, you can have EC2 Auto Scaling respond by adding more instances.
+
+**EC2 action**
+If you’re monitoring a specific instance that’s having a problem, you can use an EC2 action to stop, terminate, or recover the instance. Recovering an instance migrates the instance to a new EC2 host, something you may need to do if there’s a physical hardware problem on the hardware hosting the instance.
+
+
+
+
 
 ## CloudWatch Dashboards
 
