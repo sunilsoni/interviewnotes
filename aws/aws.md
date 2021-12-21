@@ -82,19 +82,81 @@ By specifying an EC2 Auto Scaling action, the EC2 Auto Scaling service can add o
 If you’re monitoring a specific instance that’s having a problem, you can use an EC2 action to stop, terminate, or recover the instance. Recovering an instance migrates the instance to a new EC2 host, something you may need to do if there’s a physical hardware problem on the hardware hosting the instance.
 
 
-
-
-
 ## CloudWatch Dashboards
 
+CloudWatch dashboards are your one-stop shop for keeping an eye on all of your important metrics. You can create multiple dashboards and add to them metric graphs, the latest values for a metric, and CloudWatch alarms. You can save your dashboards for future use and share them with others. Dashboards can also visualize metrics from multiple AWS Regions, so you can keep an eye on the global health of your infrastructure. 
+
+Sample CloudWatch dashboard.
+
+<img src="images/CloudWatch dashboard.png" width="900"/>
 
 ## CloudWatch Logs
+CloudWatch Logs collects and stores log files from AWS and non-AWS sources and makes it easy to view, search, and extract custom metrics from them.
 
+**Log Events, Streams, and Groups**
 
+You configure your applications and AWS services to send log events to CloudWatch Logs.
+A log event is analogous to a line in a log file and always contains a timestamp and an
+event message. Many AWS services produce their own logs called vended logs that you can
+stream to CloudWatch Logs. Such logs include Route 53 DNS query logs, VPC flow logs,
+and CloudTrail logs. CloudWatch Logs can also receive custom logs from your applications,
+such as web server access logs.
 
+CloudWatch Logs organizes log events by log streams by storing log events from the
+same source in a single log stream. For example, web server access logs from a specific
+EC2 instance would be stored in one log stream, while Route 53 DNS query logs would be
+stored in a separate log stream.
 
+CloudWatch further organizes log streams into log groups. To organize related log
+streams, you can place them into the same log group. For instance, if you have several log
+streams that are collecting web server log events from multiple web servers, you can group
+all of those log streams into a single log group.
+   
+CloudWatch Logs stores log events indefinitely by default, but you can configure a log
+group’s retention settings to delete events automatically. Retention settings range from
+1 day to 10 years. You can also archive your logs by exporting them to an S3 bucket.
 
+## Metric Filters
+A metric fi lter extracts data from log events in a log group and stores that data in a custom
+CloudWatch metric. For example, suppose a log event from a database server contains the
+time in milliseconds it takes to run a query. You may extract that value and store it as a
+CloudWatch metric so you can graph it and create an alarm to send a notifi cation when it
+exceeds a certain threshold.
 
+You can also use metric fi lters to track the number of times a particular string occurs.
+This is useful for counting the number of times a particular event occurs in a log, such as
+an error code. For example, you might want to track how many times a 403 Forbidden
+error appears in a web server log. You can confi gure a metric fi lter to count the number of
+times the error occurs in a given timeframe—fi ve minutes, for example—and record that
+value in a CloudWatch custom metric.
+
+## CloudWatch Events
+The CloudWatch Events feature lets you continuously monitor for specifi c events that represent
+a change in your AWS resources—particularly write-only API operations—and take an
+action when they occur. 
+
+For example, an EC2 instance going from the running state to the stopped state would be an event. 
+An IAM user logging into the AWS Management Console would also be an event. CloudWatch Events can then automatically and immediately take actions in response to those events.
+
+You start by creating a rule to defi ne the events to monitor, as well as the actions you
+want to take in response to those events. You defi ne the action to take by selecting a target,
+which is an AWS resource. 
+
+Some targets you can choose from include the following:
+■✓ Lambda functions
+■✓ EC2 instances
+■✓ SQS queues
+■✓ SNS topics
+■✓ ECS tasks
+CloudWatch responds to events as they occur, in real time. Unlike CloudWatch alarms,
+which take action when a metric crosses and remains crossing a numeric threshold,
+CloudWatch events trigger immediately. For example, you can create a CloudWatch event
+to send an SNS notifi cation whenever an EC2 instance terminates. Or you could trigger a
+Lambda function to process an image fi le as soon as it hits an S3 bucket.
+
+Alternatively, you can create a schedule to automatically perform actions at regular
+intervals. For example, to save money you might create a schedule to shut down development
+instances every day at 7 p.m., after the developers have ideally stopped working!
 
 
 # Amazon DynamoDB
