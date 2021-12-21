@@ -16,15 +16,12 @@ platform. This new realm of cloud computing is also known as IaaS or Infrastruct
 7. **CloudWatch**: To monitor AWS resources, It allows administrators to view and collect key Also, one can set a
    notification alarm in case of trouble.
 
-
-
+   
 # Elastic Cloud Compute (EC2)
 
 Elastic Cloud Compute (EC2) is one of the first web service interfaces when AWS was released, allowing users to create and configure compute machines within the cloud. EC2 allows users to create VM (virtual machine) on the Amazon cloud for running applications that can be accessed via the Internet. The software can be configured on cloud servers based on your specifications. You select the operating system (i.e., Microsoft Windows or Linux) best suited to your requirements or applications, and you get the operating system pre-installed. EC2 provides the actual host server and operating system.
 
 If you want any additional software, you must manually install it on top of the OS as a developer. So, if you want JDK (Java Development Kit), you can install Java. You can also install Tomcat, a database, and so on. It’s almost like getting a brand-new laptop that only has the operating system, and you need to install your tools on top of it.
-
-
 
 # Relational Database Service (RDS)
 
@@ -35,8 +32,62 @@ AWS Relational Database Service (RDS) is your relational database in the cloud. 
 
 Amazon Route 53 is a Domain Name System (DNS), which allows you to route your custom domain names to your actual application on AWS. So, you configure Route 53 to send requests from the browser to your AWS application. The AWS DNS sets up your custom domain name.
 
+# CloudWatch
+
+Amazon CloudWatch is a key service that helps you plan, monitor, and fine-tune your AWS infrastructure and applications. It lets you collect, search, and visualize data from your applications and AWS resources in the form of logs, metrics, and events. 
+
+Common CloudWatch use cases include the following:
+
+**Infrastructure monitoring and troubleshooting** 
+Visualize performance metrics to discover trends over time and spot outliers that might indicate a problem. Correlate metrics and logs across your application and infrastructure stacks to understand the root cause of failures and performance issues.
+
+**Resource optimization** 
+Save money and help with resource planning by identifying overused or underused resources. Ensure performance and availability by using AWS Auto Scaling to automatically provision new EC2 instances to meet demand.
+
+**Application monitoring** 
+Create CloudWatch alarms to alert you and take corrective action when a resource’s utilization, performance, or health falls outside of a threshold that you define.
+
+**Log analytics** 
+Search, visualize, and correlate logs from multiple sources to help with troubleshooting and identify areas for improvement.
 
 
+## CloudWatch Metrics
+
+
+## CloudWatch Alarms
+
+
+## CloudWatch Dashboards
+
+
+## CloudWatch Logs
+
+
+
+
+
+
+
+
+# Amazon DynamoDB
+
+
+# Amazon Simple Storage Service (Amazon S3)
+
+# Amazon Virtual Private Cloud (Amazon VPC)
+
+# AWS Elastic Beanstalk
+
+
+# Elastic Load Balancing
+
+# Amazon Kinesis
+
+# AWS Lambda
+
+# Amazon Simple Notification Service
+
+# Amazon Simple Queue Service
 
 
 
