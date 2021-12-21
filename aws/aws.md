@@ -53,6 +53,13 @@ Search, visualize, and correlate logs from multiple sources to help with trouble
 
 ## CloudWatch Metrics
 
+CloudWatch Metrics is a feature that collects numeric performance metrics from both AWS and non-AWS resources such as on-premises servers. A metric is a variable that contains a timeordered set of data points. Each data point contains a timestamp, a value, and optionally a unit of measure. For example, a data point for the CPU Utilization metric for an EC2 instance may contain a timestamp of December 25, 2018 13:37, a value of 75, and Percent as the unit of measure. All AWS resources automatically send their metrics to CloudWatch. These metrics include things such as EC2 instance CPU utilization, S3 bucket sizes, and DynamoDB consumed read and write capacity units. CloudWatch stores metrics for up to 15 months. You can graph metrics to view trends and how they change over time.
+
+**Figure:** Using CloudWatch to graph the CPU Utilization metric for an EC2 Instance
+
+<img src="../images/CloudWatch Metrics.png" width="700"/>
+
+
 
 ## CloudWatch Alarms
 
