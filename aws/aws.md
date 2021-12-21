@@ -23,6 +23,161 @@ Elastic Cloud Compute (EC2) is one of the first web service interfaces when AWS 
 
 If you want any additional software, you must manually install it on top of the OS as a developer. So, if you want JDK (Java Development Kit), you can install Java. You can also install Tomcat, a database, and so on. It’s almost like getting a brand-new laptop that only has the operating system, and you need to install your tools on top of it.
 
+# Simple Storage Service (S3)
+
+Amazon Simple Storage Service (S3) lets you store and retrieve unlimited amounts of data
+from anywhere in the world at any time. You can use S3 to store any kind of file. Although
+AWS calls it `storage for the internet` you can implement access controls and encryption
+to restrict access to your files to specific individuals and IP addresses. S3 opens up a variety
+of uses, both inside and outside of AWS. Many AWS services use S3 to store logs or retrieve
+data for processing, such as with analytics. You can even use S3 to host static websites!
+
+## Objects and Buckets
+
+S3 differs from Elastic Block Store (EBS) The Core Compute Services. Rather than storing blocks of raw data, S3 stores files, or, as AWS calls
+them, objects on disks in AWS data centers. You can store any kind of fi le, including text,
+images, videos, database files, and so on. Each object can be up to `5 TB` in size.
+The file name of an object is called its key and can be up to `1,024 bytes` long. 
+
+An object key can consist of alphanumeric characters and some special characters, including the following:
+
+> ! - _ . * ( )
+
+S3 stores objects in a container called a bucket that’s essentially a flat file system. 
+A bucket can store an `unlimited number` of objects. When you create a bucket, you must assign it a name between 3 and 63 characters long, and the name must be globally unique across
+AWS. Within a bucket, each object key must be unique. One reason for this is to make it easier to access objects using an S3 endpoint URL. 
+
+For example, the object text.txt stored in a bucket named benpiper would have a URL of https://benpiper.s3.amazonaws.com/text.txt .
+
+Although bucket names must be globally unique, each bucket—and by extension any objects in that bucket—can exist in only one region. This helps with latency, security, cost, and compliance requirements, as your data is stored only in the region in which you create the bucket. You can use cross-region replication to copy the contents of an object from a bucket in one region to a bucket in another, but the objects are still uniquely separate objects. AWS never moves objects between regions.
+
+Even though S3 functions as a fl at fi le system, you can organize objects into a folder structure by including a forward slash ( / ) delimiter in the name. For example, you could create an object with the name production/database.sql and another object named development/database.sql in the same bucket. Because the delimiter is part of the name, the objects are unique.
+
+As you might expect, S3 comes with a cost. You’re not charged for uploading data to S3, but you may be charged when you download data. For example, in the US East region, you can download up to 1 GB of data per month at no charge. Beyond that, the rate is $0.09 or less per gigabyte. S3 also charges you a monthly fee based on how much data you store and the storage class you use.
+
+
+
+## S3 Storage Classes
+
+All data is not created equal. Depending on its importance, certain fi les may require more or less availability or protection against loss than others. Some data you store in S3 is
+irreplaceable, and losing it would be catastrophic. Examples of this might include digital photos, encryption keys, and medical records.
+
+
+## Durability and Availability
+
+Objects that need to remain intact and free from inadvertent deletion or corruption are said
+to need high durability, which is the percent likelihood that an object will not be lost over
+the course of a year. The greater the durability of the storage medium, the less likely you
+are to lose an object.
+
+To understand how durability works, consider the following two examples. First, suppose you
+store 100,000,000,000 objects on storage with 99.999999999 percent durability. That means
+you could expect to lose only one (0.000000001 percent) of those objects over the course of a
+year! Now consider a different example. Suppose you store the same number of objects on storage
+with only 99.99 percent durability. You’d stand to lose 10,000,000 objects per year!
+
+Different data also has differing availability requirements. Availability is the percent of
+time an object will be available for retrieval. For instance, a patient’s medical records may
+need to be available around the clock, 365 days a year. Such records would need a high
+degree of both durability and availability.
+
+The level of durability and availability of an object depends on its storage class. S3 offers
+six different storage classes at different price points. S3 charges you a monthly storage cost
+based on the amount of data you store and the storage class you use. Table 8.1 gives a complete
+listing of storage classes.
+
+**S3 Storage Classes**
+
+<img src="images/S3 Storage Classes.png" width="1000"/>
+
+With one exception that we’ll cover in the following section, you’ll want the highest
+degree of durability available. Your choice of storage class then hinges upon your desired
+level of availability, which depends on how frequently you’ll need to access your files. You
+may find it helpful to categorize your files in terms of the following three access patterns:
+
+-  Frequently accessed objects
+-  Infrequently accessed objects
+-  A mixture of frequently and infrequently accessed objects
+
+## Storage Classes for Frequently Accessed Objects
+
+If you need to access objects frequently and with minimal latency, the following two storage
+classes fit the bill:
+
+**STANDARD** 
+This is the default storage class. It offers the highest levels of durability and
+availability, and your objects are always replicated across at least three Availability Zones in
+a region.
+
+**REDUCED_REDUNDANCY** 
+The REDUCED_REDUNDANCY (RRS) storage class is
+meant for data that can be easily replaced, if it needs to be replaced at all. It has the lowest
+durability of all the classes, but it has the same availability as STANDARD. AWS recommends
+against using this storage class but keeps it available for people who have processes
+that still depend on it. If you see anyone using it, do them a favor and tell them to move to a
+storage class with higher durability!
+
+
+## Storage Classes for Infrequently Accessed Objects
+
+Two of the storage classes designed for infrequently accessed objects are suffixed with the
+“IA” initialism for “infrequent access.” These IA classes offer millisecond-latency access
+and high durability but the lowest availability of all the classes. They’re designed for objects
+that are at least 128 KB in size. You can store smaller objects, but each will be billed as if it
+were 128 KB:
+
+**STANDARD_IA** 
+This class is designed for important data that can’t be re-created.
+Objects are stored in multiple Availability Zones and have an availability of 99.9 percent.
+
+**ONEZONE_IA** 
+Objects stored using this storage class are kept in only one Availability
+Zone and consequently have the lowest availability of all the classes: only 99.5 percent.
+An outage of one Availability Zone could affect availability of objects stored in that zone.
+Although unlikely, the destruction of an Availability Zone could result in the loss of objects
+stored in that zone. Use this class only for data that you can re-create or have replicated
+elsewhere.
+
+**GLACIER** 
+The GLACIER class is designed for long-term archiving of objects that rarely
+need to be retrieved. Objects in this storage class are stored using the S3 Glacier service,
+which you’ll read about later in this chapter. Unlike the other storage classes, you can’t
+retrieve an object in real time. Instead, you must initiate a restore request for the object and
+wait until the restore is complete. The time it takes to complete a restore depends on the
+retrieval option you choose and can range from 1 minute to 12 hours. Consequently, the
+availability of data stored in Glacier varies. Refer to the “S3 Glacier” section later in this
+chapter for information on retrieval options.
+
+## Storage Class for Both Frequently and Infrequently Accessed Objects
+
+S3 currently offers only one storage class designed for both frequently and infrequently accessed objects:
+
+**INTELLIGENT_TIERING** 
+This storage class automatically moves objects to the most
+cost-effective storage tier based on past access patterns. An object that hasn’t been accessed
+for 30 consecutive days is moved to the lower-cost infrequent access tier. Once the object is
+accessed, it’s moved back to the frequent access tier. Note that objects less than 128 KB are
+always charged at the higher-cost frequent access tier rate. In addition to storage pricing,
+you’re charged a monthly monitoring and automation fee.
+
+## Access Permissions
+
+## Bucket Policies
+
+## User Policies
+
+## Bucket and Object Access Control Lists
+
+## Encryption
+
+## Versioning
+
+## Object Life Cycle Configurations
+
+
+
+
+
 # Relational Database Service (RDS)
 
 AWS Relational Database Service (RDS) is your relational database in the cloud. This allows you to quickly deploy a relational database in the cloud. It has support for a wide range of databases to choose from, including MySQL, Oracle, Microsoft SQL Server, and so on. You can manage these tools using your normal admin tools. If you are using MySQL, you can use MySQL Workbench. If you are using the Oracle Database, you can use Oracle SQL Developer, and the list goes on. AWS also has support for NoSQL databases such as MongoDB. So, all major database feature’s that you need can be found in AWS with the support of the relational Database Service.

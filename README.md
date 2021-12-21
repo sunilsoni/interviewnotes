@@ -840,6 +840,12 @@ Interview questions and answers
 - [AWS](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#amazon-web-services-aws)
 - [Key components of AWS](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#key-components-of-aws)
 - [Elastic Cloud Compute (EC2)](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#elastic-cloud-compute-ec2)
+- [Simple Storage Service (S3)](ht)
+  - [Test](http)
+  - [Test](http)
+  - [Test](http)
+  - [Test](http)
+
 - [Relational Database Service (RDS)](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#relational-database-service-rds)
 - [Route 53](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#route-53)
 - [CloudWatch](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#cloudwatch)
