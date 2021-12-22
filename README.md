@@ -847,6 +847,12 @@ Interview questions and answers
   - [Storage Classes for Frequently Accessed Objects](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#storage-classes-for-frequently-accessed-objects)
   - [Storage Classes for Infrequently Accessed Objects](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#storage-classes-for-infrequently-accessed-objects)
   - [Storage Class for Both Frequently and Infrequently Accessed Objects](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#storage-class-for-both-frequently-and-infrequently-accessed-objects)
+  - [Access Permissions](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#access-permissions)
+    - [Bucket Policies](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#bucket-policies)
+    - [User Policies](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#user-policies)
+    - [Bucket and Object Access Control Lists](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#bucket-and-object-access-control-lists)
+    - [Encryption](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#encryption)
+    - [Versioning](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#versioning)
 
 - [Relational Database Service (RDS)](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#relational-database-service-rds)
 - [Route 53](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#route-53)
