@@ -214,9 +214,59 @@ automatically using object life cycle confi gurations.
 
 
 
-# Relational Database Service (RDS)
+# Amazon Relational Database Service (RDS)
 
-AWS Relational Database Service (RDS) is your relational database in the cloud. This allows you to quickly deploy a relational database in the cloud. It has support for a wide range of databases to choose from, including MySQL, Oracle, Microsoft SQL Server, and so on. You can manage these tools using your normal admin tools. If you are using MySQL, you can use MySQL Workbench. If you are using the Oracle Database, you can use Oracle SQL Developer, and the list goes on. AWS also has support for NoSQL databases such as MongoDB. So, all major database feature’s that you need can be found in AWS with the support of the relational Database Service.
+The Amazon Relational Database Service (RDS) is Amazon’s managed relational database
+service. RDS lets you provision a number of popular relational database management systems
+(RDBMSs) including Microsoft SQL Server, Oracle, MySQL, and PostgreSQL.
+
+You can always install and configure your own database server on an EC2 instance. But
+RDS offers several advantages over this. When you create an RDS database instance, Amazon
+sets up one or more compute instances and takes care of installing and configuring the RDBMS
+of your choice. These compute instances are not EC2 instances that you can secure shell (SSH)
+into, but they are connected to a virtual private cloud (VPC) of your choice, allowing your
+applications running on AWS or on-premises to take full advantage of an RDS-hosted database.
+Like EC2 instances, RDS instances use Elastic Block Service (EBS) volumes for storage.
+
+To achieve the level of performance and availability you need, you can choose a multi-Availability
+Zone (multi-AZ) deployment to have database instances in multiple Availability
+Zones. RDS can also perform manual or automatic EBS snapshots that you can easily
+restore to new RDS instances. RDS can also handle the hard work of installing patches and
+upgrades during scheduled maintenance windows.
+
+
+
+## Database Engines
+
+
+## Licensing
+
+## Instance Classes
+
+## Standard
+
+## Memory Optimized
+
+## Burstable Performance
+
+## Scaling Vertically
+
+## Storage
+
+
+## General-Purpose SSD
+
+## Provisioned IOPS SSD
+
+## Magnetic
+
+## Scaling Horizontally with Read Replicas
+
+## High Availability with Multi-AZ
+
+## Backup and Recovery
+
+
 
 
 # Route 53

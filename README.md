@@ -855,6 +855,22 @@ Interview questions and answers
     - [Versioning](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#versioning)
 
 - [Relational Database Service (RDS)](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#relational-database-service-rds)
+  - [Database Engines](https)
+  - [Licensing](https)
+  - [Instance Classes](https)
+  - [Standard](https)
+  - [Memory Optimized](https)
+  - [Burstable Performance](https)
+  - [Scaling Vertically](https)
+  - [Storage](https)
+  - [General-Purpose SSD](https)
+  - [Provisioned IOPS SSD](https)
+  - [Magnetic](https)
+  - [Scaling Horizontally with Read Replicas](https)
+  - [High Availability with Multi-AZ](https)
+  - [Backup and Recovery](https)
+  
+
 - [Route 53](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#route-53)
 - [CloudWatch](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#cloudwatch)
   *  [CloudWatch Metrics](https://github.com/sunilsoni/interview-notes/blob/main/aws/aws.md#cloudwatch-metrics)
