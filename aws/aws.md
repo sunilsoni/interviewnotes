@@ -101,79 +101,115 @@ may find it helpful to categorize your files in terms of the following three acc
 
 ## Storage Classes for Frequently Accessed Objects
 
-If you need to access objects frequently and with minimal latency, the following two storage
-classes fit the bill:
+If you need to access objects frequently and with minimal latency, the following two storage classes fit the bill:
 
 **STANDARD** 
-This is the default storage class. It offers the highest levels of durability and
-availability, and your objects are always replicated across at least three Availability Zones in
-a region.
+
+This is the default storage class. It offers the highest levels of durability and availability, and your objects are always replicated across at least three Availability Zones in a region.
 
 **REDUCED_REDUNDANCY** 
-The REDUCED_REDUNDANCY (RRS) storage class is
-meant for data that can be easily replaced, if it needs to be replaced at all. It has the lowest
-durability of all the classes, but it has the same availability as STANDARD. AWS recommends
-against using this storage class but keeps it available for people who have processes
-that still depend on it. If you see anyone using it, do them a favor and tell them to move to a
-storage class with higher durability!
+
+The REDUCED_REDUNDANCY (RRS) storage class is meant for data that can be easily replaced, if it needs to be replaced at all. It has the lowest durability of all the classes, but it has the same availability as STANDARD. AWS recommends against using this storage class but keeps it available for people who have processes that still depend on it. If you see anyone using it, do them a favor and tell them to move to a storage class with higher durability!
 
 
 ## Storage Classes for Infrequently Accessed Objects
 
-Two of the storage classes designed for infrequently accessed objects are suffixed with the
-“IA” initialism for “infrequent access.” These IA classes offer millisecond-latency access
-and high durability but the lowest availability of all the classes. They’re designed for objects
-that are at least 128 KB in size. You can store smaller objects, but each will be billed as if it
-were 128 KB:
+Two of the storage classes designed for infrequently accessed objects are suffixed with the “IA” initialism for “infrequent access.” These IA classes offer millisecond-latency access and high durability but the lowest availability of all the classes. They’re designed for objects that are at least 128 KB in size. You can store smaller objects, but each will be billed as if it were 128 KB:
 
 **STANDARD_IA** 
 This class is designed for important data that can’t be re-created.
 Objects are stored in multiple Availability Zones and have an availability of 99.9 percent.
 
 **ONEZONE_IA** 
-Objects stored using this storage class are kept in only one Availability
-Zone and consequently have the lowest availability of all the classes: only 99.5 percent.
-An outage of one Availability Zone could affect availability of objects stored in that zone.
-Although unlikely, the destruction of an Availability Zone could result in the loss of objects
-stored in that zone. Use this class only for data that you can re-create or have replicated
-elsewhere.
+
+Objects stored using this storage class are kept in only one Availability Zone and consequently have the lowest availability of all the classes: only 99.5 percent. An outage of one Availability Zone could affect availability of objects stored in that zone. Although unlikely, the destruction of an Availability Zone could result in the loss of objects stored in that zone. Use this class only for data that you can re-create or have replicated elsewhere.
 
 **GLACIER** 
-The GLACIER class is designed for long-term archiving of objects that rarely
-need to be retrieved. Objects in this storage class are stored using the S3 Glacier service,
-which you’ll read about later in this chapter. Unlike the other storage classes, you can’t
-retrieve an object in real time. Instead, you must initiate a restore request for the object and
-wait until the restore is complete. The time it takes to complete a restore depends on the
-retrieval option you choose and can range from 1 minute to 12 hours. Consequently, the
-availability of data stored in Glacier varies. Refer to the “S3 Glacier” section later in this
-chapter for information on retrieval options.
+
+The GLACIER class is designed for long-term archiving of objects that rarely need to be retrieved. Objects in this storage class are stored using the S3 Glacier service, which you’ll read about later in this chapter. Unlike the other storage classes, you can’t retrieve an object in real time. Instead, you must initiate a restore request for the object and wait until the restore is complete. The time it takes to complete a restore depends on the retrieval option you choose and can range from 1 minute to 12 hours. Consequently, the availability of data stored in Glacier varies. Refer to the “S3 Glacier” section later in this chapter for information on retrieval options.
 
 ## Storage Class for Both Frequently and Infrequently Accessed Objects
 
 S3 currently offers only one storage class designed for both frequently and infrequently accessed objects:
 
 **INTELLIGENT_TIERING** 
-This storage class automatically moves objects to the most
-cost-effective storage tier based on past access patterns. An object that hasn’t been accessed
-for 30 consecutive days is moved to the lower-cost infrequent access tier. Once the object is
-accessed, it’s moved back to the frequent access tier. Note that objects less than 128 KB are
-always charged at the higher-cost frequent access tier rate. In addition to storage pricing,
-you’re charged a monthly monitoring and automation fee.
+
+This storage class automatically moves objects to the most cost-effective storage tier based on past access patterns. An object that hasn’t been accessed for 30 consecutive days is moved to the lower-cost infrequent access tier. Once the object is accessed, it’s moved back to the frequent access tier. Note that objects less than 128 KB are always charged at the higher-cost frequent access tier rate. In addition to storage pricing, you’re charged a monthly monitoring and automation fee.
 
 ## Access Permissions
 
-## Bucket Policies
+S3 is storage for the internet, but that doesn’t mean everyone on the internet can read your data. By default, objects you put in S3 are inaccessible to anyone outside of your AWS account.
 
-## User Policies
+S3 offers the following three methods of controlling who may read, write, or delete objects stored in your S3 buckets:
+- Bucket policies
+- User policies
+- Bucket and object access control lists
 
-## Bucket and Object Access Control Lists
+### Bucket Policies
+A bucket policy is a resource-based policy that you apply to a bucket. You can use bucket
+policies to grant access to all objects within a bucket or just specific objects. You can also
+control which principals and accounts can read, write, or delete objects. You can also
+grant anonymous read access to make an object, such as a webpage or image, available to
+everyone on the internet.
 
-## Encryption
 
-## Versioning
 
-## Object Life Cycle Configurations
+### User Policies
+Identity and Access
+Management (IAM) user policies. You can use these policies to grant IAM principals access
+to S3 objects. Unlike bucket policies that you apply to a bucket, you can apply user policies
+only to an IAM principal. Keep in mind that you can’t use user policies to grant public
+(anonymous) access to an object.
 
+### Bucket and Object Access Control Lists
+Bucket and object access control lists (ACLs) are legacy access control methods that have
+mostly been superseded by bucket and user policies. Nevertheless, you can still use bucket and
+
+object ACLs to grant other AWS accounts and anonymous users access to your S3 resources.
+You can’t use ACLs to grant access to specifi c IAM principals. Due in part to this limitation,
+AWS recommends using bucket and user policies instead of ACLs whenever possible.
+
+You can use any combination of bucket policies, user policies, and access control lists. They’re not mutually exclusive.
+
+### Encryption
+S3 doesn’t change the contents of an object when you upload it. That means if you upload
+a document containing personal information, that document is stored unencrypted. Using
+appropriate access permissions can protect your data from unauthorized access, but to
+add an additional layer of security, you have the option of encrypting objects before storing
+them in S3. This is called encryption at rest . S3 gives you the following two options for
+encrypting objects at rest:
+
+■✓ Server-side encryption—When you create an object, S3 encrypts the object and saves
+only the encrypted content. When you retrieve the object, S3 decrypts it and delivers
+the unencrypted object. Server-side encryption is the easiest to implement and doesn’t
+require you to keep track of encryption keys. Amazon manages the keys and therefore
+has access to your objects.
+
+■✓ Client-side encryption—You encrypt the data prior to uploading it to S3. You must
+decrypt the object when you retrieve it from S3. This option is more complicated, as
+you’re responsible for encryption and decryption. If you lose the key used to encrypt
+an object, you won’t be able to decrypt it. Organizations with strict security requirements
+may choose this option to ensure Amazon doesn’t have the ability to read their
+encrypted objects.
+
+### Versioning
+
+To further protect against accidentally deleting or overwriting the contents of your important
+fi les, you can use versioning. To understand how versioning works, consider this
+example. Without versioning, if you upload an object with the same name as an existing
+object in the same bucket, the contents of the original object will get overwritten. But if
+you enable versioning on the bucket and then upload an object with the same name as an
+existing object, S3 will simply create a new version of that object. The original version will
+remain intact and available.
+
+If you delete an object in a bucket on which versioning is disabled, the contents of the
+object aren’t deleted. Instead, S3 adds a delete marker to the object and hides it from the S3
+service console view.
+
+Versioning is disabled by default when you create a bucket. You must explicitly enable
+versioning on a bucket to use it, and it applies to all objects in the bucket. There’s no limit
+to the number of versions of an object you can store. You can delete versions manually or
+automatically using object life cycle confi gurations.
 
 
 
