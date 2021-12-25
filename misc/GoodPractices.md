@@ -203,33 +203,33 @@ Recommend a design pattern where is the case
 
 ## Naming Conventions
 
-# App Structure
+## App Structure
 
 Check that the changes are correctly written on layers and it respects the Spring Boot App Structure Do not mixt up a
 Rest Service with a Web App
 
-# Model
+## Model
 
 Understand the meaning of usage of each model and try to find where is the most appropriate to be placed as TODO - link
 to be provided
 
-# Exception Handling
+## Exception Handling
 
 Ensure that each exception is raised and handled correctly 
 
-# Unit Testing
+## Unit Testing
 
 Coverage of minimum 80% Ensure that all corner cases are covered and it follows the unit testing standards
 
-# Rest API
+## Rest API
 
 Ensure that the API changes respect the REST maturity levels 
 
-# Error Codes
+## Error Codes
 
 Ensure that in case of a program error or exception, the API replies with the standard error codes
 
-# MVC
+## MVC
 
 Ensure that the Model-View-Controller parts of the Web Application are compliant with the Best Practices 
 
@@ -238,3 +238,42 @@ For more information:
 
 1. [Best practices for REST API design](https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/#h-name-collections-with-plural-nouns)
 2. [REST: Good Practices for API Design](https://medium.com/hashmapinc/rest-good-practices-for-api-design-881439796dc9)
+
+
+
+# Resolving a Production Issue on a Live Server
+
+
+## Notify All Stakeholders
+
+This can be done in form of a slack message to the general channel, an email copying relevant personnel or through any communication tool that the team uses. The importance of communication is to bring up the issue to everyone's attention and for all hands to be on deck. Sometimes, someone may just respond to your message with why the issue is happening (assuming it was a mistake from his/her part). But the goal is to inform and bring in the members of your team.
+
+
+## Reproduce : Replicate the production environment locally
+
+- Replicate locally and step through code to figure out what is going on.
+- Add logs and replicate in production, then use logs to debug. This is only feasible if it is easy to do additional deployments that contain the logging code, and if the issue is in-fact reproducible.
+- Write similar code to what’s running in production (often starting with a copy/pasted variant of the production code), and try to replicate and isolate the issue that way.
+
+The objective here is to reproduce the exact same bug that exists in the production environment in a more accessible location. In the local environment, we can change data, slow down the execution, and write tons of logs without users being impacted in any way.
+
+
+## Root Cause Analysis & Fix
+
+Logging and debuggers are your best friends here. If you’re dealing with a large codebase or new to the project, just attach a debugger and follow through navigation and triggering actions. Else, add logs around the suspicious code and perform the steps. You’ll eventually find the piece of code that’s causing the issue.
+
+## Re-test & Regression Testing
+Test the steps that you found earlier, which caused the bug.
+
+## Backup the System Before Implementing Complex Solution
+
+## Document the Problem and How it was Resolved
+
+add the problem and the steps you took towards resolving it to the engineering runbook. The importance of this, is that it will help the team to quickly recover from such when/if it happens next time. It also serves as a reference to the team when they want to rebuild the system to be resistant to such issues.
+
+
+
+
+
+
+

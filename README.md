@@ -921,3 +921,4 @@ Interview questions and answers
       * [How does XSS work?](https://github.com/sunilsoni/interview-notes/blob/main/misc/owasp.md#how-does-xss-work)
     * [Cross Site Request Forgery(CSRF)](https://github.com/sunilsoni/interview-notes/blob/main/misc/owasp.md#cross-site-request-forgerycsrf)
     * [Test](http)
+- [Resolving a Production Issue on a Live Server]( )
