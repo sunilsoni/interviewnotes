@@ -928,5 +928,4 @@ Interview questions and answers
     - [Re-test & Regression Testing](https://github.com/sunilsoni/interview-notes/blob/main/misc/GoodPractices.md#re-test--regression-testing)
     - [Backup the System Before Implementing Complex Solution](https://github.com/sunilsoni/interview-notes/blob/main/misc/GoodPractices.md#backup-the-system-before-implementing-complex-solution)
     - [Document the Problem and How it was Resolved](https://github.com/sunilsoni/interview-notes/blob/main/misc/GoodPractices.https://github.com/sunilsoni/interview-notes/blob/main/misc/GoodPractices.md#backup-the-system-before-implementing-complex-solutiond#backup-the-system-before-implementing-complex-solution)
-    - [Test](http)
-    - [Test](http)
+
