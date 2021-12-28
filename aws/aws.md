@@ -720,8 +720,60 @@ Table : A Sample DynamoDB Table
 |   perry        |         | Perry |  |
 
 
-## 
+Username, LastName, FirstName, and FavoriteColor are all attributes. In this table,
+the Username attribute is the primary key. Each item must have a value for the primary
+key, and it must be unique within the table. Good candidates for primary keys are things
+that tend to be unique, such as randomly generated identifiers, usernames, and email
+addresses.
 
+Other than the primary key, an item doesn’t have to have any particular attributes.
+Hence, some items may contain several attributes, while others may contain only one or
+two. This flexibility makes DynamoDB the database of choice for applications that need
+to store a wide variety of data without having to know the nature of that data in advance.
+However, every attribute must have a defined data type, which can be one of the following:
+
+**Scalar** 
+A scalar data type has only one value and can be a string, a number, binary data,
+or a Boolean value.
+
+**Set** 
+A set data type can have multiple scalar values, but each value must be unique within the set.
+
+**Document** 
+The document data type is subdivided into two subtypes: list and map.
+Document data types can store values of any type. List documents are ordered, whereas
+map documents are not. Document data types are useful for storing structured data,
+such as an IAM policy document stored in JavaScript Object Notation (JSON) format.
+DynamoDB can recognize and extract specific values nested within a document, allowing
+you to retrieve only the data you’re interested in without having to retrieve the entire
+document.
+
+
+## Scaling Horizontally
+
+DynamoDB uses the primary key to distribute items across multiple partitions. Distributing
+the data horizontally in this fashion makes it possible for DynamoDB to consistently
+achieve low-latency reads and writes regardless of how many items are in a table. The
+number of partitions DynamoDB allocates to your table depends on the number of write
+capacity units (WCU) and read capacity units (RCU) you allocate to your table. The higher
+the transaction volume and the more data you’re reading or writing, the higher your RCU
+or WCU values should be. Higher values cause DynamoDB to distribute your data across
+more partitions, increasing performance and decreasing latency. As demand on your
+DynamoDB tables changes, you can change the number of RCU and WCU accordingly.
+Alternatively, you can configure DynamoDB Auto Scaling to dynamically adjust the number
+of WCU and RCU based on demand. This automatic horizontal scaling ensures consistent
+performance, even during times of peak load.
+
+## Queries and Scans
+Recall that nonrelational databases let you quickly retrieve items from a table based on the
+value of the primary key. For example, if the primary key of a table is Username, you can
+perform a query for the user named pdrake. If an item exists with that primary key value,
+DynamoDB will return the item instantly.
+Searching for a value in an attribute other than the primary key is possible, but slower.
+To locate all items with a Username that starts with the letter p, you’d have to perform a
+scan operation to list all items in the table. This is a read-intensive task that requires scanning
+every item in every partition your table is stored in. Even if you know all the attributes of an item except for the primary key, you’d still have to perform a scan operation to
+retrieve the item.
 
 # AWS Lambda
 
