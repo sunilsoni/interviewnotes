@@ -513,3 +513,12 @@ For more information:
 - [DB Index Wiki](https://en.wikipedia.org/wiki/Database_index)
 - [SQL vs NoSQL: What's the Difference?](https://phoenixnap.com/kb/sql-vs-nosql)
 - [SQL vs NoSQL: when to use?](https://www.imaginarycloud.com/blog/sql-vs-nosql/)
+
+
+
+
+
+
+
+
+
