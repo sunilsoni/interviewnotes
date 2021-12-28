@@ -293,36 +293,40 @@ Standard instance class offers the following specs:
 - Between 2 and 96 vCPU
 - 8–384 GB memory
 
-## Memory Optimized
+## 2. Memory Optimized
 The Memory Optimized instance class is for applications with the most demanding database
 requirements. This class offers the most disk throughput and network bandwidth. 
 The latest-generation instance class provides the following:
-■■ Between 4 and 128 vCPU
-■■ 122–3,904 GB memory
+-  Between 4 and 128 vCPU
+-  122–3,904 GB memory
 
 Database instances use EBS storage. Both the Standard and Memory Optimized instance
 class types are EBS-optimized, meaning they provide dedicated bandwidth for transfers to
 and from EBS storage.
 
-## Burstable Performance
+## 3. Burstable Performance
 The Burstable Performance instance class is for nonproduction databases that have minimal
 performance requirements, such as those for test and development purposes. The latestgeneration
 Burstable Performance instance class has the lowest network bandwidth and
 disk throughput and offers the following:
-■■ Between 2 and 8 vCPU
-■■ 1–32 GB memory
+
+- Between 2 and 8 vCPU
+- 1–32 GB memory
+
 It can be difficult to predict exactly how many RDS instances you need and how much
 compute power, memory, and network and storage throughput each of those instances
 needs. Thankfully, RDS makes it easy to right-size your database deployments in two ways:
 scaling vertically and scaling horizontally.
 
 ## Scaling Vertically
+
 Scaling vertically refers to changing the way resources are allocated to a specific instance.
 After creating an instance, you can scale up to a more powerful instance class to add more
 memory or improve computing or networking performance. Or you can scale down to a
 less powerful class to save on costs.
 
 ## Storage
+
 The level of performance an RDS instance can achieve depends not only on the instance
 class you choose but also on the type of storage. New RDS instances use EBS volumes, and
 the maximum throughput a volume can achieve is a function of both the instance class and
