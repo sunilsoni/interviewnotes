@@ -59,7 +59,7 @@ triggers a function that creates associated thumbnail images for the same.
 
 There are a few cons to serverless computing as well that you should be aware of before we proceed further:
 
-# cons  of serverless computing
+# Cons or Disadvantage  of serverless computing
 
 ##  Execution duration: 
 Serverless functions are designed to run for short durations
