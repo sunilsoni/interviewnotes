@@ -1,6 +1,15 @@
 # AWS Lambda
 
 
+#  Introducing AWS Lambda
+
+Lambda is a simple compute service that runs your code in response to certain events.
+These events can be anything, from an upload operation of an object to an S3 bucket, a
+record insertion in a DynamoDB table, or even some form of event triggered from your
+mobile app. The idea here is simple--you simply provide your code to AWS Lambda.
+Lambda will internally take care of provisioning and managing the underlying
+infrastructure resources, making sure your code gets deployed successfully; even things like
+your code's scalability and high availability are taken care of by Lambda itself!
 
 # Key benefits of serverless computing
 
@@ -80,14 +89,6 @@ mere seconds.
 With each cloud provider providing its own unique tool sets and services around serverless computing, you
 
 
-#  Introducing AWS Lambda
 
-Lambda is a simple compute service that runs your code in response to certain events.
-These events can be anything, from an upload operation of an object to an S3 bucket, a
-record insertion in a DynamoDB table, or even some form of event triggered from your
-mobile app. The idea here is simple--you simply provide your code to AWS Lambda.
-Lambda will internally take care of provisioning and managing the underlying
-infrastructure resources, making sure your code gets deployed successfully; even things like
-your code's scalability and high availability are taken care of by Lambda itself!
 
 
