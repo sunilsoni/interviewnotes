@@ -1323,6 +1323,9 @@ Java 8 has introduced one JVM parameter for reducing the unnecessary use of memo
 
 G1 is the default garbage collector in JDK 9.
 
+Also Check: https://java2blog.com/garbage-collection-java/
+
+
 final, finally and finalize()
 ----------------
 
