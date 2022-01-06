@@ -91,9 +91,20 @@ services around serverless computing, you often tend to get tied down to a
 particular vendor. This means that you cannot change your cloud provider
 without making some changes to your functions as well.
 
+#  Lambda function
 
  <img src="images/lambda.png" width="1000" />
 
 Reference : https://aws.amazon.com/lambda/
 
+AWS supports Java, Python, Node.js, and even C# as programming languages for your functions.
+Each function can be invoked either on demand or invoked dynamically based on certain types of supported events. 
 
+A few event examples are listed out as follows:
+
+**Amazon S3**: Lambda functions can be triggered when an object is created, updated, or deleted in an S3 bucket
+**Amazon DynamoDB**: Lambda functions are triggered when any updates are made to a particular DynamoDB table, such as row insertion, deletion, and so on
+**Amazon Simple Notification Service (SNS)**: Trigger a Lambda function when a message is published on a, SNS topic
+**Amazon CloudWatch Logs**: Use Lambda functions to process CloudWatch Logs as feeds
+**Scheduled events**: Run Lambda functions as scheduled events, just like a cron job
+**AWS CodeCommit**: Execute Lambda functions whenever new code is pushed to an existing branch, and so on
