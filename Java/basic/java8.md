@@ -200,6 +200,46 @@ Stream features
 
 You can use Stream to filter, collect, print, and convert from one data structure to other etc.
 
+## intermediate and terminal operations
+
+ <img src="../images/intermediate and terminal operations.png" width="1000" />
+
+### intermediate vs terminal operations
+
+- Intermediate operation is lazy while a terminal operation is not. 
+
+- When you invoke an intermediate operation on a stream, the operation is not executed immediately. It is executed only when a terminal operation is invoked on that stream. In a way, an intermediate operation is memorized and is recalled as soon as a terminal operation is invoked. 
+
+- You can chain multiple intermediate operations and none of them will do anything until you invoke a terminal operation. At that time, all of the intermediate operations that you invoked earlier will be invoked along with the terminal operation.
+
+- All intermediate operations return Stream (can be chained), while terminal operations don't.
+
+### Intermediate Operations
+- filter(Predicate<T>)
+- map(Function<T>)
+- flatMap(Function<T>)
+- sorted(Comparator<T>)
+- peek(Consumer<T>)
+- distinct()
+- limit(long n)
+- skip(long n)
+
+### Terminal Operations :
+
+- forEach
+- forEachOrdered
+- toArray
+- reduce
+- collect
+- min
+- max
+- count
+- anyMatch
+- allMatch
+- noneMatch
+- findFirst    
+- findAny
+
 Functional Interface
 --------------------
 

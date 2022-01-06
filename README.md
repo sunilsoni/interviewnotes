@@ -39,6 +39,11 @@ Interview questions and answers
         1. [Lambda Expressions Examples](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#lambda-expressions-examples)
       * [Stream](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#stream)
         * [Stream features](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#stream-features)
+      * [Intermediate and Terminal operations](interface)
+        * [intermediate vs terminal operations](https)
+        * [Intermediate Operations](https)
+        * [Terminal Operations](https)
+
       * [Functional Interface](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#functional-interface)
         * [Custom Functional Interface](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#custom-functional-interface)
         * [Predefined Functional Interfaces](https://github.com/sunilsoni/interview-notes/blob/main/Java/basic/java8.md#predefined-functional-interfaces)
