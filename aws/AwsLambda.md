@@ -103,8 +103,13 @@ Each function can be invoked either on demand or invoked dynamically based on ce
 A few event examples are listed out as follows:
 
 **Amazon S3**: Lambda functions can be triggered when an object is created, updated, or deleted in an S3 bucket
+
 **Amazon DynamoDB**: Lambda functions are triggered when any updates are made to a particular DynamoDB table, such as row insertion, deletion, and so on
+
 **Amazon Simple Notification Service (SNS)**: Trigger a Lambda function when a message is published on a, SNS topic
+
 **Amazon CloudWatch Logs**: Use Lambda functions to process CloudWatch Logs as feeds
+
 **Scheduled events**: Run Lambda functions as scheduled events, just like a cron job
+
 **AWS CodeCommit**: Execute Lambda functions whenever new code is pushed to an existing branch, and so on
