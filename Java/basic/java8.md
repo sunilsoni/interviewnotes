@@ -200,11 +200,11 @@ Stream features
 
 You can use Stream to filter, collect, print, and convert from one data structure to other etc.
 
-## intermediate and terminal operations
+## Intermediate and Terminal operations
 
  <img src="../images/intermediate and terminal operations.png" width="1000" />
 
-### intermediate vs terminal operations
+### Intermediate vs Terminal operations
 
 - Intermediate operation is lazy while a terminal operation is not. 
 
@@ -224,8 +224,7 @@ You can use Stream to filter, collect, print, and convert from one data structur
 - limit(long n)
 - skip(long n)
 
-### Terminal Operations :
-
+### Terminal Operations
 - forEach
 - forEachOrdered
 - toArray
