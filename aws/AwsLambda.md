@@ -86,9 +86,14 @@ long-running, complex applications; not for simple functions that execute in a
 mere seconds.
 
 ##  Vendor lock-in: 
-With each cloud provider providing its own unique tool sets and services around serverless computing, you
+With each cloud provider providing its own unique tool sets and
+services around serverless computing, you often tend to get tied down to a
+particular vendor. This means that you cannot change your cloud provider
+without making some changes to your functions as well.
 
 
+ <img src="images/lambda.png" width="1000" />
 
+Reference : https://aws.amazon.com/lambda/
 
 
